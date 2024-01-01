@@ -30,24 +30,32 @@
         {
             this.panel2 = new System.Windows.Forms.Panel();
             this.MovePanelForBTN = new System.Windows.Forms.Panel();
-            this.btn_Suppliers = new System.Windows.Forms.Button();
-            this.btn_SignOut = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_ImportReceipt = new System.Windows.Forms.Button();
-            this.btn_SaleReceipt = new System.Windows.Forms.Button();
-            this.btn_Staff = new System.Windows.Forms.Button();
-            this.btn_Authors = new System.Windows.Forms.Button();
-            this.btn_SeachBooks = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_Customer = new System.Windows.Forms.Button();
+            this.Button_Supplier_AboutUs = new System.Windows.Forms.Button();
+            this.Button_Main_Customer = new System.Windows.Forms.Button();
+            this.Button_Main_Suppliers = new System.Windows.Forms.Button();
+            this.Button_Main_SignOut = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Button_Main_ImportReceipt = new System.Windows.Forms.Button();
+            this.Button_Main_SaleReceipt = new System.Windows.Forms.Button();
+            this.Button_Main_Staff = new System.Windows.Forms.Button();
+            this.Button_Main_Authors = new System.Windows.Forms.Button();
+            this.Button_Main_SeachBooks = new System.Windows.Forms.Button();
+            this.tab_Staffs = new LibraryManagement_BuiVanTai.Tab.Tab_Staffs();
+            this.tab_Customers = new LibraryManagement_BuiVanTai.Tab.Tab_Customers();
+            this.tab_SearchBooks = new LibraryManagement_BuiVanTai.Tab.Tab_SearchBooks();
+            this.tab_ImportReceipt = new LibraryManagement_BuiVanTai.Tab.Tab_ImportReceipt();
+            this.tab_Suppliers = new LibraryManagement_BuiVanTai.Tab_Suppliers();
+            this.tab_Authors = new LibraryManagement_BuiVanTai.Tab.Tab_Authors();
+            this.tab_SalesReceipt = new LibraryManagement_BuiVanTai.Tab.Tab_SalesReceipt();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -55,17 +63,18 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(47)))), ((int)(((byte)(60)))));
-            this.panel2.Controls.Add(this.btn_Customer);
+            this.panel2.Controls.Add(this.Button_Supplier_AboutUs);
+            this.panel2.Controls.Add(this.Button_Main_Customer);
             this.panel2.Controls.Add(this.MovePanelForBTN);
-            this.panel2.Controls.Add(this.btn_Suppliers);
-            this.panel2.Controls.Add(this.btn_SignOut);
+            this.panel2.Controls.Add(this.Button_Main_Suppliers);
+            this.panel2.Controls.Add(this.Button_Main_SignOut);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.btn_ImportReceipt);
-            this.panel2.Controls.Add(this.btn_SaleReceipt);
-            this.panel2.Controls.Add(this.btn_Staff);
-            this.panel2.Controls.Add(this.btn_Authors);
-            this.panel2.Controls.Add(this.btn_SeachBooks);
+            this.panel2.Controls.Add(this.Button_Main_ImportReceipt);
+            this.panel2.Controls.Add(this.Button_Main_SaleReceipt);
+            this.panel2.Controls.Add(this.Button_Main_Staff);
+            this.panel2.Controls.Add(this.Button_Main_Authors);
+            this.panel2.Controls.Add(this.Button_Main_SeachBooks);
             this.panel2.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel2.Location = new System.Drawing.Point(1, 44);
             this.panel2.MinimumSize = new System.Drawing.Size(162, 599);
@@ -81,50 +90,6 @@
             this.MovePanelForBTN.Size = new System.Drawing.Size(5, 41);
             this.MovePanelForBTN.TabIndex = 10;
             // 
-            // btn_Suppliers
-            // 
-            this.btn_Suppliers.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btn_Suppliers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Suppliers.Font = new System.Drawing.Font("Segoe UI Black", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Suppliers.ForeColor = System.Drawing.Color.White;
-            this.btn_Suppliers.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Supplier1;
-            this.btn_Suppliers.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_Suppliers.Location = new System.Drawing.Point(3, 395);
-            this.btn_Suppliers.Name = "btn_Suppliers";
-            this.btn_Suppliers.Size = new System.Drawing.Size(156, 43);
-            this.btn_Suppliers.TabIndex = 9;
-            this.btn_Suppliers.Text = "  Suppliers";
-            this.btn_Suppliers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Suppliers.UseVisualStyleBackColor = true;
-            this.btn_Suppliers.Click += new System.EventHandler(this.btn_Suppliers_Click);
-            // 
-            // btn_SignOut
-            // 
-            this.btn_SignOut.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btn_SignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_SignOut.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SignOut.ForeColor = System.Drawing.Color.White;
-            this.btn_SignOut.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Logout2;
-            this.btn_SignOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_SignOut.Location = new System.Drawing.Point(34, 617);
-            this.btn_SignOut.Name = "btn_SignOut";
-            this.btn_SignOut.Size = new System.Drawing.Size(89, 32);
-            this.btn_SignOut.TabIndex = 8;
-            this.btn_SignOut.Text = "Sign out";
-            this.btn_SignOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_SignOut.UseVisualStyleBackColor = true;
-            this.btn_SignOut.Click += new System.EventHandler(this.btn_SignOut_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.User_Icon;
-            this.pictureBox1.Location = new System.Drawing.Point(43, 52);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(75, 75);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -136,106 +101,15 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Welcome, user!";
             // 
-            // btn_ImportReceipt
-            // 
-            this.btn_ImportReceipt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(47)))), ((int)(((byte)(60)))));
-            this.btn_ImportReceipt.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btn_ImportReceipt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ImportReceipt.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ImportReceipt.ForeColor = System.Drawing.Color.White;
-            this.btn_ImportReceipt.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Receipt_and_Change;
-            this.btn_ImportReceipt.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_ImportReceipt.Location = new System.Drawing.Point(3, 493);
-            this.btn_ImportReceipt.Name = "btn_ImportReceipt";
-            this.btn_ImportReceipt.Size = new System.Drawing.Size(156, 43);
-            this.btn_ImportReceipt.TabIndex = 5;
-            this.btn_ImportReceipt.Text = "  Import Receipt";
-            this.btn_ImportReceipt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ImportReceipt.UseVisualStyleBackColor = false;
-            this.btn_ImportReceipt.Click += new System.EventHandler(this.btn_ImportReceipt_Click);
-            // 
-            // btn_SaleReceipt
-            // 
-            this.btn_SaleReceipt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(47)))), ((int)(((byte)(60)))));
-            this.btn_SaleReceipt.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btn_SaleReceipt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_SaleReceipt.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SaleReceipt.ForeColor = System.Drawing.Color.White;
-            this.btn_SaleReceipt.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Receipt_and_Change;
-            this.btn_SaleReceipt.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_SaleReceipt.Location = new System.Drawing.Point(3, 444);
-            this.btn_SaleReceipt.Name = "btn_SaleReceipt";
-            this.btn_SaleReceipt.Size = new System.Drawing.Size(156, 43);
-            this.btn_SaleReceipt.TabIndex = 3;
-            this.btn_SaleReceipt.Text = "  Sales Reciept";
-            this.btn_SaleReceipt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_SaleReceipt.UseVisualStyleBackColor = false;
-            this.btn_SaleReceipt.Click += new System.EventHandler(this.btn_SaleReceipt_Click);
-            // 
-            // btn_Staff
-            // 
-            this.btn_Staff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(47)))), ((int)(((byte)(60)))));
-            this.btn_Staff.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btn_Staff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Staff.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Staff.ForeColor = System.Drawing.Color.White;
-            this.btn_Staff.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Staff;
-            this.btn_Staff.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_Staff.Location = new System.Drawing.Point(3, 542);
-            this.btn_Staff.Name = "btn_Staff";
-            this.btn_Staff.Size = new System.Drawing.Size(156, 43);
-            this.btn_Staff.TabIndex = 2;
-            this.btn_Staff.Text = "  Staffs";
-            this.btn_Staff.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Staff.UseVisualStyleBackColor = false;
-            this.btn_Staff.Click += new System.EventHandler(this.btn_Staff_Click);
-            // 
-            // btn_Authors
-            // 
-            this.btn_Authors.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(47)))), ((int)(((byte)(60)))));
-            this.btn_Authors.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btn_Authors.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Authors.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Authors.ForeColor = System.Drawing.Color.White;
-            this.btn_Authors.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Author;
-            this.btn_Authors.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_Authors.Location = new System.Drawing.Point(3, 346);
-            this.btn_Authors.Name = "btn_Authors";
-            this.btn_Authors.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btn_Authors.Size = new System.Drawing.Size(156, 43);
-            this.btn_Authors.TabIndex = 1;
-            this.btn_Authors.Text = "  Authors";
-            this.btn_Authors.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Authors.UseVisualStyleBackColor = false;
-            this.btn_Authors.Click += new System.EventHandler(this.btn_Authors_Click);
-            // 
-            // btn_SeachBooks
-            // 
-            this.btn_SeachBooks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(47)))), ((int)(((byte)(60)))));
-            this.btn_SeachBooks.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btn_SeachBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_SeachBooks.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SeachBooks.ForeColor = System.Drawing.Color.White;
-            this.btn_SeachBooks.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Search_2;
-            this.btn_SeachBooks.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_SeachBooks.Location = new System.Drawing.Point(3, 249);
-            this.btn_SeachBooks.Name = "btn_SeachBooks";
-            this.btn_SeachBooks.Size = new System.Drawing.Size(156, 43);
-            this.btn_SeachBooks.TabIndex = 0;
-            this.btn_SeachBooks.Text = "  Search Books";
-            this.btn_SeachBooks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_SeachBooks.UseVisualStyleBackColor = false;
-            this.btn_SeachBooks.Click += new System.EventHandler(this.btn_SeachBooks_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(10, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(229, 21);
+            this.label1.Size = new System.Drawing.Size(258, 21);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Library Management System";
+            this.label1.Text = "Book Store Management System";
             // 
             // panel4
             // 
@@ -259,7 +133,17 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.tab_SalesReceipt);
+            this.panel1.Controls.Add(this.tab_Authors);
+            this.panel1.Controls.Add(this.tab_Staffs);
+            this.panel1.Controls.Add(this.tab_Customers);
+            this.panel1.Controls.Add(this.tab_SearchBooks);
+            this.panel1.Controls.Add(this.tab_ImportReceipt);
+            this.panel1.Controls.Add(this.tab_Suppliers);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Location = new System.Drawing.Point(169, 52);
             this.panel1.MinimumSize = new System.Drawing.Size(902, 651);
@@ -267,23 +151,242 @@
             this.panel1.Size = new System.Drawing.Size(902, 651);
             this.panel1.TabIndex = 0;
             // 
-            // btn_Customer
+            // Button_Supplier_AboutUs
             // 
-            this.btn_Customer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(47)))), ((int)(((byte)(60)))));
-            this.btn_Customer.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btn_Customer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Customer.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Customer.ForeColor = System.Drawing.Color.White;
-            this.btn_Customer.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Staff;
-            this.btn_Customer.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_Customer.Location = new System.Drawing.Point(3, 297);
-            this.btn_Customer.Name = "btn_Customer";
-            this.btn_Customer.Size = new System.Drawing.Size(156, 43);
-            this.btn_Customer.TabIndex = 11;
-            this.btn_Customer.Text = "  Customer";
-            this.btn_Customer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Customer.UseVisualStyleBackColor = false;
-            this.btn_Customer.Click += new System.EventHandler(this.btn_Customer_Click);
+            this.Button_Supplier_AboutUs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Button_Supplier_AboutUs.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.Button_Supplier_AboutUs.FlatAppearance.BorderSize = 0;
+            this.Button_Supplier_AboutUs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_Supplier_AboutUs.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_Supplier_AboutUs.ForeColor = System.Drawing.Color.White;
+            this.Button_Supplier_AboutUs.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Info;
+            this.Button_Supplier_AboutUs.Location = new System.Drawing.Point(100, 617);
+            this.Button_Supplier_AboutUs.Name = "Button_Supplier_AboutUs";
+            this.Button_Supplier_AboutUs.Size = new System.Drawing.Size(32, 32);
+            this.Button_Supplier_AboutUs.TabIndex = 12;
+            this.Button_Supplier_AboutUs.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Button_Supplier_AboutUs.UseVisualStyleBackColor = true;
+            // 
+            // Button_Main_Customer
+            // 
+            this.Button_Main_Customer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(47)))), ((int)(((byte)(60)))));
+            this.Button_Main_Customer.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.Button_Main_Customer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_Main_Customer.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_Main_Customer.ForeColor = System.Drawing.Color.White;
+            this.Button_Main_Customer.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Staff;
+            this.Button_Main_Customer.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Button_Main_Customer.Location = new System.Drawing.Point(3, 249);
+            this.Button_Main_Customer.Name = "Button_Main_Customer";
+            this.Button_Main_Customer.Size = new System.Drawing.Size(156, 43);
+            this.Button_Main_Customer.TabIndex = 11;
+            this.Button_Main_Customer.Text = "  Customer";
+            this.Button_Main_Customer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_Main_Customer.UseVisualStyleBackColor = false;
+            this.Button_Main_Customer.Click += new System.EventHandler(this.btn_Customer_Click);
+            // 
+            // Button_Main_Suppliers
+            // 
+            this.Button_Main_Suppliers.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.Button_Main_Suppliers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_Main_Suppliers.Font = new System.Drawing.Font("Segoe UI Black", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_Main_Suppliers.ForeColor = System.Drawing.Color.White;
+            this.Button_Main_Suppliers.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Supplier1;
+            this.Button_Main_Suppliers.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Button_Main_Suppliers.Location = new System.Drawing.Point(3, 347);
+            this.Button_Main_Suppliers.Name = "Button_Main_Suppliers";
+            this.Button_Main_Suppliers.Size = new System.Drawing.Size(156, 43);
+            this.Button_Main_Suppliers.TabIndex = 9;
+            this.Button_Main_Suppliers.Text = "  Suppliers";
+            this.Button_Main_Suppliers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_Main_Suppliers.UseVisualStyleBackColor = true;
+            this.Button_Main_Suppliers.Click += new System.EventHandler(this.btn_Suppliers_Click);
+            // 
+            // Button_Main_SignOut
+            // 
+            this.Button_Main_SignOut.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Button_Main_SignOut.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.Button_Main_SignOut.FlatAppearance.BorderSize = 0;
+            this.Button_Main_SignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_Main_SignOut.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_Main_SignOut.ForeColor = System.Drawing.Color.White;
+            this.Button_Main_SignOut.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Logout2;
+            this.Button_Main_SignOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_Main_SignOut.Location = new System.Drawing.Point(14, 617);
+            this.Button_Main_SignOut.Name = "Button_Main_SignOut";
+            this.Button_Main_SignOut.Size = new System.Drawing.Size(84, 32);
+            this.Button_Main_SignOut.TabIndex = 8;
+            this.Button_Main_SignOut.Text = "Sign out";
+            this.Button_Main_SignOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Button_Main_SignOut.UseVisualStyleBackColor = true;
+            this.Button_Main_SignOut.Click += new System.EventHandler(this.btn_SignOut_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.User_Icon;
+            this.pictureBox1.Location = new System.Drawing.Point(43, 52);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(75, 75);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Button_Main_ImportReceipt
+            // 
+            this.Button_Main_ImportReceipt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(47)))), ((int)(((byte)(60)))));
+            this.Button_Main_ImportReceipt.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.Button_Main_ImportReceipt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_Main_ImportReceipt.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_Main_ImportReceipt.ForeColor = System.Drawing.Color.White;
+            this.Button_Main_ImportReceipt.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Receipt_and_Change;
+            this.Button_Main_ImportReceipt.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Button_Main_ImportReceipt.Location = new System.Drawing.Point(3, 445);
+            this.Button_Main_ImportReceipt.Name = "Button_Main_ImportReceipt";
+            this.Button_Main_ImportReceipt.Size = new System.Drawing.Size(156, 43);
+            this.Button_Main_ImportReceipt.TabIndex = 5;
+            this.Button_Main_ImportReceipt.Text = "  Import Receipt";
+            this.Button_Main_ImportReceipt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_Main_ImportReceipt.UseVisualStyleBackColor = false;
+            this.Button_Main_ImportReceipt.Click += new System.EventHandler(this.btn_ImportReceipt_Click);
+            // 
+            // Button_Main_SaleReceipt
+            // 
+            this.Button_Main_SaleReceipt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(47)))), ((int)(((byte)(60)))));
+            this.Button_Main_SaleReceipt.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.Button_Main_SaleReceipt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_Main_SaleReceipt.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_Main_SaleReceipt.ForeColor = System.Drawing.Color.White;
+            this.Button_Main_SaleReceipt.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Receipt_and_Change;
+            this.Button_Main_SaleReceipt.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Button_Main_SaleReceipt.Location = new System.Drawing.Point(3, 396);
+            this.Button_Main_SaleReceipt.Name = "Button_Main_SaleReceipt";
+            this.Button_Main_SaleReceipt.Size = new System.Drawing.Size(156, 43);
+            this.Button_Main_SaleReceipt.TabIndex = 3;
+            this.Button_Main_SaleReceipt.Text = "  Sales Reciept";
+            this.Button_Main_SaleReceipt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_Main_SaleReceipt.UseVisualStyleBackColor = false;
+            this.Button_Main_SaleReceipt.Click += new System.EventHandler(this.btn_SaleReceipt_Click);
+            // 
+            // Button_Main_Staff
+            // 
+            this.Button_Main_Staff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(47)))), ((int)(((byte)(60)))));
+            this.Button_Main_Staff.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.Button_Main_Staff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_Main_Staff.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_Main_Staff.ForeColor = System.Drawing.Color.White;
+            this.Button_Main_Staff.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Staff;
+            this.Button_Main_Staff.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Button_Main_Staff.Location = new System.Drawing.Point(3, 494);
+            this.Button_Main_Staff.Name = "Button_Main_Staff";
+            this.Button_Main_Staff.Size = new System.Drawing.Size(156, 43);
+            this.Button_Main_Staff.TabIndex = 2;
+            this.Button_Main_Staff.Text = "  Staffs";
+            this.Button_Main_Staff.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_Main_Staff.UseVisualStyleBackColor = false;
+            this.Button_Main_Staff.Click += new System.EventHandler(this.btn_Staff_Click);
+            // 
+            // Button_Main_Authors
+            // 
+            this.Button_Main_Authors.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(47)))), ((int)(((byte)(60)))));
+            this.Button_Main_Authors.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.Button_Main_Authors.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_Main_Authors.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_Main_Authors.ForeColor = System.Drawing.Color.White;
+            this.Button_Main_Authors.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Author;
+            this.Button_Main_Authors.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Button_Main_Authors.Location = new System.Drawing.Point(3, 298);
+            this.Button_Main_Authors.Name = "Button_Main_Authors";
+            this.Button_Main_Authors.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Button_Main_Authors.Size = new System.Drawing.Size(156, 43);
+            this.Button_Main_Authors.TabIndex = 1;
+            this.Button_Main_Authors.Text = "  Authors";
+            this.Button_Main_Authors.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_Main_Authors.UseVisualStyleBackColor = false;
+            this.Button_Main_Authors.Click += new System.EventHandler(this.btn_Authors_Click);
+            // 
+            // Button_Main_SeachBooks
+            // 
+            this.Button_Main_SeachBooks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(47)))), ((int)(((byte)(60)))));
+            this.Button_Main_SeachBooks.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.Button_Main_SeachBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_Main_SeachBooks.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_Main_SeachBooks.ForeColor = System.Drawing.Color.White;
+            this.Button_Main_SeachBooks.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Search_2;
+            this.Button_Main_SeachBooks.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Button_Main_SeachBooks.Location = new System.Drawing.Point(3, 201);
+            this.Button_Main_SeachBooks.Name = "Button_Main_SeachBooks";
+            this.Button_Main_SeachBooks.Size = new System.Drawing.Size(156, 43);
+            this.Button_Main_SeachBooks.TabIndex = 0;
+            this.Button_Main_SeachBooks.Text = "  Search Books";
+            this.Button_Main_SeachBooks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_Main_SeachBooks.UseVisualStyleBackColor = false;
+            this.Button_Main_SeachBooks.Click += new System.EventHandler(this.btn_SeachBooks_Click);
+            // 
+            // tab_Staffs
+            // 
+            this.tab_Staffs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab_Staffs.Location = new System.Drawing.Point(0, 0);
+            this.tab_Staffs.Name = "tab_Staffs";
+            this.tab_Staffs.Size = new System.Drawing.Size(902, 651);
+            this.tab_Staffs.TabIndex = 5;
+            // 
+            // tab_Customers
+            // 
+            this.tab_Customers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab_Customers.Location = new System.Drawing.Point(0, 0);
+            this.tab_Customers.MinimumSize = new System.Drawing.Size(902, 651);
+            this.tab_Customers.Name = "tab_Customers";
+            this.tab_Customers.Size = new System.Drawing.Size(902, 651);
+            this.tab_Customers.TabIndex = 4;
+            // 
+            // tab_SearchBooks
+            // 
+            this.tab_SearchBooks.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab_SearchBooks.Location = new System.Drawing.Point(0, 0);
+            this.tab_SearchBooks.MinimumSize = new System.Drawing.Size(902, 651);
+            this.tab_SearchBooks.Name = "tab_SearchBooks";
+            this.tab_SearchBooks.Size = new System.Drawing.Size(902, 651);
+            this.tab_SearchBooks.TabIndex = 3;
+            // 
+            // tab_ImportReceipt
+            // 
+            this.tab_ImportReceipt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab_ImportReceipt.Location = new System.Drawing.Point(0, 0);
+            this.tab_ImportReceipt.MinimumSize = new System.Drawing.Size(902, 651);
+            this.tab_ImportReceipt.Name = "tab_ImportReceipt";
+            this.tab_ImportReceipt.Size = new System.Drawing.Size(902, 651);
+            this.tab_ImportReceipt.TabIndex = 2;
+            // 
+            // tab_Suppliers
+            // 
+            this.tab_Suppliers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tab_Suppliers.BackColor = System.Drawing.Color.Gainsboro;
+            this.tab_Suppliers.Location = new System.Drawing.Point(0, 0);
+            this.tab_Suppliers.Name = "tab_Suppliers";
+            this.tab_Suppliers.Size = new System.Drawing.Size(899, 651);
+            this.tab_Suppliers.TabIndex = 1;
+            // 
+            // tab_Authors
+            // 
+            this.tab_Authors.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab_Authors.Location = new System.Drawing.Point(0, 0);
+            this.tab_Authors.MinimumSize = new System.Drawing.Size(902, 651);
+            this.tab_Authors.Name = "tab_Authors";
+            this.tab_Authors.Size = new System.Drawing.Size(902, 651);
+            this.tab_Authors.TabIndex = 6;
+            // 
+            // tab_SalesReceipt1
+            // 
+            this.tab_SalesReceipt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab_SalesReceipt.Location = new System.Drawing.Point(0, 0);
+            this.tab_SalesReceipt.MinimumSize = new System.Drawing.Size(902, 651);
+            this.tab_SalesReceipt.Name = "tab_SalesReceipt1";
+            this.tab_SalesReceipt.Size = new System.Drawing.Size(902, 651);
+            this.tab_SalesReceipt.TabIndex = 7;
             // 
             // Form_Main
             // 
@@ -294,16 +397,15 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.MaximumSize = new System.Drawing.Size(1089, 744);
             this.MinimumSize = new System.Drawing.Size(1089, 744);
             this.Name = "Form_Main";
             this.Text = "Suppliers";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -312,19 +414,27 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button btn_SeachBooks;
-        private System.Windows.Forms.Button btn_Authors;
-        private System.Windows.Forms.Button btn_Staff;
-        private System.Windows.Forms.Button btn_ImportReceipt;
-        private System.Windows.Forms.Button btn_SaleReceipt;
+        private System.Windows.Forms.Button Button_Main_SeachBooks;
+        private System.Windows.Forms.Button Button_Main_Authors;
+        private System.Windows.Forms.Button Button_Main_Staff;
+        private System.Windows.Forms.Button Button_Main_ImportReceipt;
+        private System.Windows.Forms.Button Button_Main_SaleReceipt;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btn_SignOut;
+        private System.Windows.Forms.Button Button_Main_SignOut;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btn_Suppliers;
+        private System.Windows.Forms.Button Button_Main_Suppliers;
         private System.Windows.Forms.Panel MovePanelForBTN;
-        private System.Windows.Forms.Button btn_Customer;
+        private System.Windows.Forms.Button Button_Main_Customer;
+        private Tab_Suppliers tab_Suppliers;
+        private System.Windows.Forms.Button Button_Supplier_AboutUs;
+        private Tab.Tab_ImportReceipt tab_ImportReceipt;
+        private Tab.Tab_SearchBooks tab_SearchBooks;
+        private Tab.Tab_Staffs tab_Staffs;
+        private Tab.Tab_Customers tab_Customers;
+        private Tab.Tab_SalesReceipt tab_SalesReceipt;
+        private Tab.Tab_Authors tab_Authors;
     }
 }
 
