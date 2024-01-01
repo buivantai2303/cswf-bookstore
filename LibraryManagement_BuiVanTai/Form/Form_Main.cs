@@ -18,6 +18,11 @@ namespace LibraryManagement_BuiVanTai
             InitializeComponent();
         }
 
+        private void Form_Main_Load(object sender, EventArgs e)
+        {
+            tab_SearchBooks.BringToFront();
+        }
+
 
         // Move UI to other panel by buttons. - Change by Tai 
         private void MovePanel(Control BTN)
@@ -38,6 +43,7 @@ namespace LibraryManagement_BuiVanTai
             Button_Main_SaleReceipt.BackColor = originalButtonColor;
             Button_Main_ImportReceipt.BackColor = originalButtonColor;
             Button_Main_Staff.BackColor = originalButtonColor;
+            Button_Main_Books.BackColor = originalButtonColor;
         }
 
 
@@ -55,11 +61,12 @@ namespace LibraryManagement_BuiVanTai
 
             tab_SearchBooks.Visible = true;
             tab_Customers.Visible = false;
-            tab_Authors.Visible = true;
+            tab_Authors.Visible = false;
             tab_Suppliers.Visible = false;
             tab_SalesReceipt.Visible = false;
             tab_ImportReceipt.Visible = false;
             tab_Staffs.Visible = false;
+            tab_Book1.Visible = false;
 
         }
 
@@ -83,6 +90,8 @@ namespace LibraryManagement_BuiVanTai
             tab_SalesReceipt.Visible = false;
             tab_ImportReceipt.Visible = false;
             tab_Staffs.Visible = false;
+            tab_Book1.Visible = false;
+
         }
 
 
@@ -105,6 +114,8 @@ namespace LibraryManagement_BuiVanTai
             tab_SalesReceipt.Visible = false;
             tab_ImportReceipt.Visible = false;
             tab_Staffs.Visible = false;
+            tab_Book1.Visible = false;
+
         }
 
 
@@ -127,6 +138,8 @@ namespace LibraryManagement_BuiVanTai
             tab_SalesReceipt.Visible = false;
             tab_ImportReceipt.Visible = false;
             tab_Staffs.Visible = false;
+            tab_Book1.Visible = false;
+
         }
 
 
@@ -151,6 +164,8 @@ namespace LibraryManagement_BuiVanTai
             tab_SalesReceipt.Visible = true;
             tab_ImportReceipt.Visible = false;
             tab_Staffs.Visible = false;
+            tab_Book1.Visible = false;
+
         }
 
 
@@ -172,6 +187,8 @@ namespace LibraryManagement_BuiVanTai
             tab_SalesReceipt.Visible = false;
             tab_ImportReceipt.Visible = true;
             tab_Staffs.Visible = false;
+            tab_Book1.Visible = false;
+
         }
 
 
@@ -194,13 +211,37 @@ namespace LibraryManagement_BuiVanTai
             tab_SalesReceipt.Visible = false;
             tab_ImportReceipt.Visible = false;
             tab_Staffs.Visible = true;
+            tab_Book1.Visible = false;
+
         }
+
+
 
 
         // Sign out button ============================================================================ - Changed by Tai 
         private void btn_SignOut_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Button_Main_Books_Click(object sender, EventArgs e)
+        {
+            if (originalButtonColor == default(Color))
+            {
+                originalButtonColor = Button_Main_SeachBooks.BackColor;
+            }
+            ResetButtonColors();
+            MovePanel(Button_Main_Books);
+            Button_Main_Books.BackColor = Color.FromArgb(0, 67, 147);
+
+            tab_SearchBooks.Visible = false;
+            tab_Customers.Visible = false;
+            tab_Authors.Visible = false;
+            tab_Suppliers.Visible = false;
+            tab_SalesReceipt.Visible = false;
+            tab_ImportReceipt.Visible = false;
+            tab_Staffs.Visible = false;
+            tab_Book1.Visible = true;
         }
 
 

@@ -80,6 +80,12 @@
     <Compile Include="Tab\Tab_Authors.Designer.cs">
       <DependentUpon>Tab_Authors.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tab\Tab_Book.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tab\Tab_Book.Designer.cs">
+      <DependentUpon>Tab_Book.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tab\Tab_Customers.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     </Compile>
     <EmbeddedResource Include="Tab\Tab_Authors.resx">
       <DependentUpon>Tab_Authors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tab\Tab_Book.resx">
+      <DependentUpon>Tab_Book.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tab\Tab_Customers.resx">
       <DependentUpon>Tab_Customers.cs</DependentUpon>
@@ -249,6 +258,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Add 50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add 20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wallet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wallet1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Book1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

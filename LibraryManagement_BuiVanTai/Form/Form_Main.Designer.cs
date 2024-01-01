@@ -30,32 +30,34 @@
         {
             this.panel2 = new System.Windows.Forms.Panel();
             this.MovePanelForBTN = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.Button_Main_Books = new System.Windows.Forms.Button();
             this.Button_Supplier_AboutUs = new System.Windows.Forms.Button();
             this.Button_Main_Customer = new System.Windows.Forms.Button();
             this.Button_Main_Suppliers = new System.Windows.Forms.Button();
             this.Button_Main_SignOut = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.Button_Main_ImportReceipt = new System.Windows.Forms.Button();
             this.Button_Main_SaleReceipt = new System.Windows.Forms.Button();
             this.Button_Main_Staff = new System.Windows.Forms.Button();
             this.Button_Main_Authors = new System.Windows.Forms.Button();
             this.Button_Main_SeachBooks = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tab_SalesReceipt = new LibraryManagement_BuiVanTai.Tab.Tab_SalesReceipt();
+            this.tab_Authors = new LibraryManagement_BuiVanTai.Tab.Tab_Authors();
             this.tab_Staffs = new LibraryManagement_BuiVanTai.Tab.Tab_Staffs();
             this.tab_Customers = new LibraryManagement_BuiVanTai.Tab.Tab_Customers();
             this.tab_SearchBooks = new LibraryManagement_BuiVanTai.Tab.Tab_SearchBooks();
             this.tab_ImportReceipt = new LibraryManagement_BuiVanTai.Tab.Tab_ImportReceipt();
             this.tab_Suppliers = new LibraryManagement_BuiVanTai.Tab_Suppliers();
-            this.tab_Authors = new LibraryManagement_BuiVanTai.Tab.Tab_Authors();
-            this.tab_SalesReceipt = new LibraryManagement_BuiVanTai.Tab.Tab_SalesReceipt();
+            this.tab_Book1 = new LibraryManagement_BuiVanTai.Tab.Tab_Book();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -63,9 +65,10 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(47)))), ((int)(((byte)(60)))));
+            this.panel2.Controls.Add(this.MovePanelForBTN);
+            this.panel2.Controls.Add(this.Button_Main_Books);
             this.panel2.Controls.Add(this.Button_Supplier_AboutUs);
             this.panel2.Controls.Add(this.Button_Main_Customer);
-            this.panel2.Controls.Add(this.MovePanelForBTN);
             this.panel2.Controls.Add(this.Button_Main_Suppliers);
             this.panel2.Controls.Add(this.Button_Main_SignOut);
             this.panel2.Controls.Add(this.pictureBox1);
@@ -85,71 +88,28 @@
             // MovePanelForBTN
             // 
             this.MovePanelForBTN.BackColor = System.Drawing.Color.White;
-            this.MovePanelForBTN.Location = new System.Drawing.Point(3, 250);
+            this.MovePanelForBTN.Location = new System.Drawing.Point(3, 203);
             this.MovePanelForBTN.Name = "MovePanelForBTN";
             this.MovePanelForBTN.Size = new System.Drawing.Size(5, 41);
             this.MovePanelForBTN.TabIndex = 10;
             // 
-            // label2
+            // Button_Main_Books
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(31, 130);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 17);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Welcome, user!";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(10, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(258, 21);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Book Store Management System";
-            // 
-            // panel4
-            // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.ForeColor = System.Drawing.SystemColors.Control;
-            this.panel4.Location = new System.Drawing.Point(1, 1);
-            this.panel4.MinimumSize = new System.Drawing.Size(1030, 45);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1070, 45);
-            this.panel4.TabIndex = 3;
-            // 
-            // panel3
-            // 
-            this.panel3.Location = new System.Drawing.Point(-157, -34);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(438, 28);
-            this.panel3.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.tab_SalesReceipt);
-            this.panel1.Controls.Add(this.tab_Authors);
-            this.panel1.Controls.Add(this.tab_Staffs);
-            this.panel1.Controls.Add(this.tab_Customers);
-            this.panel1.Controls.Add(this.tab_SearchBooks);
-            this.panel1.Controls.Add(this.tab_ImportReceipt);
-            this.panel1.Controls.Add(this.tab_Suppliers);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Location = new System.Drawing.Point(169, 52);
-            this.panel1.MinimumSize = new System.Drawing.Size(902, 651);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(902, 651);
-            this.panel1.TabIndex = 0;
+            this.Button_Main_Books.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(47)))), ((int)(((byte)(60)))));
+            this.Button_Main_Books.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.Button_Main_Books.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_Main_Books.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_Main_Books.ForeColor = System.Drawing.Color.White;
+            this.Button_Main_Books.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Book1;
+            this.Button_Main_Books.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Button_Main_Books.Location = new System.Drawing.Point(3, 250);
+            this.Button_Main_Books.Name = "Button_Main_Books";
+            this.Button_Main_Books.Size = new System.Drawing.Size(156, 43);
+            this.Button_Main_Books.TabIndex = 13;
+            this.Button_Main_Books.Text = "Books";
+            this.Button_Main_Books.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_Main_Books.UseVisualStyleBackColor = false;
+            this.Button_Main_Books.Click += new System.EventHandler(this.Button_Main_Books_Click);
             // 
             // Button_Supplier_AboutUs
             // 
@@ -177,7 +137,7 @@
             this.Button_Main_Customer.ForeColor = System.Drawing.Color.White;
             this.Button_Main_Customer.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Staff;
             this.Button_Main_Customer.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Button_Main_Customer.Location = new System.Drawing.Point(3, 249);
+            this.Button_Main_Customer.Location = new System.Drawing.Point(3, 299);
             this.Button_Main_Customer.Name = "Button_Main_Customer";
             this.Button_Main_Customer.Size = new System.Drawing.Size(156, 43);
             this.Button_Main_Customer.TabIndex = 11;
@@ -194,7 +154,7 @@
             this.Button_Main_Suppliers.ForeColor = System.Drawing.Color.White;
             this.Button_Main_Suppliers.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Supplier1;
             this.Button_Main_Suppliers.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Button_Main_Suppliers.Location = new System.Drawing.Point(3, 347);
+            this.Button_Main_Suppliers.Location = new System.Drawing.Point(3, 397);
             this.Button_Main_Suppliers.Name = "Button_Main_Suppliers";
             this.Button_Main_Suppliers.Size = new System.Drawing.Size(156, 43);
             this.Button_Main_Suppliers.TabIndex = 9;
@@ -233,6 +193,17 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(31, 130);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(101, 17);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Welcome, user!";
+            // 
             // Button_Main_ImportReceipt
             // 
             this.Button_Main_ImportReceipt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(47)))), ((int)(((byte)(60)))));
@@ -242,7 +213,7 @@
             this.Button_Main_ImportReceipt.ForeColor = System.Drawing.Color.White;
             this.Button_Main_ImportReceipt.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Receipt_and_Change;
             this.Button_Main_ImportReceipt.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Button_Main_ImportReceipt.Location = new System.Drawing.Point(3, 445);
+            this.Button_Main_ImportReceipt.Location = new System.Drawing.Point(3, 495);
             this.Button_Main_ImportReceipt.Name = "Button_Main_ImportReceipt";
             this.Button_Main_ImportReceipt.Size = new System.Drawing.Size(156, 43);
             this.Button_Main_ImportReceipt.TabIndex = 5;
@@ -260,7 +231,7 @@
             this.Button_Main_SaleReceipt.ForeColor = System.Drawing.Color.White;
             this.Button_Main_SaleReceipt.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Receipt_and_Change;
             this.Button_Main_SaleReceipt.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Button_Main_SaleReceipt.Location = new System.Drawing.Point(3, 396);
+            this.Button_Main_SaleReceipt.Location = new System.Drawing.Point(3, 446);
             this.Button_Main_SaleReceipt.Name = "Button_Main_SaleReceipt";
             this.Button_Main_SaleReceipt.Size = new System.Drawing.Size(156, 43);
             this.Button_Main_SaleReceipt.TabIndex = 3;
@@ -278,7 +249,7 @@
             this.Button_Main_Staff.ForeColor = System.Drawing.Color.White;
             this.Button_Main_Staff.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Staff;
             this.Button_Main_Staff.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Button_Main_Staff.Location = new System.Drawing.Point(3, 494);
+            this.Button_Main_Staff.Location = new System.Drawing.Point(3, 544);
             this.Button_Main_Staff.Name = "Button_Main_Staff";
             this.Button_Main_Staff.Size = new System.Drawing.Size(156, 43);
             this.Button_Main_Staff.TabIndex = 2;
@@ -296,7 +267,7 @@
             this.Button_Main_Authors.ForeColor = System.Drawing.Color.White;
             this.Button_Main_Authors.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Author;
             this.Button_Main_Authors.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Button_Main_Authors.Location = new System.Drawing.Point(3, 298);
+            this.Button_Main_Authors.Location = new System.Drawing.Point(3, 348);
             this.Button_Main_Authors.Name = "Button_Main_Authors";
             this.Button_Main_Authors.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Button_Main_Authors.Size = new System.Drawing.Size(156, 43);
@@ -323,6 +294,75 @@
             this.Button_Main_SeachBooks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Button_Main_SeachBooks.UseVisualStyleBackColor = false;
             this.Button_Main_SeachBooks.Click += new System.EventHandler(this.btn_SeachBooks_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(10, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(258, 21);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Book Store Management System";
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.ForeColor = System.Drawing.SystemColors.Control;
+            this.panel4.Location = new System.Drawing.Point(1, 1);
+            this.panel4.MinimumSize = new System.Drawing.Size(1030, 45);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1070, 45);
+            this.panel4.TabIndex = 3;
+            // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(-157, -34);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(438, 28);
+            this.panel3.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.tab_Book1);
+            this.panel1.Controls.Add(this.tab_SalesReceipt);
+            this.panel1.Controls.Add(this.tab_Authors);
+            this.panel1.Controls.Add(this.tab_Staffs);
+            this.panel1.Controls.Add(this.tab_Customers);
+            this.panel1.Controls.Add(this.tab_SearchBooks);
+            this.panel1.Controls.Add(this.tab_ImportReceipt);
+            this.panel1.Controls.Add(this.tab_Suppliers);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Location = new System.Drawing.Point(169, 52);
+            this.panel1.MinimumSize = new System.Drawing.Size(902, 651);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(902, 651);
+            this.panel1.TabIndex = 0;
+            // 
+            // tab_SalesReceipt
+            // 
+            this.tab_SalesReceipt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab_SalesReceipt.Location = new System.Drawing.Point(0, 0);
+            this.tab_SalesReceipt.MinimumSize = new System.Drawing.Size(902, 651);
+            this.tab_SalesReceipt.Name = "tab_SalesReceipt";
+            this.tab_SalesReceipt.Size = new System.Drawing.Size(902, 651);
+            this.tab_SalesReceipt.TabIndex = 7;
+            // 
+            // tab_Authors
+            // 
+            this.tab_Authors.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab_Authors.Location = new System.Drawing.Point(0, 0);
+            this.tab_Authors.MinimumSize = new System.Drawing.Size(902, 651);
+            this.tab_Authors.Name = "tab_Authors";
+            this.tab_Authors.Size = new System.Drawing.Size(902, 651);
+            this.tab_Authors.TabIndex = 6;
             // 
             // tab_Staffs
             // 
@@ -352,6 +392,7 @@
             // 
             // tab_ImportReceipt
             // 
+            this.tab_ImportReceipt.BackColor = System.Drawing.Color.Gainsboro;
             this.tab_ImportReceipt.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tab_ImportReceipt.Location = new System.Drawing.Point(0, 0);
             this.tab_ImportReceipt.MinimumSize = new System.Drawing.Size(902, 651);
@@ -370,23 +411,14 @@
             this.tab_Suppliers.Size = new System.Drawing.Size(899, 651);
             this.tab_Suppliers.TabIndex = 1;
             // 
-            // tab_Authors
+            // tab_Book1
             // 
-            this.tab_Authors.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tab_Authors.Location = new System.Drawing.Point(0, 0);
-            this.tab_Authors.MinimumSize = new System.Drawing.Size(902, 651);
-            this.tab_Authors.Name = "tab_Authors";
-            this.tab_Authors.Size = new System.Drawing.Size(902, 651);
-            this.tab_Authors.TabIndex = 6;
-            // 
-            // tab_SalesReceipt1
-            // 
-            this.tab_SalesReceipt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tab_SalesReceipt.Location = new System.Drawing.Point(0, 0);
-            this.tab_SalesReceipt.MinimumSize = new System.Drawing.Size(902, 651);
-            this.tab_SalesReceipt.Name = "tab_SalesReceipt1";
-            this.tab_SalesReceipt.Size = new System.Drawing.Size(902, 651);
-            this.tab_SalesReceipt.TabIndex = 7;
+            this.tab_Book1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab_Book1.Location = new System.Drawing.Point(0, 0);
+            this.tab_Book1.MinimumSize = new System.Drawing.Size(902, 651);
+            this.tab_Book1.Name = "tab_Book1";
+            this.tab_Book1.Size = new System.Drawing.Size(902, 651);
+            this.tab_Book1.TabIndex = 8;
             // 
             // Form_Main
             // 
@@ -400,12 +432,13 @@
             this.MinimumSize = new System.Drawing.Size(1089, 744);
             this.Name = "Form_Main";
             this.Text = "Suppliers";
+            this.Load += new System.EventHandler(this.Form_Main_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -435,6 +468,8 @@
         private Tab.Tab_Customers tab_Customers;
         private Tab.Tab_SalesReceipt tab_SalesReceipt;
         private Tab.Tab_Authors tab_Authors;
+        private System.Windows.Forms.Button Button_Main_Books;
+        private Tab.Tab_Book tab_Book1;
     }
 }
 
