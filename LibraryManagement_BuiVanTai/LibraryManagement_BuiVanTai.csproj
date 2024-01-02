@@ -58,12 +58,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\ClassDefineName.cs" />
+    <Compile Include="Class\Class_Author.cs" />
+    <Compile Include="Class\Class_Book.cs" />
+    <Compile Include="Class\Class_Customer.cs" />
+    <Compile Include="Class\Class_Publisher.cs" />
+    <Compile Include="Class\Class_Staff.cs" />
     <Compile Include="Class\Class_Suppliers.cs" />
     <Compile Include="Class\Class_ImportReceipt.cs" />
     <Compile Include="Class\Class_ImportReceiptDetails.cs" />
     <Compile Include="Database\Database.cs" />
     <Compile Include="Database\DatabaseFunctionDemo.cs" />
+    <Compile Include="Database\Database_Author.cs" />
+    <Compile Include="Database\Database_Book.cs" />
+    <Compile Include="Database\Database_Customer.cs" />
     <Compile Include="Database\Database_ImportReceipt.cs" />
+    <Compile Include="Database\Database_Publisher.cs" />
+    <Compile Include="Database\Database_Staff.cs" />
     <Compile Include="Database\Database_Suppliers.cs" />
     <Compile Include="Database\Database_ImportReceiptDetails.cs" />
     <Compile Include="Form\Form_Main.cs">
