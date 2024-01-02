@@ -34,13 +34,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.PTB_Suppliers_Menu = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Label_Suppliers_WorkingNumber = new System.Windows.Forms.Label();
             this.Label_Suppliers_Active = new System.Windows.Forms.Label();
             this.Label_Suppliers_1 = new System.Windows.Forms.Label();
             this.Label_Suppliers_TotalNumbers = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.Button_Suppliers_Save = new System.Windows.Forms.Button();
             this.ComboBox_Suppliers_Suppliers_StatusFix = new System.Windows.Forms.ComboBox();
+            this.Button_Suppliers_Add = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.Textbox_Suppliers_Address = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -53,6 +57,7 @@
             this.TextBox_Suppliers_Search = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel4 = new System.Windows.Forms.Panel();
+            this.Button_Suppliers_Report = new System.Windows.Forms.Button();
             this.LabelDateNow = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.Label_TimeNow = new System.Windows.Forms.Label();
@@ -63,24 +68,19 @@
             this.SupplierAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SupplierTel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SupplierState = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ActionColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.Button_Suppliers_Refresh = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.ComboBox_Suppliers_Status = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Button_Suppliers_Report = new System.Windows.Forms.Button();
-            this.ActionColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Button_Suppliers_Save = new System.Windows.Forms.Button();
-            this.Button_Suppliers_Add = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.PTB_Suppliers_Menu = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PTB_Suppliers_Menu)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGView_Suppliers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PTB_Suppliers_Menu)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -108,6 +108,15 @@
             this.label1.Size = new System.Drawing.Size(155, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Library Suppliers";
+            // 
+            // PTB_Suppliers_Menu
+            // 
+            this.PTB_Suppliers_Menu.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Menu;
+            this.PTB_Suppliers_Menu.Location = new System.Drawing.Point(12, 12);
+            this.PTB_Suppliers_Menu.Name = "PTB_Suppliers_Menu";
+            this.PTB_Suppliers_Menu.Size = new System.Drawing.Size(26, 26);
+            this.PTB_Suppliers_Menu.TabIndex = 0;
+            this.PTB_Suppliers_Menu.TabStop = false;
             // 
             // panel2
             // 
@@ -171,6 +180,15 @@
             this.Label_Suppliers_TotalNumbers.TabIndex = 1;
             this.Label_Suppliers_TotalNumbers.Text = "8888";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.SupplierTotal;
+            this.pictureBox1.Location = new System.Drawing.Point(157, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(55, 50);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -196,6 +214,22 @@
             this.panel3.Size = new System.Drawing.Size(669, 120);
             this.panel3.TabIndex = 1;
             // 
+            // Button_Suppliers_Save
+            // 
+            this.Button_Suppliers_Save.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.Button_Suppliers_Save.BackColor = System.Drawing.Color.SeaShell;
+            this.Button_Suppliers_Save.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_Suppliers_Save.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Save2;
+            this.Button_Suppliers_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Button_Suppliers_Save.Location = new System.Drawing.Point(579, 22);
+            this.Button_Suppliers_Save.Name = "Button_Suppliers_Save";
+            this.Button_Suppliers_Save.Size = new System.Drawing.Size(65, 48);
+            this.Button_Suppliers_Save.TabIndex = 17;
+            this.Button_Suppliers_Save.Text = "Save";
+            this.Button_Suppliers_Save.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_Suppliers_Save.UseVisualStyleBackColor = false;
+            this.Button_Suppliers_Save.Click += new System.EventHandler(this.Button_SuppliersSave_Click);
+            // 
             // ComboBox_Suppliers_Suppliers_StatusFix
             // 
             this.ComboBox_Suppliers_Suppliers_StatusFix.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -212,6 +246,22 @@
             this.ComboBox_Suppliers_Suppliers_StatusFix.Name = "ComboBox_Suppliers_Suppliers_StatusFix";
             this.ComboBox_Suppliers_Suppliers_StatusFix.Size = new System.Drawing.Size(120, 25);
             this.ComboBox_Suppliers_Suppliers_StatusFix.TabIndex = 13;
+            // 
+            // Button_Suppliers_Add
+            // 
+            this.Button_Suppliers_Add.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.Button_Suppliers_Add.BackColor = System.Drawing.Color.SeaShell;
+            this.Button_Suppliers_Add.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_Suppliers_Add.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Add;
+            this.Button_Suppliers_Add.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Button_Suppliers_Add.Location = new System.Drawing.Point(508, 22);
+            this.Button_Suppliers_Add.Name = "Button_Suppliers_Add";
+            this.Button_Suppliers_Add.Size = new System.Drawing.Size(65, 48);
+            this.Button_Suppliers_Add.TabIndex = 18;
+            this.Button_Suppliers_Add.Text = "Add";
+            this.Button_Suppliers_Add.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_Suppliers_Add.UseVisualStyleBackColor = false;
+            this.Button_Suppliers_Add.Click += new System.EventHandler(this.Button_SuppliersAdd_Click);
             // 
             // label8
             // 
@@ -367,6 +417,22 @@
             this.panel4.Size = new System.Drawing.Size(902, 471);
             this.panel4.TabIndex = 4;
             // 
+            // Button_Suppliers_Report
+            // 
+            this.Button_Suppliers_Report.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(137)))), ((int)(((byte)(86)))));
+            this.Button_Suppliers_Report.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_Suppliers_Report.ForeColor = System.Drawing.Color.White;
+            this.Button_Suppliers_Report.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Health_Graph;
+            this.Button_Suppliers_Report.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Button_Suppliers_Report.Location = new System.Drawing.Point(675, 37);
+            this.Button_Suppliers_Report.Name = "Button_Suppliers_Report";
+            this.Button_Suppliers_Report.Size = new System.Drawing.Size(119, 35);
+            this.Button_Suppliers_Report.TabIndex = 19;
+            this.Button_Suppliers_Report.Text = "Create Report";
+            this.Button_Suppliers_Report.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_Suppliers_Report.UseVisualStyleBackColor = false;
+            this.Button_Suppliers_Report.Click += new System.EventHandler(this.Button_Suppliers_Report_Click);
+            // 
             // LabelDateNow
             // 
             this.LabelDateNow.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -510,6 +576,17 @@
             this.SupplierState.Name = "SupplierState";
             this.SupplierState.ReadOnly = true;
             // 
+            // ActionColumn
+            // 
+            this.ActionColumn.Description = "Details";
+            this.ActionColumn.FillWeight = 40F;
+            this.ActionColumn.HeaderText = "Action";
+            this.ActionColumn.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Delete;
+            this.ActionColumn.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.ActionColumn.Name = "ActionColumn";
+            this.ActionColumn.ReadOnly = true;
+            this.ActionColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
             // Button_Suppliers_Refresh
             // 
             this.Button_Suppliers_Refresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
@@ -571,81 +648,6 @@
             this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewImageColumn1.Width = 66;
             // 
-            // Button_Suppliers_Report
-            // 
-            this.Button_Suppliers_Report.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(137)))), ((int)(((byte)(86)))));
-            this.Button_Suppliers_Report.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_Suppliers_Report.ForeColor = System.Drawing.Color.White;
-            this.Button_Suppliers_Report.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Health_Graph;
-            this.Button_Suppliers_Report.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Button_Suppliers_Report.Location = new System.Drawing.Point(675, 37);
-            this.Button_Suppliers_Report.Name = "Button_Suppliers_Report";
-            this.Button_Suppliers_Report.Size = new System.Drawing.Size(119, 35);
-            this.Button_Suppliers_Report.TabIndex = 19;
-            this.Button_Suppliers_Report.Text = "Create Report";
-            this.Button_Suppliers_Report.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_Suppliers_Report.UseVisualStyleBackColor = false;
-            this.Button_Suppliers_Report.Click += new System.EventHandler(this.Button_Suppliers_Report_Click);
-            // 
-            // ActionColumn
-            // 
-            this.ActionColumn.Description = "Details";
-            this.ActionColumn.FillWeight = 40F;
-            this.ActionColumn.HeaderText = "Action";
-            this.ActionColumn.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Delete;
-            this.ActionColumn.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.ActionColumn.Name = "ActionColumn";
-            this.ActionColumn.ReadOnly = true;
-            this.ActionColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // Button_Suppliers_Save
-            // 
-            this.Button_Suppliers_Save.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.Button_Suppliers_Save.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_Suppliers_Save.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Save2;
-            this.Button_Suppliers_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Button_Suppliers_Save.Location = new System.Drawing.Point(579, 22);
-            this.Button_Suppliers_Save.Name = "Button_Suppliers_Save";
-            this.Button_Suppliers_Save.Size = new System.Drawing.Size(65, 48);
-            this.Button_Suppliers_Save.TabIndex = 17;
-            this.Button_Suppliers_Save.Text = "Save";
-            this.Button_Suppliers_Save.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_Suppliers_Save.UseVisualStyleBackColor = true;
-            this.Button_Suppliers_Save.Click += new System.EventHandler(this.Button_SuppliersSave_Click);
-            // 
-            // Button_Suppliers_Add
-            // 
-            this.Button_Suppliers_Add.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.Button_Suppliers_Add.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_Suppliers_Add.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Add;
-            this.Button_Suppliers_Add.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Button_Suppliers_Add.Location = new System.Drawing.Point(508, 22);
-            this.Button_Suppliers_Add.Name = "Button_Suppliers_Add";
-            this.Button_Suppliers_Add.Size = new System.Drawing.Size(65, 48);
-            this.Button_Suppliers_Add.TabIndex = 18;
-            this.Button_Suppliers_Add.Text = "Add";
-            this.Button_Suppliers_Add.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_Suppliers_Add.UseVisualStyleBackColor = true;
-            this.Button_Suppliers_Add.Click += new System.EventHandler(this.Button_SuppliersAdd_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.SupplierTotal;
-            this.pictureBox1.Location = new System.Drawing.Point(157, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(55, 50);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // PTB_Suppliers_Menu
-            // 
-            this.PTB_Suppliers_Menu.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Menu;
-            this.PTB_Suppliers_Menu.Location = new System.Drawing.Point(12, 12);
-            this.PTB_Suppliers_Menu.Name = "PTB_Suppliers_Menu";
-            this.PTB_Suppliers_Menu.Size = new System.Drawing.Size(26, 26);
-            this.PTB_Suppliers_Menu.TabIndex = 0;
-            this.PTB_Suppliers_Menu.TabStop = false;
-            // 
             // Tab_Suppliers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -660,15 +662,15 @@
             this.Load += new System.EventHandler(this.Tab_Suppliers_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PTB_Suppliers_Menu)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGView_Suppliers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PTB_Suppliers_Menu)).EndInit();
             this.ResumeLayout(false);
 
         }

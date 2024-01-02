@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.BookID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Remaining = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookType = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,6 +56,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.TextBox_Suppliers_Search = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.Button_Suppliers_Save = new System.Windows.Forms.Button();
             this.Button_Suppliers_Add = new System.Windows.Forms.Button();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
@@ -67,9 +70,6 @@
             this.Label_Suppliers_1 = new System.Windows.Forms.Label();
             this.Label_Suppliers_TotalNumbers = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGView_Suppliers)).BeginInit();
             this.panel3.SuspendLayout();
@@ -117,7 +117,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.Textbox_Suppliers_Address.BackColor = System.Drawing.Color.White;
             this.Textbox_Suppliers_Address.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Textbox_Suppliers_Address.Location = new System.Drawing.Point(199, 84);
+            this.Textbox_Suppliers_Address.Location = new System.Drawing.Point(181, 84);
             this.Textbox_Suppliers_Address.MaximumSize = new System.Drawing.Size(200, 25);
             this.Textbox_Suppliers_Address.Name = "Textbox_Suppliers_Address";
             this.Textbox_Suppliers_Address.Size = new System.Drawing.Size(200, 25);
@@ -129,11 +129,11 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(199, 64);
+            this.label6.Location = new System.Drawing.Point(181, 64);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(108, 17);
+            this.label6.Size = new System.Drawing.Size(93, 17);
             this.label6.TabIndex = 14;
-            this.label6.Text = "Author Address:";
+            this.label6.Text = "Author Email:";
             // 
             // label5
             // 
@@ -141,7 +141,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(199, 7);
+            this.label5.Location = new System.Drawing.Point(181, 6);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(87, 17);
             this.label5.TabIndex = 12;
@@ -155,8 +155,9 @@
             this.TextBox_Suppliers_Name.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBox_Suppliers_Name.Location = new System.Drawing.Point(15, 84);
             this.TextBox_Suppliers_Name.MaximumSize = new System.Drawing.Size(168, 25);
+            this.TextBox_Suppliers_Name.MinimumSize = new System.Drawing.Size(152, 25);
             this.TextBox_Suppliers_Name.Name = "TextBox_Suppliers_Name";
-            this.TextBox_Suppliers_Name.Size = new System.Drawing.Size(168, 25);
+            this.TextBox_Suppliers_Name.Size = new System.Drawing.Size(152, 25);
             this.TextBox_Suppliers_Name.TabIndex = 11;
             // 
             // Label_SupplierName
@@ -179,10 +180,10 @@
             this.TextBox_Suppliers_ID.BackColor = System.Drawing.Color.White;
             this.TextBox_Suppliers_ID.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBox_Suppliers_ID.Location = new System.Drawing.Point(15, 28);
-            this.TextBox_Suppliers_ID.MaximumSize = new System.Drawing.Size(168, 25);
-            this.TextBox_Suppliers_ID.MinimumSize = new System.Drawing.Size(168, 25);
+            this.TextBox_Suppliers_ID.MaximumSize = new System.Drawing.Size(152, 25);
+            this.TextBox_Suppliers_ID.MinimumSize = new System.Drawing.Size(152, 25);
             this.TextBox_Suppliers_ID.Name = "TextBox_Suppliers_ID";
-            this.TextBox_Suppliers_ID.Size = new System.Drawing.Size(168, 25);
+            this.TextBox_Suppliers_ID.Size = new System.Drawing.Size(152, 25);
             this.TextBox_Suppliers_ID.TabIndex = 9;
             // 
             // Label_SupplierID
@@ -226,7 +227,9 @@
             this.panel4.Controls.Add(this.LabelDateNow);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.Label_TimeNow);
+            this.panel4.Controls.Add(this.Button_Suppliers_Save);
             this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.Button_Suppliers_Add);
             this.panel4.Controls.Add(this.DGView_Suppliers);
             this.panel4.Controls.Add(this.Button_Suppliers_Refresh);
             this.panel4.Controls.Add(this.label2);
@@ -292,14 +295,14 @@
             this.DGView_Suppliers.BackgroundColor = System.Drawing.Color.White;
             this.DGView_Suppliers.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DGView_Suppliers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGView_Suppliers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGView_Suppliers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.DGView_Suppliers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DGView_Suppliers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.BookID,
@@ -309,27 +312,27 @@
             this.PublisherName,
             this.AuthorName,
             this.ActionColumn});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(151)))), ((int)(((byte)(196)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGView_Suppliers.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(151)))), ((int)(((byte)(196)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGView_Suppliers.DefaultCellStyle = dataGridViewCellStyle8;
             this.DGView_Suppliers.EnableHeadersVisualStyles = false;
             this.DGView_Suppliers.Location = new System.Drawing.Point(18, 84);
             this.DGView_Suppliers.MultiSelect = false;
             this.DGView_Suppliers.Name = "DGView_Suppliers";
             this.DGView_Suppliers.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGView_Suppliers.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGView_Suppliers.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.DGView_Suppliers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.DGView_Suppliers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGView_Suppliers.ShowCellErrors = false;
@@ -387,8 +390,6 @@
             this.panel3.Controls.Add(this.dateTimePicker1);
             this.panel3.Controls.Add(this.textBox1);
             this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.Button_Suppliers_Save);
-            this.panel3.Controls.Add(this.Button_Suppliers_Add);
             this.panel3.Controls.Add(this.Textbox_Suppliers_Address);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label5);
@@ -403,15 +404,51 @@
             this.panel3.Size = new System.Drawing.Size(669, 120);
             this.panel3.TabIndex = 11;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(184, 31);
+            this.dateTimePicker1.MaximumSize = new System.Drawing.Size(242, 22);
+            this.dateTimePicker1.MinimumSize = new System.Drawing.Size(242, 22);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(242, 22);
+            this.dateTimePicker1.TabIndex = 23;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(395, 84);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(171, 25);
+            this.textBox1.TabIndex = 22;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(395, 64);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(108, 17);
+            this.label10.TabIndex = 21;
+            this.label10.Text = "Author Address:";
+            // 
             // Button_Suppliers_Save
             // 
-            this.Button_Suppliers_Save.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.Button_Suppliers_Save.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Button_Suppliers_Save.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_Suppliers_Save.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Save2;
             this.Button_Suppliers_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Button_Suppliers_Save.Location = new System.Drawing.Point(601, 16);
+            this.Button_Suppliers_Save.Location = new System.Drawing.Point(690, 30);
             this.Button_Suppliers_Save.Name = "Button_Suppliers_Save";
-            this.Button_Suppliers_Save.Size = new System.Drawing.Size(65, 48);
+            this.Button_Suppliers_Save.Size = new System.Drawing.Size(94, 37);
             this.Button_Suppliers_Save.TabIndex = 17;
             this.Button_Suppliers_Save.Text = "Save";
             this.Button_Suppliers_Save.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -419,13 +456,13 @@
             // 
             // Button_Suppliers_Add
             // 
-            this.Button_Suppliers_Add.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.Button_Suppliers_Add.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Button_Suppliers_Add.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_Suppliers_Add.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Add;
             this.Button_Suppliers_Add.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Button_Suppliers_Add.Location = new System.Drawing.Point(530, 16);
+            this.Button_Suppliers_Add.Location = new System.Drawing.Point(579, 30);
             this.Button_Suppliers_Add.Name = "Button_Suppliers_Add";
-            this.Button_Suppliers_Add.Size = new System.Drawing.Size(65, 48);
+            this.Button_Suppliers_Add.Size = new System.Drawing.Size(94, 38);
             this.Button_Suppliers_Add.TabIndex = 18;
             this.Button_Suppliers_Add.Text = "Add";
             this.Button_Suppliers_Add.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -529,44 +566,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(55, 50);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(202, 32);
-            this.dateTimePicker1.MaximumSize = new System.Drawing.Size(282, 22);
-            this.dateTimePicker1.MinimumSize = new System.Drawing.Size(282, 22);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(282, 22);
-            this.dateTimePicker1.TabIndex = 23;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(419, 84);
-            this.textBox1.MaximumSize = new System.Drawing.Size(185, 25);
-            this.textBox1.MinimumSize = new System.Drawing.Size(185, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(185, 25);
-            this.textBox1.TabIndex = 22;
-            // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(419, 64);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(93, 17);
-            this.label10.TabIndex = 21;
-            this.label10.Text = "Author Email:";
             // 
             // Tab_Authors
             // 
