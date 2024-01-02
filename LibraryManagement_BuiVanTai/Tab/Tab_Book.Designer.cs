@@ -29,58 +29,58 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
             this.LabelDateNow = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.Label_TimeNow = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.DGView_Suppliers = new System.Windows.Forms.DataGridView();
+            this.DGV_Books = new System.Windows.Forms.DataGridView();
             this.BookID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Remaining = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PublisherName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AuthorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ActionColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Button_Suppliers_Refresh = new System.Windows.Forms.Button();
+            this.BTN_Books_Refresh = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.TextBox_Suppliers_Search = new System.Windows.Forms.TextBox();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Button_Suppliers_Save = new System.Windows.Forms.Button();
-            this.Button_Suppliers_Add = new System.Windows.Forms.Button();
-            this.PTB_Suppliers_Menu = new System.Windows.Forms.PictureBox();
+            this.TB_Books_Search = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Label_Suppliers_1 = new System.Windows.Forms.Label();
-            this.Label_Suppliers_TotalNumbers = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.LB_Books_Total = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TB_Books_Price = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CBB_Books_AuthorName = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.ComboBox_Suppliers_Suppliers_StatusFix = new System.Windows.Forms.ComboBox();
+            this.CBB_Books_PublisherName = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.Textbox_Suppliers_Address = new System.Windows.Forms.TextBox();
+            this.TB_Books_Type = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.Textbox_Suppliers_Telephone = new System.Windows.Forms.TextBox();
+            this.TB_Books_Remaining = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.TextBox_Suppliers_Name = new System.Windows.Forms.TextBox();
+            this.TB_Books_Name = new System.Windows.Forms.TextBox();
             this.Label_SupplierName = new System.Windows.Forms.Label();
-            this.TextBox_Suppliers_ID = new System.Windows.Forms.TextBox();
+            this.TB_Books_ID = new System.Windows.Forms.TextBox();
             this.Label_SupplierID = new System.Windows.Forms.Label();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.ActionColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.PTB_Suppliers_Menu = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BTN_Books_Save = new System.Windows.Forms.Button();
+            this.BTN_Books_Add = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGView_Suppliers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PTB_Suppliers_Menu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Books)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PTB_Suppliers_Menu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
@@ -93,10 +93,10 @@
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.Label_TimeNow);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.DGView_Suppliers);
-            this.panel4.Controls.Add(this.Button_Suppliers_Refresh);
+            this.panel4.Controls.Add(this.DGV_Books);
+            this.panel4.Controls.Add(this.BTN_Books_Refresh);
             this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.TextBox_Suppliers_Search);
+            this.panel4.Controls.Add(this.TB_Books_Search);
             this.panel4.Location = new System.Drawing.Point(0, 180);
             this.panel4.MinimumSize = new System.Drawing.Size(902, 471);
             this.panel4.Name = "panel4";
@@ -145,29 +145,29 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Time now:";
             // 
-            // DGView_Suppliers
+            // DGV_Books
             // 
-            this.DGView_Suppliers.AllowUserToAddRows = false;
-            this.DGView_Suppliers.AllowUserToDeleteRows = false;
-            this.DGView_Suppliers.AllowUserToResizeColumns = false;
-            this.DGView_Suppliers.AllowUserToResizeRows = false;
-            this.DGView_Suppliers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.DGV_Books.AllowUserToAddRows = false;
+            this.DGV_Books.AllowUserToDeleteRows = false;
+            this.DGV_Books.AllowUserToResizeColumns = false;
+            this.DGV_Books.AllowUserToResizeRows = false;
+            this.DGV_Books.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DGView_Suppliers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DGView_Suppliers.BackgroundColor = System.Drawing.Color.White;
-            this.DGView_Suppliers.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.DGView_Suppliers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGView_Suppliers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.DGView_Suppliers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.DGView_Suppliers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DGV_Books.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DGV_Books.BackgroundColor = System.Drawing.Color.White;
+            this.DGV_Books.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.DGV_Books.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_Books.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.DGV_Books.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.DGV_Books.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.BookID,
             this.BookName,
             this.Remaining,
@@ -175,35 +175,35 @@
             this.PublisherName,
             this.AuthorName,
             this.ActionColumn});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(151)))), ((int)(((byte)(196)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGView_Suppliers.DefaultCellStyle = dataGridViewCellStyle5;
-            this.DGView_Suppliers.EnableHeadersVisualStyles = false;
-            this.DGView_Suppliers.Location = new System.Drawing.Point(18, 84);
-            this.DGView_Suppliers.MultiSelect = false;
-            this.DGView_Suppliers.Name = "DGView_Suppliers";
-            this.DGView_Suppliers.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGView_Suppliers.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.DGView_Suppliers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.DGView_Suppliers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGView_Suppliers.ShowCellErrors = false;
-            this.DGView_Suppliers.ShowCellToolTips = false;
-            this.DGView_Suppliers.ShowEditingIcon = false;
-            this.DGView_Suppliers.ShowRowErrors = false;
-            this.DGView_Suppliers.Size = new System.Drawing.Size(881, 359);
-            this.DGView_Suppliers.TabIndex = 8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(151)))), ((int)(((byte)(196)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGV_Books.DefaultCellStyle = dataGridViewCellStyle2;
+            this.DGV_Books.EnableHeadersVisualStyles = false;
+            this.DGV_Books.Location = new System.Drawing.Point(18, 84);
+            this.DGV_Books.MultiSelect = false;
+            this.DGV_Books.Name = "DGV_Books";
+            this.DGV_Books.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_Books.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.DGV_Books.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.DGV_Books.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGV_Books.ShowCellErrors = false;
+            this.DGV_Books.ShowCellToolTips = false;
+            this.DGV_Books.ShowEditingIcon = false;
+            this.DGV_Books.ShowRowErrors = false;
+            this.DGV_Books.Size = new System.Drawing.Size(881, 359);
+            this.DGV_Books.TabIndex = 8;
             // 
             // BookID
             // 
@@ -252,28 +252,17 @@
             this.AuthorName.Name = "AuthorName";
             this.AuthorName.ReadOnly = true;
             // 
-            // ActionColumn
+            // BTN_Books_Refresh
             // 
-            this.ActionColumn.Description = "Details";
-            this.ActionColumn.FillWeight = 40F;
-            this.ActionColumn.HeaderText = "Action";
-            this.ActionColumn.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Delete;
-            this.ActionColumn.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.ActionColumn.Name = "ActionColumn";
-            this.ActionColumn.ReadOnly = true;
-            this.ActionColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // Button_Suppliers_Refresh
-            // 
-            this.Button_Suppliers_Refresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            this.Button_Suppliers_Refresh.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_Suppliers_Refresh.ForeColor = System.Drawing.Color.White;
-            this.Button_Suppliers_Refresh.Location = new System.Drawing.Point(432, 37);
-            this.Button_Suppliers_Refresh.Name = "Button_Suppliers_Refresh";
-            this.Button_Suppliers_Refresh.Size = new System.Drawing.Size(118, 35);
-            this.Button_Suppliers_Refresh.TabIndex = 7;
-            this.Button_Suppliers_Refresh.Text = "Refresh";
-            this.Button_Suppliers_Refresh.UseVisualStyleBackColor = false;
+            this.BTN_Books_Refresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            this.BTN_Books_Refresh.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Books_Refresh.ForeColor = System.Drawing.Color.White;
+            this.BTN_Books_Refresh.Location = new System.Drawing.Point(432, 37);
+            this.BTN_Books_Refresh.Name = "BTN_Books_Refresh";
+            this.BTN_Books_Refresh.Size = new System.Drawing.Size(118, 35);
+            this.BTN_Books_Refresh.TabIndex = 7;
+            this.BTN_Books_Refresh.Text = "Refresh";
+            this.BTN_Books_Refresh.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -286,65 +275,14 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Search Suppliers Name:";
             // 
-            // TextBox_Suppliers_Search
+            // TB_Books_Search
             // 
-            this.TextBox_Suppliers_Search.BackColor = System.Drawing.Color.White;
-            this.TextBox_Suppliers_Search.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBox_Suppliers_Search.Location = new System.Drawing.Point(18, 42);
-            this.TextBox_Suppliers_Search.Name = "TextBox_Suppliers_Search";
-            this.TextBox_Suppliers_Search.Size = new System.Drawing.Size(382, 25);
-            this.TextBox_Suppliers_Search.TabIndex = 2;
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.Description = "Details";
-            this.dataGridViewImageColumn1.FillWeight = 40F;
-            this.dataGridViewImageColumn1.HeaderText = "Action";
-            this.dataGridViewImageColumn1.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Delete;
-            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.ReadOnly = true;
-            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewImageColumn1.Width = 66;
-            // 
-            // Button_Suppliers_Save
-            // 
-            this.Button_Suppliers_Save.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.Button_Suppliers_Save.BackColor = System.Drawing.Color.SeaShell;
-            this.Button_Suppliers_Save.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_Suppliers_Save.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Save2;
-            this.Button_Suppliers_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Button_Suppliers_Save.Location = new System.Drawing.Point(579, 7);
-            this.Button_Suppliers_Save.Name = "Button_Suppliers_Save";
-            this.Button_Suppliers_Save.Size = new System.Drawing.Size(65, 48);
-            this.Button_Suppliers_Save.TabIndex = 17;
-            this.Button_Suppliers_Save.Text = "Save";
-            this.Button_Suppliers_Save.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_Suppliers_Save.UseVisualStyleBackColor = false;
-            // 
-            // Button_Suppliers_Add
-            // 
-            this.Button_Suppliers_Add.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.Button_Suppliers_Add.BackColor = System.Drawing.Color.SeaShell;
-            this.Button_Suppliers_Add.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_Suppliers_Add.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Add;
-            this.Button_Suppliers_Add.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Button_Suppliers_Add.Location = new System.Drawing.Point(508, 7);
-            this.Button_Suppliers_Add.Name = "Button_Suppliers_Add";
-            this.Button_Suppliers_Add.Size = new System.Drawing.Size(65, 48);
-            this.Button_Suppliers_Add.TabIndex = 18;
-            this.Button_Suppliers_Add.Text = "Add";
-            this.Button_Suppliers_Add.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_Suppliers_Add.UseVisualStyleBackColor = false;
-            // 
-            // PTB_Suppliers_Menu
-            // 
-            this.PTB_Suppliers_Menu.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Menu;
-            this.PTB_Suppliers_Menu.Location = new System.Drawing.Point(12, 12);
-            this.PTB_Suppliers_Menu.Name = "PTB_Suppliers_Menu";
-            this.PTB_Suppliers_Menu.Size = new System.Drawing.Size(26, 26);
-            this.PTB_Suppliers_Menu.TabIndex = 0;
-            this.PTB_Suppliers_Menu.TabStop = false;
+            this.TB_Books_Search.BackColor = System.Drawing.Color.White;
+            this.TB_Books_Search.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_Books_Search.Location = new System.Drawing.Point(18, 42);
+            this.TB_Books_Search.Name = "TB_Books_Search";
+            this.TB_Books_Search.Size = new System.Drawing.Size(382, 25);
+            this.TB_Books_Search.TabIndex = 2;
             // 
             // contextMenuStrip1
             // 
@@ -384,7 +322,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.Label_Suppliers_1);
-            this.panel2.Controls.Add(this.Label_Suppliers_TotalNumbers);
+            this.panel2.Controls.Add(this.LB_Books_Total);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(0, 54);
             this.panel2.MaximumSize = new System.Drawing.Size(227, 120);
@@ -404,25 +342,16 @@
             this.Label_Suppliers_1.TabIndex = 2;
             this.Label_Suppliers_1.Text = "Total books:";
             // 
-            // Label_Suppliers_TotalNumbers
+            // LB_Books_Total
             // 
-            this.Label_Suppliers_TotalNumbers.AutoSize = true;
-            this.Label_Suppliers_TotalNumbers.Font = new System.Drawing.Font("Shopee Display ExtBd", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_Suppliers_TotalNumbers.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.Label_Suppliers_TotalNumbers.Location = new System.Drawing.Point(10, 9);
-            this.Label_Suppliers_TotalNumbers.Name = "Label_Suppliers_TotalNumbers";
-            this.Label_Suppliers_TotalNumbers.Size = new System.Drawing.Size(75, 44);
-            this.Label_Suppliers_TotalNumbers.TabIndex = 1;
-            this.Label_Suppliers_TotalNumbers.Text = "8888";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Book_50;
-            this.pictureBox1.Location = new System.Drawing.Point(157, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(55, 50);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.LB_Books_Total.AutoSize = true;
+            this.LB_Books_Total.Font = new System.Drawing.Font("Shopee Display ExtBd", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_Books_Total.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.LB_Books_Total.Location = new System.Drawing.Point(10, 9);
+            this.LB_Books_Total.Name = "LB_Books_Total";
+            this.LB_Books_Total.Size = new System.Drawing.Size(75, 44);
+            this.LB_Books_Total.TabIndex = 1;
+            this.LB_Books_Total.Text = "8888";
             // 
             // panel3
             // 
@@ -430,21 +359,21 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(234)))), ((int)(((byte)(242)))));
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.TB_Books_Price);
             this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.comboBox1);
+            this.panel3.Controls.Add(this.CBB_Books_AuthorName);
             this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.Button_Suppliers_Save);
-            this.panel3.Controls.Add(this.ComboBox_Suppliers_Suppliers_StatusFix);
-            this.panel3.Controls.Add(this.Button_Suppliers_Add);
+            this.panel3.Controls.Add(this.BTN_Books_Save);
+            this.panel3.Controls.Add(this.CBB_Books_PublisherName);
+            this.panel3.Controls.Add(this.BTN_Books_Add);
             this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.Textbox_Suppliers_Address);
+            this.panel3.Controls.Add(this.TB_Books_Type);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.Textbox_Suppliers_Telephone);
+            this.panel3.Controls.Add(this.TB_Books_Remaining);
             this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.TextBox_Suppliers_Name);
+            this.panel3.Controls.Add(this.TB_Books_Name);
             this.panel3.Controls.Add(this.Label_SupplierName);
-            this.panel3.Controls.Add(this.TextBox_Suppliers_ID);
+            this.panel3.Controls.Add(this.TB_Books_ID);
             this.panel3.Controls.Add(this.Label_SupplierID);
             this.panel3.Location = new System.Drawing.Point(233, 54);
             this.panel3.MaximumSize = new System.Drawing.Size(0, 120);
@@ -453,16 +382,16 @@
             this.panel3.Size = new System.Drawing.Size(669, 120);
             this.panel3.TabIndex = 7;
             // 
-            // textBox1
+            // TB_Books_Price
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.TB_Books_Price.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(508, 84);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(146, 25);
-            this.textBox1.TabIndex = 22;
+            this.TB_Books_Price.BackColor = System.Drawing.Color.White;
+            this.TB_Books_Price.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_Books_Price.Location = new System.Drawing.Point(508, 84);
+            this.TB_Books_Price.Name = "TB_Books_Price";
+            this.TB_Books_Price.Size = new System.Drawing.Size(146, 25);
+            this.TB_Books_Price.TabIndex = 22;
             // 
             // label10
             // 
@@ -476,22 +405,22 @@
             this.label10.TabIndex = 21;
             this.label10.Text = "Book Price:";
             // 
-            // comboBox1
+            // CBB_Books_AuthorName
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.CBB_Books_AuthorName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.CBB_Books_AuthorName.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CBB_Books_AuthorName.FormattingEnabled = true;
+            this.CBB_Books_AuthorName.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
-            this.comboBox1.Location = new System.Drawing.Point(364, 84);
-            this.comboBox1.MaximumSize = new System.Drawing.Size(120, 0);
-            this.comboBox1.MinimumSize = new System.Drawing.Size(120, 0);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(120, 25);
-            this.comboBox1.TabIndex = 19;
+            this.CBB_Books_AuthorName.Location = new System.Drawing.Point(364, 84);
+            this.CBB_Books_AuthorName.MaximumSize = new System.Drawing.Size(120, 0);
+            this.CBB_Books_AuthorName.MinimumSize = new System.Drawing.Size(120, 0);
+            this.CBB_Books_AuthorName.Name = "CBB_Books_AuthorName";
+            this.CBB_Books_AuthorName.Size = new System.Drawing.Size(120, 25);
+            this.CBB_Books_AuthorName.TabIndex = 19;
             // 
             // label9
             // 
@@ -505,22 +434,22 @@
             this.label9.TabIndex = 20;
             this.label9.Text = "Author Name:";
             // 
-            // ComboBox_Suppliers_Suppliers_StatusFix
+            // CBB_Books_PublisherName
             // 
-            this.ComboBox_Suppliers_Suppliers_StatusFix.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.CBB_Books_PublisherName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ComboBox_Suppliers_Suppliers_StatusFix.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ComboBox_Suppliers_Suppliers_StatusFix.FormattingEnabled = true;
-            this.ComboBox_Suppliers_Suppliers_StatusFix.Items.AddRange(new object[] {
+            this.CBB_Books_PublisherName.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CBB_Books_PublisherName.FormattingEnabled = true;
+            this.CBB_Books_PublisherName.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
-            this.ComboBox_Suppliers_Suppliers_StatusFix.Location = new System.Drawing.Point(364, 28);
-            this.ComboBox_Suppliers_Suppliers_StatusFix.MaximumSize = new System.Drawing.Size(120, 0);
-            this.ComboBox_Suppliers_Suppliers_StatusFix.MinimumSize = new System.Drawing.Size(120, 0);
-            this.ComboBox_Suppliers_Suppliers_StatusFix.Name = "ComboBox_Suppliers_Suppliers_StatusFix";
-            this.ComboBox_Suppliers_Suppliers_StatusFix.Size = new System.Drawing.Size(120, 25);
-            this.ComboBox_Suppliers_Suppliers_StatusFix.TabIndex = 13;
+            this.CBB_Books_PublisherName.Location = new System.Drawing.Point(364, 28);
+            this.CBB_Books_PublisherName.MaximumSize = new System.Drawing.Size(120, 0);
+            this.CBB_Books_PublisherName.MinimumSize = new System.Drawing.Size(120, 0);
+            this.CBB_Books_PublisherName.Name = "CBB_Books_PublisherName";
+            this.CBB_Books_PublisherName.Size = new System.Drawing.Size(120, 25);
+            this.CBB_Books_PublisherName.TabIndex = 13;
             // 
             // label8
             // 
@@ -534,19 +463,19 @@
             this.label8.TabIndex = 16;
             this.label8.Text = "Publisher Name:";
             // 
-            // Textbox_Suppliers_Address
+            // TB_Books_Type
             // 
-            this.Textbox_Suppliers_Address.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.TB_Books_Type.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Textbox_Suppliers_Address.BackColor = System.Drawing.Color.White;
-            this.Textbox_Suppliers_Address.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Textbox_Suppliers_Address.Location = new System.Drawing.Point(199, 84);
-            this.Textbox_Suppliers_Address.MaximumSize = new System.Drawing.Size(146, 25);
-            this.Textbox_Suppliers_Address.MinimumSize = new System.Drawing.Size(146, 25);
-            this.Textbox_Suppliers_Address.Name = "Textbox_Suppliers_Address";
-            this.Textbox_Suppliers_Address.Size = new System.Drawing.Size(146, 25);
-            this.Textbox_Suppliers_Address.TabIndex = 15;
+            this.TB_Books_Type.BackColor = System.Drawing.Color.White;
+            this.TB_Books_Type.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_Books_Type.Location = new System.Drawing.Point(199, 84);
+            this.TB_Books_Type.MaximumSize = new System.Drawing.Size(146, 25);
+            this.TB_Books_Type.MinimumSize = new System.Drawing.Size(146, 25);
+            this.TB_Books_Type.Name = "TB_Books_Type";
+            this.TB_Books_Type.Size = new System.Drawing.Size(146, 25);
+            this.TB_Books_Type.TabIndex = 15;
             // 
             // label6
             // 
@@ -560,20 +489,20 @@
             this.label6.TabIndex = 14;
             this.label6.Text = "BookType:";
             // 
-            // Textbox_Suppliers_Telephone
+            // TB_Books_Remaining
             // 
-            this.Textbox_Suppliers_Telephone.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.TB_Books_Remaining.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Textbox_Suppliers_Telephone.BackColor = System.Drawing.Color.White;
-            this.Textbox_Suppliers_Telephone.Enabled = false;
-            this.Textbox_Suppliers_Telephone.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Textbox_Suppliers_Telephone.Location = new System.Drawing.Point(199, 28);
-            this.Textbox_Suppliers_Telephone.MaximumSize = new System.Drawing.Size(146, 25);
-            this.Textbox_Suppliers_Telephone.MinimumSize = new System.Drawing.Size(146, 25);
-            this.Textbox_Suppliers_Telephone.Name = "Textbox_Suppliers_Telephone";
-            this.Textbox_Suppliers_Telephone.Size = new System.Drawing.Size(146, 25);
-            this.Textbox_Suppliers_Telephone.TabIndex = 13;
+            this.TB_Books_Remaining.BackColor = System.Drawing.Color.White;
+            this.TB_Books_Remaining.Enabled = false;
+            this.TB_Books_Remaining.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_Books_Remaining.Location = new System.Drawing.Point(199, 28);
+            this.TB_Books_Remaining.MaximumSize = new System.Drawing.Size(146, 25);
+            this.TB_Books_Remaining.MinimumSize = new System.Drawing.Size(146, 25);
+            this.TB_Books_Remaining.Name = "TB_Books_Remaining";
+            this.TB_Books_Remaining.Size = new System.Drawing.Size(146, 25);
+            this.TB_Books_Remaining.TabIndex = 13;
             // 
             // label5
             // 
@@ -587,19 +516,19 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "Remaining:";
             // 
-            // TextBox_Suppliers_Name
+            // TB_Books_Name
             // 
-            this.TextBox_Suppliers_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.TB_Books_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TextBox_Suppliers_Name.BackColor = System.Drawing.Color.White;
-            this.TextBox_Suppliers_Name.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBox_Suppliers_Name.Location = new System.Drawing.Point(15, 84);
-            this.TextBox_Suppliers_Name.MaximumSize = new System.Drawing.Size(168, 25);
-            this.TextBox_Suppliers_Name.MinimumSize = new System.Drawing.Size(168, 25);
-            this.TextBox_Suppliers_Name.Name = "TextBox_Suppliers_Name";
-            this.TextBox_Suppliers_Name.Size = new System.Drawing.Size(168, 25);
-            this.TextBox_Suppliers_Name.TabIndex = 11;
+            this.TB_Books_Name.BackColor = System.Drawing.Color.White;
+            this.TB_Books_Name.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_Books_Name.Location = new System.Drawing.Point(15, 84);
+            this.TB_Books_Name.MaximumSize = new System.Drawing.Size(168, 25);
+            this.TB_Books_Name.MinimumSize = new System.Drawing.Size(168, 25);
+            this.TB_Books_Name.Name = "TB_Books_Name";
+            this.TB_Books_Name.Size = new System.Drawing.Size(168, 25);
+            this.TB_Books_Name.TabIndex = 11;
             // 
             // Label_SupplierName
             // 
@@ -614,19 +543,19 @@
             this.Label_SupplierName.TabIndex = 10;
             this.Label_SupplierName.Text = "BookName:";
             // 
-            // TextBox_Suppliers_ID
+            // TB_Books_ID
             // 
-            this.TextBox_Suppliers_ID.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.TB_Books_ID.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TextBox_Suppliers_ID.BackColor = System.Drawing.Color.White;
-            this.TextBox_Suppliers_ID.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBox_Suppliers_ID.Location = new System.Drawing.Point(15, 28);
-            this.TextBox_Suppliers_ID.MaximumSize = new System.Drawing.Size(168, 25);
-            this.TextBox_Suppliers_ID.MinimumSize = new System.Drawing.Size(168, 25);
-            this.TextBox_Suppliers_ID.Name = "TextBox_Suppliers_ID";
-            this.TextBox_Suppliers_ID.Size = new System.Drawing.Size(168, 25);
-            this.TextBox_Suppliers_ID.TabIndex = 9;
+            this.TB_Books_ID.BackColor = System.Drawing.Color.White;
+            this.TB_Books_ID.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_Books_ID.Location = new System.Drawing.Point(15, 28);
+            this.TB_Books_ID.MaximumSize = new System.Drawing.Size(168, 25);
+            this.TB_Books_ID.MinimumSize = new System.Drawing.Size(168, 25);
+            this.TB_Books_ID.Name = "TB_Books_ID";
+            this.TB_Books_ID.Size = new System.Drawing.Size(168, 25);
+            this.TB_Books_ID.TabIndex = 9;
             // 
             // Label_SupplierID
             // 
@@ -641,6 +570,77 @@
             this.Label_SupplierID.TabIndex = 0;
             this.Label_SupplierID.Text = "Book ID:";
             // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.Description = "Details";
+            this.dataGridViewImageColumn1.FillWeight = 40F;
+            this.dataGridViewImageColumn1.HeaderText = "Action";
+            this.dataGridViewImageColumn1.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Delete;
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn1.Width = 66;
+            // 
+            // ActionColumn
+            // 
+            this.ActionColumn.Description = "Details";
+            this.ActionColumn.FillWeight = 40F;
+            this.ActionColumn.HeaderText = "Action";
+            this.ActionColumn.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Delete;
+            this.ActionColumn.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.ActionColumn.Name = "ActionColumn";
+            this.ActionColumn.ReadOnly = true;
+            this.ActionColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // PTB_Suppliers_Menu
+            // 
+            this.PTB_Suppliers_Menu.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Menu;
+            this.PTB_Suppliers_Menu.Location = new System.Drawing.Point(12, 12);
+            this.PTB_Suppliers_Menu.Name = "PTB_Suppliers_Menu";
+            this.PTB_Suppliers_Menu.Size = new System.Drawing.Size(26, 26);
+            this.PTB_Suppliers_Menu.TabIndex = 0;
+            this.PTB_Suppliers_Menu.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Book_50;
+            this.pictureBox1.Location = new System.Drawing.Point(157, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(55, 50);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // BTN_Books_Save
+            // 
+            this.BTN_Books_Save.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.BTN_Books_Save.BackColor = System.Drawing.Color.SeaShell;
+            this.BTN_Books_Save.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Books_Save.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Save2;
+            this.BTN_Books_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_Books_Save.Location = new System.Drawing.Point(579, 7);
+            this.BTN_Books_Save.Name = "BTN_Books_Save";
+            this.BTN_Books_Save.Size = new System.Drawing.Size(65, 48);
+            this.BTN_Books_Save.TabIndex = 17;
+            this.BTN_Books_Save.Text = "Save";
+            this.BTN_Books_Save.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Books_Save.UseVisualStyleBackColor = false;
+            // 
+            // BTN_Books_Add
+            // 
+            this.BTN_Books_Add.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.BTN_Books_Add.BackColor = System.Drawing.Color.SeaShell;
+            this.BTN_Books_Add.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Books_Add.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Add;
+            this.BTN_Books_Add.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_Books_Add.Location = new System.Drawing.Point(508, 7);
+            this.BTN_Books_Add.Name = "BTN_Books_Add";
+            this.BTN_Books_Add.Size = new System.Drawing.Size(65, 48);
+            this.BTN_Books_Add.TabIndex = 18;
+            this.BTN_Books_Add.Text = "Add";
+            this.BTN_Books_Add.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Books_Add.UseVisualStyleBackColor = false;
+            // 
             // Tab_Book
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -654,15 +654,15 @@
             this.Size = new System.Drawing.Size(902, 651);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGView_Suppliers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PTB_Suppliers_Menu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Books)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PTB_Suppliers_Menu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -674,35 +674,35 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label Label_TimeNow;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView DGView_Suppliers;
-        private System.Windows.Forms.Button Button_Suppliers_Refresh;
+        private System.Windows.Forms.DataGridView DGV_Books;
+        private System.Windows.Forms.Button BTN_Books_Refresh;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox TextBox_Suppliers_Search;
+        private System.Windows.Forms.TextBox TB_Books_Search;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
-        private System.Windows.Forms.Button Button_Suppliers_Save;
-        private System.Windows.Forms.Button Button_Suppliers_Add;
+        private System.Windows.Forms.Button BTN_Books_Save;
+        private System.Windows.Forms.Button BTN_Books_Add;
         private System.Windows.Forms.PictureBox PTB_Suppliers_Menu;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label Label_Suppliers_1;
-        private System.Windows.Forms.Label Label_Suppliers_TotalNumbers;
+        private System.Windows.Forms.Label LB_Books_Total;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.ComboBox ComboBox_Suppliers_Suppliers_StatusFix;
+        private System.Windows.Forms.ComboBox CBB_Books_PublisherName;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox Textbox_Suppliers_Address;
+        private System.Windows.Forms.TextBox TB_Books_Type;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox Textbox_Suppliers_Telephone;
+        private System.Windows.Forms.TextBox TB_Books_Remaining;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox TextBox_Suppliers_Name;
+        private System.Windows.Forms.TextBox TB_Books_Name;
         private System.Windows.Forms.Label Label_SupplierName;
-        private System.Windows.Forms.TextBox TextBox_Suppliers_ID;
+        private System.Windows.Forms.TextBox TB_Books_ID;
         private System.Windows.Forms.Label Label_SupplierID;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TB_Books_Price;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CBB_Books_AuthorName;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridViewTextBoxColumn BookID;
         private System.Windows.Forms.DataGridViewTextBoxColumn BookName;
