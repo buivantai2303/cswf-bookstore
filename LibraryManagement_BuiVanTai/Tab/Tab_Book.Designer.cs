@@ -415,7 +415,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.SupplierTotal;
+            this.pictureBox1.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Book_50;
             this.pictureBox1.Location = new System.Drawing.Point(157, 9);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(55, 50);
