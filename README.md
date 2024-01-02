@@ -46,7 +46,3 @@ A comprehensive Library Management System that allows efficient management of bo
   - Push to the branch: git push origin feature-new-feature.
   - Submit a pull request.
 
-In this README:
-- Replace placeholders like `[http://localhost:3000](http://localhost:3000)` and `[https://github.com/your-username/LibraryManagement.git](https://github.com/your-username/LibraryManagement.git)` with your actual URLs.
-- Modify the technologies used section based on the technologies you've employed.
-- Add or modify sections based on your project's specifics.
