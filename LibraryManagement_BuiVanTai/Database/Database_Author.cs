@@ -14,7 +14,7 @@ namespace LibraryManagement_BuiVanTai.Database
         Database db;
         DataTable dt;
 
-        public Database_Author(string servername, string databasename, string user = "", string pass = "")
+        public Database_Author(string servername, string databasename)
         {
             db = new Database(servername, databasename);
         }
@@ -34,9 +34,16 @@ namespace LibraryManagement_BuiVanTai.Database
 
         public bool UpdateDate(Class_Author at)
         {
-            string query = "UPDATE ";
+            string query = "UPDATE Authors " +
+            "Set AuthorName = " + "\'" + at.AuthorName + "\'," + "AuthorDOB = " + "\'" + at.AuthorDOB + "\'," + "AuthorAddress = " + "\'" + at.AuthorAddress + "\'," + "AuthorEmail = " + "\'" + at.AuthorEmail + "\',"
+            + "WHERE AuthorID = \'" + at.AuthorId + "\'";
             return db.ExecuteSQL(query);
         }
 
+        public bool DeleteDate(Class_Author at)
+        {
+            string query = "DELETE FROM Authors WHERE AuthorID = \'" + at.AuthorId + "\'";
+            return db.ExecuteSQL(query);
+        }
     }
 }
