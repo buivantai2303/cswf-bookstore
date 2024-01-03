@@ -49,12 +49,15 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.DGView_ImportReceipt = new System.Windows.Forms.DataGridView();
+            this.StaffID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StaffName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StaffDOB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StaffTell = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StaffAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
-            this.LabelDateNow = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.Label_TimeNow = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.Button_Suppliers_Refresh = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.TextBox_Suppliers_Search = new System.Windows.Forms.TextBox();
@@ -65,13 +68,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
-            this.StaffAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StaffTell = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StaffDOB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StaffName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StaffID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PTB_Suppliers_Menu)).BeginInit();
             this.panel4.SuspendLayout();
@@ -261,10 +257,6 @@
             this.panel4.Controls.Add(this.Button_Suppliers_Save);
             this.panel4.Controls.Add(this.splitContainer1);
             this.panel4.Controls.Add(this.Button_Suppliers_Add);
-            this.panel4.Controls.Add(this.LabelDateNow);
-            this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.Label_TimeNow);
-            this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.Button_Suppliers_Refresh);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.TextBox_Suppliers_Search);
@@ -349,8 +341,60 @@
             this.DGView_ImportReceipt.ShowCellToolTips = false;
             this.DGView_ImportReceipt.ShowEditingIcon = false;
             this.DGView_ImportReceipt.ShowRowErrors = false;
-            this.DGView_ImportReceipt.Size = new System.Drawing.Size(651, 363);
+            this.DGView_ImportReceipt.Size = new System.Drawing.Size(651, 342);
             this.DGView_ImportReceipt.TabIndex = 26;
+            // 
+            // StaffID
+            // 
+            this.StaffID.DataPropertyName = "StaffID";
+            this.StaffID.FillWeight = 81.32249F;
+            this.StaffID.HeaderText = "Staff ID";
+            this.StaffID.MinimumWidth = 2;
+            this.StaffID.Name = "StaffID";
+            this.StaffID.ReadOnly = true;
+            // 
+            // StaffName
+            // 
+            this.StaffName.DataPropertyName = "StaffName";
+            this.StaffName.FillWeight = 81.32249F;
+            this.StaffName.HeaderText = "Staff Name";
+            this.StaffName.MinimumWidth = 2;
+            this.StaffName.Name = "StaffName";
+            this.StaffName.ReadOnly = true;
+            // 
+            // StaffDOB
+            // 
+            this.StaffDOB.DataPropertyName = "StaffDOB";
+            this.StaffDOB.FillWeight = 81.32249F;
+            this.StaffDOB.HeaderText = "Date of bitrh";
+            this.StaffDOB.MinimumWidth = 2;
+            this.StaffDOB.Name = "StaffDOB";
+            this.StaffDOB.ReadOnly = true;
+            // 
+            // StaffTell
+            // 
+            this.StaffTell.DataPropertyName = "StaffTell";
+            this.StaffTell.FillWeight = 81.32249F;
+            this.StaffTell.HeaderText = "Telephone";
+            this.StaffTell.MinimumWidth = 2;
+            this.StaffTell.Name = "StaffTell";
+            this.StaffTell.ReadOnly = true;
+            // 
+            // StaffAddress
+            // 
+            this.StaffAddress.DataPropertyName = "StaffAddress";
+            this.StaffAddress.HeaderText = "Address";
+            this.StaffAddress.Name = "StaffAddress";
+            this.StaffAddress.ReadOnly = true;
+            // 
+            // Delete
+            // 
+            this.Delete.HeaderText = "Action";
+            this.Delete.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Delete;
+            this.Delete.Name = "Delete";
+            this.Delete.ReadOnly = true;
+            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // panel5
             // 
@@ -371,6 +415,14 @@
             this.panel5.Size = new System.Drawing.Size(241, 369);
             this.panel5.TabIndex = 0;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(8, 181);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(206, 23);
+            this.dateTimePicker1.TabIndex = 32;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -381,48 +433,6 @@
             this.label3.Size = new System.Drawing.Size(84, 30);
             this.label3.TabIndex = 3;
             this.label3.Text = "Profile:";
-            // 
-            // LabelDateNow
-            // 
-            this.LabelDateNow.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.LabelDateNow.AutoSize = true;
-            this.LabelDateNow.Location = new System.Drawing.Point(49, 450);
-            this.LabelDateNow.Name = "LabelDateNow";
-            this.LabelDateNow.Size = new System.Drawing.Size(21, 13);
-            this.LabelDateNow.TabIndex = 12;
-            this.LabelDateNow.Text = "{?}";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(15, 450);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(33, 13);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Date:";
-            // 
-            // Label_TimeNow
-            // 
-            this.Label_TimeNow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Label_TimeNow.AutoSize = true;
-            this.Label_TimeNow.Location = new System.Drawing.Point(638, 450);
-            this.Label_TimeNow.Name = "Label_TimeNow";
-            this.Label_TimeNow.Size = new System.Drawing.Size(21, 13);
-            this.Label_TimeNow.TabIndex = 10;
-            this.Label_TimeNow.Text = "{?}";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(576, 450);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Time now:";
             // 
             // Button_Suppliers_Refresh
             // 
@@ -538,66 +548,6 @@
             this.panel2.Size = new System.Drawing.Size(227, 120);
             this.panel2.TabIndex = 14;
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(8, 181);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(206, 23);
-            this.dateTimePicker1.TabIndex = 32;
-            // 
-            // Delete
-            // 
-            this.Delete.HeaderText = "Action";
-            this.Delete.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Delete;
-            this.Delete.Name = "Delete";
-            this.Delete.ReadOnly = true;
-            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // StaffAddress
-            // 
-            this.StaffAddress.DataPropertyName = "StaffAddress";
-            this.StaffAddress.HeaderText = "Address";
-            this.StaffAddress.Name = "StaffAddress";
-            this.StaffAddress.ReadOnly = true;
-            // 
-            // StaffTell
-            // 
-            this.StaffTell.DataPropertyName = "StaffTell";
-            this.StaffTell.FillWeight = 81.32249F;
-            this.StaffTell.HeaderText = "Telephone";
-            this.StaffTell.MinimumWidth = 2;
-            this.StaffTell.Name = "StaffTell";
-            this.StaffTell.ReadOnly = true;
-            // 
-            // StaffDOB
-            // 
-            this.StaffDOB.DataPropertyName = "StaffDOB";
-            this.StaffDOB.FillWeight = 81.32249F;
-            this.StaffDOB.HeaderText = "Date of bitrh";
-            this.StaffDOB.MinimumWidth = 2;
-            this.StaffDOB.Name = "StaffDOB";
-            this.StaffDOB.ReadOnly = true;
-            // 
-            // StaffName
-            // 
-            this.StaffName.DataPropertyName = "StaffName";
-            this.StaffName.FillWeight = 81.32249F;
-            this.StaffName.HeaderText = "Staff Name";
-            this.StaffName.MinimumWidth = 2;
-            this.StaffName.Name = "StaffName";
-            this.StaffName.ReadOnly = true;
-            // 
-            // StaffID
-            // 
-            this.StaffID.DataPropertyName = "StaffID";
-            this.StaffID.FillWeight = 81.32249F;
-            this.StaffID.HeaderText = "Staff ID";
-            this.StaffID.MinimumWidth = 2;
-            this.StaffID.Name = "StaffID";
-            this.StaffID.ReadOnly = true;
-            // 
             // Tab_Staffs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -648,10 +598,6 @@
         private System.Windows.Forms.DataGridView DGView_ImportReceipt;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label LabelDateNow;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label Label_TimeNow;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button Button_Suppliers_Refresh;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TextBox_Suppliers_Search;

@@ -58,7 +58,7 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Button_Book_Pay = new System.Windows.Forms.Button();
+            this.Button_ImportReport_Pay = new System.Windows.Forms.Button();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
@@ -280,7 +280,7 @@
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.Button_ImportReport_Refresh);
             this.panel3.Controls.Add(this.dataGridView1);
-            this.panel3.Controls.Add(this.Button_Book_Pay);
+            this.panel3.Controls.Add(this.Button_ImportReport_Pay);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
@@ -424,21 +424,21 @@
             this.Amount.Name = "Amount";
             this.Amount.ReadOnly = true;
             // 
-            // Button_Book_Pay
+            // Button_ImportReport_Pay
             // 
-            this.Button_Book_Pay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Button_Book_Pay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(137)))), ((int)(((byte)(86)))));
-            this.Button_Book_Pay.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_Book_Pay.ForeColor = System.Drawing.Color.White;
-            this.Button_Book_Pay.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Wallet1;
-            this.Button_Book_Pay.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Button_Book_Pay.Location = new System.Drawing.Point(90, 333);
-            this.Button_Book_Pay.Name = "Button_Book_Pay";
-            this.Button_Book_Pay.Size = new System.Drawing.Size(66, 58);
-            this.Button_Book_Pay.TabIndex = 29;
-            this.Button_Book_Pay.Text = "Pay";
-            this.Button_Book_Pay.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Button_Book_Pay.UseVisualStyleBackColor = false;
+            this.Button_ImportReport_Pay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Button_ImportReport_Pay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(137)))), ((int)(((byte)(86)))));
+            this.Button_ImportReport_Pay.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_ImportReport_Pay.ForeColor = System.Drawing.Color.White;
+            this.Button_ImportReport_Pay.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Wallet1;
+            this.Button_ImportReport_Pay.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Button_ImportReport_Pay.Location = new System.Drawing.Point(90, 333);
+            this.Button_ImportReport_Pay.Name = "Button_ImportReport_Pay";
+            this.Button_ImportReport_Pay.Size = new System.Drawing.Size(66, 58);
+            this.Button_ImportReport_Pay.TabIndex = 29;
+            this.Button_ImportReport_Pay.Text = "Pay";
+            this.Button_ImportReport_Pay.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Button_ImportReport_Pay.UseVisualStyleBackColor = false;
             // 
             // dataGridViewImageColumn1
             // 
@@ -503,7 +503,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView DGView_ImportReceipt;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button Button_Book_Pay;
+        private System.Windows.Forms.Button Button_ImportReport_Pay;
         private System.Windows.Forms.DataGridViewTextBoxColumn ImportID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ImportDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn BookType;

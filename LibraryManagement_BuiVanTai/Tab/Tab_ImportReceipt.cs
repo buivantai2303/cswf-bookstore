@@ -34,7 +34,7 @@ namespace LibraryManagement_BuiVanTai.Tab
             dataTable_ImportReceipt = DB_ImportReceipt.getTable();
             DGV_ImportReceipt.DataSource = dataTable_ImportReceipt;
             DGV_ImportReceipt.RowHeadersVisible = false;
-            DGView_ImportReceipt_ReceiptDetails.RowHeadersVisible = false;
+            DGV_ImportReceipt_ReceiptDetails.RowHeadersVisible = false;
 
         }
 
