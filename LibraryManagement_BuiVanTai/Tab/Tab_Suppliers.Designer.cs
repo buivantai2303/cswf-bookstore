@@ -58,10 +58,6 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel4 = new System.Windows.Forms.Panel();
             this.Button_Suppliers_Report = new System.Windows.Forms.Button();
-            this.LabelDateNow = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.Label_TimeNow = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.DGView_Suppliers = new System.Windows.Forms.DataGridView();
             this.SupplierID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SuppliersName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,6 +70,10 @@
             this.ComboBox_Suppliers_Status = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Label_TimeNow = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.LabelDateNow = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PTB_Suppliers_Menu)).BeginInit();
             this.panel2.SuspendLayout();
@@ -433,48 +433,6 @@
             this.Button_Suppliers_Report.UseVisualStyleBackColor = false;
             this.Button_Suppliers_Report.Click += new System.EventHandler(this.Button_Suppliers_Report_Click);
             // 
-            // LabelDateNow
-            // 
-            this.LabelDateNow.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.LabelDateNow.AutoSize = true;
-            this.LabelDateNow.Location = new System.Drawing.Point(49, 450);
-            this.LabelDateNow.Name = "LabelDateNow";
-            this.LabelDateNow.Size = new System.Drawing.Size(21, 13);
-            this.LabelDateNow.TabIndex = 12;
-            this.LabelDateNow.Text = "{?}";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(15, 450);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(33, 13);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Date:";
-            // 
-            // Label_TimeNow
-            // 
-            this.Label_TimeNow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Label_TimeNow.AutoSize = true;
-            this.Label_TimeNow.Location = new System.Drawing.Point(638, 450);
-            this.Label_TimeNow.Name = "Label_TimeNow";
-            this.Label_TimeNow.Size = new System.Drawing.Size(21, 13);
-            this.Label_TimeNow.TabIndex = 10;
-            this.Label_TimeNow.Text = "{?}";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(576, 450);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Time now:";
-            // 
             // DGView_Suppliers
             // 
             this.DGView_Suppliers.AllowUserToAddRows = false;
@@ -648,6 +606,48 @@
             this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewImageColumn1.Width = 66;
             // 
+            // Label_TimeNow
+            // 
+            this.Label_TimeNow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Label_TimeNow.AutoSize = true;
+            this.Label_TimeNow.Location = new System.Drawing.Point(638, 450);
+            this.Label_TimeNow.Name = "Label_TimeNow";
+            this.Label_TimeNow.Size = new System.Drawing.Size(21, 13);
+            this.Label_TimeNow.TabIndex = 10;
+            this.Label_TimeNow.Text = "{?}";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(576, 450);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(56, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Time now:";
+            // 
+            // LabelDateNow
+            // 
+            this.LabelDateNow.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LabelDateNow.AutoSize = true;
+            this.LabelDateNow.Location = new System.Drawing.Point(49, 450);
+            this.LabelDateNow.Name = "LabelDateNow";
+            this.LabelDateNow.Size = new System.Drawing.Size(21, 13);
+            this.LabelDateNow.TabIndex = 12;
+            this.LabelDateNow.Text = "{?}";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(15, 450);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(33, 13);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Date:";
+            // 
             // Tab_Suppliers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -700,10 +700,6 @@
         private System.Windows.Forms.Label Label_SupplierID;
         private System.Windows.Forms.TextBox TextBox_Suppliers_Name;
         private System.Windows.Forms.Label Label_SupplierName;
-        private System.Windows.Forms.Label LabelDateNow;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label Label_TimeNow;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox Textbox_Suppliers_Telephone;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox Textbox_Suppliers_Address;
@@ -719,5 +715,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SupplierTel;
         private System.Windows.Forms.DataGridViewTextBoxColumn SupplierState;
         private System.Windows.Forms.DataGridViewImageColumn ActionColumn;
+        private System.Windows.Forms.Label LabelDateNow;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label Label_TimeNow;
+        private System.Windows.Forms.Label label4;
     }
 }

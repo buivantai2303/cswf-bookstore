@@ -51,10 +51,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.LabelDateNow = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.Label_TimeNow = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.TextBox_ImportReport_Search = new System.Windows.Forms.TextBox();
             this.DGView_ImportReceipt = new System.Windows.Forms.DataGridView();
@@ -256,10 +252,6 @@
             this.Panel_ImportReceipt_GridBox.Controls.Add(this.label3);
             this.Panel_ImportReceipt_GridBox.Controls.Add(this.dateTimePicker2);
             this.Panel_ImportReceipt_GridBox.Controls.Add(this.dateTimePicker1);
-            this.Panel_ImportReceipt_GridBox.Controls.Add(this.LabelDateNow);
-            this.Panel_ImportReceipt_GridBox.Controls.Add(this.label7);
-            this.Panel_ImportReceipt_GridBox.Controls.Add(this.Label_TimeNow);
-            this.Panel_ImportReceipt_GridBox.Controls.Add(this.label4);
             this.Panel_ImportReceipt_GridBox.Controls.Add(this.label2);
             this.Panel_ImportReceipt_GridBox.Controls.Add(this.TextBox_ImportReport_Search);
             this.Panel_ImportReceipt_GridBox.Controls.Add(this.DGView_ImportReceipt);
@@ -305,48 +297,6 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(196, 20);
             this.dateTimePicker1.TabIndex = 33;
-            // 
-            // LabelDateNow
-            // 
-            this.LabelDateNow.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.LabelDateNow.AutoSize = true;
-            this.LabelDateNow.Location = new System.Drawing.Point(68, 414);
-            this.LabelDateNow.Name = "LabelDateNow";
-            this.LabelDateNow.Size = new System.Drawing.Size(21, 13);
-            this.LabelDateNow.TabIndex = 32;
-            this.LabelDateNow.Text = "{?}";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(34, 414);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(33, 13);
-            this.label7.TabIndex = 31;
-            this.label7.Text = "Date:";
-            // 
-            // Label_TimeNow
-            // 
-            this.Label_TimeNow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Label_TimeNow.AutoSize = true;
-            this.Label_TimeNow.Location = new System.Drawing.Point(331, 414);
-            this.Label_TimeNow.Name = "Label_TimeNow";
-            this.Label_TimeNow.Size = new System.Drawing.Size(21, 13);
-            this.Label_TimeNow.TabIndex = 30;
-            this.Label_TimeNow.Text = "{?}";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(269, 414);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 13);
-            this.label4.TabIndex = 29;
-            this.label4.Text = "Time now:";
             // 
             // label2
             // 
@@ -423,7 +373,7 @@
             this.DGView_ImportReceipt.ShowCellToolTips = false;
             this.DGView_ImportReceipt.ShowEditingIcon = false;
             this.DGView_ImportReceipt.ShowRowErrors = false;
-            this.DGView_ImportReceipt.Size = new System.Drawing.Size(559, 306);
+            this.DGView_ImportReceipt.Size = new System.Drawing.Size(559, 326);
             this.DGView_ImportReceipt.TabIndex = 24;
             // 
             // ImportID
@@ -560,10 +510,6 @@
         private System.Windows.Forms.PictureBox PTB_Suppliers_Menu;
         private System.Windows.Forms.Panel Panel_ImportReceipt_Right;
         private System.Windows.Forms.Panel Panel_ImportReceipt_GridBox;
-        private System.Windows.Forms.Label LabelDateNow;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label Label_TimeNow;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TextBox_ImportReport_Search;
         private System.Windows.Forms.DataGridView DGView_ImportReceipt;

@@ -45,12 +45,11 @@
             this.LB = new System.Windows.Forms.Label();
             this.BookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.LabelDateNow = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.Label_TimeNow = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.BTN_Authors_Save = new System.Windows.Forms.Button();
+            this.BTN_Authors_Add = new System.Windows.Forms.Button();
             this.DGV_Authors = new System.Windows.Forms.DataGridView();
             this.AuthorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ActionColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.BTN_Authors_Refresh = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.TB_Authors_Search = new System.Windows.Forms.TextBox();
@@ -61,21 +60,18 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.PTB_Suppliers_Menu = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.LBL_Authors_Total = new System.Windows.Forms.Label();
             this.LB_Authors_Total = new System.Windows.Forms.Label();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.BTN_Authors_Save = new System.Windows.Forms.Button();
-            this.BTN_Authors_Add = new System.Windows.Forms.Button();
-            this.ActionColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.PTB_Suppliers_Menu = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Authors)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PTB_Suppliers_Menu)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -213,11 +209,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.LabelDateNow);
-            this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.Label_TimeNow);
             this.panel4.Controls.Add(this.BTN_Authors_Save);
-            this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.BTN_Authors_Add);
             this.panel4.Controls.Add(this.DGV_Authors);
             this.panel4.Controls.Add(this.BTN_Authors_Refresh);
@@ -229,47 +221,33 @@
             this.panel4.Size = new System.Drawing.Size(902, 471);
             this.panel4.TabIndex = 12;
             // 
-            // LabelDateNow
+            // BTN_Authors_Save
             // 
-            this.LabelDateNow.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.LabelDateNow.AutoSize = true;
-            this.LabelDateNow.Location = new System.Drawing.Point(49, 450);
-            this.LabelDateNow.Name = "LabelDateNow";
-            this.LabelDateNow.Size = new System.Drawing.Size(21, 13);
-            this.LabelDateNow.TabIndex = 12;
-            this.LabelDateNow.Text = "{?}";
+            this.BTN_Authors_Save.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.BTN_Authors_Save.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Authors_Save.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Save2;
+            this.BTN_Authors_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_Authors_Save.Location = new System.Drawing.Point(690, 30);
+            this.BTN_Authors_Save.Name = "BTN_Authors_Save";
+            this.BTN_Authors_Save.Size = new System.Drawing.Size(94, 37);
+            this.BTN_Authors_Save.TabIndex = 17;
+            this.BTN_Authors_Save.Text = "Save";
+            this.BTN_Authors_Save.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Authors_Save.UseVisualStyleBackColor = true;
             // 
-            // label7
+            // BTN_Authors_Add
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(15, 450);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(33, 13);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Date:";
-            // 
-            // Label_TimeNow
-            // 
-            this.Label_TimeNow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Label_TimeNow.AutoSize = true;
-            this.Label_TimeNow.Location = new System.Drawing.Point(638, 450);
-            this.Label_TimeNow.Name = "Label_TimeNow";
-            this.Label_TimeNow.Size = new System.Drawing.Size(21, 13);
-            this.Label_TimeNow.TabIndex = 10;
-            this.Label_TimeNow.Text = "{?}";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(576, 450);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Time now:";
+            this.BTN_Authors_Add.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.BTN_Authors_Add.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Authors_Add.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Add;
+            this.BTN_Authors_Add.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_Authors_Add.Location = new System.Drawing.Point(579, 30);
+            this.BTN_Authors_Add.Name = "BTN_Authors_Add";
+            this.BTN_Authors_Add.Size = new System.Drawing.Size(94, 38);
+            this.BTN_Authors_Add.TabIndex = 18;
+            this.BTN_Authors_Add.Text = "Add";
+            this.BTN_Authors_Add.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Authors_Add.UseVisualStyleBackColor = true;
             // 
             // DGV_Authors
             // 
@@ -337,6 +315,17 @@
             this.AuthorName.HeaderText = "Author Name";
             this.AuthorName.Name = "AuthorName";
             this.AuthorName.ReadOnly = true;
+            // 
+            // ActionColumn
+            // 
+            this.ActionColumn.Description = "Details";
+            this.ActionColumn.FillWeight = 40F;
+            this.ActionColumn.HeaderText = "Action";
+            this.ActionColumn.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Delete;
+            this.ActionColumn.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.ActionColumn.Name = "ActionColumn";
+            this.ActionColumn.ReadOnly = true;
+            this.ActionColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // BTN_Authors_Refresh
             // 
@@ -460,6 +449,15 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Authors";
             // 
+            // PTB_Suppliers_Menu
+            // 
+            this.PTB_Suppliers_Menu.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Menu;
+            this.PTB_Suppliers_Menu.Location = new System.Drawing.Point(12, 12);
+            this.PTB_Suppliers_Menu.Name = "PTB_Suppliers_Menu";
+            this.PTB_Suppliers_Menu.Size = new System.Drawing.Size(26, 26);
+            this.PTB_Suppliers_Menu.TabIndex = 0;
+            this.PTB_Suppliers_Menu.TabStop = false;
+            // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -499,6 +497,15 @@
             this.LB_Authors_Total.TabIndex = 1;
             this.LB_Authors_Total.Text = "8888";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.SupplierTotal;
+            this.pictureBox1.Location = new System.Drawing.Point(157, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(55, 50);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // dataGridViewImageColumn1
             // 
             this.dataGridViewImageColumn1.Description = "Details";
@@ -510,63 +517,6 @@
             this.dataGridViewImageColumn1.ReadOnly = true;
             this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewImageColumn1.Width = 66;
-            // 
-            // BTN_Authors_Save
-            // 
-            this.BTN_Authors_Save.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.BTN_Authors_Save.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Authors_Save.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Save2;
-            this.BTN_Authors_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_Authors_Save.Location = new System.Drawing.Point(690, 30);
-            this.BTN_Authors_Save.Name = "BTN_Authors_Save";
-            this.BTN_Authors_Save.Size = new System.Drawing.Size(94, 37);
-            this.BTN_Authors_Save.TabIndex = 17;
-            this.BTN_Authors_Save.Text = "Save";
-            this.BTN_Authors_Save.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Authors_Save.UseVisualStyleBackColor = true;
-            // 
-            // BTN_Authors_Add
-            // 
-            this.BTN_Authors_Add.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.BTN_Authors_Add.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Authors_Add.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Add;
-            this.BTN_Authors_Add.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_Authors_Add.Location = new System.Drawing.Point(579, 30);
-            this.BTN_Authors_Add.Name = "BTN_Authors_Add";
-            this.BTN_Authors_Add.Size = new System.Drawing.Size(94, 38);
-            this.BTN_Authors_Add.TabIndex = 18;
-            this.BTN_Authors_Add.Text = "Add";
-            this.BTN_Authors_Add.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Authors_Add.UseVisualStyleBackColor = true;
-            // 
-            // ActionColumn
-            // 
-            this.ActionColumn.Description = "Details";
-            this.ActionColumn.FillWeight = 40F;
-            this.ActionColumn.HeaderText = "Action";
-            this.ActionColumn.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Delete;
-            this.ActionColumn.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.ActionColumn.Name = "ActionColumn";
-            this.ActionColumn.ReadOnly = true;
-            this.ActionColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // PTB_Suppliers_Menu
-            // 
-            this.PTB_Suppliers_Menu.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Menu;
-            this.PTB_Suppliers_Menu.Location = new System.Drawing.Point(12, 12);
-            this.PTB_Suppliers_Menu.Name = "PTB_Suppliers_Menu";
-            this.PTB_Suppliers_Menu.Size = new System.Drawing.Size(26, 26);
-            this.PTB_Suppliers_Menu.TabIndex = 0;
-            this.PTB_Suppliers_Menu.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.SupplierTotal;
-            this.pictureBox1.Location = new System.Drawing.Point(157, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(55, 50);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // Tab_Authors
             // 
@@ -586,9 +536,9 @@
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PTB_Suppliers_Menu)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PTB_Suppliers_Menu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -610,10 +560,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn BookName;
         private System.Windows.Forms.DataGridViewImageColumn ActionColumn;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label LabelDateNow;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label Label_TimeNow;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView DGV_Authors;
         private System.Windows.Forms.DataGridViewTextBoxColumn AuthorName;
         private System.Windows.Forms.Button BTN_Authors_Refresh;
