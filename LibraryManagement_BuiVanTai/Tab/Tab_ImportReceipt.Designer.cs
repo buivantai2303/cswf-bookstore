@@ -36,7 +36,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.Panel_ImportReceipt_GridBox = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.Date_ImportReceipt_TimeSearch = new System.Windows.Forms.DateTimePicker();
             this.LabelDateNow = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.BTN_ImportReceipt_Refresh = new System.Windows.Forms.Button();
@@ -113,7 +113,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Panel_ImportReceipt_GridBox.BackColor = System.Drawing.Color.White;
-            this.Panel_ImportReceipt_GridBox.Controls.Add(this.dateTimePicker1);
+            this.Panel_ImportReceipt_GridBox.Controls.Add(this.Date_ImportReceipt_TimeSearch);
             this.Panel_ImportReceipt_GridBox.Controls.Add(this.LabelDateNow);
             this.Panel_ImportReceipt_GridBox.Controls.Add(this.label7);
             this.Panel_ImportReceipt_GridBox.Controls.Add(this.BTN_ImportReceipt_Refresh);
@@ -128,12 +128,14 @@
             this.Panel_ImportReceipt_GridBox.Size = new System.Drawing.Size(559, 437);
             this.Panel_ImportReceipt_GridBox.TabIndex = 21;
             // 
-            // dateTimePicker1
+            // Date_ImportReceipt_TimeSearch
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(209, 39);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(160, 20);
-            this.dateTimePicker1.TabIndex = 33;
+            this.Date_ImportReceipt_TimeSearch.CalendarFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Date_ImportReceipt_TimeSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Date_ImportReceipt_TimeSearch.Location = new System.Drawing.Point(208, 36);
+            this.Date_ImportReceipt_TimeSearch.Name = "Date_ImportReceipt_TimeSearch";
+            this.Date_ImportReceipt_TimeSearch.Size = new System.Drawing.Size(216, 23);
+            this.Date_ImportReceipt_TimeSearch.TabIndex = 33;
             // 
             // LabelDateNow
             // 
@@ -162,9 +164,9 @@
             this.BTN_ImportReceipt_Refresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
             this.BTN_ImportReceipt_Refresh.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_ImportReceipt_Refresh.ForeColor = System.Drawing.Color.White;
-            this.BTN_ImportReceipt_Refresh.Location = new System.Drawing.Point(424, 24);
+            this.BTN_ImportReceipt_Refresh.Location = new System.Drawing.Point(437, 28);
             this.BTN_ImportReceipt_Refresh.Name = "BTN_ImportReceipt_Refresh";
-            this.BTN_ImportReceipt_Refresh.Size = new System.Drawing.Size(118, 35);
+            this.BTN_ImportReceipt_Refresh.Size = new System.Drawing.Size(118, 31);
             this.BTN_ImportReceipt_Refresh.TabIndex = 27;
             this.BTN_ImportReceipt_Refresh.Text = "Refresh";
             this.BTN_ImportReceipt_Refresh.UseVisualStyleBackColor = false;
@@ -727,7 +729,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker Date_ImportReceipt_TimeSearch;
         private System.Windows.Forms.Button BTN_ImportReceipt_Save;
         private System.Windows.Forms.Button BTN_ImportReceipt_Add;
         private System.Windows.Forms.Label label5;
