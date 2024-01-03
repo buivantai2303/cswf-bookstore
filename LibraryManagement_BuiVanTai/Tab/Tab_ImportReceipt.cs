@@ -32,8 +32,8 @@ namespace LibraryManagement_BuiVanTai.Tab
         {
             DB_ImportReceipt = new Database_ImportReceipt(ServerName, DatabaseName);
             dataTable_ImportReceipt = DB_ImportReceipt.getTable();
-            DGView_ImportReceipt.DataSource = dataTable_ImportReceipt;
-            DGView_ImportReceipt.RowHeadersVisible = false;
+            DGV_ImportReceipt.DataSource = dataTable_ImportReceipt;
+            DGV_ImportReceipt.RowHeadersVisible = false;
             DGView_ImportReceipt_ReceiptDetails.RowHeadersVisible = false;
 
         }
@@ -43,22 +43,22 @@ namespace LibraryManagement_BuiVanTai.Tab
             /*Class_ImportReceipt importReceipt = new Class_ImportReceipt();*/
 
             // Select only delete icon and question to delete access
-            if (e.RowIndex >= 0 && DGView_ImportReceipt.Columns[e.ColumnIndex].Name == "ActionColumn")
+            if (e.RowIndex >= 0 && DGV_ImportReceipt.Columns[e.ColumnIndex].Name == "ActionColumn")
             {
                 DialogResult result = MessageBox.Show("Are you sure you want to delete this row?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (result == DialogResult.Yes)
                 {
-                    string columnIDValue = DGView_ImportReceipt.Rows[e.RowIndex].Cells[1].Value.ToString();
+                    string columnIDValue = DGV_ImportReceipt.Rows[e.RowIndex].Cells[1].Value.ToString();
 /*                    DB_Suppliers.DeletDataByID(columnIDValue);*/
 
-                    int rowIndex = DGView_ImportReceipt.CurrentCell.RowIndex;
+                    int rowIndex = DGV_ImportReceipt.CurrentCell.RowIndex;
 /*                    DGView_Suppliers.Rows.RemoveAt(rowIndex);*/
 
                     MessageBox.Show("Row deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             } 
-            else if (e.RowIndex >= 0 && DGView_ImportReceipt.Columns[e.ColumnIndex].Name == "Information")
+            else if (e.RowIndex >= 0 && DGV_ImportReceipt.Columns[e.ColumnIndex].Name == "Information")
             {
 
             }

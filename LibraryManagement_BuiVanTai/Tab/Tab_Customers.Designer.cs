@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Label_Suppliers_1 = new System.Windows.Forms.Label();
             this.Label_Suppliers_TotalNumbers = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -41,16 +41,16 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.TextBox_Suppliers_Search = new System.Windows.Forms.TextBox();
+            this.TB_Customer_Search = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.Button_Suppliers_Refresh = new System.Windows.Forms.Button();
+            this.BTN_Customer_Refresh = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.Label_TimeNow = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.LabelDateNow = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.Button_Suppliers_Save = new System.Windows.Forms.Button();
+            this.BTN_Customer_Save = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.DGV_Customer = new System.Windows.Forms.DataGridView();
             this.CustomerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,17 +59,17 @@
             this.Tel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.TB_Customer_Address = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.TB_Customer_Tel = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.TB_Customer_LastName = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.TB_Customer_Firstname = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TB_Customer_ID = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.Button_Suppliers_Add = new System.Windows.Forms.Button();
+            this.BTN_Customer_Add = new System.Windows.Forms.Button();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PTB_Suppliers_Menu)).BeginInit();
@@ -184,14 +184,14 @@
             this.panel3.Size = new System.Drawing.Size(669, 120);
             this.panel3.TabIndex = 11;
             // 
-            // TextBox_Suppliers_Search
+            // TB_Customer_Search
             // 
-            this.TextBox_Suppliers_Search.BackColor = System.Drawing.Color.White;
-            this.TextBox_Suppliers_Search.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBox_Suppliers_Search.Location = new System.Drawing.Point(18, 42);
-            this.TextBox_Suppliers_Search.Name = "TextBox_Suppliers_Search";
-            this.TextBox_Suppliers_Search.Size = new System.Drawing.Size(382, 25);
-            this.TextBox_Suppliers_Search.TabIndex = 2;
+            this.TB_Customer_Search.BackColor = System.Drawing.Color.White;
+            this.TB_Customer_Search.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_Customer_Search.Location = new System.Drawing.Point(18, 42);
+            this.TB_Customer_Search.Name = "TB_Customer_Search";
+            this.TB_Customer_Search.Size = new System.Drawing.Size(382, 25);
+            this.TB_Customer_Search.TabIndex = 2;
             // 
             // label2
             // 
@@ -204,17 +204,17 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Search Suppliers Name:";
             // 
-            // Button_Suppliers_Refresh
+            // BTN_Customer_Refresh
             // 
-            this.Button_Suppliers_Refresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            this.Button_Suppliers_Refresh.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_Suppliers_Refresh.ForeColor = System.Drawing.Color.White;
-            this.Button_Suppliers_Refresh.Location = new System.Drawing.Point(533, 37);
-            this.Button_Suppliers_Refresh.Name = "Button_Suppliers_Refresh";
-            this.Button_Suppliers_Refresh.Size = new System.Drawing.Size(118, 35);
-            this.Button_Suppliers_Refresh.TabIndex = 7;
-            this.Button_Suppliers_Refresh.Text = "Refresh";
-            this.Button_Suppliers_Refresh.UseVisualStyleBackColor = false;
+            this.BTN_Customer_Refresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            this.BTN_Customer_Refresh.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Customer_Refresh.ForeColor = System.Drawing.Color.White;
+            this.BTN_Customer_Refresh.Location = new System.Drawing.Point(533, 37);
+            this.BTN_Customer_Refresh.Name = "BTN_Customer_Refresh";
+            this.BTN_Customer_Refresh.Size = new System.Drawing.Size(118, 35);
+            this.BTN_Customer_Refresh.TabIndex = 7;
+            this.BTN_Customer_Refresh.Text = "Refresh";
+            this.BTN_Customer_Refresh.UseVisualStyleBackColor = false;
             // 
             // label4
             // 
@@ -275,36 +275,36 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.Button_Suppliers_Save);
+            this.panel4.Controls.Add(this.BTN_Customer_Save);
             this.panel4.Controls.Add(this.splitContainer1);
-            this.panel4.Controls.Add(this.Button_Suppliers_Add);
+            this.panel4.Controls.Add(this.BTN_Customer_Add);
             this.panel4.Controls.Add(this.LabelDateNow);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.Label_TimeNow);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.Button_Suppliers_Refresh);
+            this.panel4.Controls.Add(this.BTN_Customer_Refresh);
             this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.TextBox_Suppliers_Search);
+            this.panel4.Controls.Add(this.TB_Customer_Search);
             this.panel4.Location = new System.Drawing.Point(0, 180);
             this.panel4.MinimumSize = new System.Drawing.Size(902, 471);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(902, 471);
             this.panel4.TabIndex = 12;
             // 
-            // Button_Suppliers_Save
+            // BTN_Customer_Save
             // 
-            this.Button_Suppliers_Save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Button_Suppliers_Save.BackColor = System.Drawing.Color.SeaShell;
-            this.Button_Suppliers_Save.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_Suppliers_Save.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Save2;
-            this.Button_Suppliers_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Button_Suppliers_Save.Location = new System.Drawing.Point(758, 37);
-            this.Button_Suppliers_Save.Name = "Button_Suppliers_Save";
-            this.Button_Suppliers_Save.Size = new System.Drawing.Size(87, 35);
-            this.Button_Suppliers_Save.TabIndex = 17;
-            this.Button_Suppliers_Save.Text = "Save";
-            this.Button_Suppliers_Save.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_Suppliers_Save.UseVisualStyleBackColor = false;
+            this.BTN_Customer_Save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BTN_Customer_Save.BackColor = System.Drawing.Color.SeaShell;
+            this.BTN_Customer_Save.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Customer_Save.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Save2;
+            this.BTN_Customer_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_Customer_Save.Location = new System.Drawing.Point(758, 37);
+            this.BTN_Customer_Save.Name = "BTN_Customer_Save";
+            this.BTN_Customer_Save.Size = new System.Drawing.Size(87, 35);
+            this.BTN_Customer_Save.TabIndex = 17;
+            this.BTN_Customer_Save.Text = "Save";
+            this.BTN_Customer_Save.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Customer_Save.UseVisualStyleBackColor = false;
             // 
             // splitContainer1
             // 
@@ -338,14 +338,14 @@
             this.DGV_Customer.BackgroundColor = System.Drawing.Color.White;
             this.DGV_Customer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DGV_Customer.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_Customer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_Customer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.DGV_Customer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DGV_Customer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CustomerID,
@@ -353,27 +353,27 @@
             this.LastName,
             this.Tel,
             this.Address});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(151)))), ((int)(((byte)(196)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGV_Customer.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(151)))), ((int)(((byte)(196)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGV_Customer.DefaultCellStyle = dataGridViewCellStyle5;
             this.DGV_Customer.EnableHeadersVisualStyles = false;
             this.DGV_Customer.Location = new System.Drawing.Point(3, 3);
             this.DGV_Customer.MultiSelect = false;
             this.DGV_Customer.Name = "DGV_Customer";
             this.DGV_Customer.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_Customer.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_Customer.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.DGV_Customer.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.DGV_Customer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_Customer.ShowCellErrors = false;
@@ -428,15 +428,15 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.textBox6);
+            this.panel5.Controls.Add(this.TB_Customer_Address);
             this.panel5.Controls.Add(this.label15);
-            this.panel5.Controls.Add(this.textBox5);
+            this.panel5.Controls.Add(this.TB_Customer_Tel);
             this.panel5.Controls.Add(this.label14);
-            this.panel5.Controls.Add(this.textBox4);
+            this.panel5.Controls.Add(this.TB_Customer_LastName);
             this.panel5.Controls.Add(this.label13);
-            this.panel5.Controls.Add(this.textBox3);
+            this.panel5.Controls.Add(this.TB_Customer_Firstname);
             this.panel5.Controls.Add(this.label12);
-            this.panel5.Controls.Add(this.textBox2);
+            this.panel5.Controls.Add(this.TB_Customer_ID);
             this.panel5.Controls.Add(this.label11);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -445,18 +445,18 @@
             this.panel5.Size = new System.Drawing.Size(241, 369);
             this.panel5.TabIndex = 0;
             // 
-            // textBox6
+            // TB_Customer_Address
             // 
-            this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.TB_Customer_Address.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox6.BackColor = System.Drawing.Color.White;
-            this.textBox6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(8, 300);
-            this.textBox6.MinimumSize = new System.Drawing.Size(168, 25);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(206, 25);
-            this.textBox6.TabIndex = 31;
+            this.TB_Customer_Address.BackColor = System.Drawing.Color.White;
+            this.TB_Customer_Address.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_Customer_Address.Location = new System.Drawing.Point(8, 300);
+            this.TB_Customer_Address.MinimumSize = new System.Drawing.Size(168, 25);
+            this.TB_Customer_Address.Name = "TB_Customer_Address";
+            this.TB_Customer_Address.Size = new System.Drawing.Size(206, 25);
+            this.TB_Customer_Address.TabIndex = 31;
             // 
             // label15
             // 
@@ -469,18 +469,18 @@
             this.label15.TabIndex = 30;
             this.label15.Text = "- Address:";
             // 
-            // textBox5
+            // TB_Customer_Tel
             // 
-            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.TB_Customer_Tel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox5.BackColor = System.Drawing.Color.White;
-            this.textBox5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(8, 239);
-            this.textBox5.MinimumSize = new System.Drawing.Size(168, 25);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(206, 25);
-            this.textBox5.TabIndex = 29;
+            this.TB_Customer_Tel.BackColor = System.Drawing.Color.White;
+            this.TB_Customer_Tel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_Customer_Tel.Location = new System.Drawing.Point(8, 239);
+            this.TB_Customer_Tel.MinimumSize = new System.Drawing.Size(168, 25);
+            this.TB_Customer_Tel.Name = "TB_Customer_Tel";
+            this.TB_Customer_Tel.Size = new System.Drawing.Size(206, 25);
+            this.TB_Customer_Tel.TabIndex = 29;
             // 
             // label14
             // 
@@ -493,18 +493,18 @@
             this.label14.TabIndex = 28;
             this.label14.Text = "- Telephone:";
             // 
-            // textBox4
+            // TB_Customer_LastName
             // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.TB_Customer_LastName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.BackColor = System.Drawing.Color.White;
-            this.textBox4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(8, 181);
-            this.textBox4.MinimumSize = new System.Drawing.Size(168, 25);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(206, 25);
-            this.textBox4.TabIndex = 27;
+            this.TB_Customer_LastName.BackColor = System.Drawing.Color.White;
+            this.TB_Customer_LastName.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_Customer_LastName.Location = new System.Drawing.Point(8, 181);
+            this.TB_Customer_LastName.MinimumSize = new System.Drawing.Size(168, 25);
+            this.TB_Customer_LastName.Name = "TB_Customer_LastName";
+            this.TB_Customer_LastName.Size = new System.Drawing.Size(206, 25);
+            this.TB_Customer_LastName.TabIndex = 27;
             // 
             // label13
             // 
@@ -517,18 +517,18 @@
             this.label13.TabIndex = 26;
             this.label13.Text = "- Last name:";
             // 
-            // textBox3
+            // TB_Customer_Firstname
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.TB_Customer_Firstname.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(8, 118);
-            this.textBox3.MinimumSize = new System.Drawing.Size(168, 25);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(206, 25);
-            this.textBox3.TabIndex = 25;
+            this.TB_Customer_Firstname.BackColor = System.Drawing.Color.White;
+            this.TB_Customer_Firstname.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_Customer_Firstname.Location = new System.Drawing.Point(8, 118);
+            this.TB_Customer_Firstname.MinimumSize = new System.Drawing.Size(168, 25);
+            this.TB_Customer_Firstname.Name = "TB_Customer_Firstname";
+            this.TB_Customer_Firstname.Size = new System.Drawing.Size(206, 25);
+            this.TB_Customer_Firstname.TabIndex = 25;
             // 
             // label12
             // 
@@ -541,18 +541,18 @@
             this.label12.TabIndex = 24;
             this.label12.Text = "- First name:";
             // 
-            // textBox2
+            // TB_Customer_ID
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.TB_Customer_ID.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(8, 62);
-            this.textBox2.MinimumSize = new System.Drawing.Size(168, 25);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(206, 25);
-            this.textBox2.TabIndex = 23;
+            this.TB_Customer_ID.BackColor = System.Drawing.Color.White;
+            this.TB_Customer_ID.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_Customer_ID.Location = new System.Drawing.Point(8, 62);
+            this.TB_Customer_ID.MinimumSize = new System.Drawing.Size(168, 25);
+            this.TB_Customer_ID.Name = "TB_Customer_ID";
+            this.TB_Customer_ID.Size = new System.Drawing.Size(206, 25);
+            this.TB_Customer_ID.TabIndex = 23;
             // 
             // label11
             // 
@@ -565,20 +565,20 @@
             this.label11.TabIndex = 3;
             this.label11.Text = "- Customer ID:";
             // 
-            // Button_Suppliers_Add
+            // BTN_Customer_Add
             // 
-            this.Button_Suppliers_Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Button_Suppliers_Add.BackColor = System.Drawing.Color.SeaShell;
-            this.Button_Suppliers_Add.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_Suppliers_Add.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Add;
-            this.Button_Suppliers_Add.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Button_Suppliers_Add.Location = new System.Drawing.Point(661, 37);
-            this.Button_Suppliers_Add.Name = "Button_Suppliers_Add";
-            this.Button_Suppliers_Add.Size = new System.Drawing.Size(91, 35);
-            this.Button_Suppliers_Add.TabIndex = 18;
-            this.Button_Suppliers_Add.Text = "Add";
-            this.Button_Suppliers_Add.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_Suppliers_Add.UseVisualStyleBackColor = false;
+            this.BTN_Customer_Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BTN_Customer_Add.BackColor = System.Drawing.Color.SeaShell;
+            this.BTN_Customer_Add.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Customer_Add.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Add;
+            this.BTN_Customer_Add.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_Customer_Add.Location = new System.Drawing.Point(661, 37);
+            this.BTN_Customer_Add.Name = "BTN_Customer_Add";
+            this.BTN_Customer_Add.Size = new System.Drawing.Size(91, 35);
+            this.BTN_Customer_Add.TabIndex = 18;
+            this.BTN_Customer_Add.Text = "Add";
+            this.BTN_Customer_Add.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Customer_Add.UseVisualStyleBackColor = false;
             // 
             // dataGridViewImageColumn1
             // 
@@ -634,11 +634,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button Button_Suppliers_Save;
-        private System.Windows.Forms.Button Button_Suppliers_Add;
-        private System.Windows.Forms.TextBox TextBox_Suppliers_Search;
+        private System.Windows.Forms.Button BTN_Customer_Save;
+        private System.Windows.Forms.Button BTN_Customer_Add;
+        private System.Windows.Forms.TextBox TB_Customer_Search;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button Button_Suppliers_Refresh;
+        private System.Windows.Forms.Button BTN_Customer_Refresh;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label Label_TimeNow;
         private System.Windows.Forms.Label label7;
@@ -653,15 +653,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tel;
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox TB_Customer_Address;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox TB_Customer_Tel;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox TB_Customer_LastName;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox TB_Customer_Firstname;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TB_Customer_ID;
         private System.Windows.Forms.Label label11;
     }
 }

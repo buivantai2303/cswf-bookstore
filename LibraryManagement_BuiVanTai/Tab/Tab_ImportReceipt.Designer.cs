@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.Panel_ImportReceipt_GridBox = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.LabelDateNow = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.Button_ImportReport_Refresh = new System.Windows.Forms.Button();
+            this.BTN_ImportReceipt_Refresh = new System.Windows.Forms.Button();
             this.Label_TimeNow = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.TextBox_ImportReport_Search = new System.Windows.Forms.TextBox();
-            this.DGView_ImportReceipt = new System.Windows.Forms.DataGridView();
+            this.TB_ImportReceipt_Search = new System.Windows.Forms.TextBox();
+            this.DGV_ImportReceipt = new System.Windows.Forms.DataGridView();
             this.ImportID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ImportDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PublisherID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,16 +52,15 @@
             this.ActionColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.Panel_ImportReceipt_ButtonBox = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.Date_ImportDate = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.CBB_StaffName = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CBB_PubName = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.TextBox_ImportReceipt_ImportID = new System.Windows.Forms.TextBox();
-            this.Button_Suppliers_Save = new System.Windows.Forms.Button();
-            this.Button_ImportReceipt_Add = new System.Windows.Forms.Button();
-            this.Button_ImportReport_Report = new System.Windows.Forms.Button();
+            this.TB_ImportReceipt_ImportID = new System.Windows.Forms.TextBox();
+            this.BTN_ImportReceipt_Save = new System.Windows.Forms.Button();
+            this.BTN_ImportReceipt_Add = new System.Windows.Forms.Button();
             this.Panel_ImportReceipt_Right = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.DGView_ImportReceipt_ReceiptDetails = new System.Windows.Forms.DataGridView();
@@ -71,6 +70,7 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.BTN_ImportReceipt_Report = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.PTB_Suppliers_Menu = new System.Windows.Forms.PictureBox();
@@ -81,7 +81,7 @@
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.Panel_ImportReceipt_GridBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGView_ImportReceipt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_ImportReceipt)).BeginInit();
             this.Panel_ImportReceipt_ButtonBox.SuspendLayout();
             this.Panel_ImportReceipt_Right.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGView_ImportReceipt_ReceiptDetails)).BeginInit();
@@ -116,12 +116,12 @@
             this.Panel_ImportReceipt_GridBox.Controls.Add(this.dateTimePicker1);
             this.Panel_ImportReceipt_GridBox.Controls.Add(this.LabelDateNow);
             this.Panel_ImportReceipt_GridBox.Controls.Add(this.label7);
-            this.Panel_ImportReceipt_GridBox.Controls.Add(this.Button_ImportReport_Refresh);
+            this.Panel_ImportReceipt_GridBox.Controls.Add(this.BTN_ImportReceipt_Refresh);
             this.Panel_ImportReceipt_GridBox.Controls.Add(this.Label_TimeNow);
             this.Panel_ImportReceipt_GridBox.Controls.Add(this.label4);
             this.Panel_ImportReceipt_GridBox.Controls.Add(this.label2);
-            this.Panel_ImportReceipt_GridBox.Controls.Add(this.TextBox_ImportReport_Search);
-            this.Panel_ImportReceipt_GridBox.Controls.Add(this.DGView_ImportReceipt);
+            this.Panel_ImportReceipt_GridBox.Controls.Add(this.TB_ImportReceipt_Search);
+            this.Panel_ImportReceipt_GridBox.Controls.Add(this.DGV_ImportReceipt);
             this.Panel_ImportReceipt_GridBox.Location = new System.Drawing.Point(1, 163);
             this.Panel_ImportReceipt_GridBox.MinimumSize = new System.Drawing.Size(559, 437);
             this.Panel_ImportReceipt_GridBox.Name = "Panel_ImportReceipt_GridBox";
@@ -157,17 +157,17 @@
             this.label7.TabIndex = 31;
             this.label7.Text = "Date:";
             // 
-            // Button_ImportReport_Refresh
+            // BTN_ImportReceipt_Refresh
             // 
-            this.Button_ImportReport_Refresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            this.Button_ImportReport_Refresh.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_ImportReport_Refresh.ForeColor = System.Drawing.Color.White;
-            this.Button_ImportReport_Refresh.Location = new System.Drawing.Point(424, 24);
-            this.Button_ImportReport_Refresh.Name = "Button_ImportReport_Refresh";
-            this.Button_ImportReport_Refresh.Size = new System.Drawing.Size(118, 35);
-            this.Button_ImportReport_Refresh.TabIndex = 27;
-            this.Button_ImportReport_Refresh.Text = "Refresh";
-            this.Button_ImportReport_Refresh.UseVisualStyleBackColor = false;
+            this.BTN_ImportReceipt_Refresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            this.BTN_ImportReceipt_Refresh.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_ImportReceipt_Refresh.ForeColor = System.Drawing.Color.White;
+            this.BTN_ImportReceipt_Refresh.Location = new System.Drawing.Point(424, 24);
+            this.BTN_ImportReceipt_Refresh.Name = "BTN_ImportReceipt_Refresh";
+            this.BTN_ImportReceipt_Refresh.Size = new System.Drawing.Size(118, 35);
+            this.BTN_ImportReceipt_Refresh.TabIndex = 27;
+            this.BTN_ImportReceipt_Refresh.Text = "Refresh";
+            this.BTN_ImportReceipt_Refresh.UseVisualStyleBackColor = false;
             // 
             // Label_TimeNow
             // 
@@ -200,73 +200,73 @@
             this.label2.TabIndex = 26;
             this.label2.Text = "Search Import Code:";
             // 
-            // TextBox_ImportReport_Search
+            // TB_ImportReceipt_Search
             // 
-            this.TextBox_ImportReport_Search.BackColor = System.Drawing.Color.White;
-            this.TextBox_ImportReport_Search.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBox_ImportReport_Search.Location = new System.Drawing.Point(22, 34);
-            this.TextBox_ImportReport_Search.Name = "TextBox_ImportReport_Search";
-            this.TextBox_ImportReport_Search.Size = new System.Drawing.Size(181, 25);
-            this.TextBox_ImportReport_Search.TabIndex = 25;
+            this.TB_ImportReceipt_Search.BackColor = System.Drawing.Color.White;
+            this.TB_ImportReceipt_Search.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_ImportReceipt_Search.Location = new System.Drawing.Point(22, 34);
+            this.TB_ImportReceipt_Search.Name = "TB_ImportReceipt_Search";
+            this.TB_ImportReceipt_Search.Size = new System.Drawing.Size(181, 25);
+            this.TB_ImportReceipt_Search.TabIndex = 25;
             // 
-            // DGView_ImportReceipt
+            // DGV_ImportReceipt
             // 
-            this.DGView_ImportReceipt.AllowUserToAddRows = false;
-            this.DGView_ImportReceipt.AllowUserToDeleteRows = false;
-            this.DGView_ImportReceipt.AllowUserToResizeColumns = false;
-            this.DGView_ImportReceipt.AllowUserToResizeRows = false;
-            this.DGView_ImportReceipt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.DGV_ImportReceipt.AllowUserToAddRows = false;
+            this.DGV_ImportReceipt.AllowUserToDeleteRows = false;
+            this.DGV_ImportReceipt.AllowUserToResizeColumns = false;
+            this.DGV_ImportReceipt.AllowUserToResizeRows = false;
+            this.DGV_ImportReceipt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DGView_ImportReceipt.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DGView_ImportReceipt.BackgroundColor = System.Drawing.Color.White;
-            this.DGView_ImportReceipt.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.DGView_ImportReceipt.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGView_ImportReceipt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
-            this.DGView_ImportReceipt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.DGView_ImportReceipt.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DGV_ImportReceipt.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DGV_ImportReceipt.BackgroundColor = System.Drawing.Color.White;
+            this.DGV_ImportReceipt.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.DGV_ImportReceipt.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_ImportReceipt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.DGV_ImportReceipt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.DGV_ImportReceipt.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ImportID,
             this.ImportDate,
             this.PublisherID,
             this.StaffID,
             this.ActionColumn});
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(151)))), ((int)(((byte)(196)))));
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGView_ImportReceipt.DefaultCellStyle = dataGridViewCellStyle20;
-            this.DGView_ImportReceipt.EnableHeadersVisualStyles = false;
-            this.DGView_ImportReceipt.Location = new System.Drawing.Point(11, 65);
-            this.DGView_ImportReceipt.MultiSelect = false;
-            this.DGView_ImportReceipt.Name = "DGView_ImportReceipt";
-            this.DGView_ImportReceipt.ReadOnly = true;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGView_ImportReceipt.RowHeadersDefaultCellStyle = dataGridViewCellStyle21;
-            this.DGView_ImportReceipt.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.DGView_ImportReceipt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGView_ImportReceipt.ShowCellErrors = false;
-            this.DGView_ImportReceipt.ShowCellToolTips = false;
-            this.DGView_ImportReceipt.ShowEditingIcon = false;
-            this.DGView_ImportReceipt.ShowRowErrors = false;
-            this.DGView_ImportReceipt.Size = new System.Drawing.Size(544, 338);
-            this.DGView_ImportReceipt.TabIndex = 24;
-            this.DGView_ImportReceipt.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGView_ImportReceipt_CellContentClick);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(151)))), ((int)(((byte)(196)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGV_ImportReceipt.DefaultCellStyle = dataGridViewCellStyle2;
+            this.DGV_ImportReceipt.EnableHeadersVisualStyles = false;
+            this.DGV_ImportReceipt.Location = new System.Drawing.Point(11, 65);
+            this.DGV_ImportReceipt.MultiSelect = false;
+            this.DGV_ImportReceipt.Name = "DGV_ImportReceipt";
+            this.DGV_ImportReceipt.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_ImportReceipt.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.DGV_ImportReceipt.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.DGV_ImportReceipt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGV_ImportReceipt.ShowCellErrors = false;
+            this.DGV_ImportReceipt.ShowCellToolTips = false;
+            this.DGV_ImportReceipt.ShowEditingIcon = false;
+            this.DGV_ImportReceipt.ShowRowErrors = false;
+            this.DGV_ImportReceipt.Size = new System.Drawing.Size(544, 338);
+            this.DGV_ImportReceipt.TabIndex = 24;
+            this.DGV_ImportReceipt.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGView_ImportReceipt_CellContentClick);
             // 
             // ImportID
             // 
@@ -321,15 +321,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Panel_ImportReceipt_ButtonBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(234)))), ((int)(((byte)(242)))));
             this.Panel_ImportReceipt_ButtonBox.Controls.Add(this.label9);
-            this.Panel_ImportReceipt_ButtonBox.Controls.Add(this.dateTimePicker2);
+            this.Panel_ImportReceipt_ButtonBox.Controls.Add(this.Date_ImportDate);
             this.Panel_ImportReceipt_ButtonBox.Controls.Add(this.label8);
-            this.Panel_ImportReceipt_ButtonBox.Controls.Add(this.comboBox2);
+            this.Panel_ImportReceipt_ButtonBox.Controls.Add(this.CBB_StaffName);
             this.Panel_ImportReceipt_ButtonBox.Controls.Add(this.label6);
-            this.Panel_ImportReceipt_ButtonBox.Controls.Add(this.comboBox1);
+            this.Panel_ImportReceipt_ButtonBox.Controls.Add(this.CBB_PubName);
             this.Panel_ImportReceipt_ButtonBox.Controls.Add(this.label5);
-            this.Panel_ImportReceipt_ButtonBox.Controls.Add(this.TextBox_ImportReceipt_ImportID);
-            this.Panel_ImportReceipt_ButtonBox.Controls.Add(this.Button_Suppliers_Save);
-            this.Panel_ImportReceipt_ButtonBox.Controls.Add(this.Button_ImportReceipt_Add);
+            this.Panel_ImportReceipt_ButtonBox.Controls.Add(this.TB_ImportReceipt_ImportID);
+            this.Panel_ImportReceipt_ButtonBox.Controls.Add(this.BTN_ImportReceipt_Save);
+            this.Panel_ImportReceipt_ButtonBox.Controls.Add(this.BTN_ImportReceipt_Add);
             this.Panel_ImportReceipt_ButtonBox.Location = new System.Drawing.Point(0, 3);
             this.Panel_ImportReceipt_ButtonBox.MinimumSize = new System.Drawing.Size(560, 154);
             this.Panel_ImportReceipt_ButtonBox.Name = "Panel_ImportReceipt_ButtonBox";
@@ -347,15 +347,15 @@
             this.label9.TabIndex = 41;
             this.label9.Text = "Import Date:";
             // 
-            // dateTimePicker2
+            // Date_ImportDate
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(210, 28);
-            this.dateTimePicker2.MaximumSize = new System.Drawing.Size(215, 23);
-            this.dateTimePicker2.MinimumSize = new System.Drawing.Size(215, 23);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(215, 23);
-            this.dateTimePicker2.TabIndex = 34;
+            this.Date_ImportDate.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Date_ImportDate.Location = new System.Drawing.Point(210, 28);
+            this.Date_ImportDate.MaximumSize = new System.Drawing.Size(215, 23);
+            this.Date_ImportDate.MinimumSize = new System.Drawing.Size(215, 23);
+            this.Date_ImportDate.Name = "Date_ImportDate";
+            this.Date_ImportDate.Size = new System.Drawing.Size(215, 23);
+            this.Date_ImportDate.TabIndex = 34;
             // 
             // label8
             // 
@@ -368,16 +368,16 @@
             this.label8.TabIndex = 40;
             this.label8.Text = "Staff ID:";
             // 
-            // comboBox2
+            // CBB_StaffName
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(209, 89);
-            this.comboBox2.MaximumSize = new System.Drawing.Size(216, 0);
-            this.comboBox2.MinimumSize = new System.Drawing.Size(216, 0);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(216, 25);
-            this.comboBox2.TabIndex = 39;
+            this.CBB_StaffName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CBB_StaffName.FormattingEnabled = true;
+            this.CBB_StaffName.Location = new System.Drawing.Point(209, 89);
+            this.CBB_StaffName.MaximumSize = new System.Drawing.Size(216, 0);
+            this.CBB_StaffName.MinimumSize = new System.Drawing.Size(216, 0);
+            this.CBB_StaffName.Name = "CBB_StaffName";
+            this.CBB_StaffName.Size = new System.Drawing.Size(216, 25);
+            this.CBB_StaffName.TabIndex = 39;
             // 
             // label6
             // 
@@ -390,14 +390,14 @@
             this.label6.TabIndex = 38;
             this.label6.Text = "Publisher Name:";
             // 
-            // comboBox1
+            // CBB_PubName
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 89);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(161, 25);
-            this.comboBox1.TabIndex = 37;
+            this.CBB_PubName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CBB_PubName.FormattingEnabled = true;
+            this.CBB_PubName.Location = new System.Drawing.Point(12, 89);
+            this.CBB_PubName.Name = "CBB_PubName";
+            this.CBB_PubName.Size = new System.Drawing.Size(161, 25);
+            this.CBB_PubName.TabIndex = 37;
             // 
             // label5
             // 
@@ -410,59 +410,43 @@
             this.label5.TabIndex = 34;
             this.label5.Text = "Import Code:";
             // 
-            // TextBox_ImportReceipt_ImportID
+            // TB_ImportReceipt_ImportID
             // 
-            this.TextBox_ImportReceipt_ImportID.BackColor = System.Drawing.Color.White;
-            this.TextBox_ImportReceipt_ImportID.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBox_ImportReceipt_ImportID.Location = new System.Drawing.Point(12, 26);
-            this.TextBox_ImportReceipt_ImportID.Name = "TextBox_ImportReceipt_ImportID";
-            this.TextBox_ImportReceipt_ImportID.Size = new System.Drawing.Size(161, 25);
-            this.TextBox_ImportReceipt_ImportID.TabIndex = 36;
+            this.TB_ImportReceipt_ImportID.BackColor = System.Drawing.Color.White;
+            this.TB_ImportReceipt_ImportID.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_ImportReceipt_ImportID.Location = new System.Drawing.Point(12, 26);
+            this.TB_ImportReceipt_ImportID.Name = "TB_ImportReceipt_ImportID";
+            this.TB_ImportReceipt_ImportID.Size = new System.Drawing.Size(161, 25);
+            this.TB_ImportReceipt_ImportID.TabIndex = 36;
             // 
-            // Button_Suppliers_Save
+            // BTN_ImportReceipt_Save
             // 
-            this.Button_Suppliers_Save.BackColor = System.Drawing.Color.SeaShell;
-            this.Button_Suppliers_Save.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_Suppliers_Save.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Save2;
-            this.Button_Suppliers_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Button_Suppliers_Save.Location = new System.Drawing.Point(461, 76);
-            this.Button_Suppliers_Save.Name = "Button_Suppliers_Save";
-            this.Button_Suppliers_Save.Size = new System.Drawing.Size(83, 38);
-            this.Button_Suppliers_Save.TabIndex = 29;
-            this.Button_Suppliers_Save.Text = "Save";
-            this.Button_Suppliers_Save.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_Suppliers_Save.UseVisualStyleBackColor = false;
+            this.BTN_ImportReceipt_Save.BackColor = System.Drawing.Color.SeaShell;
+            this.BTN_ImportReceipt_Save.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_ImportReceipt_Save.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Save2;
+            this.BTN_ImportReceipt_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_ImportReceipt_Save.Location = new System.Drawing.Point(461, 76);
+            this.BTN_ImportReceipt_Save.Name = "BTN_ImportReceipt_Save";
+            this.BTN_ImportReceipt_Save.Size = new System.Drawing.Size(83, 38);
+            this.BTN_ImportReceipt_Save.TabIndex = 29;
+            this.BTN_ImportReceipt_Save.Text = "Save";
+            this.BTN_ImportReceipt_Save.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_ImportReceipt_Save.UseVisualStyleBackColor = false;
             // 
-            // Button_ImportReceipt_Add
+            // BTN_ImportReceipt_Add
             // 
-            this.Button_ImportReceipt_Add.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.Button_ImportReceipt_Add.BackColor = System.Drawing.Color.SeaShell;
-            this.Button_ImportReceipt_Add.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_ImportReceipt_Add.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Add;
-            this.Button_ImportReceipt_Add.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Button_ImportReceipt_Add.Location = new System.Drawing.Point(461, 28);
-            this.Button_ImportReceipt_Add.Name = "Button_ImportReceipt_Add";
-            this.Button_ImportReceipt_Add.Size = new System.Drawing.Size(83, 38);
-            this.Button_ImportReceipt_Add.TabIndex = 30;
-            this.Button_ImportReceipt_Add.Text = "Add";
-            this.Button_ImportReceipt_Add.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_ImportReceipt_Add.UseVisualStyleBackColor = false;
-            // 
-            // Button_ImportReport_Report
-            // 
-            this.Button_ImportReport_Report.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Button_ImportReport_Report.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(137)))), ((int)(((byte)(86)))));
-            this.Button_ImportReport_Report.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_ImportReport_Report.ForeColor = System.Drawing.Color.White;
-            this.Button_ImportReport_Report.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Health_Graph;
-            this.Button_ImportReport_Report.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Button_ImportReport_Report.Location = new System.Drawing.Point(174, 488);
-            this.Button_ImportReport_Report.Name = "Button_ImportReport_Report";
-            this.Button_ImportReport_Report.Size = new System.Drawing.Size(119, 35);
-            this.Button_ImportReport_Report.TabIndex = 28;
-            this.Button_ImportReport_Report.Text = "Create Report";
-            this.Button_ImportReport_Report.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_ImportReport_Report.UseVisualStyleBackColor = false;
+            this.BTN_ImportReceipt_Add.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.BTN_ImportReceipt_Add.BackColor = System.Drawing.Color.SeaShell;
+            this.BTN_ImportReceipt_Add.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_ImportReceipt_Add.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Add;
+            this.BTN_ImportReceipt_Add.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_ImportReceipt_Add.Location = new System.Drawing.Point(461, 28);
+            this.BTN_ImportReceipt_Add.Name = "BTN_ImportReceipt_Add";
+            this.BTN_ImportReceipt_Add.Size = new System.Drawing.Size(83, 38);
+            this.BTN_ImportReceipt_Add.TabIndex = 30;
+            this.BTN_ImportReceipt_Add.Text = "Add";
+            this.BTN_ImportReceipt_Add.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_ImportReceipt_Add.UseVisualStyleBackColor = false;
             // 
             // Panel_ImportReceipt_Right
             // 
@@ -474,7 +458,7 @@
             this.Panel_ImportReceipt_Right.Controls.Add(this.DGView_ImportReceipt_ReceiptDetails);
             this.Panel_ImportReceipt_Right.Controls.Add(this.panel2);
             this.Panel_ImportReceipt_Right.Controls.Add(this.label3);
-            this.Panel_ImportReceipt_Right.Controls.Add(this.Button_ImportReport_Report);
+            this.Panel_ImportReceipt_Right.Controls.Add(this.BTN_ImportReceipt_Report);
             this.Panel_ImportReceipt_Right.Location = new System.Drawing.Point(0, 3);
             this.Panel_ImportReceipt_Right.Name = "Panel_ImportReceipt_Right";
             this.Panel_ImportReceipt_Right.Size = new System.Drawing.Size(339, 600);
@@ -505,41 +489,41 @@
             this.DGView_ImportReceipt_ReceiptDetails.BackgroundColor = System.Drawing.Color.White;
             this.DGView_ImportReceipt_ReceiptDetails.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DGView_ImportReceipt_ReceiptDetails.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGView_ImportReceipt_ReceiptDetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGView_ImportReceipt_ReceiptDetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.DGView_ImportReceipt_ReceiptDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DGView_ImportReceipt_ReceiptDetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(151)))), ((int)(((byte)(196)))));
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGView_ImportReceipt_ReceiptDetails.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(151)))), ((int)(((byte)(196)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGView_ImportReceipt_ReceiptDetails.DefaultCellStyle = dataGridViewCellStyle5;
             this.DGView_ImportReceipt_ReceiptDetails.EnableHeadersVisualStyles = false;
             this.DGView_ImportReceipt_ReceiptDetails.Location = new System.Drawing.Point(3, 47);
             this.DGView_ImportReceipt_ReceiptDetails.MultiSelect = false;
             this.DGView_ImportReceipt_ReceiptDetails.Name = "DGView_ImportReceipt_ReceiptDetails";
             this.DGView_ImportReceipt_ReceiptDetails.ReadOnly = true;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGView_ImportReceipt_ReceiptDetails.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGView_ImportReceipt_ReceiptDetails.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.DGView_ImportReceipt_ReceiptDetails.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.DGView_ImportReceipt_ReceiptDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGView_ImportReceipt_ReceiptDetails.ShowCellErrors = false;
@@ -605,6 +589,22 @@
             this.label3.Size = new System.Drawing.Size(176, 38);
             this.label3.TabIndex = 2;
             this.label3.Text = "Receipt Details";
+            // 
+            // BTN_ImportReceipt_Report
+            // 
+            this.BTN_ImportReceipt_Report.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BTN_ImportReceipt_Report.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(137)))), ((int)(((byte)(86)))));
+            this.BTN_ImportReceipt_Report.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_ImportReceipt_Report.ForeColor = System.Drawing.Color.White;
+            this.BTN_ImportReceipt_Report.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Health_Graph;
+            this.BTN_ImportReceipt_Report.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_ImportReceipt_Report.Location = new System.Drawing.Point(174, 488);
+            this.BTN_ImportReceipt_Report.Name = "BTN_ImportReceipt_Report";
+            this.BTN_ImportReceipt_Report.Size = new System.Drawing.Size(119, 35);
+            this.BTN_ImportReceipt_Report.TabIndex = 28;
+            this.BTN_ImportReceipt_Report.Text = "Create Report";
+            this.BTN_ImportReceipt_Report.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_ImportReceipt_Report.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -682,7 +682,7 @@
             this.splitContainer1.ResumeLayout(false);
             this.Panel_ImportReceipt_GridBox.ResumeLayout(false);
             this.Panel_ImportReceipt_GridBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGView_ImportReceipt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_ImportReceipt)).EndInit();
             this.Panel_ImportReceipt_ButtonBox.ResumeLayout(false);
             this.Panel_ImportReceipt_ButtonBox.PerformLayout();
             this.Panel_ImportReceipt_Right.ResumeLayout(false);
@@ -701,16 +701,16 @@
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Panel Panel_ImportReceipt_ButtonBox;
-        private System.Windows.Forms.Button Button_ImportReport_Report;
-        private System.Windows.Forms.Button Button_ImportReport_Refresh;
+        private System.Windows.Forms.Button BTN_ImportReceipt_Report;
+        private System.Windows.Forms.Button BTN_ImportReceipt_Refresh;
         private System.Windows.Forms.Panel Panel_ImportReceipt_GridBox;
         private System.Windows.Forms.Label LabelDateNow;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label Label_TimeNow;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox TextBox_ImportReport_Search;
-        private System.Windows.Forms.DataGridView DGView_ImportReceipt;
+        private System.Windows.Forms.TextBox TB_ImportReceipt_Search;
+        private System.Windows.Forms.DataGridView DGV_ImportReceipt;
         private System.Windows.Forms.DataGridViewTextBoxColumn ImportID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ImportDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn PublisherID;
@@ -728,16 +728,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button Button_Suppliers_Save;
-        private System.Windows.Forms.Button Button_ImportReceipt_Add;
+        private System.Windows.Forms.Button BTN_ImportReceipt_Save;
+        private System.Windows.Forms.Button BTN_ImportReceipt_Add;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox TextBox_ImportReceipt_ImportID;
+        private System.Windows.Forms.TextBox TB_ImportReceipt_ImportID;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox CBB_StaffName;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CBB_PubName;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker Date_ImportDate;
         private System.Windows.Forms.Label label10;
     }
 }
