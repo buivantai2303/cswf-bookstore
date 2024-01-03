@@ -26,23 +26,24 @@ A comprehensive Library Management System that allows efficient management of bo
 
 1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/buivantai2303/LibraryManagement.git
+      ```bash
+      git clone https://github.com/buivantai2303/LibraryManagement.git
 
 2. Usage
-  - Log in with your admin credentials.
-  - Navigate through the dashboard to manage books, suppliers, and transactions.
-  - Utilize the search and filtering options for efficient data retrieval.
-  - Generate reports and export data as needed.
+     - Log in with your admin credentials.
+     - Navigate through the dashboard to manage books, suppliers, and transactions.
+     - Utilize the search and filtering options for efficient data retrieval.
+     - Generate reports and export data as needed.
 
 3. Technologies Used
-  - Language: C# & WindowsForm
+     - Language: C# & WindowsForm
+     - Database: SQL Server
 
 4. Contributing
-  **Contributions are welcome! Follow these steps:**
-  - Fork the repository.
-  - Create a new branch: git checkout -b feature-new-feature.
-  - Make changes and commit: git commit -m 'Add new feature'.
-  - Push to the branch: git push origin feature-new-feature.
-  - Submit a pull request.
+     **Contributions are welcome! Follow these steps:**
+     - Fork the repository.
+     - Create a new branch: git checkout -b feature-new-feature.
+     - Make changes and commit: git commit -m 'Add new feature'.
+     - Push to the branch: git push origin feature-new-feature.
+     - Submit a pull request.
 
