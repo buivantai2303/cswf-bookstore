@@ -28,37 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.PTB_Suppliers_Menu = new System.Windows.Forms.PictureBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label2 = new System.Windows.Forms.Label();
-            this.DGView_ImportReceipt = new System.Windows.Forms.DataGridView();
+            this.DGV_SearchBook_Left = new System.Windows.Forms.DataGridView();
             this.ImportID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ImportDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ActionColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TB_SearchBook_Search = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.Button_ImportReport_Refresh = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.LB_SearchBook_Total = new System.Windows.Forms.Label();
+            this.BTN_SeachBook_Reset = new System.Windows.Forms.Button();
+            this.DGV_SearchBook_Right = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Button_ImportReport_Pay = new System.Windows.Forms.Button();
+            this.BTN_SeachBook_Pay = new System.Windows.Forms.Button();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
@@ -67,11 +67,11 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGView_ImportReceipt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_SearchBook_Left)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_SearchBook_Right)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -117,8 +117,8 @@
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.White;
             this.splitContainer1.Panel1.Controls.Add(this.label2);
-            this.splitContainer1.Panel1.Controls.Add(this.DGView_ImportReceipt);
-            this.splitContainer1.Panel1.Controls.Add(this.textBox1);
+            this.splitContainer1.Panel1.Controls.Add(this.DGV_SearchBook_Left);
+            this.splitContainer1.Panel1.Controls.Add(this.TB_SearchBook_Search);
             this.splitContainer1.Panel1.Controls.Add(this.panel2);
             // 
             // splitContainer1.Panel2
@@ -139,63 +139,63 @@
             this.label2.TabIndex = 27;
             this.label2.Text = "Search Book Name:";
             // 
-            // DGView_ImportReceipt
+            // DGV_SearchBook_Left
             // 
-            this.DGView_ImportReceipt.AllowUserToAddRows = false;
-            this.DGView_ImportReceipt.AllowUserToDeleteRows = false;
-            this.DGView_ImportReceipt.AllowUserToResizeColumns = false;
-            this.DGView_ImportReceipt.AllowUserToResizeRows = false;
-            this.DGView_ImportReceipt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.DGV_SearchBook_Left.AllowUserToAddRows = false;
+            this.DGV_SearchBook_Left.AllowUserToDeleteRows = false;
+            this.DGV_SearchBook_Left.AllowUserToResizeColumns = false;
+            this.DGV_SearchBook_Left.AllowUserToResizeRows = false;
+            this.DGV_SearchBook_Left.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DGView_ImportReceipt.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DGView_ImportReceipt.BackgroundColor = System.Drawing.Color.White;
-            this.DGView_ImportReceipt.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.DGView_ImportReceipt.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGView_ImportReceipt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.DGView_ImportReceipt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.DGView_ImportReceipt.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DGV_SearchBook_Left.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DGV_SearchBook_Left.BackgroundColor = System.Drawing.Color.White;
+            this.DGV_SearchBook_Left.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.DGV_SearchBook_Left.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_SearchBook_Left.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.DGV_SearchBook_Left.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.DGV_SearchBook_Left.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ImportID,
             this.ImportDate,
             this.BookType,
             this.Price,
             this.ActionColumn});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(151)))), ((int)(((byte)(196)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGView_ImportReceipt.DefaultCellStyle = dataGridViewCellStyle8;
-            this.DGView_ImportReceipt.EnableHeadersVisualStyles = false;
-            this.DGView_ImportReceipt.Location = new System.Drawing.Point(0, 215);
-            this.DGView_ImportReceipt.MultiSelect = false;
-            this.DGView_ImportReceipt.Name = "DGView_ImportReceipt";
-            this.DGView_ImportReceipt.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGView_ImportReceipt.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.DGView_ImportReceipt.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.DGView_ImportReceipt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGView_ImportReceipt.ShowCellErrors = false;
-            this.DGView_ImportReceipt.ShowCellToolTips = false;
-            this.DGView_ImportReceipt.ShowEditingIcon = false;
-            this.DGView_ImportReceipt.ShowRowErrors = false;
-            this.DGView_ImportReceipt.Size = new System.Drawing.Size(453, 388);
-            this.DGView_ImportReceipt.TabIndex = 25;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(151)))), ((int)(((byte)(196)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGV_SearchBook_Left.DefaultCellStyle = dataGridViewCellStyle2;
+            this.DGV_SearchBook_Left.EnableHeadersVisualStyles = false;
+            this.DGV_SearchBook_Left.Location = new System.Drawing.Point(0, 215);
+            this.DGV_SearchBook_Left.MultiSelect = false;
+            this.DGV_SearchBook_Left.Name = "DGV_SearchBook_Left";
+            this.DGV_SearchBook_Left.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_SearchBook_Left.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.DGV_SearchBook_Left.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.DGV_SearchBook_Left.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGV_SearchBook_Left.ShowCellErrors = false;
+            this.DGV_SearchBook_Left.ShowCellToolTips = false;
+            this.DGV_SearchBook_Left.ShowEditingIcon = false;
+            this.DGV_SearchBook_Left.ShowRowErrors = false;
+            this.DGV_SearchBook_Left.Size = new System.Drawing.Size(453, 388);
+            this.DGV_SearchBook_Left.TabIndex = 25;
             // 
             // ImportID
             // 
@@ -244,12 +244,12 @@
             this.ActionColumn.ReadOnly = true;
             this.ActionColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
-            // textBox1
+            // TB_SearchBook_Search
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 189);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(158, 20);
-            this.textBox1.TabIndex = 0;
+            this.TB_SearchBook_Search.Location = new System.Drawing.Point(12, 189);
+            this.TB_SearchBook_Search.Name = "TB_SearchBook_Search";
+            this.TB_SearchBook_Search.Size = new System.Drawing.Size(158, 20);
+            this.TB_SearchBook_Search.TabIndex = 0;
             // 
             // panel2
             // 
@@ -278,9 +278,9 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(234)))), ((int)(((byte)(242)))));
             this.panel3.Controls.Add(this.panel4);
-            this.panel3.Controls.Add(this.Button_ImportReport_Refresh);
-            this.panel3.Controls.Add(this.dataGridView1);
-            this.panel3.Controls.Add(this.Button_ImportReport_Pay);
+            this.panel3.Controls.Add(this.BTN_SeachBook_Reset);
+            this.panel3.Controls.Add(this.DGV_SearchBook_Right);
+            this.panel3.Controls.Add(this.BTN_SeachBook_Pay);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
@@ -291,96 +291,96 @@
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.LB_SearchBook_Total);
             this.panel4.Location = new System.Drawing.Point(200, 333);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(180, 58);
             this.panel4.TabIndex = 32;
             // 
-            // label4
+            // LB_SearchBook_Total
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(3, 17);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 17);
-            this.label4.TabIndex = 28;
-            this.label4.Text = "Total:";
+            this.LB_SearchBook_Total.AutoSize = true;
+            this.LB_SearchBook_Total.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_SearchBook_Total.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.LB_SearchBook_Total.Location = new System.Drawing.Point(3, 17);
+            this.LB_SearchBook_Total.Name = "LB_SearchBook_Total";
+            this.LB_SearchBook_Total.Size = new System.Drawing.Size(43, 17);
+            this.LB_SearchBook_Total.TabIndex = 28;
+            this.LB_SearchBook_Total.Text = "Total:";
             // 
-            // Button_ImportReport_Refresh
+            // BTN_SeachBook_Reset
             // 
-            this.Button_ImportReport_Refresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Button_ImportReport_Refresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            this.Button_ImportReport_Refresh.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_ImportReport_Refresh.ForeColor = System.Drawing.Color.White;
-            this.Button_ImportReport_Refresh.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Reset;
-            this.Button_ImportReport_Refresh.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Button_ImportReport_Refresh.Location = new System.Drawing.Point(18, 333);
-            this.Button_ImportReport_Refresh.Name = "Button_ImportReport_Refresh";
-            this.Button_ImportReport_Refresh.Size = new System.Drawing.Size(66, 58);
-            this.Button_ImportReport_Refresh.TabIndex = 31;
-            this.Button_ImportReport_Refresh.Text = "Reset";
-            this.Button_ImportReport_Refresh.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Button_ImportReport_Refresh.UseVisualStyleBackColor = false;
+            this.BTN_SeachBook_Reset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BTN_SeachBook_Reset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            this.BTN_SeachBook_Reset.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_SeachBook_Reset.ForeColor = System.Drawing.Color.White;
+            this.BTN_SeachBook_Reset.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Reset;
+            this.BTN_SeachBook_Reset.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BTN_SeachBook_Reset.Location = new System.Drawing.Point(18, 333);
+            this.BTN_SeachBook_Reset.Name = "BTN_SeachBook_Reset";
+            this.BTN_SeachBook_Reset.Size = new System.Drawing.Size(66, 58);
+            this.BTN_SeachBook_Reset.TabIndex = 31;
+            this.BTN_SeachBook_Reset.Text = "Reset";
+            this.BTN_SeachBook_Reset.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BTN_SeachBook_Reset.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // DGV_SearchBook_Right
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.DGV_SearchBook_Right.AllowUserToAddRows = false;
+            this.DGV_SearchBook_Right.AllowUserToDeleteRows = false;
+            this.DGV_SearchBook_Right.AllowUserToResizeColumns = false;
+            this.DGV_SearchBook_Right.AllowUserToResizeRows = false;
+            this.DGV_SearchBook_Right.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DGV_SearchBook_Right.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DGV_SearchBook_Right.BackgroundColor = System.Drawing.Color.White;
+            this.DGV_SearchBook_Right.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.DGV_SearchBook_Right.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_SearchBook_Right.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.DGV_SearchBook_Right.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.DGV_SearchBook_Right.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.Amount});
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(151)))), ((int)(((byte)(196)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle11;
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
-            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.ShowCellErrors = false;
-            this.dataGridView1.ShowCellToolTips = false;
-            this.dataGridView1.ShowEditingIcon = false;
-            this.dataGridView1.ShowRowErrors = false;
-            this.dataGridView1.Size = new System.Drawing.Size(442, 318);
-            this.dataGridView1.TabIndex = 30;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(151)))), ((int)(((byte)(196)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGV_SearchBook_Right.DefaultCellStyle = dataGridViewCellStyle5;
+            this.DGV_SearchBook_Right.EnableHeadersVisualStyles = false;
+            this.DGV_SearchBook_Right.Location = new System.Drawing.Point(0, 0);
+            this.DGV_SearchBook_Right.MultiSelect = false;
+            this.DGV_SearchBook_Right.Name = "DGV_SearchBook_Right";
+            this.DGV_SearchBook_Right.ReadOnly = true;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_SearchBook_Right.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.DGV_SearchBook_Right.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.DGV_SearchBook_Right.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGV_SearchBook_Right.ShowCellErrors = false;
+            this.DGV_SearchBook_Right.ShowCellToolTips = false;
+            this.DGV_SearchBook_Right.ShowEditingIcon = false;
+            this.DGV_SearchBook_Right.ShowRowErrors = false;
+            this.DGV_SearchBook_Right.Size = new System.Drawing.Size(442, 318);
+            this.DGV_SearchBook_Right.TabIndex = 30;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -424,21 +424,21 @@
             this.Amount.Name = "Amount";
             this.Amount.ReadOnly = true;
             // 
-            // Button_ImportReport_Pay
+            // BTN_SeachBook_Pay
             // 
-            this.Button_ImportReport_Pay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Button_ImportReport_Pay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(137)))), ((int)(((byte)(86)))));
-            this.Button_ImportReport_Pay.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_ImportReport_Pay.ForeColor = System.Drawing.Color.White;
-            this.Button_ImportReport_Pay.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Wallet1;
-            this.Button_ImportReport_Pay.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Button_ImportReport_Pay.Location = new System.Drawing.Point(90, 333);
-            this.Button_ImportReport_Pay.Name = "Button_ImportReport_Pay";
-            this.Button_ImportReport_Pay.Size = new System.Drawing.Size(66, 58);
-            this.Button_ImportReport_Pay.TabIndex = 29;
-            this.Button_ImportReport_Pay.Text = "Pay";
-            this.Button_ImportReport_Pay.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Button_ImportReport_Pay.UseVisualStyleBackColor = false;
+            this.BTN_SeachBook_Pay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BTN_SeachBook_Pay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(137)))), ((int)(((byte)(86)))));
+            this.BTN_SeachBook_Pay.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_SeachBook_Pay.ForeColor = System.Drawing.Color.White;
+            this.BTN_SeachBook_Pay.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Wallet1;
+            this.BTN_SeachBook_Pay.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BTN_SeachBook_Pay.Location = new System.Drawing.Point(90, 333);
+            this.BTN_SeachBook_Pay.Name = "BTN_SeachBook_Pay";
+            this.BTN_SeachBook_Pay.Size = new System.Drawing.Size(66, 58);
+            this.BTN_SeachBook_Pay.TabIndex = 29;
+            this.BTN_SeachBook_Pay.Text = "Pay";
+            this.BTN_SeachBook_Pay.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BTN_SeachBook_Pay.UseVisualStyleBackColor = false;
             // 
             // dataGridViewImageColumn1
             // 
@@ -480,13 +480,13 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DGView_ImportReceipt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_SearchBook_Left)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_SearchBook_Right)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -498,18 +498,18 @@
         private System.Windows.Forms.PictureBox PTB_Suppliers_Menu;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TB_SearchBook_Search;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView DGView_ImportReceipt;
+        private System.Windows.Forms.DataGridView DGV_SearchBook_Left;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button Button_ImportReport_Pay;
+        private System.Windows.Forms.Button BTN_SeachBook_Pay;
         private System.Windows.Forms.DataGridViewTextBoxColumn ImportID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ImportDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn BookType;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewImageColumn ActionColumn;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DGV_SearchBook_Right;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -517,8 +517,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
-        private System.Windows.Forms.Button Button_ImportReport_Refresh;
+        private System.Windows.Forms.Button BTN_SeachBook_Reset;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label LB_SearchBook_Total;
     }
 }

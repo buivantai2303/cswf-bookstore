@@ -50,7 +50,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.Date_ImportDate = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
-            this.CBB_StaffName = new System.Windows.Forms.ComboBox();
+            this.CBB_StaffID = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.CBB_PubName = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -58,7 +58,7 @@
             this.BTN_ImportReceipt_Save = new System.Windows.Forms.Button();
             this.BTN_ImportReceipt_Add = new System.Windows.Forms.Button();
             this.Panel_ImportReceipt_Right = new System.Windows.Forms.Panel();
-            this.LB_Datails_Total = new System.Windows.Forms.Label();
+            this.LB_ReceiptDetails_Total = new System.Windows.Forms.Label();
             this.DGV_ImportReceipt_ReceiptDetails = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -275,7 +275,7 @@
             this.Panel_ImportReceipt_ButtonBox.Controls.Add(this.label9);
             this.Panel_ImportReceipt_ButtonBox.Controls.Add(this.Date_ImportDate);
             this.Panel_ImportReceipt_ButtonBox.Controls.Add(this.label8);
-            this.Panel_ImportReceipt_ButtonBox.Controls.Add(this.CBB_StaffName);
+            this.Panel_ImportReceipt_ButtonBox.Controls.Add(this.CBB_StaffID);
             this.Panel_ImportReceipt_ButtonBox.Controls.Add(this.label6);
             this.Panel_ImportReceipt_ButtonBox.Controls.Add(this.CBB_PubName);
             this.Panel_ImportReceipt_ButtonBox.Controls.Add(this.label5);
@@ -320,16 +320,16 @@
             this.label8.TabIndex = 40;
             this.label8.Text = "Staff ID:";
             // 
-            // CBB_StaffName
+            // CBB_StaffID
             // 
-            this.CBB_StaffName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CBB_StaffName.FormattingEnabled = true;
-            this.CBB_StaffName.Location = new System.Drawing.Point(209, 89);
-            this.CBB_StaffName.MaximumSize = new System.Drawing.Size(216, 0);
-            this.CBB_StaffName.MinimumSize = new System.Drawing.Size(216, 0);
-            this.CBB_StaffName.Name = "CBB_StaffName";
-            this.CBB_StaffName.Size = new System.Drawing.Size(216, 25);
-            this.CBB_StaffName.TabIndex = 39;
+            this.CBB_StaffID.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CBB_StaffID.FormattingEnabled = true;
+            this.CBB_StaffID.Location = new System.Drawing.Point(209, 89);
+            this.CBB_StaffID.MaximumSize = new System.Drawing.Size(216, 0);
+            this.CBB_StaffID.MinimumSize = new System.Drawing.Size(216, 0);
+            this.CBB_StaffID.Name = "CBB_StaffID";
+            this.CBB_StaffID.Size = new System.Drawing.Size(216, 25);
+            this.CBB_StaffID.TabIndex = 39;
             // 
             // label6
             // 
@@ -406,7 +406,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Panel_ImportReceipt_Right.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Panel_ImportReceipt_Right.Controls.Add(this.LB_Datails_Total);
+            this.Panel_ImportReceipt_Right.Controls.Add(this.LB_ReceiptDetails_Total);
             this.Panel_ImportReceipt_Right.Controls.Add(this.DGV_ImportReceipt_ReceiptDetails);
             this.Panel_ImportReceipt_Right.Controls.Add(this.panel2);
             this.Panel_ImportReceipt_Right.Controls.Add(this.label3);
@@ -416,17 +416,17 @@
             this.Panel_ImportReceipt_Right.Size = new System.Drawing.Size(339, 600);
             this.Panel_ImportReceipt_Right.TabIndex = 19;
             // 
-            // LB_Datails_Total
+            // LB_ReceiptDetails_Total
             // 
-            this.LB_Datails_Total.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.LB_Datails_Total.AutoSize = true;
-            this.LB_Datails_Total.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_Datails_Total.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.LB_Datails_Total.Location = new System.Drawing.Point(171, 441);
-            this.LB_Datails_Total.Name = "LB_Datails_Total";
-            this.LB_Datails_Total.Size = new System.Drawing.Size(43, 17);
-            this.LB_Datails_Total.TabIndex = 42;
-            this.LB_Datails_Total.Text = "Total:";
+            this.LB_ReceiptDetails_Total.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.LB_ReceiptDetails_Total.AutoSize = true;
+            this.LB_ReceiptDetails_Total.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_ReceiptDetails_Total.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.LB_ReceiptDetails_Total.Location = new System.Drawing.Point(171, 441);
+            this.LB_ReceiptDetails_Total.Name = "LB_ReceiptDetails_Total";
+            this.LB_ReceiptDetails_Total.Size = new System.Drawing.Size(43, 17);
+            this.LB_ReceiptDetails_Total.TabIndex = 42;
+            this.LB_ReceiptDetails_Total.Text = "Total:";
             // 
             // DGV_ImportReceipt_ReceiptDetails
             // 
@@ -681,11 +681,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox TB_ImportReceipt_ImportID;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox CBB_StaffName;
+        private System.Windows.Forms.ComboBox CBB_StaffID;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox CBB_PubName;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker Date_ImportDate;
-        private System.Windows.Forms.Label LB_Datails_Total;
+        private System.Windows.Forms.Label LB_ReceiptDetails_Total;
     }
 }

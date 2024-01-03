@@ -40,9 +40,9 @@ namespace LibraryManagement_BuiVanTai
 
             // Get total suppliers and active suppliets.
             DB_Suppliers = new Database_Suppliers(ClassDefineName.servername, ClassDefineName.database_name);
-            Label_Suppliers_TotalNumbers.Text = DGView_Suppliers.Rows.Count.ToString();
+            Label_Suppliers_TotalNumbers.Text = DGV_Suppliers.Rows.Count.ToString();
             Label_Suppliers_WorkingNumber.Text = DB_Suppliers.getActiveRowCount().ToString();
-            DGView_Suppliers.RowHeadersVisible = false;
+            DGV_Suppliers.RowHeadersVisible = false;
 
             // Set comboBox default is "all'
             ComboBox_Suppliers_Status.Text = ClassDefineName.table_Suppliers_SupplierState_AllState;
@@ -58,18 +58,18 @@ namespace LibraryManagement_BuiVanTai
         private void ComboBox_Library_Status_SelectedIndexChanged(object sender, EventArgs e) {
             if (ComboBox_Suppliers_Status.Text == "Active")
             {
-                TextBox_Suppliers_Search.Clear();
+                TB_Suppliers_Search.Clear();
                 DB_Suppliers = new Database_Suppliers(ClassDefineName.servername, ClassDefineName.database_name);
                 dataTable_Suppliers = DB_Suppliers.getActiveTable();
-                DGView_Suppliers.DataSource = dataTable_Suppliers;
+                DGV_Suppliers.DataSource = dataTable_Suppliers;
 
             } 
             else if (ComboBox_Suppliers_Status.Text == "Inactive") 
             {
-                TextBox_Suppliers_Search.Clear();
+                TB_Suppliers_Search.Clear();
                 DB_Suppliers = new Database_Suppliers(ClassDefineName.servername, ClassDefineName.database_name);
                 dataTable_Suppliers = DB_Suppliers.getInActiveTable();
-                DGView_Suppliers.DataSource = dataTable_Suppliers;
+                DGV_Suppliers.DataSource = dataTable_Suppliers;
             } 
             else
             {
@@ -80,7 +80,7 @@ namespace LibraryManagement_BuiVanTai
 
         // Combo Box statement select =====================================================================
         private void Btn_Suppliers_Refresh_Click(object sender, EventArgs e) {
-            TextBox_Suppliers_Search.Clear();
+            TB_Suppliers_Search.Clear();
             GridViewFormLoad(ClassDefineName.servername, ClassDefineName.database_name);
             getEmptyTextBox();
         }
@@ -90,28 +90,28 @@ namespace LibraryManagement_BuiVanTai
         public void GridViewFormLoad(string ServerName, string DatabaseName) {
             DB_Suppliers = new Database_Suppliers(ServerName, DatabaseName);
             dataTable_Suppliers = DB_Suppliers.getTable();
-            DGView_Suppliers.DataSource = dataTable_Suppliers;
-            Label_Suppliers_TotalNumbers.Text = DGView_Suppliers.Rows.Count.ToString();
+            DGV_Suppliers.DataSource = dataTable_Suppliers;
+            Label_Suppliers_TotalNumbers.Text = DGV_Suppliers.Rows.Count.ToString();
         }
 
 
         // Use delete buton to dataGridView_Suppliers function ============================================
         private void dataGridView_Suppliers_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Class_Suppliers suppliers = new Class_Suppliers(TextBox_Suppliers_ID.Text);
+            Class_Suppliers suppliers = new Class_Suppliers(TB_Suppliers_ID.Text);
 
             // Select only delete icon and question to delete access
-            if (e.RowIndex >= 0 && DGView_Suppliers.Columns[e.ColumnIndex].Name == "ActionColumn")
+            if (e.RowIndex >= 0 && DGV_Suppliers.Columns[e.ColumnIndex].Name == "ActionColumn")
             {
                 DialogResult result = MessageBox.Show("Are you sure you want to delete this row?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (result == DialogResult.Yes)
                 {
-                    string columnIDValue = DGView_Suppliers.Rows[e.RowIndex].Cells[1].Value.ToString();
+                    string columnIDValue = DGV_Suppliers.Rows[e.RowIndex].Cells[1].Value.ToString();
                     DB_Suppliers.DeletDataByID(columnIDValue);
 
-                    int rowIndex = DGView_Suppliers.CurrentCell.RowIndex;
-                    DGView_Suppliers.Rows.RemoveAt(rowIndex);
+                    int rowIndex = DGV_Suppliers.CurrentCell.RowIndex;
+                    DGV_Suppliers.Rows.RemoveAt(rowIndex);
 
                     MessageBox.Show("Row deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -125,18 +125,18 @@ namespace LibraryManagement_BuiVanTai
 
             if (ComboBox_Suppliers_Status.Text != ClassDefineName.table_Suppliers_SupplierState_Active && ComboBox_Suppliers_Status.Text != ClassDefineName.table_Suppliers_SupplierState_Inactive)
             {
-                dataTable_Suppliers = DB_Suppliers.SearchDataNonState(TextBox_Suppliers_Search.Text, ClassDefineName.table_Suppliers_SupplierState_OffState);
-                DGView_Suppliers.DataSource = dataTable_Suppliers;
+                dataTable_Suppliers = DB_Suppliers.SearchDataNonState(TB_Suppliers_Search.Text, ClassDefineName.table_Suppliers_SupplierState_OffState);
+                DGV_Suppliers.DataSource = dataTable_Suppliers;
             }
             else if (ComboBox_Suppliers_Status.Text == ClassDefineName.table_Suppliers_SupplierState_Active)
             {
-                dataTable_Suppliers = DB_Suppliers.SearchDataWithState(TextBox_Suppliers_Search.Text, ClassDefineName.table_Suppliers_SupplierState_Active);
-                DGView_Suppliers.DataSource = dataTable_Suppliers;
+                dataTable_Suppliers = DB_Suppliers.SearchDataWithState(TB_Suppliers_Search.Text, ClassDefineName.table_Suppliers_SupplierState_Active);
+                DGV_Suppliers.DataSource = dataTable_Suppliers;
             } 
             else if (ComboBox_Suppliers_Status.Text == ClassDefineName.table_Suppliers_SupplierState_Inactive)
             {
-                dataTable_Suppliers = DB_Suppliers.SearchDataWithState(TextBox_Suppliers_Search.Text, ClassDefineName.table_Suppliers_SupplierState_Inactive);
-                DGView_Suppliers.DataSource = dataTable_Suppliers;
+                dataTable_Suppliers = DB_Suppliers.SearchDataWithState(TB_Suppliers_Search.Text, ClassDefineName.table_Suppliers_SupplierState_Inactive);
+                DGV_Suppliers.DataSource = dataTable_Suppliers;
             }
             else
             {
@@ -149,17 +149,17 @@ namespace LibraryManagement_BuiVanTai
         private void Button_SuppliersSave_Click(object sender, EventArgs e)
         {
             // Get the selected row index
-            int rowIndex = DGView_Suppliers.CurrentCell.RowIndex;
+            int rowIndex = DGV_Suppliers.CurrentCell.RowIndex;
 
             // Check if a row is selected
             if (rowIndex >= 0)
             {
-                DataGridViewRow SelectedRow = DGView_Suppliers.Rows[rowIndex];
-                Class_Suppliers suppliers = new Class_Suppliers(TextBox_Suppliers_ID.Text, TextBox_Suppliers_Name.Text, Textbox_Suppliers_Address.Text, Textbox_Suppliers_Telephone.Text, ComboBox_Suppliers_Suppliers_StatusFix.Text);
+                DataGridViewRow SelectedRow = DGV_Suppliers.Rows[rowIndex];
+                Class_Suppliers suppliers = new Class_Suppliers(TB_Suppliers_ID.Text, TB_Suppliers_Name.Text, TB_Suppliers_Address.Text, TB_Suppliers_Telephone.Text, CBB_Suppliers_Suppliers_StatusFix.Text);
 
                 // Get the values from the selected row
                 string OldID = SelectedRow.Cells["SupplierID"].Value.ToString();
-                string NewID = TextBox_Suppliers_ID.Text;
+                string NewID = TB_Suppliers_ID.Text;
 
                 if (DataConditional())
                 {
@@ -197,7 +197,7 @@ namespace LibraryManagement_BuiVanTai
         // Add button click================================================================================
         private void Button_SuppliersAdd_Click(object sender, EventArgs e)
         {
-            Class_Suppliers suppliers = new Class_Suppliers(TextBox_Suppliers_ID.Text, TextBox_Suppliers_Name.Text, Textbox_Suppliers_Address.Text, Textbox_Suppliers_Telephone.Text, ComboBox_Suppliers_Suppliers_StatusFix.Text);
+            Class_Suppliers suppliers = new Class_Suppliers(TB_Suppliers_ID.Text, TB_Suppliers_Name.Text, TB_Suppliers_Address.Text, TB_Suppliers_Telephone.Text, CBB_Suppliers_Suppliers_StatusFix.Text);
 
             // Check condition
             if (DataConditional())
@@ -214,11 +214,11 @@ namespace LibraryManagement_BuiVanTai
 
                         // Add new data to dataGridSuppliers
                         DataRow dataGridSuppliers = dataTable_Suppliers.NewRow();
-                        dataGridSuppliers[0] = TextBox_Suppliers_ID.Text;
-                        dataGridSuppliers[1] = TextBox_Suppliers_Name.Text;
-                        dataGridSuppliers[2] = Textbox_Suppliers_Address.Text;
-                        dataGridSuppliers[3] = Textbox_Suppliers_Telephone.Text;
-                        dataGridSuppliers[4] = ComboBox_Suppliers_Suppliers_StatusFix.Text;
+                        dataGridSuppliers[0] = TB_Suppliers_ID.Text;
+                        dataGridSuppliers[1] = TB_Suppliers_Name.Text;
+                        dataGridSuppliers[2] = TB_Suppliers_Address.Text;
+                        dataGridSuppliers[3] = TB_Suppliers_Telephone.Text;
+                        dataGridSuppliers[4] = CBB_Suppliers_Suppliers_StatusFix.Text;
                         dataTable_Suppliers.Rows.Add(dataGridSuppliers);
 
                         getEmptyTextBox();
@@ -238,31 +238,31 @@ namespace LibraryManagement_BuiVanTai
         private bool DataConditional()
         {
             
-            if (TextBox_Suppliers_ID.Text.Length < 3 || TextBox_Suppliers_ID.Text.Length > 10)
+            if (TB_Suppliers_ID.Text.Length < 3 || TB_Suppliers_ID.Text.Length > 10)
             {
                 MessageBox.Show("The 'Supplier Code' must be at least 3 to a maximum of 10 characters.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
-            if (TextBox_Suppliers_Name.Text.Length < 1 || TextBox_Suppliers_Name.Text.Length > 200)
+            if (TB_Suppliers_Name.Text.Length < 1 || TB_Suppliers_Name.Text.Length > 200)
             {
                 MessageBox.Show("The 'Supplier Name' cannot be empty and must be maximum 200 characters.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
-            if (Textbox_Suppliers_Address.Text.Length < 1 || Textbox_Suppliers_Address.Text.Length > 200)
+            if (TB_Suppliers_Address.Text.Length < 1 || TB_Suppliers_Address.Text.Length > 200)
             {
                 MessageBox.Show("The 'Supplier Address' cannot be empty and must be maximum 200 characters.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
-            if (Textbox_Suppliers_Telephone.Text.Length < 1 || Textbox_Suppliers_Telephone.Text.Length > 12)
+            if (TB_Suppliers_Telephone.Text.Length < 1 || TB_Suppliers_Telephone.Text.Length > 12)
             {
                 MessageBox.Show("The 'Phone Telephone' cannot be empty, minimum 10 and maximum 11 numbers.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
-            if (ComboBox_Suppliers_Suppliers_StatusFix.Text != ClassDefineName.table_Suppliers_SupplierState_Active && ComboBox_Suppliers_Suppliers_StatusFix.Text != ClassDefineName.table_Suppliers_SupplierState_Inactive)
+            if (CBB_Suppliers_Suppliers_StatusFix.Text != ClassDefineName.table_Suppliers_SupplierState_Active && CBB_Suppliers_Suppliers_StatusFix.Text != ClassDefineName.table_Suppliers_SupplierState_Inactive)
             {
                 MessageBox.Show("Invalid 'Suppliers status'", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -276,12 +276,12 @@ namespace LibraryManagement_BuiVanTai
         private void dataGridView_Suppliers_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int index = e.RowIndex;
-            DataGridViewRow SelectedRow = DGView_Suppliers.Rows[index];
-            TextBox_Suppliers_ID.Text = SelectedRow.Cells[1].Value.ToString();
-            TextBox_Suppliers_Name.Text = SelectedRow.Cells[2].Value.ToString();
-            Textbox_Suppliers_Address.Text = SelectedRow.Cells[3].Value.ToString();
-            Textbox_Suppliers_Telephone.Text = SelectedRow.Cells[4].Value.ToString();
-            ComboBox_Suppliers_Suppliers_StatusFix.Text = SelectedRow.Cells[5].Value.ToString();
+            DataGridViewRow SelectedRow = DGV_Suppliers.Rows[index];
+            TB_Suppliers_ID.Text = SelectedRow.Cells[1].Value.ToString();
+            TB_Suppliers_Name.Text = SelectedRow.Cells[2].Value.ToString();
+            TB_Suppliers_Address.Text = SelectedRow.Cells[3].Value.ToString();
+            TB_Suppliers_Telephone.Text = SelectedRow.Cells[4].Value.ToString();
+            CBB_Suppliers_Suppliers_StatusFix.Text = SelectedRow.Cells[5].Value.ToString();
         }
 
 
@@ -289,13 +289,13 @@ namespace LibraryManagement_BuiVanTai
         // Set to all textbox is empty ========================================================================
         private void getEmptyTextBox()
         {
-            TextBox_Suppliers_ID.Text = string.Empty;
-            TextBox_Suppliers_Name.Text = string.Empty;
-            Textbox_Suppliers_Address.Text = string.Empty;
-            Textbox_Suppliers_Telephone.Text = string.Empty;
-            TextBox_Suppliers_Search.Text = string.Empty;
+            TB_Suppliers_ID.Text = string.Empty;
+            TB_Suppliers_Name.Text = string.Empty;
+            TB_Suppliers_Address.Text = string.Empty;
+            TB_Suppliers_Telephone.Text = string.Empty;
+            TB_Suppliers_Search.Text = string.Empty;
             ComboBox_Suppliers_Status.Text = ClassDefineName.table_Suppliers_SupplierState_AllState;
-            ComboBox_Suppliers_Suppliers_StatusFix.Text = ClassDefineName.table_Suppliers_SupplierState_Active;
+            CBB_Suppliers_Suppliers_StatusFix.Text = ClassDefineName.table_Suppliers_SupplierState_Active;
         }
 
 
@@ -334,7 +334,7 @@ namespace LibraryManagement_BuiVanTai
                         workSheet.Range["A1:E3"].Interior.Color = System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.Orange);
 
                         // Add table name in the merged cell and format it
-                        workSheet.Cells[1, 1] = $"Suppliers: {DGView_Suppliers.Rows.Count.ToString()} are working";
+                        workSheet.Cells[1, 1] = $"Suppliers: {DGV_Suppliers.Rows.Count.ToString()} are working";
                         workSheet.Cells[1, 1].Font.Bold = true;
                         workSheet.Cells[1, 1].Font.Size = 20;
 

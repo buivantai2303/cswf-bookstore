@@ -42,45 +42,45 @@
             this.Label_Suppliers_TotalNumbers = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.Button_Suppliers_Save = new System.Windows.Forms.Button();
-            this.ComboBox_Suppliers_Suppliers_StatusFix = new System.Windows.Forms.ComboBox();
-            this.Button_Suppliers_Add = new System.Windows.Forms.Button();
+            this.NTN_Suppliers_Save = new System.Windows.Forms.Button();
+            this.CBB_Suppliers_Suppliers_StatusFix = new System.Windows.Forms.ComboBox();
+            this.BTN_Suppliers_Add = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.Textbox_Suppliers_Address = new System.Windows.Forms.TextBox();
+            this.TB_Suppliers_Address = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.Textbox_Suppliers_Telephone = new System.Windows.Forms.TextBox();
+            this.TB_Suppliers_Telephone = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.TextBox_Suppliers_Name = new System.Windows.Forms.TextBox();
+            this.TB_Suppliers_Name = new System.Windows.Forms.TextBox();
             this.Label_SupplierName = new System.Windows.Forms.Label();
-            this.TextBox_Suppliers_ID = new System.Windows.Forms.TextBox();
+            this.TB_Suppliers_ID = new System.Windows.Forms.TextBox();
             this.Label_SupplierID = new System.Windows.Forms.Label();
-            this.TextBox_Suppliers_Search = new System.Windows.Forms.TextBox();
+            this.TB_Suppliers_Search = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel4 = new System.Windows.Forms.Panel();
-            this.Button_Suppliers_Report = new System.Windows.Forms.Button();
-            this.DGView_Suppliers = new System.Windows.Forms.DataGridView();
+            this.BTN_Suppliers_Report = new System.Windows.Forms.Button();
+            this.LabelDateNow = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.Label_TimeNow = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.DGV_Suppliers = new System.Windows.Forms.DataGridView();
             this.SupplierID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SuppliersName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SupplierAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SupplierTel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SupplierState = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ActionColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Button_Suppliers_Refresh = new System.Windows.Forms.Button();
+            this.BTN_Suppliers_Refresh = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.ComboBox_Suppliers_Status = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Label_TimeNow = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.LabelDateNow = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PTB_Suppliers_Menu)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGView_Suppliers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Suppliers)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -195,17 +195,17 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(234)))), ((int)(((byte)(242)))));
-            this.panel3.Controls.Add(this.Button_Suppliers_Save);
-            this.panel3.Controls.Add(this.ComboBox_Suppliers_Suppliers_StatusFix);
-            this.panel3.Controls.Add(this.Button_Suppliers_Add);
+            this.panel3.Controls.Add(this.NTN_Suppliers_Save);
+            this.panel3.Controls.Add(this.CBB_Suppliers_Suppliers_StatusFix);
+            this.panel3.Controls.Add(this.BTN_Suppliers_Add);
             this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.Textbox_Suppliers_Address);
+            this.panel3.Controls.Add(this.TB_Suppliers_Address);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.Textbox_Suppliers_Telephone);
+            this.panel3.Controls.Add(this.TB_Suppliers_Telephone);
             this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.TextBox_Suppliers_Name);
+            this.panel3.Controls.Add(this.TB_Suppliers_Name);
             this.panel3.Controls.Add(this.Label_SupplierName);
-            this.panel3.Controls.Add(this.TextBox_Suppliers_ID);
+            this.panel3.Controls.Add(this.TB_Suppliers_ID);
             this.panel3.Controls.Add(this.Label_SupplierID);
             this.panel3.Location = new System.Drawing.Point(233, 54);
             this.panel3.MaximumSize = new System.Drawing.Size(0, 120);
@@ -214,54 +214,54 @@
             this.panel3.Size = new System.Drawing.Size(669, 120);
             this.panel3.TabIndex = 1;
             // 
-            // Button_Suppliers_Save
+            // NTN_Suppliers_Save
             // 
-            this.Button_Suppliers_Save.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.Button_Suppliers_Save.BackColor = System.Drawing.Color.SeaShell;
-            this.Button_Suppliers_Save.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_Suppliers_Save.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Save2;
-            this.Button_Suppliers_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Button_Suppliers_Save.Location = new System.Drawing.Point(579, 22);
-            this.Button_Suppliers_Save.Name = "Button_Suppliers_Save";
-            this.Button_Suppliers_Save.Size = new System.Drawing.Size(65, 48);
-            this.Button_Suppliers_Save.TabIndex = 17;
-            this.Button_Suppliers_Save.Text = "Save";
-            this.Button_Suppliers_Save.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_Suppliers_Save.UseVisualStyleBackColor = false;
-            this.Button_Suppliers_Save.Click += new System.EventHandler(this.Button_SuppliersSave_Click);
+            this.NTN_Suppliers_Save.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.NTN_Suppliers_Save.BackColor = System.Drawing.Color.SeaShell;
+            this.NTN_Suppliers_Save.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NTN_Suppliers_Save.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Save2;
+            this.NTN_Suppliers_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.NTN_Suppliers_Save.Location = new System.Drawing.Point(579, 22);
+            this.NTN_Suppliers_Save.Name = "NTN_Suppliers_Save";
+            this.NTN_Suppliers_Save.Size = new System.Drawing.Size(65, 48);
+            this.NTN_Suppliers_Save.TabIndex = 17;
+            this.NTN_Suppliers_Save.Text = "Save";
+            this.NTN_Suppliers_Save.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.NTN_Suppliers_Save.UseVisualStyleBackColor = false;
+            this.NTN_Suppliers_Save.Click += new System.EventHandler(this.Button_SuppliersSave_Click);
             // 
-            // ComboBox_Suppliers_Suppliers_StatusFix
+            // CBB_Suppliers_Suppliers_StatusFix
             // 
-            this.ComboBox_Suppliers_Suppliers_StatusFix.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.CBB_Suppliers_Suppliers_StatusFix.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ComboBox_Suppliers_Suppliers_StatusFix.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ComboBox_Suppliers_Suppliers_StatusFix.FormattingEnabled = true;
-            this.ComboBox_Suppliers_Suppliers_StatusFix.Items.AddRange(new object[] {
+            this.CBB_Suppliers_Suppliers_StatusFix.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CBB_Suppliers_Suppliers_StatusFix.FormattingEnabled = true;
+            this.CBB_Suppliers_Suppliers_StatusFix.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
-            this.ComboBox_Suppliers_Suppliers_StatusFix.Location = new System.Drawing.Point(364, 28);
-            this.ComboBox_Suppliers_Suppliers_StatusFix.MaximumSize = new System.Drawing.Size(120, 0);
-            this.ComboBox_Suppliers_Suppliers_StatusFix.MinimumSize = new System.Drawing.Size(120, 0);
-            this.ComboBox_Suppliers_Suppliers_StatusFix.Name = "ComboBox_Suppliers_Suppliers_StatusFix";
-            this.ComboBox_Suppliers_Suppliers_StatusFix.Size = new System.Drawing.Size(120, 25);
-            this.ComboBox_Suppliers_Suppliers_StatusFix.TabIndex = 13;
+            this.CBB_Suppliers_Suppliers_StatusFix.Location = new System.Drawing.Point(364, 28);
+            this.CBB_Suppliers_Suppliers_StatusFix.MaximumSize = new System.Drawing.Size(120, 0);
+            this.CBB_Suppliers_Suppliers_StatusFix.MinimumSize = new System.Drawing.Size(120, 0);
+            this.CBB_Suppliers_Suppliers_StatusFix.Name = "CBB_Suppliers_Suppliers_StatusFix";
+            this.CBB_Suppliers_Suppliers_StatusFix.Size = new System.Drawing.Size(120, 25);
+            this.CBB_Suppliers_Suppliers_StatusFix.TabIndex = 13;
             // 
-            // Button_Suppliers_Add
+            // BTN_Suppliers_Add
             // 
-            this.Button_Suppliers_Add.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.Button_Suppliers_Add.BackColor = System.Drawing.Color.SeaShell;
-            this.Button_Suppliers_Add.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_Suppliers_Add.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Add;
-            this.Button_Suppliers_Add.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Button_Suppliers_Add.Location = new System.Drawing.Point(508, 22);
-            this.Button_Suppliers_Add.Name = "Button_Suppliers_Add";
-            this.Button_Suppliers_Add.Size = new System.Drawing.Size(65, 48);
-            this.Button_Suppliers_Add.TabIndex = 18;
-            this.Button_Suppliers_Add.Text = "Add";
-            this.Button_Suppliers_Add.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_Suppliers_Add.UseVisualStyleBackColor = false;
-            this.Button_Suppliers_Add.Click += new System.EventHandler(this.Button_SuppliersAdd_Click);
+            this.BTN_Suppliers_Add.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.BTN_Suppliers_Add.BackColor = System.Drawing.Color.SeaShell;
+            this.BTN_Suppliers_Add.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Suppliers_Add.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Add;
+            this.BTN_Suppliers_Add.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_Suppliers_Add.Location = new System.Drawing.Point(508, 22);
+            this.BTN_Suppliers_Add.Name = "BTN_Suppliers_Add";
+            this.BTN_Suppliers_Add.Size = new System.Drawing.Size(65, 48);
+            this.BTN_Suppliers_Add.TabIndex = 18;
+            this.BTN_Suppliers_Add.Text = "Add";
+            this.BTN_Suppliers_Add.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Suppliers_Add.UseVisualStyleBackColor = false;
+            this.BTN_Suppliers_Add.Click += new System.EventHandler(this.Button_SuppliersAdd_Click);
             // 
             // label8
             // 
@@ -275,17 +275,17 @@
             this.label8.TabIndex = 16;
             this.label8.Text = "Supplier status:";
             // 
-            // Textbox_Suppliers_Address
+            // TB_Suppliers_Address
             // 
-            this.Textbox_Suppliers_Address.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.TB_Suppliers_Address.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Textbox_Suppliers_Address.BackColor = System.Drawing.Color.White;
-            this.Textbox_Suppliers_Address.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Textbox_Suppliers_Address.Location = new System.Drawing.Point(361, 84);
-            this.Textbox_Suppliers_Address.Name = "Textbox_Suppliers_Address";
-            this.Textbox_Suppliers_Address.Size = new System.Drawing.Size(283, 25);
-            this.Textbox_Suppliers_Address.TabIndex = 15;
+            this.TB_Suppliers_Address.BackColor = System.Drawing.Color.White;
+            this.TB_Suppliers_Address.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_Suppliers_Address.Location = new System.Drawing.Point(361, 84);
+            this.TB_Suppliers_Address.Name = "TB_Suppliers_Address";
+            this.TB_Suppliers_Address.Size = new System.Drawing.Size(283, 25);
+            this.TB_Suppliers_Address.TabIndex = 15;
             // 
             // label6
             // 
@@ -299,19 +299,19 @@
             this.label6.TabIndex = 14;
             this.label6.Text = "Supplier Address:";
             // 
-            // Textbox_Suppliers_Telephone
+            // TB_Suppliers_Telephone
             // 
-            this.Textbox_Suppliers_Telephone.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.TB_Suppliers_Telephone.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Textbox_Suppliers_Telephone.BackColor = System.Drawing.Color.White;
-            this.Textbox_Suppliers_Telephone.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Textbox_Suppliers_Telephone.Location = new System.Drawing.Point(199, 28);
-            this.Textbox_Suppliers_Telephone.MaximumSize = new System.Drawing.Size(146, 25);
-            this.Textbox_Suppliers_Telephone.MinimumSize = new System.Drawing.Size(146, 25);
-            this.Textbox_Suppliers_Telephone.Name = "Textbox_Suppliers_Telephone";
-            this.Textbox_Suppliers_Telephone.Size = new System.Drawing.Size(146, 25);
-            this.Textbox_Suppliers_Telephone.TabIndex = 13;
+            this.TB_Suppliers_Telephone.BackColor = System.Drawing.Color.White;
+            this.TB_Suppliers_Telephone.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_Suppliers_Telephone.Location = new System.Drawing.Point(199, 28);
+            this.TB_Suppliers_Telephone.MaximumSize = new System.Drawing.Size(146, 25);
+            this.TB_Suppliers_Telephone.MinimumSize = new System.Drawing.Size(146, 25);
+            this.TB_Suppliers_Telephone.Name = "TB_Suppliers_Telephone";
+            this.TB_Suppliers_Telephone.Size = new System.Drawing.Size(146, 25);
+            this.TB_Suppliers_Telephone.TabIndex = 13;
             // 
             // label5
             // 
@@ -325,19 +325,19 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "Supplier Telephone:";
             // 
-            // TextBox_Suppliers_Name
+            // TB_Suppliers_Name
             // 
-            this.TextBox_Suppliers_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.TB_Suppliers_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TextBox_Suppliers_Name.BackColor = System.Drawing.Color.White;
-            this.TextBox_Suppliers_Name.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBox_Suppliers_Name.Location = new System.Drawing.Point(15, 84);
-            this.TextBox_Suppliers_Name.MaximumSize = new System.Drawing.Size(330, 25);
-            this.TextBox_Suppliers_Name.MinimumSize = new System.Drawing.Size(330, 25);
-            this.TextBox_Suppliers_Name.Name = "TextBox_Suppliers_Name";
-            this.TextBox_Suppliers_Name.Size = new System.Drawing.Size(330, 25);
-            this.TextBox_Suppliers_Name.TabIndex = 11;
+            this.TB_Suppliers_Name.BackColor = System.Drawing.Color.White;
+            this.TB_Suppliers_Name.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_Suppliers_Name.Location = new System.Drawing.Point(15, 84);
+            this.TB_Suppliers_Name.MaximumSize = new System.Drawing.Size(330, 25);
+            this.TB_Suppliers_Name.MinimumSize = new System.Drawing.Size(330, 25);
+            this.TB_Suppliers_Name.Name = "TB_Suppliers_Name";
+            this.TB_Suppliers_Name.Size = new System.Drawing.Size(330, 25);
+            this.TB_Suppliers_Name.TabIndex = 11;
             // 
             // Label_SupplierName
             // 
@@ -352,19 +352,19 @@
             this.Label_SupplierName.TabIndex = 10;
             this.Label_SupplierName.Text = "Supplier Name:";
             // 
-            // TextBox_Suppliers_ID
+            // TB_Suppliers_ID
             // 
-            this.TextBox_Suppliers_ID.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.TB_Suppliers_ID.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TextBox_Suppliers_ID.BackColor = System.Drawing.Color.White;
-            this.TextBox_Suppliers_ID.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBox_Suppliers_ID.Location = new System.Drawing.Point(15, 28);
-            this.TextBox_Suppliers_ID.MaximumSize = new System.Drawing.Size(168, 25);
-            this.TextBox_Suppliers_ID.MinimumSize = new System.Drawing.Size(168, 25);
-            this.TextBox_Suppliers_ID.Name = "TextBox_Suppliers_ID";
-            this.TextBox_Suppliers_ID.Size = new System.Drawing.Size(168, 25);
-            this.TextBox_Suppliers_ID.TabIndex = 9;
+            this.TB_Suppliers_ID.BackColor = System.Drawing.Color.White;
+            this.TB_Suppliers_ID.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_Suppliers_ID.Location = new System.Drawing.Point(15, 28);
+            this.TB_Suppliers_ID.MaximumSize = new System.Drawing.Size(168, 25);
+            this.TB_Suppliers_ID.MinimumSize = new System.Drawing.Size(168, 25);
+            this.TB_Suppliers_ID.Name = "TB_Suppliers_ID";
+            this.TB_Suppliers_ID.Size = new System.Drawing.Size(168, 25);
+            this.TB_Suppliers_ID.TabIndex = 9;
             // 
             // Label_SupplierID
             // 
@@ -379,15 +379,15 @@
             this.Label_SupplierID.TabIndex = 0;
             this.Label_SupplierID.Text = "Supplier ID";
             // 
-            // TextBox_Suppliers_Search
+            // TB_Suppliers_Search
             // 
-            this.TextBox_Suppliers_Search.BackColor = System.Drawing.Color.White;
-            this.TextBox_Suppliers_Search.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBox_Suppliers_Search.Location = new System.Drawing.Point(18, 42);
-            this.TextBox_Suppliers_Search.Name = "TextBox_Suppliers_Search";
-            this.TextBox_Suppliers_Search.Size = new System.Drawing.Size(382, 25);
-            this.TextBox_Suppliers_Search.TabIndex = 2;
-            this.TextBox_Suppliers_Search.TextChanged += new System.EventHandler(this.TextBox_Suppliers_Search_TextChanged);
+            this.TB_Suppliers_Search.BackColor = System.Drawing.Color.White;
+            this.TB_Suppliers_Search.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_Suppliers_Search.Location = new System.Drawing.Point(18, 42);
+            this.TB_Suppliers_Search.Name = "TB_Suppliers_Search";
+            this.TB_Suppliers_Search.Size = new System.Drawing.Size(382, 25);
+            this.TB_Suppliers_Search.TabIndex = 2;
+            this.TB_Suppliers_Search.TextChanged += new System.EventHandler(this.TextBox_Suppliers_Search_TextChanged);
             // 
             // contextMenuStrip1
             // 
@@ -400,52 +400,94 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.Button_Suppliers_Report);
+            this.panel4.Controls.Add(this.BTN_Suppliers_Report);
             this.panel4.Controls.Add(this.LabelDateNow);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.Label_TimeNow);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.DGView_Suppliers);
-            this.panel4.Controls.Add(this.Button_Suppliers_Refresh);
+            this.panel4.Controls.Add(this.DGV_Suppliers);
+            this.panel4.Controls.Add(this.BTN_Suppliers_Refresh);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.ComboBox_Suppliers_Status);
             this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.TextBox_Suppliers_Search);
+            this.panel4.Controls.Add(this.TB_Suppliers_Search);
             this.panel4.Location = new System.Drawing.Point(0, 180);
             this.panel4.MinimumSize = new System.Drawing.Size(902, 471);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(902, 471);
             this.panel4.TabIndex = 4;
             // 
-            // Button_Suppliers_Report
+            // BTN_Suppliers_Report
             // 
-            this.Button_Suppliers_Report.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(137)))), ((int)(((byte)(86)))));
-            this.Button_Suppliers_Report.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_Suppliers_Report.ForeColor = System.Drawing.Color.White;
-            this.Button_Suppliers_Report.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Health_Graph;
-            this.Button_Suppliers_Report.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Button_Suppliers_Report.Location = new System.Drawing.Point(675, 37);
-            this.Button_Suppliers_Report.Name = "Button_Suppliers_Report";
-            this.Button_Suppliers_Report.Size = new System.Drawing.Size(119, 35);
-            this.Button_Suppliers_Report.TabIndex = 19;
-            this.Button_Suppliers_Report.Text = "Create Report";
-            this.Button_Suppliers_Report.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_Suppliers_Report.UseVisualStyleBackColor = false;
-            this.Button_Suppliers_Report.Click += new System.EventHandler(this.Button_Suppliers_Report_Click);
+            this.BTN_Suppliers_Report.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(137)))), ((int)(((byte)(86)))));
+            this.BTN_Suppliers_Report.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Suppliers_Report.ForeColor = System.Drawing.Color.White;
+            this.BTN_Suppliers_Report.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Health_Graph;
+            this.BTN_Suppliers_Report.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_Suppliers_Report.Location = new System.Drawing.Point(675, 37);
+            this.BTN_Suppliers_Report.Name = "BTN_Suppliers_Report";
+            this.BTN_Suppliers_Report.Size = new System.Drawing.Size(119, 35);
+            this.BTN_Suppliers_Report.TabIndex = 19;
+            this.BTN_Suppliers_Report.Text = "Create Report";
+            this.BTN_Suppliers_Report.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Suppliers_Report.UseVisualStyleBackColor = false;
+            this.BTN_Suppliers_Report.Click += new System.EventHandler(this.Button_Suppliers_Report_Click);
             // 
-            // DGView_Suppliers
+            // LabelDateNow
             // 
-            this.DGView_Suppliers.AllowUserToAddRows = false;
-            this.DGView_Suppliers.AllowUserToDeleteRows = false;
-            this.DGView_Suppliers.AllowUserToResizeColumns = false;
-            this.DGView_Suppliers.AllowUserToResizeRows = false;
-            this.DGView_Suppliers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.LabelDateNow.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LabelDateNow.AutoSize = true;
+            this.LabelDateNow.Location = new System.Drawing.Point(49, 450);
+            this.LabelDateNow.Name = "LabelDateNow";
+            this.LabelDateNow.Size = new System.Drawing.Size(21, 13);
+            this.LabelDateNow.TabIndex = 12;
+            this.LabelDateNow.Text = "{?}";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(15, 450);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(33, 13);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Date:";
+            // 
+            // Label_TimeNow
+            // 
+            this.Label_TimeNow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Label_TimeNow.AutoSize = true;
+            this.Label_TimeNow.Location = new System.Drawing.Point(638, 450);
+            this.Label_TimeNow.Name = "Label_TimeNow";
+            this.Label_TimeNow.Size = new System.Drawing.Size(21, 13);
+            this.Label_TimeNow.TabIndex = 10;
+            this.Label_TimeNow.Text = "{?}";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(576, 450);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(56, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Time now:";
+            // 
+            // DGV_Suppliers
+            // 
+            this.DGV_Suppliers.AllowUserToAddRows = false;
+            this.DGV_Suppliers.AllowUserToDeleteRows = false;
+            this.DGV_Suppliers.AllowUserToResizeColumns = false;
+            this.DGV_Suppliers.AllowUserToResizeRows = false;
+            this.DGV_Suppliers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DGView_Suppliers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DGView_Suppliers.BackgroundColor = System.Drawing.Color.White;
-            this.DGView_Suppliers.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.DGView_Suppliers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.DGV_Suppliers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DGV_Suppliers.BackgroundColor = System.Drawing.Color.White;
+            this.DGV_Suppliers.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.DGV_Suppliers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -453,9 +495,9 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGView_Suppliers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.DGView_Suppliers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.DGView_Suppliers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DGV_Suppliers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.DGV_Suppliers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.DGV_Suppliers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SupplierID,
             this.SuppliersName,
             this.SupplierAddress,
@@ -469,12 +511,12 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(151)))), ((int)(((byte)(196)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGView_Suppliers.DefaultCellStyle = dataGridViewCellStyle5;
-            this.DGView_Suppliers.EnableHeadersVisualStyles = false;
-            this.DGView_Suppliers.Location = new System.Drawing.Point(18, 84);
-            this.DGView_Suppliers.MultiSelect = false;
-            this.DGView_Suppliers.Name = "DGView_Suppliers";
-            this.DGView_Suppliers.ReadOnly = true;
+            this.DGV_Suppliers.DefaultCellStyle = dataGridViewCellStyle5;
+            this.DGV_Suppliers.EnableHeadersVisualStyles = false;
+            this.DGV_Suppliers.Location = new System.Drawing.Point(18, 84);
+            this.DGV_Suppliers.MultiSelect = false;
+            this.DGV_Suppliers.Name = "DGV_Suppliers";
+            this.DGV_Suppliers.ReadOnly = true;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -482,17 +524,17 @@
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGView_Suppliers.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.DGView_Suppliers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.DGView_Suppliers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGView_Suppliers.ShowCellErrors = false;
-            this.DGView_Suppliers.ShowCellToolTips = false;
-            this.DGView_Suppliers.ShowEditingIcon = false;
-            this.DGView_Suppliers.ShowRowErrors = false;
-            this.DGView_Suppliers.Size = new System.Drawing.Size(881, 359);
-            this.DGView_Suppliers.TabIndex = 8;
-            this.DGView_Suppliers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Suppliers_CellContentClick);
-            this.DGView_Suppliers.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Suppliers_CellClick);
+            this.DGV_Suppliers.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.DGV_Suppliers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.DGV_Suppliers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGV_Suppliers.ShowCellErrors = false;
+            this.DGV_Suppliers.ShowCellToolTips = false;
+            this.DGV_Suppliers.ShowEditingIcon = false;
+            this.DGV_Suppliers.ShowRowErrors = false;
+            this.DGV_Suppliers.Size = new System.Drawing.Size(881, 359);
+            this.DGV_Suppliers.TabIndex = 8;
+            this.DGV_Suppliers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Suppliers_CellContentClick);
+            this.DGV_Suppliers.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Suppliers_CellClick);
             // 
             // SupplierID
             // 
@@ -545,18 +587,18 @@
             this.ActionColumn.ReadOnly = true;
             this.ActionColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
-            // Button_Suppliers_Refresh
+            // BTN_Suppliers_Refresh
             // 
-            this.Button_Suppliers_Refresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            this.Button_Suppliers_Refresh.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_Suppliers_Refresh.ForeColor = System.Drawing.Color.White;
-            this.Button_Suppliers_Refresh.Location = new System.Drawing.Point(541, 37);
-            this.Button_Suppliers_Refresh.Name = "Button_Suppliers_Refresh";
-            this.Button_Suppliers_Refresh.Size = new System.Drawing.Size(118, 35);
-            this.Button_Suppliers_Refresh.TabIndex = 7;
-            this.Button_Suppliers_Refresh.Text = "Refresh";
-            this.Button_Suppliers_Refresh.UseVisualStyleBackColor = false;
-            this.Button_Suppliers_Refresh.Click += new System.EventHandler(this.Btn_Suppliers_Refresh_Click);
+            this.BTN_Suppliers_Refresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            this.BTN_Suppliers_Refresh.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Suppliers_Refresh.ForeColor = System.Drawing.Color.White;
+            this.BTN_Suppliers_Refresh.Location = new System.Drawing.Point(541, 37);
+            this.BTN_Suppliers_Refresh.Name = "BTN_Suppliers_Refresh";
+            this.BTN_Suppliers_Refresh.Size = new System.Drawing.Size(118, 35);
+            this.BTN_Suppliers_Refresh.TabIndex = 7;
+            this.BTN_Suppliers_Refresh.Text = "Refresh";
+            this.BTN_Suppliers_Refresh.UseVisualStyleBackColor = false;
+            this.BTN_Suppliers_Refresh.Click += new System.EventHandler(this.Btn_Suppliers_Refresh_Click);
             // 
             // label3
             // 
@@ -606,48 +648,6 @@
             this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewImageColumn1.Width = 66;
             // 
-            // Label_TimeNow
-            // 
-            this.Label_TimeNow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Label_TimeNow.AutoSize = true;
-            this.Label_TimeNow.Location = new System.Drawing.Point(638, 450);
-            this.Label_TimeNow.Name = "Label_TimeNow";
-            this.Label_TimeNow.Size = new System.Drawing.Size(21, 13);
-            this.Label_TimeNow.TabIndex = 10;
-            this.Label_TimeNow.Text = "{?}";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(576, 450);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Time now:";
-            // 
-            // LabelDateNow
-            // 
-            this.LabelDateNow.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.LabelDateNow.AutoSize = true;
-            this.LabelDateNow.Location = new System.Drawing.Point(49, 450);
-            this.LabelDateNow.Name = "LabelDateNow";
-            this.LabelDateNow.Size = new System.Drawing.Size(21, 13);
-            this.LabelDateNow.TabIndex = 12;
-            this.LabelDateNow.Text = "{?}";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(15, 450);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(33, 13);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Date:";
-            // 
             // Tab_Suppliers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -670,7 +670,7 @@
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGView_Suppliers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Suppliers)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -686,29 +686,29 @@
         private System.Windows.Forms.Label Label_Suppliers_1;
         private System.Windows.Forms.Label Label_Suppliers_TotalNumbers;
         private System.Windows.Forms.Label Label_Suppliers_Active;
-        private System.Windows.Forms.TextBox TextBox_Suppliers_Search;
+        private System.Windows.Forms.TextBox TB_Suppliers_Search;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button Button_Suppliers_Refresh;
+        private System.Windows.Forms.Button BTN_Suppliers_Refresh;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox ComboBox_Suppliers_Status;
-        private System.Windows.Forms.DataGridView DGView_Suppliers;
+        private System.Windows.Forms.DataGridView DGV_Suppliers;
         private System.Windows.Forms.Label Label_Suppliers_WorkingNumber;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
-        private System.Windows.Forms.TextBox TextBox_Suppliers_ID;
+        private System.Windows.Forms.TextBox TB_Suppliers_ID;
         private System.Windows.Forms.Label Label_SupplierID;
-        private System.Windows.Forms.TextBox TextBox_Suppliers_Name;
+        private System.Windows.Forms.TextBox TB_Suppliers_Name;
         private System.Windows.Forms.Label Label_SupplierName;
-        private System.Windows.Forms.TextBox Textbox_Suppliers_Telephone;
+        private System.Windows.Forms.TextBox TB_Suppliers_Telephone;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox Textbox_Suppliers_Address;
+        private System.Windows.Forms.TextBox TB_Suppliers_Address;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox ComboBox_Suppliers_Suppliers_StatusFix;
+        private System.Windows.Forms.ComboBox CBB_Suppliers_Suppliers_StatusFix;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button Button_Suppliers_Save;
-        private System.Windows.Forms.Button Button_Suppliers_Add;
-        private System.Windows.Forms.Button Button_Suppliers_Report;
+        private System.Windows.Forms.Button NTN_Suppliers_Save;
+        private System.Windows.Forms.Button BTN_Suppliers_Add;
+        private System.Windows.Forms.Button BTN_Suppliers_Report;
         private System.Windows.Forms.DataGridViewTextBoxColumn SupplierID;
         private System.Windows.Forms.DataGridViewTextBoxColumn SuppliersName;
         private System.Windows.Forms.DataGridViewTextBoxColumn SupplierAddress;
