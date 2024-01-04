@@ -145,7 +145,7 @@ namespace LibraryManagement_BuiVanTai
         }
 
 
-        // Add button click ===============================================================================
+        // Save button click ===============================================================================
         private void Button_SuppliersSave_Click(object sender, EventArgs e)
         {
             // Get the selected row index
@@ -209,20 +209,30 @@ namespace LibraryManagement_BuiVanTai
                 {
                     if (DB_Suppliers.InsertData(suppliers))
                     {
-                        // Notifocation added successfull
-                        MessageBox.Show("Supplier added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        // Add new data to dataGridSuppliers
-                        DataRow dataGridSuppliers = dataTable_Suppliers.NewRow();
-                        dataGridSuppliers[0] = TB_Suppliers_ID.Text;
-                        dataGridSuppliers[1] = TB_Suppliers_Name.Text;
-                        dataGridSuppliers[2] = TB_Suppliers_Address.Text;
-                        dataGridSuppliers[3] = TB_Suppliers_Telephone.Text;
-                        dataGridSuppliers[4] = CBB_Suppliers_Suppliers_StatusFix.Text;
-                        dataTable_Suppliers.Rows.Add(dataGridSuppliers);
+                        if (DB_Suppliers.IsDuplicateSupplier(TB_Suppliers_ID.Text) == 1)
+                        {
+                            MessageBox.Show("Duplicate supplier found. Please check the Supplier ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                        else
+                        {
+                            // Notifocation added successfull
+                            MessageBox.Show("Supplier added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        getEmptyTextBox();
-                        GridViewFormLoad(ClassDefineName.servername, ClassDefineName.database_name);
+                            // Add new data to dataGridSuppliers
+                            DataRow dataGridSuppliers = dataTable_Suppliers.NewRow();
+                            dataGridSuppliers[0] = TB_Suppliers_ID.Text;
+                            dataGridSuppliers[1] = TB_Suppliers_Name.Text;
+                            dataGridSuppliers[2] = TB_Suppliers_Address.Text;
+                            dataGridSuppliers[3] = TB_Suppliers_Telephone.Text;
+                            dataGridSuppliers[4] = CBB_Suppliers_Suppliers_StatusFix.Text;
+                            dataTable_Suppliers.Rows.Add(dataGridSuppliers);
+
+                            getEmptyTextBox();
+                            GridViewFormLoad(ClassDefineName.servername, ClassDefineName.database_name);
+                        }
+                        
                     }
                     else
                     {

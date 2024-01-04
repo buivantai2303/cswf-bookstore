@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -73,7 +74,7 @@ namespace LibraryManagement_BuiVanTai.Database
         // Insert value to SQL =============================================================================
         public bool InsertData(Class_Suppliers obj)
         {
-            string sqlCommand = $"INSERT INTO {ClassDefineName.table_Suppliers_SupplierID} VALUES ('{obj.SupplierID1}', '{obj.SupplierName1}', '{obj.SupplierAddress1}', '{obj.SupplierTel1}', '{obj.SupplierState1}';)";
+            string sqlCommand = $"INSERT INTO {ClassDefineName.table_Suppliers_TableName} VALUES ('{obj.SupplierID1}', '{obj.SupplierName1}', '{obj.SupplierAddress1}', '{obj.SupplierTel1}', '{obj.SupplierState1}')";
             return database.ExecuteSQL(sqlCommand);
         }
 
@@ -116,6 +117,14 @@ namespace LibraryManagement_BuiVanTai.Database
             string sqlCommand = $"SELECT {ColumnID} FROM {ClassDefineName.table_Suppliers_TableName} WHERE {ClassDefineName.table_Suppliers_SupplierID} = '{ID}';";
             return database.ExecuteSQL(sqlCommand);
         }
+
+        public int IsDuplicateSupplier(string supplierID)
+        {
+            string sqlCommand = $"SELECT COUNT(*) FROM {ClassDefineName.table_Suppliers_TableName} WHERE {ClassDefineName.table_Suppliers_SupplierID} = '{supplierID}'";
+
+            return database.ExcuteSQL_CheckDuplicate(sqlCommand);
+        }
+
 
     }
 }

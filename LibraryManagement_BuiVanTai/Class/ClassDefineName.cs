@@ -28,6 +28,13 @@ namespace LibraryManagement_BuiVanTai.Class
         public static string table_Suppliers_SupplierState_OffState = "";
         public static string table_Suppliers_Supplier_ExportFileName = "Suppliers";
 
+        public static string table_ImportRecipt_TableName = "ImportReceipt";
+        public static string table_ImportRecipt_ImportID = "ImportID";
+        public static string table_ImportRecipt_ImportDate = "ImportDate";
+        public static string table_ImportRecipt_PublisherID = "PublisherID";
+        public static string table_ImportRecipt_StaffID = "StaffID";
+
+
 
     }
 }

@@ -29,14 +29,14 @@ namespace LibraryManagement_BuiVanTai.Database
         public DataTable getTable()
         {
             dataTable = new DataTable();
-            dataTable = database.getTable("ImportReceipt");
+            dataTable = database.getTable(ClassDefineName.table_ImportRecipt_TableName);
             return dataTable;
         }
 
         public DataTable getActiveTable()
         {
             dataTable = new DataTable();
-            dataTable = database.getTableByState(ClassDefineName.table_Suppliers_TableName,
+            dataTable = database.getTableByState(ClassDefineName.table_ImportRecipt_TableName,
                 ClassDefineName.table_Suppliers_SupplierState, ClassDefineName.table_Suppliers_SupplierState_Active);
             return dataTable;
         }

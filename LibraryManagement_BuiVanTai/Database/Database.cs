@@ -115,6 +115,23 @@ namespace LibraryManagement_BuiVanTai.Database
             }
         }
 
+        public int ExcuteSQL_CheckDuplicate(string sqlCommand)
+        {
+            try
+            {
+                CMD = new SqlCommand(sqlCommand);
+                CMD.CommandType = CommandType.Text;
+                CMD.Connection = SQLCONN;
+                CMD.ExecuteNonQuery();
+                return 1; // Success
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error executing SQL command: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0; // Failure
+            }
+        }
+
 
 
         /*        public bool executeSQL(string sql)
