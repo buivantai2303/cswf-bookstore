@@ -89,14 +89,6 @@ namespace LibraryManagement_BuiVanTai.Database
         }
 
 
-        public DataTable SearchDataWithState(string keyWords, string State)
-        {
-            dataTable = new DataTable();
-            dataTable = database.getSeachAndDisplayTable(ClassDefineName.table_Suppliers_TableName,
-                ClassDefineName.table_Suppliers_SupplierState, State, ClassDefineName.table_Suppliers_SupplierName, keyWords);
-            return dataTable;
-        }
-
         public DataTable SearchDataNonState(string keyWords, string State)
         {
             dataTable = new DataTable();
@@ -105,9 +97,9 @@ namespace LibraryManagement_BuiVanTai.Database
         }
 
 
-        public bool getColumnID(string ColumnID, string ID)
+        public bool getComboBox()
         {
-            string sqlCommand = $"SELECT {ColumnID} FROM {ClassDefineName.table_Suppliers_TableName} WHERE {ClassDefineName.table_Suppliers_SupplierID} = '{ID}';";
+            string sqlCommand = $"SELECT {ClassDefineName.table_Publishers_PublisherName} FROM {ClassDefineName.table_Publishers_TableName};";
             return database.ExecuteSQL(sqlCommand);
         }
     }
