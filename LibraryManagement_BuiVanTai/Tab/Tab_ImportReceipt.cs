@@ -36,11 +36,16 @@ namespace LibraryManagement_BuiVanTai.Tab
             DGV_ImportReceipt.RowHeadersVisible = false;
             DGV_ImportReceipt_ReceiptDetails.RowHeadersVisible = false;
 
+            // Set the DateTimePicker format to "yyyy-MM-dd"
+
+            Date_ImportDate.Format = DateTimePickerFormat.Custom;
+            Date_ImportDate.CustomFormat = "yyyy-MM-dd";
         }
+
 
         private void DGView_ImportReceipt_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            /*Class_ImportReceipt importReceipt = new Class_ImportReceipt();*/
+            Class_Suppliers suppliers = new Class_Suppliers(TB_ImportReceipt_ImportID.Text);
 
             // Select only delete icon and question to delete access
             if (e.RowIndex >= 0 && DGV_ImportReceipt.Columns[e.ColumnIndex].Name == "ActionColumn")
@@ -50,23 +55,46 @@ namespace LibraryManagement_BuiVanTai.Tab
                 if (result == DialogResult.Yes)
                 {
                     string columnIDValue = DGV_ImportReceipt.Rows[e.RowIndex].Cells[1].Value.ToString();
-/*                    DB_Suppliers.DeletDataByID(columnIDValue);*/
+                    DB_ImportReceipt.DeletDataByID(columnIDValue);
 
                     int rowIndex = DGV_ImportReceipt.CurrentCell.RowIndex;
-/*                    DGView_Suppliers.Rows.RemoveAt(rowIndex);*/
+                    DGV_ImportReceipt.Rows.RemoveAt(rowIndex);
 
                     MessageBox.Show("Row deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
                 }
-            } 
-            else if (e.RowIndex >= 0 && DGV_ImportReceipt.Columns[e.ColumnIndex].Name == "Information")
-            {
-
+                return;
             }
         }
 
+
         private void DGView_ImportReceipt_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            // Check if the clicked cell is not in the header
+            if (e.RowIndex >= 0)
+            {
+                int index = e.RowIndex;
+                DataGridViewRow selectedRow = DGV_ImportReceipt.Rows[index];
 
+                // Retrieve values from DataGridView
+                TB_ImportReceipt_ImportID.Text = selectedRow.Cells[1].Value.ToString();
+
+                // Convert the string representation of the date to a DateTime object
+                if (DateTime.TryParse(selectedRow.Cells[2].Value.ToString(), out DateTime importDate))
+                {
+                    Date_ImportDate.Value = importDate;
+                }
+                else
+                {
+                    // Handle parsing error if necessary
+                    // MessageBox.Show("Error parsing import date.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                CBB_PubName.Text = selectedRow.Cells[3].Value.ToString();
+                CBB_StaffID.Text = selectedRow.Cells[4].Value.ToString();
+            }
         }
+
+
     }
 }

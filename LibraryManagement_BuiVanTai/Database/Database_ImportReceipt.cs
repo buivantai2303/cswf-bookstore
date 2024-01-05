@@ -29,26 +29,14 @@ namespace LibraryManagement_BuiVanTai.Database
         public DataTable getTable()
         {
             dataTable = new DataTable();
-            dataTable = database.getTable(ClassDefineName.table_ImportRecipt_TableName);
+            dataTable = database.getTable(ClassDefineName.table_ImportReceipt_TableName);
             return dataTable;
         }
 
-        public DataTable getActiveTable()
+        public bool getNameFromID(string ID)
         {
-            dataTable = new DataTable();
-            dataTable = database.getTableByState(ClassDefineName.table_ImportRecipt_TableName,
-                ClassDefineName.table_Suppliers_SupplierState, ClassDefineName.table_Suppliers_SupplierState_Active);
-            return dataTable;
-        }
-
-
-        // Get data rows Inactive suppliers ===============================================================
-        public DataTable getInActiveTable()
-        {
-            dataTable = new DataTable();
-            dataTable = database.getTableByState(ClassDefineName.table_Suppliers_TableName,
-                ClassDefineName.table_Suppliers_SupplierState, ClassDefineName.table_Suppliers_SupplierState_Inactive);
-            return dataTable;
+            string sqlCommand = $"SELETCT {ClassDefineName.Pu} FROM {ClassDefineName.table_ImportReceipt_TableName} {ClassDefineName.table_ImportReceipt_ImportID} VALUES (;)";
+            return database.ExecuteSQL(sqlCommand);
         }
 
 
@@ -88,7 +76,8 @@ namespace LibraryManagement_BuiVanTai.Database
 
         public bool DeletDataByID(string ID)
         {
-            string sqlCommand = $"DELETE FROM {ClassDefineName.table_Suppliers_TableName} WHERE {ClassDefineName.table_Suppliers_SupplierID} = '{ID}';";
+            string sqlCommand = $"DELETE FROM {ClassDefineName.table_ImportReceipt_TableName} WHERE {ClassDefineName.table_ImportReceiptDetails_ImportID} = '{ID}';" +
+                                $"DELETE FROM {ClassDefineName.table_ImportReceipt_TableName} WHERE {ClassDefineName.table_ImportReceipt_ImportID} = '{ID}';";
             return database.ExecuteSQL(sqlCommand);
         }
 
