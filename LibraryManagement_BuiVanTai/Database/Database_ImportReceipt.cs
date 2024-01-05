@@ -38,6 +38,8 @@ namespace LibraryManagement_BuiVanTai.Database
                                $"{ClassDefineName.table_Publishers_TableName}.{ClassDefineName.table_Publishers_PublisherID}";
 
             return database.GetDataTable(sqlCommand);
+
+
         }
 
         public bool getNameFromID(string ID)
@@ -97,10 +99,11 @@ namespace LibraryManagement_BuiVanTai.Database
         }
 
 
-        public bool getComboBox()
+        public DataTable GetPublisherNames()
         {
             string sqlCommand = $"SELECT {ClassDefineName.table_Publishers_PublisherName} FROM {ClassDefineName.table_Publishers_TableName};";
-            return database.ExecuteSQL(sqlCommand);
+            return database.GetDataTable(sqlCommand);
         }
+
     }
 }

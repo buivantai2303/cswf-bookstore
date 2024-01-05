@@ -35,6 +35,21 @@ namespace LibraryManagement_BuiVanTai.Tab
             DB_ImportReceipt = new Database_ImportReceipt(ServerName, DatabaseName);
             dataTable_ImportReceipt = DB_ImportReceipt.getTable();
 
+
+            CBB_PubName.DisplayMember = ClassDefineName.table_Publishers_PublisherName; // Set the display member
+
+            DataTable publisherNames = DB_ImportReceipt.GetPublisherNames();
+
+            if (publisherNames != null)
+            {
+                CBB_PubName.DataSource = publisherNames; // Set the data source
+            }
+            else
+            {
+                MessageBox.Show("Failed to retrieve publisher names from the database.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
             if (dataTable_ImportReceipt != null)
             {
                 DGV_ImportReceipt.DataSource = dataTable_ImportReceipt;
@@ -103,6 +118,9 @@ namespace LibraryManagement_BuiVanTai.Tab
                 CBB_StaffID.Text = selectedRow.Cells[4].Value.ToString();
             }
         }
+
+
+
 
 
     }

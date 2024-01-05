@@ -137,6 +137,7 @@ namespace LibraryManagement_BuiVanTai.Database
             }
         }
 
+
         public int ExcuteSQL_CheckDuplicate(string sqlCommand)
         {
             try
