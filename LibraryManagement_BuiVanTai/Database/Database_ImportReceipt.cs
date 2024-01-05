@@ -31,16 +31,18 @@ namespace LibraryManagement_BuiVanTai.Database
             string sqlCommand = $"SELECT {ClassDefineName.table_ImportReceiptDetails_ImportID}, " +
                                $"{ClassDefineName.table_ImportReceipt_ImportDate}, " +
                                $"{ClassDefineName.table_Publishers_PublisherName}, " +
-                               $"{ClassDefineName.table_ImportReceipt_StaffID} " +
+                               $"{ClassDefineName.table_Staffs_StaffName} " + // Assuming this is the correct column for StaffName
                                $"FROM {ClassDefineName.table_ImportReceipt_TableName} " +
                                $"JOIN {ClassDefineName.table_Publishers_TableName} " +
                                $"ON {ClassDefineName.table_ImportReceipt_TableName}.{ClassDefineName.table_Publishers_PublisherID} = " +
-                               $"{ClassDefineName.table_Publishers_TableName}.{ClassDefineName.table_Publishers_PublisherID}";
+                               $"{ClassDefineName.table_Publishers_TableName}.{ClassDefineName.table_Publishers_PublisherID} " +
+                               $"JOIN {ClassDefineName.table_Staffs_TableName} " +
+                               $"ON {ClassDefineName.table_ImportReceipt_TableName}.{ClassDefineName.table_Staffs_StaffID} = " +
+                               $"{ClassDefineName.table_Staffs_TableName}.{ClassDefineName.table_Staffs_StaffID}";
 
             return database.GetDataTable(sqlCommand);
-
-
         }
+
 
         public bool getNameFromID(string ID)
         {
@@ -72,6 +74,7 @@ namespace LibraryManagement_BuiVanTai.Database
             return database.ExecuteSQL(sqlCommand);
         }
 
+        // Update data by click "Add" button ===============================================================
         public bool UpdateData(Class_Suppliers obj, string ID)
         {
             string sqlCommand = $"UPDATE {ClassDefineName.table_Suppliers_TableName} " +
@@ -83,6 +86,7 @@ namespace LibraryManagement_BuiVanTai.Database
             return database.ExecuteSQL(sqlCommand);
         }
 
+        // Delete data row by click in action column== =====================================================
         public bool DeletDataByID(string ID)
         {
             string sqlCommand = $"DELETE FROM {ClassDefineName.table_ImportReceipt_TableName} WHERE {ClassDefineName.table_ImportReceiptDetails_ImportID} = '{ID}';" +
@@ -90,7 +94,7 @@ namespace LibraryManagement_BuiVanTai.Database
             return database.ExecuteSQL(sqlCommand);
         }
 
-
+        // Searching data by search funtion from user ======================================================
         public DataTable SearchDataNonState(string keyWords, string State)
         {
             dataTable = new DataTable();
@@ -98,10 +102,16 @@ namespace LibraryManagement_BuiVanTai.Database
             return dataTable;
         }
 
-
+        // Get PublisherName to the CBB_ImportReceipt_SupplierName =========================================
         public DataTable GetPublisherNames()
         {
             string sqlCommand = $"SELECT {ClassDefineName.table_Publishers_PublisherName} FROM {ClassDefineName.table_Publishers_TableName};";
+            return database.GetDataTable(sqlCommand);
+        }
+
+        public DataTable GetStaffName()
+        {
+            string sqlCommand = $"SELECT {ClassDefineName.table_Staffs_StaffName} FROM {ClassDefineName.table_Staffs_TableName};";
             return database.GetDataTable(sqlCommand);
         }
 

@@ -35,14 +35,18 @@ namespace LibraryManagement_BuiVanTai.Tab
             DB_ImportReceipt = new Database_ImportReceipt(ServerName, DatabaseName);
             dataTable_ImportReceipt = DB_ImportReceipt.getTable();
 
-
-            CBB_PubName.DisplayMember = ClassDefineName.table_Publishers_PublisherName; // Set the display member
-
+            // Add PublisherName fill to CBB_PubName:
+            CBB_PubName.DisplayMember = ClassDefineName.table_Publishers_PublisherName;
             DataTable publisherNames = DB_ImportReceipt.GetPublisherNames();
 
-            if (publisherNames != null)
+            // Add PublisherName fill to CBB_PubName:
+            CBB_StaffID.DisplayMember = ClassDefineName.table_Staffs_StaffName;
+            DataTable staffName = DB_ImportReceipt.GetStaffName();
+
+            if (publisherNames != null && staffName != null)
             {
-                CBB_PubName.DataSource = publisherNames; // Set the data source
+                CBB_PubName.DataSource = publisherNames;
+                CBB_StaffID.DataSource = staffName;
             }
             else
             {

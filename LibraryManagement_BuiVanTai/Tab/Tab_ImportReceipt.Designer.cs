@@ -41,6 +41,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.TB_ImportReceipt_Search = new System.Windows.Forms.TextBox();
             this.DGV_ImportReceipt = new System.Windows.Forms.DataGridView();
+            this.ImportID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ImportDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PublisherName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StaffID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ActionColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.Panel_ImportReceipt_ButtonBox = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.Date_ImportDate = new System.Windows.Forms.DateTimePicker();
@@ -67,11 +72,6 @@
             this.PTB_Suppliers_Menu = new System.Windows.Forms.PictureBox();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.ImportID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ImportDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PublisherName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StaffID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ActionColumn = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -222,6 +222,53 @@
             this.DGV_ImportReceipt.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGView_ImportReceipt_CellClick);
             this.DGV_ImportReceipt.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGView_ImportReceipt_CellContentClick);
             // 
+            // ImportID
+            // 
+            this.ImportID.DataPropertyName = "ImportID";
+            this.ImportID.FillWeight = 81.32249F;
+            this.ImportID.HeaderText = "ImportID";
+            this.ImportID.MinimumWidth = 2;
+            this.ImportID.Name = "ImportID";
+            this.ImportID.ReadOnly = true;
+            // 
+            // ImportDate
+            // 
+            this.ImportDate.DataPropertyName = "ImportDate";
+            this.ImportDate.FillWeight = 81.32249F;
+            this.ImportDate.HeaderText = "Import Date";
+            this.ImportDate.MinimumWidth = 2;
+            this.ImportDate.Name = "ImportDate";
+            this.ImportDate.ReadOnly = true;
+            // 
+            // PublisherName
+            // 
+            this.PublisherName.DataPropertyName = "PublisherName";
+            this.PublisherName.FillWeight = 81.32249F;
+            this.PublisherName.HeaderText = "Publisher Name";
+            this.PublisherName.MinimumWidth = 2;
+            this.PublisherName.Name = "PublisherName";
+            this.PublisherName.ReadOnly = true;
+            // 
+            // StaffID
+            // 
+            this.StaffID.DataPropertyName = "StaffID";
+            this.StaffID.FillWeight = 81.32249F;
+            this.StaffID.HeaderText = "Staff ID";
+            this.StaffID.MinimumWidth = 2;
+            this.StaffID.Name = "StaffID";
+            this.StaffID.ReadOnly = true;
+            // 
+            // ActionColumn
+            // 
+            this.ActionColumn.FillWeight = 36.32773F;
+            this.ActionColumn.HeaderText = "Action";
+            this.ActionColumn.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Delete;
+            this.ActionColumn.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.ActionColumn.MinimumWidth = 59;
+            this.ActionColumn.Name = "ActionColumn";
+            this.ActionColumn.ReadOnly = true;
+            this.ActionColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
             // Panel_ImportReceipt_ButtonBox
             // 
             this.Panel_ImportReceipt_ButtonBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -273,9 +320,9 @@
             this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label8.Location = new System.Drawing.Point(206, 69);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(59, 17);
+            this.label8.Size = new System.Drawing.Size(81, 17);
             this.label8.TabIndex = 40;
-            this.label8.Text = "Staff ID:";
+            this.label8.Text = "Staff Name:";
             // 
             // CBB_StaffID
             // 
@@ -573,53 +620,6 @@
             this.dataGridViewImageColumn2.ReadOnly = true;
             this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewImageColumn2.Width = 158;
-            // 
-            // ImportID
-            // 
-            this.ImportID.DataPropertyName = "ImportID";
-            this.ImportID.FillWeight = 81.32249F;
-            this.ImportID.HeaderText = "ImportID";
-            this.ImportID.MinimumWidth = 2;
-            this.ImportID.Name = "ImportID";
-            this.ImportID.ReadOnly = true;
-            // 
-            // ImportDate
-            // 
-            this.ImportDate.DataPropertyName = "ImportDate";
-            this.ImportDate.FillWeight = 81.32249F;
-            this.ImportDate.HeaderText = "Import Date";
-            this.ImportDate.MinimumWidth = 2;
-            this.ImportDate.Name = "ImportDate";
-            this.ImportDate.ReadOnly = true;
-            // 
-            // PublisherName
-            // 
-            this.PublisherName.DataPropertyName = "PublisherName";
-            this.PublisherName.FillWeight = 81.32249F;
-            this.PublisherName.HeaderText = "Publisher Name";
-            this.PublisherName.MinimumWidth = 2;
-            this.PublisherName.Name = "PublisherName";
-            this.PublisherName.ReadOnly = true;
-            // 
-            // StaffID
-            // 
-            this.StaffID.DataPropertyName = "StaffID";
-            this.StaffID.FillWeight = 81.32249F;
-            this.StaffID.HeaderText = "Staff ID";
-            this.StaffID.MinimumWidth = 2;
-            this.StaffID.Name = "StaffID";
-            this.StaffID.ReadOnly = true;
-            // 
-            // ActionColumn
-            // 
-            this.ActionColumn.FillWeight = 36.32773F;
-            this.ActionColumn.HeaderText = "Action";
-            this.ActionColumn.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Delete;
-            this.ActionColumn.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.ActionColumn.MinimumWidth = 59;
-            this.ActionColumn.Name = "ActionColumn";
-            this.ActionColumn.ReadOnly = true;
-            this.ActionColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // Tab_ImportReceipt
             // 
