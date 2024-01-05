@@ -57,6 +57,7 @@ namespace LibraryManagement_BuiVanTai.Database
         }
 
 
+
         public DataTable getTableByState(string tablename, string ColumnState, string State)
         {
             DataTable datatable = new DataTable();
@@ -96,6 +97,27 @@ namespace LibraryManagement_BuiVanTai.Database
             return datatable;
         }
 
+
+        public DataTable GetDataTable(string sqlCommand)
+        {
+            try
+            {
+                using (SqlCommand command = new SqlCommand(sqlCommand, SQLCONN))
+                {
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                    {
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+                        return dataTable;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error retrieving data from the database: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
 
 
         public bool ExecuteSQL(string sqlCommand)

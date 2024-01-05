@@ -28,18 +28,27 @@ namespace LibraryManagement_BuiVanTai.Tab
             DB_ImportReceipt = new Database_ImportReceipt(ClassDefineName.servername, ClassDefineName.database_name);
         }
 
+
+        // Load GridView from database
         public void GridViewFormLoad(string ServerName, string DatabaseName)
         {
             DB_ImportReceipt = new Database_ImportReceipt(ServerName, DatabaseName);
             dataTable_ImportReceipt = DB_ImportReceipt.getTable();
-            DGV_ImportReceipt.DataSource = dataTable_ImportReceipt;
-            DGV_ImportReceipt.RowHeadersVisible = false;
-            DGV_ImportReceipt_ReceiptDetails.RowHeadersVisible = false;
 
-            // Set the DateTimePicker format to "yyyy-MM-dd"
+            if (dataTable_ImportReceipt != null)
+            {
+                DGV_ImportReceipt.DataSource = dataTable_ImportReceipt;
+                DGV_ImportReceipt.RowHeadersVisible = false;
+                DGV_ImportReceipt_ReceiptDetails.RowHeadersVisible = false;
 
-            Date_ImportDate.Format = DateTimePickerFormat.Custom;
-            Date_ImportDate.CustomFormat = "yyyy-MM-dd";
+                // Set the DateTimePicker format to "yyyy-MM-dd"
+                Date_ImportDate.Format = DateTimePickerFormat.Custom;
+                Date_ImportDate.CustomFormat = "yyyy-MM-dd";
+            }
+            else
+            {
+                MessageBox.Show("Failed to retrieve data from the database.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
 

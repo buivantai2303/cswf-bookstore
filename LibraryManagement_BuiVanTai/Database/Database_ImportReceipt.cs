@@ -28,14 +28,21 @@ namespace LibraryManagement_BuiVanTai.Database
         // Get data from table ImportReceipt =========================================================================
         public DataTable getTable()
         {
-            dataTable = new DataTable();
-            dataTable = database.getTable(ClassDefineName.table_ImportReceipt_TableName);
-            return dataTable;
+            string sqlCommand = $"SELECT {ClassDefineName.table_ImportReceiptDetails_ImportID}, " +
+                               $"{ClassDefineName.table_ImportReceipt_ImportDate}, " +
+                               $"{ClassDefineName.table_Publishers_PublisherName}, " +
+                               $"{ClassDefineName.table_ImportReceipt_StaffID} " +
+                               $"FROM {ClassDefineName.table_ImportReceipt_TableName} " +
+                               $"JOIN {ClassDefineName.table_Publishers_TableName} " +
+                               $"ON {ClassDefineName.table_ImportReceipt_TableName}.{ClassDefineName.table_Publishers_PublisherID} = " +
+                               $"{ClassDefineName.table_Publishers_TableName}.{ClassDefineName.table_Publishers_PublisherID}";
+
+            return database.GetDataTable(sqlCommand);
         }
 
         public bool getNameFromID(string ID)
         {
-            string sqlCommand = $"SELETCT {ClassDefineName.Pu} FROM {ClassDefineName.table_ImportReceipt_TableName} {ClassDefineName.table_ImportReceipt_ImportID} VALUES (;)";
+            string sqlCommand = $"SELETCT {ClassDefineName.table_Publishers_PublisherName} FROM {ClassDefineName.table_Publishers_TableName} WHERE {ClassDefineName.table_Publishers_PublisherID} = '{ID}'";
             return database.ExecuteSQL(sqlCommand);
         }
 
