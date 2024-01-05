@@ -122,13 +122,16 @@ namespace LibraryManagement_BuiVanTai.Database
                 CMD = new SqlCommand(sqlCommand);
                 CMD.CommandType = CommandType.Text;
                 CMD.Connection = SQLCONN;
-                CMD.ExecuteNonQuery();
-                return 1; // Success
+
+                // Use ExecuteScalar to get the count of duplicates
+                int count = (int)CMD.ExecuteScalar();
+
+                return count; // Return the count of duplicates
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error executing SQL command: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return 0; // Failure
+                return -1; // Return -1 to indicate failure
             }
         }
 

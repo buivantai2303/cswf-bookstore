@@ -62,6 +62,7 @@ namespace LibraryManagement_BuiVanTai
                 DB_Suppliers = new Database_Suppliers(ClassDefineName.servername, ClassDefineName.database_name);
                 dataTable_Suppliers = DB_Suppliers.getActiveTable();
                 DGV_Suppliers.DataSource = dataTable_Suppliers;
+                return;
 
             } 
             else if (ComboBox_Suppliers_Status.Text == "Inactive") 
@@ -70,10 +71,12 @@ namespace LibraryManagement_BuiVanTai
                 DB_Suppliers = new Database_Suppliers(ClassDefineName.servername, ClassDefineName.database_name);
                 dataTable_Suppliers = DB_Suppliers.getInActiveTable();
                 DGV_Suppliers.DataSource = dataTable_Suppliers;
+                return;
             } 
             else
             {
                 GridViewFormLoad(ClassDefineName.servername, ClassDefineName.database_name);
+                return;
             }
         }
 
@@ -83,6 +86,7 @@ namespace LibraryManagement_BuiVanTai
             TB_Suppliers_Search.Clear();
             GridViewFormLoad(ClassDefineName.servername, ClassDefineName.database_name);
             getEmptyTextBox();
+            return;
         }
 
 
@@ -92,6 +96,7 @@ namespace LibraryManagement_BuiVanTai
             dataTable_Suppliers = DB_Suppliers.getTable();
             DGV_Suppliers.DataSource = dataTable_Suppliers;
             Label_Suppliers_TotalNumbers.Text = DGV_Suppliers.Rows.Count.ToString();
+            return;
         }
 
 
@@ -114,7 +119,9 @@ namespace LibraryManagement_BuiVanTai
                     DGV_Suppliers.Rows.RemoveAt(rowIndex);
 
                     MessageBox.Show("Row deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
                 }
+                return;
             }
         }
 
@@ -127,20 +134,24 @@ namespace LibraryManagement_BuiVanTai
             {
                 dataTable_Suppliers = DB_Suppliers.SearchDataNonState(TB_Suppliers_Search.Text, ClassDefineName.table_Suppliers_SupplierState_OffState);
                 DGV_Suppliers.DataSource = dataTable_Suppliers;
+                return;
             }
             else if (ComboBox_Suppliers_Status.Text == ClassDefineName.table_Suppliers_SupplierState_Active)
             {
                 dataTable_Suppliers = DB_Suppliers.SearchDataWithState(TB_Suppliers_Search.Text, ClassDefineName.table_Suppliers_SupplierState_Active);
                 DGV_Suppliers.DataSource = dataTable_Suppliers;
+                return;
             } 
             else if (ComboBox_Suppliers_Status.Text == ClassDefineName.table_Suppliers_SupplierState_Inactive)
             {
                 dataTable_Suppliers = DB_Suppliers.SearchDataWithState(TB_Suppliers_Search.Text, ClassDefineName.table_Suppliers_SupplierState_Inactive);
                 DGV_Suppliers.DataSource = dataTable_Suppliers;
+                return;
             }
             else
             {
                 MessageBox.Show("Invalid status.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
         }
 
@@ -177,12 +188,14 @@ namespace LibraryManagement_BuiVanTai
                             {
                                 MessageBox.Show("Updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 GridViewFormLoad(ClassDefineName.servername, ClassDefineName.database_name);
+                                return;
                             }
+                            return;
                         }
                     }
                     else if (result == DialogResult.No)
                     {
-                       
+                        return;
                     }
                 }
 
@@ -190,6 +203,7 @@ namespace LibraryManagement_BuiVanTai
             else
             {
                 MessageBox.Show("Please select a row before saving.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
         }
 
@@ -202,42 +216,36 @@ namespace LibraryManagement_BuiVanTai
             // Check condition
             if (DataConditional())
             {
-                // Get over condition and excute adding process.
-                DialogResult result = MessageBox.Show("Do you want to add this supplier?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (result == DialogResult.Yes)
+                if (DB_Suppliers.IsDuplicateSupplier(TB_Suppliers_ID.Text) > 0)
                 {
-                    if (DB_Suppliers.InsertData(suppliers))
+                    MessageBox.Show("Duplicate supplier found. Please check the Supplier ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else
+                {
+                    DialogResult result = MessageBox.Show("Do you want to add this supplier?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
                     {
+                        // Notifocation added successfull
+                        MessageBox.Show("Supplier added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        if (DB_Suppliers.IsDuplicateSupplier(TB_Suppliers_ID.Text) == 1)
-                        {
-                            MessageBox.Show("Duplicate supplier found. Please check the Supplier ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
-                        }
-                        else
-                        {
-                            // Notifocation added successfull
-                            MessageBox.Show("Supplier added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        // Add new data to dataGridSuppliers
+                        DataRow dataGridSuppliers = dataTable_Suppliers.NewRow();
+                        dataGridSuppliers[0] = TB_Suppliers_ID.Text;
+                        dataGridSuppliers[1] = TB_Suppliers_Name.Text;
+                        dataGridSuppliers[2] = TB_Suppliers_Address.Text;
+                        dataGridSuppliers[3] = TB_Suppliers_Telephone.Text;
+                        dataGridSuppliers[4] = CBB_Suppliers_Suppliers_StatusFix.Text;
+                        dataTable_Suppliers.Rows.Add(dataGridSuppliers);
 
-                            // Add new data to dataGridSuppliers
-                            DataRow dataGridSuppliers = dataTable_Suppliers.NewRow();
-                            dataGridSuppliers[0] = TB_Suppliers_ID.Text;
-                            dataGridSuppliers[1] = TB_Suppliers_Name.Text;
-                            dataGridSuppliers[2] = TB_Suppliers_Address.Text;
-                            dataGridSuppliers[3] = TB_Suppliers_Telephone.Text;
-                            dataGridSuppliers[4] = CBB_Suppliers_Suppliers_StatusFix.Text;
-                            dataTable_Suppliers.Rows.Add(dataGridSuppliers);
-
-                            getEmptyTextBox();
-                            GridViewFormLoad(ClassDefineName.servername, ClassDefineName.database_name);
-                        }
-                        
+                        getEmptyTextBox();
+                        GridViewFormLoad(ClassDefineName.servername, ClassDefineName.database_name);
                     }
                     else
                     {
-                        MessageBox.Show("Failed to add supplier. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
                     }
+                return;
                 }
             }
         }

@@ -125,6 +125,5 @@ namespace LibraryManagement_BuiVanTai.Database
             return database.ExcuteSQL_CheckDuplicate(sqlCommand);
         }
 
-
     }
 }
