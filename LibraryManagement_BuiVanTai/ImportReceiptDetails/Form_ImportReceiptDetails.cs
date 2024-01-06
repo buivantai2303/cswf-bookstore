@@ -3,84 +3,74 @@ using LibraryManagement_BuiVanTai.Database;
 using LibraryManagement_BuiVanTai.Tab;
 using Microsoft.Office.Interop.Excel;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LibraryManagement_BuiVanTai.ImportReceiptDetails
 {
     public partial class Form_ImportReceiptDetails : Form
     {
-        public Form_ImportReceiptDetails()
+        private Database_ImportReceiptDetails DB_ImportReceiptDeatails = new Database_ImportReceiptDetails();
+        private Database_ImportReceiptDetails DB_ImportReceiptDetails = null;
+        private System.Data.DataTable dataTable_ImportReceiptDetails = null;
+        private Tab_ImportReceipt Tab_ImportReceipt = new Tab_ImportReceipt();
+
+        public Form_ImportReceiptDetails(string ImportID)
         {
             InitializeComponent();
+            TB_ImportID.Text = ImportID;
+            TB_ImportID.Enabled = false;
         }
-
-        Database_ImportReceiptDetails DB_ImportReceiptDeatails = new Database_ImportReceiptDetails();
-        Database_ImportReceiptDetails DB_ImportReceiptDetails = null;
-        System.Data.DataTable dataTable_ImportReceiptDetails = null;
-        Tab_ImportReceipt Tab_ImportReceipt = new Tab_ImportReceipt();
 
         private void BTN_SeachBook_Pay_Click(object sender, EventArgs e)
         {
             AddCheckConditional();
         }
 
-        public void AddCheckConditional()
+        private void Form_ImportReceiptDetails_Load(object sender, EventArgs e)
         {
-            int importAmount;
-            decimal price;
+            DB_ImportReceiptDeatails = new Database_ImportReceiptDetails(ClassDefineName.servername, ClassDefineName.database_name);
 
-            if (int.TryParse(TB_ImportAmount.Text, out importAmount) && decimal.TryParse(TB_Price.Text, out price))
+            // Add PublisherName fill to CBB_PubName:
+            CBB_BookID.DisplayMember = ClassDefineName.table_Books_BookID;
+            System.Data.DataTable DT_BookID = DB_ImportReceiptDeatails.GetBookID();
+
+            // Add PublisherName fill to CBB_PubName:
+            CBB_SupplierID.DisplayMember = ClassDefineName.table_Suppliers_SupplierID;
+            System.Data.DataTable DT_SupplierID = DB_ImportReceiptDeatails.GetSuppliersID();
+
+            if (DT_BookID != null && DT_SupplierID != null)
             {
-                // Use 'importAmount' and 'price' in your Class_ImportReceiptDetails constructor
-                Class_ImportReceiptDetails importReceiptDetails = new Class_ImportReceiptDetails(TB_ImportID.Text, CBB_BookID.Text, importAmount, CBB_SupplierID.Text, price);
-
-                if (AddButtonState())
-                {
-                    TB_ImportID.Enabled = true;
-                    if (DB_ImportReceiptDeatails.InsertData(importReceiptDetails))
-                    {
-                        MessageBox.Show("New import receipt added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Close();
-                        return;
-                    }
-                }
+                CBB_BookID.DataSource = DT_BookID;
+                CBB_SupplierID.DataSource = DT_SupplierID;
             }
             else
             {
-                MessageBox.Show("Invalid input. Please enter valid numeric values for Import Amount and Price.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Failed to retrieve publisher names from the database.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-
         }
 
-        private void CBB_BookName_SelectedIndexChanged(object sender, EventArgs e)
+        private void CBB_BookID_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddButtonState();
-/*            System.Data.DataTable bookNameTable = DB_ImportReceiptDeatails.GetBookID();
+            System.Data.DataTable bookNameTable = DB_ImportReceiptDeatails.GetBookName(CBB_BookID.Text);
 
             foreach (DataRow row in bookNameTable.Rows)
             {
-                CBB_BookID.Text = row["BookID"].ToString();
-            }*/
+                TB_BookName.Text = row[ClassDefineName.table_Books_BookName].ToString();
+            }
         }
 
-        private void CBB_SupplierName_SelectedIndexChanged(object sender, EventArgs e)
+        private void CBB_SupplierID_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddButtonState();
-/*
-            System.Data.DataTable SupplierNameTable = DB_ImportReceiptDeatails.GetSuppliersID();
 
-            foreach (DataRow row in SupplierNameTable.Rows)
+            System.Data.DataTable supplierNameTable = DB_ImportReceiptDeatails.GetSuppliersName(CBB_SupplierID.Text);
+
+            foreach (DataRow row in supplierNameTable.Rows)
             {
-                CBB_SupplierID.Text = row["SupplierID"].ToString();
-            }*/
+                TB_SupplierName.Text = row[ClassDefineName.table_Suppliers_SupplierName].ToString();
+            }
         }
 
         private bool AddButtonState()
@@ -97,27 +87,29 @@ namespace LibraryManagement_BuiVanTai.ImportReceiptDetails
             return true;
         }
 
-        private void Form_ImportReceiptDetails_Load(object sender, EventArgs e)
+        private void AddCheckConditional()
         {
-            DB_ImportReceiptDeatails = new Database_ImportReceiptDetails(ClassDefineName.servername, ClassDefineName.database_name);
+            int importAmount;
+            decimal price;
 
-            // Add PublisherName fill to CBB_PubName:
-            CBB_BookID.DisplayMember = ClassDefineName.table_Books_BookID;
-            System.Data.DataTable DT_BookID = DB_ImportReceiptDeatails.GetBookID();
-
-            // Add PublisherName fill to CBB_PubName:
-            CBB_SupplierID.DisplayMember = ClassDefineName.table_Suppliers_SupplierID;
-            System.Data.DataTable DT_SupplierID = DB_ImportReceiptDeatails.GetSuppliersID();
-
-
-            if (DT_BookID != null && DT_SupplierID != null)
+            if (int.TryParse(TB_ImportAmount.Text, out importAmount) && decimal.TryParse(TB_Price.Text, out price))
             {
-                CBB_BookID.DataSource = DT_BookID;
-                CBB_SupplierID.DataSource = DT_SupplierID;
+                Class_ImportReceiptDetails importReceiptDetails = new Class_ImportReceiptDetails(TB_ImportID.Text, CBB_BookID.Text, importAmount, CBB_SupplierID.Text, price);
+
+                if (AddButtonState())
+                {
+                    TB_ImportID.Enabled = true;
+                    if (DB_ImportReceiptDeatails.InsertData(importReceiptDetails))
+                    {
+                        MessageBox.Show("New import receipt added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Close();
+                        return;
+                    }
+                }
             }
             else
             {
-                MessageBox.Show("Failed to retrieve publisher names from the database.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Invalid input. Please enter valid numeric values for Import Amount and Price.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

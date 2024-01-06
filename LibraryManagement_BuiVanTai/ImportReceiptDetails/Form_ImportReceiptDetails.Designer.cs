@@ -193,7 +193,7 @@
             this.CBB_SupplierID.Name = "CBB_SupplierID";
             this.CBB_SupplierID.Size = new System.Drawing.Size(224, 25);
             this.CBB_SupplierID.TabIndex = 13;
-            this.CBB_SupplierID.SelectedIndexChanged += new System.EventHandler(this.CBB_SupplierName_SelectedIndexChanged);
+            this.CBB_SupplierID.SelectedIndexChanged += new System.EventHandler(this.CBB_SupplierID_SelectedIndexChanged);
             // 
             // CBB_BookID
             // 
@@ -203,7 +203,7 @@
             this.CBB_BookID.Name = "CBB_BookID";
             this.CBB_BookID.Size = new System.Drawing.Size(224, 25);
             this.CBB_BookID.TabIndex = 12;
-            this.CBB_BookID.SelectedIndexChanged += new System.EventHandler(this.CBB_BookName_SelectedIndexChanged);
+            this.CBB_BookID.SelectedIndexChanged += new System.EventHandler(this.CBB_BookID_SelectedIndexChanged);
             // 
             // TB_Price
             // 

@@ -222,10 +222,10 @@ namespace LibraryManagement_BuiVanTai.Tab
                             dataGridImport[3] = CBB_StaffID.Text;
                             dataTable_ImportReceipt.Rows.Add(dataGridImport);
 
-                            
+
                             GridViewFormLoad_ImportReceipt(ClassDefineName.servername, ClassDefineName.database_name);
 
-                            Form_ImportReceiptDetails form_ImportReceiptDetails = new Form_ImportReceiptDetails();
+                            Form_ImportReceiptDetails form_ImportReceiptDetails = new Form_ImportReceiptDetails(TB_ImportReceipt_ImportID.Text);
                             form_ImportReceiptDetails.ShowDialog();
 
 
@@ -342,6 +342,6 @@ namespace LibraryManagement_BuiVanTai.Tab
             return DateTime.TryParse(dateString, out date);
         }
 
-        
+
     }
 }
