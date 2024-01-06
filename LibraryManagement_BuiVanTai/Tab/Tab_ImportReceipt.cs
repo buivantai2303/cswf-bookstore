@@ -1,5 +1,6 @@
 ﻿using LibraryManagement_BuiVanTai.Class;
 using LibraryManagement_BuiVanTai.Database;
+using LibraryManagement_BuiVanTai.ImportReceiptDetails;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -213,8 +214,6 @@ namespace LibraryManagement_BuiVanTai.Tab
                     {
                         if (DB_ImportReceipt.InsertData(importReceipt, CBB_PubID, CBB_StaffID))
                         {
-                            MessageBox.Show("New import receipt added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                             // Add new data to dataGridSuppliers
                             DataRow dataGridImport = dataTable_ImportReceipt.NewRow();
                             dataGridImport[0] = TB_ImportReceipt_ImportID.Text;
@@ -223,8 +222,15 @@ namespace LibraryManagement_BuiVanTai.Tab
                             dataGridImport[3] = CBB_StaffID.Text;
                             dataTable_ImportReceipt.Rows.Add(dataGridImport);
 
-                            getEmptyTextBox();
+                            
                             GridViewFormLoad_ImportReceipt(ClassDefineName.servername, ClassDefineName.database_name);
+
+                            Form_ImportReceiptDetails form_ImportReceiptDetails = new Form_ImportReceiptDetails();
+                            form_ImportReceiptDetails.ShowDialog();
+
+
+                            getEmptyTextBox();
+
                         }
                     }
                 }

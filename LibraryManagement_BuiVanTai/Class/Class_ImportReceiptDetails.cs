@@ -10,20 +10,20 @@ namespace LibraryManagement_BuiVanTai.Class
     {
         private string ImportID;
         private string BookID;
-        private string ImportAmount;
+        private int ImportAmount;
         private string SupplierID;
         private decimal Price;
 
 
         public string ImportID1 { get => ImportID; set => ImportID = value; }
         public string BookID1 { get => BookID; set => BookID = value; }
-        public string ImportAmount1 { get => ImportAmount; set => ImportAmount = value; }
+        public int ImportAmount1 { get => ImportAmount; set => ImportAmount = value; }
         public string SupplierID1 { get => SupplierID; set => SupplierID = value; }
         public decimal Price1 { get => Price; set => Price = value; }
 
         public Class_ImportReceiptDetails() { }
 
-        public Class_ImportReceiptDetails(string importID, string bookID, string importAmount, string supplierID, decimal price)
+        public Class_ImportReceiptDetails(string importID, string bookID, int importAmount, string supplierID, decimal price)
         {
             ImportID = importID;
             BookID = bookID;

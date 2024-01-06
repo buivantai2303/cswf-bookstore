@@ -66,6 +66,9 @@ namespace LibraryManagement_BuiVanTai.Database
             return database.ExecuteSQL(sqlCommand);
         }
 
+
+
+
         // Searching data by search funtion from user ======================================================
         public DataTable SearchData(string keyWords, string date)
         {

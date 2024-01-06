@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace LibraryManagement_BuiVanTai.Database
 {
@@ -44,6 +45,59 @@ namespace LibraryManagement_BuiVanTai.Database
             return database.GetDataTable(sqlCommand);
         }
 
+        public bool InsertData(Class_ImportReceiptDetails obj)
+        {
+            string sqlCommand = $"INSERT INTO {ClassDefineName.table_ImportReceiptDetails_TableName} " +
+                $"VALUES ('{obj.ImportID1}', '{obj.BookID1}', '{obj.ImportAmount1}, {obj.SupplierID1}, {obj.Price1}'";
+            return database.ExecuteSQL(sqlCommand);
+        }
 
+        public DataTable GetBookName()
+        {
+            string sqlCommand = $"SELECT {ClassDefineName.table_Books_BookName} FROM {ClassDefineName.table_Books_TableName};";
+            return database.GetDataTable(sqlCommand);
+        }
+
+        public DataTable GetBookName(string BookID)
+        {
+            string sqlCommand = $"SELECT {ClassDefineName.table_Books_BookName} FROM {ClassDefineName.table_Books_TableName} WHERE {ClassDefineName.table_Books_BookID} LIKE '%{BookID}%';";
+            return database.GetDataTable(sqlCommand);
+        }
+
+        public DataTable GetBookID(string BookName)
+        {
+            string sqlCommand = $"SELECT {ClassDefineName.table_Books_BookID} FROM {ClassDefineName.table_Books_TableName} WHERE {ClassDefineName.table_Books_BookName} LIKE '%{BookName}%';";
+            return database.GetDataTable(sqlCommand);
+        }
+
+        public DataTable GetBookID()
+        {
+            string sqlCommand = $"SELECT {ClassDefineName.table_Books_BookID} FROM {ClassDefineName.table_Books_TableName};";
+            return database.GetDataTable(sqlCommand);
+        }
+
+        public DataTable GetSuppliersName(string SupplierID)
+        {
+            string sqlCommand = $"SELECT {ClassDefineName.table_Suppliers_SupplierName} FROM {ClassDefineName.table_Suppliers_TableName} WHERE {ClassDefineName.table_Suppliers_SupplierID} LIKE '%{SupplierID}%';";
+            return database.GetDataTable(sqlCommand);
+        }
+
+        public DataTable GetSuppliersName()
+        {
+            string sqlCommand = $"SELECT {ClassDefineName.table_Suppliers_SupplierName} FROM {ClassDefineName.table_Suppliers_TableName};";
+            return database.GetDataTable(sqlCommand);
+        }
+
+        public DataTable GetSuppliersID(string SupplierName)
+        {
+            string sqlCommand = $"SELECT {ClassDefineName.table_Suppliers_SupplierID} FROM {ClassDefineName.table_Suppliers_TableName} WHERE {ClassDefineName.table_Suppliers_SupplierName} LIKE '%{SupplierName}%';";
+            return database.GetDataTable(sqlCommand);
+        }
+
+        public DataTable GetSuppliersID()
+        {
+            string sqlCommand = $"SELECT {ClassDefineName.table_Suppliers_SupplierID} FROM {ClassDefineName.table_Suppliers_TableName};";
+            return database.GetDataTable(sqlCommand);
+        }
     }
 }
