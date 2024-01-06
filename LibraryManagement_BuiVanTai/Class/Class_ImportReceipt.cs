@@ -20,6 +20,12 @@ namespace LibraryManagement_BuiVanTai.Class
 
         public Class_ImportReceipt() { }
 
+        public Class_ImportReceipt(string importID, DateTime importDate) 
+        {
+            ImportID = importID;
+            ImportDate = importDate;
+        }
+
         public Class_ImportReceipt(string importID, DateTime importDate, string publisherID, string staffID)
         {
             ImportID = importID;

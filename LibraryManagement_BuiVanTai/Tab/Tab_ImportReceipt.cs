@@ -41,13 +41,13 @@ namespace LibraryManagement_BuiVanTai.Tab
             DataTable publisherNames = DB_ImportReceipt.GetPublisherNames();
 
             // Add PublisherName fill to CBB_PubName:
-            CBB_StaffID.DisplayMember = ClassDefineName.table_Staffs_StaffName;
+            CBB_StaffName.DisplayMember = ClassDefineName.table_Staffs_StaffName;
             DataTable staffName = DB_ImportReceipt.GetStaffName();
 
             if (publisherNames != null && staffName != null)
             {
                 CBB_PubName.DataSource = publisherNames;
-                CBB_StaffID.DataSource = staffName;
+                CBB_StaffName.DataSource = staffName;
             }
             else
             {
@@ -124,7 +124,7 @@ namespace LibraryManagement_BuiVanTai.Tab
                 }
 
                 CBB_PubName.Text = selectedRow.Cells[3].Value.ToString();
-                CBB_StaffID.Text = selectedRow.Cells[4].Value.ToString();
+                CBB_StaffName.Text = selectedRow.Cells[4].Value.ToString();
             }
         }
 
@@ -154,10 +154,7 @@ namespace LibraryManagement_BuiVanTai.Tab
         private void BTN_ImportReceipt_Refresh_Click(object sender, EventArgs e)
         {
             GridViewFormLoad(ClassDefineName.servername, ClassDefineName.database_name);
-            TB_ImportReceipt_ImportID.Text = null;
-            Date_ImportDate.Text = DateTime.Now.ToString();
-            CBB_PubName.Text = null;
-            CBB_StaffID.Text = null;
+            getEmptyTextBox();
         }
 
 
@@ -165,13 +162,48 @@ namespace LibraryManagement_BuiVanTai.Tab
         // Add button fuction ================================================================================================
         private void BTN_ImportReceipt_Add_Click(object sender, EventArgs e)
         {
+            Class_ImportReceipt importReceipt = new Class_ImportReceipt(TB_ImportReceipt_ImportID.Text, Date_ImportDate.Value);
             if (DataConditional())
             {
+                if (DB_ImportReceipt.IsDuplicateSupplier(TB_ImportReceipt_ImportID.Text) > 0)
+                {
+                    MessageBox.Show("Duplicate 'ImportID' found. Please check the Supplier ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else
+                {
+                    DialogResult result = MessageBox.Show("Do you want to add new Import Receipt?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+                        if (DB_ImportReceipt.InsertData(importReceipt, CBB_PubName, CBB_StaffName))
+                        {
+                            MessageBox.Show("New import receipt added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                            // Add new data to dataGridSuppliers
+                            DataRow dataGridImport = dataTable_ImportReceipt.NewRow();
+                            dataGridImport[0] = TB_ImportReceipt_ImportID.Text;
+                            dataGridImport[1] = Date_ImportDate.Text;
+                            dataGridImport[2] = CBB_PubName.Text;
+                            dataGridImport[3] = CBB_StaffName.Text;
+                            dataTable_ImportReceipt.Rows.Add(dataGridImport);
+
+                            getEmptyTextBox();
+                            GridViewFormLoad(ClassDefineName.servername, ClassDefineName.database_name);
+                        }
+                    }
+                }
             }
         }
 
 
+        //
+        private void getEmptyTextBox()
+        {
+            TB_ImportReceipt_ImportID.Text = null;
+            Date_ImportDate.Text = DateTime.Now.ToString();
+            CBB_PubName.Text = null;
+            CBB_StaffName.Text = null;
+        }
 
         // Data condition checking:
         private const int MinImportIdLength = 3;
@@ -185,7 +217,7 @@ namespace LibraryManagement_BuiVanTai.Tab
             if (!IsValidSelectedItem(CBB_PubName, "existing supplier"))
                 return false;
 
-            if (!IsValidSelectedItem(CBB_StaffID, "existing staff name"))
+            if (!IsValidSelectedItem(CBB_StaffName, "existing staff name"))
                 return false;
 
             if (!IsValidDate(Date_ImportDate.Text))
