@@ -31,7 +31,7 @@ namespace LibraryManagement_BuiVanTai.Database
             return db.ExecuteSQL(query);
         }
 
-        public bool UpdateDate(Class_Staff st)
+        public bool UpdateData(Class_Staff st)
         {
             string query = "UPDATE Staffs " +
             "Set StaffName = " + "\'" + st.StaffName +"\'," + "StaffDOB = " + "\'" + st.StaffDOB +"\'," + "StaffAddress = " + "\'" + st.StaffAddress +"\'," + "StaffTel = " + "\'" + st.StaffTel +"\',"
@@ -39,10 +39,16 @@ namespace LibraryManagement_BuiVanTai.Database
             return db.ExecuteSQL(query);
         }
 
-        public bool DeleteDate(Class_Staff st)
+        public bool DeleteData(Class_Staff st)
         {
             string query = "DELETE FROM Staffs WHERE AuthorID = \'" + st.StaffId +"\'";
             return db.ExecuteSQL(query);
+        }
+
+        public DataTable searchData(string keyword)
+        {
+            dt = db.ExecuteSQLReturnTable("SELECT * FROM Staffs WHERE StaffName like '%" + keyword + "%' OR StaffID like '%" + keyword + "%'");
+            return dt;
         }
     }
 }

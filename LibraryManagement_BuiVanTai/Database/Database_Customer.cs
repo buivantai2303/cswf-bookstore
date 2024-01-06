@@ -31,7 +31,7 @@ namespace LibraryManagement_BuiVanTai.Database
             return db.ExecuteSQL(query);
         }
 
-        public bool UpdateDate(Class_Customer ct)
+        public bool UpdateData(Class_Customer ct)
         {
             string query = "UPDATE Customers " +
             "Set FirstName = " + "\'" + ct.FirstName + "\'," + "LastName = " + "\'" + ct.LastName + "\'," + "Tel = " + "\'" + ct.Tel + "\'," + "Address = " + "\'" + ct.Address + "\',"
@@ -39,10 +39,16 @@ namespace LibraryManagement_BuiVanTai.Database
             return db.ExecuteSQL(query);
         }
 
-        public bool DeleteDate(Class_Customer ct)
+        public bool DeleteData(Class_Customer ct)
         {
             string query = "DELETE FROM Customers WHERE CustomerID = \'" + ct.Id + "\'";
             return db.ExecuteSQL(query);
+        }
+
+        public DataTable searchData(string keyword)
+        {
+            dt = db.ExecuteSQLReturnTable("SELECT * FROM Customers WHERE FirstName like '%" + keyword + "%' OR LastName like '%" + keyword + "%'");
+            return dt;
         }
     }
 }

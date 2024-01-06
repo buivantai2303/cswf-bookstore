@@ -25,7 +25,6 @@ namespace LibraryManagement_BuiVanTai.Tab
         {
             try
             {
-
                 Class_Book book = new Class_Book(TB_Books_ID.Text, TB_Books_Name.Text, TB_Books_Remaining.Text, TB_Books_Type.Text, CBB_Books_PublisherID.Text, CBB_Books_AuthorID.Text, TB_Books_Price.Text);
                 if (Database_Book.InsertData(book) == true)
                 {

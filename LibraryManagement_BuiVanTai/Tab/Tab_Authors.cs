@@ -161,7 +161,6 @@ namespace LibraryManagement_BuiVanTai.Tab
         }
         private void DGV_Authors_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
             if (e.RowIndex >= 0 && DGV_Authors.Columns[e.ColumnIndex].Name == "ActionColumn")
             {
                 DialogResult result = MessageBox.Show("Are you sure you want to delete this row?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
