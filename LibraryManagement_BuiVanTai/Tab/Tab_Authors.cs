@@ -30,6 +30,8 @@ namespace LibraryManagement_BuiVanTai.Tab
                 if (Database_Author.InsertData(at) == true)
                 {
                     MessageBox.Show("Add Successfuly");
+                    refresh();
+                    GridViewFormLoad(ClassDefineName.servername, ClassDefineName.database_name);
                 } else
                 {
                     MessageBox.Show("There is something wrong!! Please Contact IT support");
@@ -95,6 +97,8 @@ namespace LibraryManagement_BuiVanTai.Tab
                 if (Database_Author.UpdateData(at) == true)
                 {
                     MessageBox.Show("Add Successfuly");
+                    refresh();
+                    GridViewFormLoad(ClassDefineName.servername, ClassDefineName.database_name);
                 }
                 else
                 {
@@ -108,10 +112,9 @@ namespace LibraryManagement_BuiVanTai.Tab
 
         }
 
-        private void BTN_Authors_Refresh_Click(object sender, EventArgs e)
+        public void refresh()
         {
             TB_Authors_ID.Enabled = true;
-            GridViewFormLoad(ClassDefineName.servername, ClassDefineName.database_name);
             TB_Authors_ID.Text = null;
             TB_Authors_Name.Text = null;
             Date_Authors_AuthorID.Text = DateTime.Now.ToString();
@@ -119,42 +122,33 @@ namespace LibraryManagement_BuiVanTai.Tab
             TB_Authors_Address.Text = null;
         }
 
+
+        private void BTN_Authors_Refresh_Click(object sender, EventArgs e)
+        {
+            refresh();
+        }
+
         private void TB_Authors_ID_TextChanged(object sender, EventArgs e)
         {
-            if (TB_Authors_Address.Text == "" || TB_Authors_ID.Text == "" || TB_Authors_Email.Text == "" || TB_Authors_Name.Text == "") 
-            { 
-                BTN_Authors_Add.Enabled = false;
-            } else
-            {
-                BTN_Authors_Add.Enabled = true;
-            }
+            CheckNull();
         }
 
         private void TB_Authors_Name_TextChanged(object sender, EventArgs e)
         {
-            if (TB_Authors_Address.Text == "" || TB_Authors_ID.Text == "" || TB_Authors_Email.Text == "" || TB_Authors_Name.Text == "")
-            {
-                BTN_Authors_Add.Enabled = false;
-            }
-            else
-            {
-                BTN_Authors_Add.Enabled = true;
-            }
+            CheckNull();
         }
 
         private void TB_Authors_Email_TextChanged(object sender, EventArgs e)
         {
-            if (TB_Authors_Address.Text == "" || TB_Authors_ID.Text == "" || TB_Authors_Email.Text == "" || TB_Authors_Name.Text == "")
-            {
-                BTN_Authors_Add.Enabled = false;
-            }
-            else
-            {
-                BTN_Authors_Add.Enabled = true;
-            }
+            CheckNull();
         }
 
         private void TB_Authors_Address_TextChanged(object sender, EventArgs e)
+        {
+            CheckNull();
+        }
+
+        public void CheckNull()
         {
             if (TB_Authors_Address.Text == "" || TB_Authors_ID.Text == "" || TB_Authors_Email.Text == "" || TB_Authors_Name.Text == "")
             {
@@ -165,7 +159,6 @@ namespace LibraryManagement_BuiVanTai.Tab
                 BTN_Authors_Add.Enabled = true;
             }
         }
-
         private void DGV_Authors_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             
@@ -210,7 +203,8 @@ namespace LibraryManagement_BuiVanTai.Tab
 
         private void TB_Authors_Search_TextChanged(object sender, EventArgs e)
         {
-            
+            dt = Database_Author.searchData(TB_Authors_Search.Text);
+            DGV_Authors.DataSource = dt;
         }
     }
 }
