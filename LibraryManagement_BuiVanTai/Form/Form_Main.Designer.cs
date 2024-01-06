@@ -46,6 +46,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tab_Book1 = new LibraryManagement_BuiVanTai.Tab.Tab_Book();
             this.tab_SalesReceipt = new LibraryManagement_BuiVanTai.Tab.Tab_SalesReceipt();
             this.tab_Authors = new LibraryManagement_BuiVanTai.Tab.Tab_Authors();
             this.tab_Staffs = new LibraryManagement_BuiVanTai.Tab.Tab_Staffs();
@@ -53,7 +54,6 @@
             this.tab_SearchBooks = new LibraryManagement_BuiVanTai.Tab.Tab_SearchBooks();
             this.tab_ImportReceipt = new LibraryManagement_BuiVanTai.Tab.Tab_ImportReceipt();
             this.tab_Suppliers = new LibraryManagement_BuiVanTai.Tab_Suppliers();
-            this.tab_Book1 = new LibraryManagement_BuiVanTai.Tab.Tab_Book();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
@@ -106,7 +106,7 @@
             this.Button_Main_Books.Name = "Button_Main_Books";
             this.Button_Main_Books.Size = new System.Drawing.Size(156, 43);
             this.Button_Main_Books.TabIndex = 13;
-            this.Button_Main_Books.Text = "Books";
+            this.Button_Main_Books.Text = "  Books";
             this.Button_Main_Books.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Button_Main_Books.UseVisualStyleBackColor = false;
             this.Button_Main_Books.Click += new System.EventHandler(this.Button_Main_Books_Click);
@@ -346,6 +346,15 @@
             this.panel1.Size = new System.Drawing.Size(902, 651);
             this.panel1.TabIndex = 0;
             // 
+            // tab_Book1
+            // 
+            this.tab_Book1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab_Book1.Location = new System.Drawing.Point(0, 0);
+            this.tab_Book1.MinimumSize = new System.Drawing.Size(902, 651);
+            this.tab_Book1.Name = "tab_Book1";
+            this.tab_Book1.Size = new System.Drawing.Size(902, 651);
+            this.tab_Book1.TabIndex = 8;
+            // 
             // tab_SalesReceipt
             // 
             this.tab_SalesReceipt.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -410,15 +419,6 @@
             this.tab_Suppliers.Name = "tab_Suppliers";
             this.tab_Suppliers.Size = new System.Drawing.Size(899, 651);
             this.tab_Suppliers.TabIndex = 1;
-            // 
-            // tab_Book1
-            // 
-            this.tab_Book1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tab_Book1.Location = new System.Drawing.Point(0, 0);
-            this.tab_Book1.MinimumSize = new System.Drawing.Size(902, 651);
-            this.tab_Book1.Name = "tab_Book1";
-            this.tab_Book1.Size = new System.Drawing.Size(902, 651);
-            this.tab_Book1.TabIndex = 8;
             // 
             // Form_Main
             // 

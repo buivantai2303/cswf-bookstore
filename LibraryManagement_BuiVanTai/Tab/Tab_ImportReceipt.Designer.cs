@@ -223,7 +223,6 @@
             this.DGV_ImportReceipt.Size = new System.Drawing.Size(544, 352);
             this.DGV_ImportReceipt.TabIndex = 24;
             this.DGV_ImportReceipt.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGView_ImportReceipt_CellClick);
-            this.DGV_ImportReceipt.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGView_ImportReceipt_CellContentClick);
             // 
             // ImportID
             // 
@@ -315,6 +314,7 @@
             this.Date_ImportDate.Name = "Date_ImportDate";
             this.Date_ImportDate.Size = new System.Drawing.Size(215, 23);
             this.Date_ImportDate.TabIndex = 34;
+            this.Date_ImportDate.ValueChanged += new System.EventHandler(this.Date_ImportDate_ValueChanged);
             // 
             // label8
             // 
@@ -337,6 +337,7 @@
             this.CBB_StaffName.Name = "CBB_StaffName";
             this.CBB_StaffName.Size = new System.Drawing.Size(216, 25);
             this.CBB_StaffName.TabIndex = 39;
+            this.CBB_StaffName.SelectedIndexChanged += new System.EventHandler(this.CBB_StaffName_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -357,6 +358,7 @@
             this.CBB_PubName.Name = "CBB_PubName";
             this.CBB_PubName.Size = new System.Drawing.Size(161, 25);
             this.CBB_PubName.TabIndex = 37;
+            this.CBB_PubName.SelectedIndexChanged += new System.EventHandler(this.CBB_PubName_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -377,6 +379,7 @@
             this.TB_ImportReceipt_ImportID.Name = "TB_ImportReceipt_ImportID";
             this.TB_ImportReceipt_ImportID.Size = new System.Drawing.Size(161, 25);
             this.TB_ImportReceipt_ImportID.TabIndex = 36;
+            this.TB_ImportReceipt_ImportID.TextChanged += new System.EventHandler(this.TB_ImportReceipt_ImportID_TextChanged);
             // 
             // BTN_ImportReceipt_Save
             // 

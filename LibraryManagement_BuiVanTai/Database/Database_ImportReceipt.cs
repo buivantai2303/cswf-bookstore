@@ -45,51 +45,18 @@ namespace LibraryManagement_BuiVanTai.Database
         }
 
 
-        public bool getNameFromID(string ID)
-        {
-            string sqlCommand = $"SELETCT {ClassDefineName.table_Publishers_PublisherName} FROM {ClassDefineName.table_Publishers_TableName} WHERE {ClassDefineName.table_Publishers_PublisherID} = '{ID}'";
-            return database.ExecuteSQL(sqlCommand);
-        }
-
-
-        // Get numbers of active suppliers ================================================================
-        public int getActiveRowCount()
-        {
-            int rowCount = 0;
-            DataTable dataTable = database.getTableByState(ClassDefineName.table_Suppliers_TableName,
-                ClassDefineName.table_Suppliers_SupplierState, ClassDefineName.table_Suppliers_SupplierState_Active);
-
-            if (dataTable != null)
-            {
-                rowCount = dataTable.Rows.Count;
-            }
-
-            return rowCount;
-        }
-
 
         // Insert value to SQL =============================================================================
         public bool InsertData(Class_ImportReceipt obj, ComboBox PublisherName, ComboBox staffName)
         {
             string sqlCommand = $"INSERT INTO {ClassDefineName.table_ImportReceipt_TableName} ({ClassDefineName.table_ImportReceipt_ImportID}, {ClassDefineName.table_ImportReceipt_ImportDate}, {ClassDefineName.table_ImportReceipt_PublisherID}, {ClassDefineName.table_ImportReceipt_StaffID})" +
                 $"VALUES ('{obj.ImportID1}', '{obj.ImportDate1}'," +
-                $"(SELECT {ClassDefineName.table_Publishers_PublisherID} FROM {ClassDefineName.table_Publishers_TableName} WHERE {ClassDefineName.table_Publishers_PublisherName} = '{PublisherName}')," +
-                $"(SELECT {ClassDefineName.table_Staffs_StaffID} FROM {ClassDefineName.table_Staffs_TableName} WHERE {ClassDefineName.table_Staffs_StaffName} = '{staffName}')" +
+                $"(SELECT {ClassDefineName.table_Publishers_PublisherID} FROM {ClassDefineName.table_Publishers_TableName} WHERE {ClassDefineName.table_Publishers_PublisherName} = '{PublisherName.Text}')," +
+                $"(SELECT {ClassDefineName.table_Staffs_StaffID} FROM {ClassDefineName.table_Staffs_TableName} WHERE {ClassDefineName.table_Staffs_StaffName} = '{staffName.Text}')" +
                 $");";
             return database.ExecuteSQL(sqlCommand); 
         }
 
-        // Update data by click "Add" button ===============================================================
-        public bool UpdateData(Class_Suppliers obj, string ID)
-        {
-            string sqlCommand = $"UPDATE {ClassDefineName.table_Suppliers_TableName} " +
-                $"SET {ClassDefineName.table_Suppliers_SupplierName} =  '{obj.SupplierName1}', " +
-                $"{ClassDefineName.table_Suppliers_SupplierAddress} = '{obj.SupplierAddress1}', " +
-                $"{ClassDefineName.table_Suppliers_SupplierTelephone} = '{obj.SupplierTel1}' , " +
-                $"{ClassDefineName.table_Suppliers_SupplierState} = '{obj.SupplierState1}' " +
-                $"WHERE {ClassDefineName.table_Suppliers_SupplierID} = '{ID}';";
-            return database.ExecuteSQL(sqlCommand);
-        }
 
         // Delete data row by click in action column== =====================================================
         public bool DeletDataByID(string ID)

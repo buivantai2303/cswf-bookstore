@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LibraryManagement_BuiVanTai.Class;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace LibraryManagement_BuiVanTai.Database
         public Database_ImportReceiptDetails() { }
 
         // Dynamic change server and database =============================================================
-        private string TableName = "ImportReceiptDetails";
+        private string TableName = ClassDefineName.table_ImportReceiptDetails_TableName;
 
 
         // Declare new connection ====================================================================================

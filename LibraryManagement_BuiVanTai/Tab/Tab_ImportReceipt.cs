@@ -73,37 +73,11 @@ namespace LibraryManagement_BuiVanTai.Tab
 
 
 
-        // Delete data by click in the items =================================================================================
+        // Select and Delete data by click in the items =================================================================================
         private void DGView_ImportReceipt_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Class_Suppliers suppliers = new Class_Suppliers(TB_ImportReceipt_ImportID.Text);
 
-            // Select only delete icon and question to delete access
-            if (e.RowIndex >= 0 && DGV_ImportReceipt.Columns[e.ColumnIndex].Name == "ActionColumn")
-            {
-                DialogResult result = MessageBox.Show("Are you sure you want to delete this row?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (result == DialogResult.Yes)
-                {
-                    string columnIDValue = DGV_ImportReceipt.Rows[e.RowIndex].Cells[1].Value.ToString();
-                    DB_ImportReceipt.DeletDataByID(columnIDValue);
-
-                    int rowIndex = DGV_ImportReceipt.CurrentCell.RowIndex;
-                    DGV_ImportReceipt.Rows.RemoveAt(rowIndex);
-
-                    MessageBox.Show("Row deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
-                return;
-            }
-        }
-
-
-
-        // Fill data from SQL to Grid ========================================================================================
-        private void DGView_ImportReceipt_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // Check if the clicked cell is not in the header
+            // Export data to ComboBox & TextBox
             if (e.RowIndex >= 0)
             {
                 int index = e.RowIndex;
@@ -111,6 +85,7 @@ namespace LibraryManagement_BuiVanTai.Tab
 
                 // Retrieve values from DataGridView
                 TB_ImportReceipt_ImportID.Text = selectedRow.Cells[1].Value.ToString();
+                TB_ImportReceipt_ImportID.Enabled = false;
 
                 // Convert the string representation of the date to a DateTime object
                 if (DateTime.TryParse(selectedRow.Cells[2].Value.ToString(), out DateTime importDate))
@@ -126,7 +101,31 @@ namespace LibraryManagement_BuiVanTai.Tab
                 CBB_PubName.Text = selectedRow.Cells[3].Value.ToString();
                 CBB_StaffName.Text = selectedRow.Cells[4].Value.ToString();
             }
+
+
+
+
+            Class_Suppliers suppliers = new Class_Suppliers(TB_ImportReceipt_ImportID.Text);
+            string columnIDValue = DGV_ImportReceipt.Rows[e.RowIndex].Cells[1].Value.ToString();
+
+            // Select only delete icon and question to delete access
+            if (e.RowIndex >= 0 && DGV_ImportReceipt.Columns[e.ColumnIndex].Name == "ActionColumn")
+            {
+                DialogResult result = MessageBox.Show("Are you sure you want to delete this row?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    DB_ImportReceipt.DeletDataByID(columnIDValue);
+                    int rowIndex = DGV_ImportReceipt.CurrentCell.RowIndex;
+                    DGV_ImportReceipt.Rows.RemoveAt(rowIndex);
+
+                    MessageBox.Show("Row deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                return;
+            }
         }
+
 
 
 
@@ -155,6 +154,7 @@ namespace LibraryManagement_BuiVanTai.Tab
         {
             GridViewFormLoad(ClassDefineName.servername, ClassDefineName.database_name);
             getEmptyTextBox();
+            TB_ImportReceipt_ImportID.Enabled = Enabled;
         }
 
 
@@ -192,6 +192,38 @@ namespace LibraryManagement_BuiVanTai.Tab
                         }
                     }
                 }
+            }
+        }
+
+        private void TB_ImportReceipt_ImportID_TextChanged(object sender, EventArgs e)
+        {
+            AddButtonState();
+        }
+
+        private void Date_ImportDate_ValueChanged(object sender, EventArgs e)
+        {
+            AddButtonState();
+        }
+
+        private void CBB_PubName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AddButtonState();
+        }
+
+        private void CBB_StaffName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AddButtonState();
+        }
+
+        private void AddButtonState()
+        {
+            if (TB_ImportReceipt_ImportID.Text == "" || CBB_PubName.Text == "" || CBB_StaffName.Text == "" || !IsValidDate(Date_ImportDate.Text))
+            {
+                BTN_ImportReceipt_Add.Enabled = false;
+            }
+            else
+            {
+                BTN_ImportReceipt_Add.Enabled = true;
             }
         }
 
@@ -256,5 +288,6 @@ namespace LibraryManagement_BuiVanTai.Tab
             return DateTime.TryParse(dateString, out date);
         }
 
+        
     }
 }

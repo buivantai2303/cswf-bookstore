@@ -37,6 +37,7 @@ namespace LibraryManagement_BuiVanTai
 
             // Load data to GridView.
             GridViewFormLoad(ClassDefineName.servername, ClassDefineName.database_name);
+            BTN_Suppliers_Add.Enabled = false;
 
             // Get total suppliers and active suppliets.
             DB_Suppliers = new Database_Suppliers(ClassDefineName.servername, ClassDefineName.database_name);
@@ -86,6 +87,7 @@ namespace LibraryManagement_BuiVanTai
             TB_Suppliers_Search.Clear();
             GridViewFormLoad(ClassDefineName.servername, ClassDefineName.database_name);
             getEmptyTextBox();
+            TB_Suppliers_ID.Enabled = false;
             return;
         }
 
@@ -94,8 +96,19 @@ namespace LibraryManagement_BuiVanTai
         public void GridViewFormLoad(string ServerName, string DatabaseName) {
             DB_Suppliers = new Database_Suppliers(ServerName, DatabaseName);
             dataTable_Suppliers = DB_Suppliers.getTable();
-            DGV_Suppliers.DataSource = dataTable_Suppliers;
-            Label_Suppliers_TotalNumbers.Text = DGV_Suppliers.Rows.Count.ToString();
+
+            if (dataTable_Suppliers != null)
+            {
+                DGV_Suppliers.DataSource = dataTable_Suppliers;
+                Label_Suppliers_TotalNumbers.Text = DGV_Suppliers.Rows.Count.ToString();
+                DGV_Suppliers.DataSource = dataTable_Suppliers;
+                DGV_Suppliers.RowHeadersVisible = false;
+                DGV_Suppliers.RowHeadersVisible = false;
+            }
+            else
+            {
+                MessageBox.Show("Failed to retrieve data from the database.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             return;
         }
 
@@ -103,7 +116,15 @@ namespace LibraryManagement_BuiVanTai
         // Use delete buton to dataGridView_Suppliers function ============================================
         private void dataGridView_Suppliers_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Class_Suppliers suppliers = new Class_Suppliers(TB_Suppliers_ID.Text);
+
+            int index = e.RowIndex;
+            TB_Suppliers_ID.Enabled = true;
+            DataGridViewRow SelectedRow = DGV_Suppliers.Rows[index];
+            TB_Suppliers_ID.Text = SelectedRow.Cells[1].Value.ToString();
+            TB_Suppliers_Name.Text = SelectedRow.Cells[2].Value.ToString();
+            TB_Suppliers_Address.Text = SelectedRow.Cells[3].Value.ToString();
+            TB_Suppliers_Telephone.Text = SelectedRow.Cells[4].Value.ToString();
+            CBB_Suppliers_Suppliers_StatusFix.Text = SelectedRow.Cells[5].Value.ToString();
 
             // Select only delete icon and question to delete access
             if (e.RowIndex >= 0 && DGV_Suppliers.Columns[e.ColumnIndex].Name == "ActionColumn")
@@ -258,6 +279,40 @@ namespace LibraryManagement_BuiVanTai
         }
 
 
+        // Disable Add button when not have any data in the Textbox.
+        private void TB_Suppliers_Telephone_TextChanged(object sender, EventArgs e)
+        {
+            AddButtonState();
+        }
+
+        private void CBB_Suppliers_Suppliers_StatusFix_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AddButtonState();
+        }
+
+        private void TB_Suppliers_Name_TextChanged(object sender, EventArgs e)
+        {
+            AddButtonState();
+        }
+
+        private void TB_Suppliers_Address_TextChanged(object sender, EventArgs e)
+        {
+            AddButtonState();
+        }
+
+        private void AddButtonState()
+        {
+            if (TB_Suppliers_ID.Text == "" || TB_Suppliers_Name.Text == "" || TB_Suppliers_Address.Text == "" || CBB_Suppliers_Suppliers_StatusFix.Text == "")
+            {
+                BTN_Suppliers_Add.Enabled = false;
+            }
+            else
+            {
+                BTN_Suppliers_Add.Enabled = true;
+            }
+        }
+
+
 
         // Conditionnal for adding data to datbase
         private bool DataConditional()
@@ -300,13 +355,7 @@ namespace LibraryManagement_BuiVanTai
         // fill textbox by clikc on the datarows
         private void dataGridView_Suppliers_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int index = e.RowIndex;
-            DataGridViewRow SelectedRow = DGV_Suppliers.Rows[index];
-            TB_Suppliers_ID.Text = SelectedRow.Cells[1].Value.ToString();
-            TB_Suppliers_Name.Text = SelectedRow.Cells[2].Value.ToString();
-            TB_Suppliers_Address.Text = SelectedRow.Cells[3].Value.ToString();
-            TB_Suppliers_Telephone.Text = SelectedRow.Cells[4].Value.ToString();
-            CBB_Suppliers_Suppliers_StatusFix.Text = SelectedRow.Cells[5].Value.ToString();
+
         }
 
 
@@ -409,6 +458,19 @@ namespace LibraryManagement_BuiVanTai
 
             }
         }
+
+        private void TB_Suppliers_ID_TextChanged(object sender, EventArgs e)
+        {
+            if (TB_Suppliers_ID.Text == "" || TB_Suppliers_Name.Text == "" || TB_Suppliers_Address.Text == "" || CBB_Suppliers_Suppliers_StatusFix.Text == "")
+            {
+                BTN_Suppliers_Add.Enabled = false;
+            }
+            else
+            {
+                BTN_Suppliers_Add.Enabled = true;
+            }
+        }
+
 
     }
 
