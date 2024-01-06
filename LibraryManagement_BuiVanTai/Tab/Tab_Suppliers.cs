@@ -462,8 +462,6 @@ namespace LibraryManagement_BuiVanTai
                 BTN_Suppliers_Add.Enabled = true;
             }
         }
-
-
     }
 
 }

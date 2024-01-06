@@ -16,6 +16,11 @@ namespace LibraryManagement_BuiVanTai.Class
         public string AuthorId { get; set; }
         public string Price { get; set; }
 
+        public Class_Book(string bookId) 
+        {
+            BookId = bookId;
+        }
+
         public Class_Book(string bookId, string bookTitle, string remaining, string bookType, string publisherId, string authorId, string price)
         {
             BookId = bookId;

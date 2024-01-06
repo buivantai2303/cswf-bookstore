@@ -22,7 +22,7 @@ namespace LibraryManagement_BuiVanTai.Database
 
 
         // Declare new connection ====================================================================================
-        public Database_ImportReceiptDetails(string servername, string databasename, string user = "", string pass = "")
+        public Database_ImportReceiptDetails(string servername, string databasename)
         {
             database = new Database(servername, databasename);
         }

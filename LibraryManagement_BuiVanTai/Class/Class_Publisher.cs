@@ -25,5 +25,10 @@ namespace LibraryManagement_BuiVanTai.Class
             PublisherAddress = publisherAddress;
             PublisherTel = publisherTel;
         }
+
+        public string toID(Class_Publisher pub)
+        {
+            return PublisherId;
+        }
     }
 }

@@ -46,9 +46,9 @@ namespace LibraryManagement_BuiVanTai.Database
             return db.ExecuteSQL(query);
         }
 
-        public string toName(Class_Author at)
+        public string toID(Class_Author at)
         { 
-            return at.AuthorName; 
+            return at.AuthorId; 
         }
     }
 }
