@@ -18,30 +18,30 @@ namespace LibraryManagement_BuiVanTai.Database
             db = new Database(servername, databasename);
         }
 
-        public DataTable getTable()
+        public DataTable getTable(string tableName)
         {
             dt = new DataTable();
-            dt = db.getTable("Books");
+            dt = db.getTable("Staffs");
             return dt;
         }
 
-        public bool InsertData(Class_Book book)
+        public bool InsertData(Class_Staff st)
         {
-            string query = "INSERT INTO Books VALUES (\'" + book.BookId + "\'," + "\'" + book.BookTitle + "\'," + "\'" + book.Remaining + "\'," + "\'" + book.BookType + "\'," + "\'" + book.PublisherId + "\'" + "\'" + book.AuthorId + "\'" + "\'" + book.Price + "\')";
+            string query = "INSERT INTO Staffs VALUES (\'" + st.StaffId +"\'," + "\'" + st.StaffName +"\'," + "\'" + st.StaffDOB +"\'," + "\'" + st.StaffAddress +"\'," + "\'" + st.StaffTel +"\')";
             return db.ExecuteSQL(query);
         }
 
-        public bool UpdateDate(Class_Book book)
+        public bool UpdateDate(Class_Staff st)
         {
-            string query = "UPDATE Books " +
-            "Set BookName = " + "\'" + book.BookTitle + "\'," + "Remaining = " + "\'" + book.Remaining + "\'," + "BookType = " + "\'" + book.BookType + "\'," + "PublisherID = " + "\'" + book.PublisherId + "\'," + "AuthorID = " + "\'" + book.AuthorId + "\'," + "Price = " + "\'" + book.Price + "\',"
-            + "WHERE BookID = \'" + book.BookId + "\'";
+            string query = "UPDATE Staffs " +
+            "Set StaffName = " + "\'" + st.StaffName +"\'," + "StaffDOB = " + "\'" + st.StaffDOB +"\'," + "StaffAddress = " + "\'" + st.StaffAddress +"\'," + "StaffTel = " + "\'" + st.StaffTel +"\',"
+            + "WHERE StaffID = \'" + st.StaffId +"\'";
             return db.ExecuteSQL(query);
         }
 
-        public bool DeleteDate(Class_Book book)
+        public bool DeleteDate(Class_Staff st)
         {
-            string query = "DELETE FROM Books WHERE BookID = \'" + book.BookId + "\'";
+            string query = "DELETE FROM Staffs WHERE AuthorID = \'" + st.StaffId +"\'";
             return db.ExecuteSQL(query);
         }
     }
