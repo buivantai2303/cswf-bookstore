@@ -74,24 +74,48 @@ namespace LibraryManagement_BuiVanTai.Database
         }
 
         // Get PublisherName to the CBB_ImportReceipt_SupplierName =========================================
-        public DataTable GetPublisherNames()
+        public DataTable GetPublisherName(string PubID)
         {
-            string sqlCommand = $"SELECT {ClassDefineName.table_Publishers_PublisherName} FROM {ClassDefineName.table_Publishers_TableName};";
+            string sqlCommand = $"SELECT {ClassDefineName.table_Publishers_PublisherName} FROM {ClassDefineName.table_Publishers_TableName} WHERE {ClassDefineName.table_Publishers_PublisherID} LIKE '%{PubID}%';";
             return database.GetDataTable(sqlCommand);
         }
 
-        public DataTable GetStaffName()
+        public DataTable GetStaffName(string StaffID)
         {
-            string sqlCommand = $"SELECT {ClassDefineName.table_Staffs_StaffName} FROM {ClassDefineName.table_Staffs_TableName};";
+            string sqlCommand = $"SELECT {ClassDefineName.table_Staffs_StaffName} FROM {ClassDefineName.table_Staffs_TableName} WHERE {ClassDefineName.table_Staffs_StaffID} LIKE '%{StaffID}%';";
+            return database.GetDataTable(sqlCommand);
+        }
+
+        public DataTable GetPublisherID()
+        {
+            string sqlCommand = $"SELECT {ClassDefineName.table_Publishers_PublisherID} FROM {ClassDefineName.table_Publishers_TableName};";
+            return database.GetDataTable(sqlCommand);
+        }
+
+        public DataTable GetPublisherID(string PubName)
+        {
+            string sqlCommand = $"SELECT {ClassDefineName.table_Publishers_PublisherID} FROM {ClassDefineName.table_Publishers_TableName} WHERE {ClassDefineName.table_Publishers_PublisherName} LIKE '%{PubName}%';";
+            return database.GetDataTable(sqlCommand);
+        }
+
+        public DataTable GetStaffID()
+        {
+            string sqlCommand = $"SELECT {ClassDefineName.table_Staffs_StaffID} FROM {ClassDefineName.table_Staffs_TableName};";
+            return database.GetDataTable(sqlCommand);
+        }
+
+        public DataTable GetStaffID(string staffName)
+        {
+            string sqlCommand = $"SELECT {ClassDefineName.table_Staffs_StaffID} FROM {ClassDefineName.table_Staffs_TableName} WHERE {ClassDefineName.table_Staffs_StaffName} LIKE '%{staffName}%';";
             return database.GetDataTable(sqlCommand);
         }
 
         public int IsDuplicateSupplier(string ImportID)
         {
-            string sqlCommand = $"SELECT COUNT(*) FROM {ClassDefineName.table_ImportReceipt_TableName} WHERE {ClassDefineName.table_ImportReceipt_ImportID} = '{ImportID}'";
-
+            string sqlCommand = $"SELECT COUNT(*) FROM {ClassDefineName.table_ImportReceipt_TableName} WHERE {ClassDefineName.table_ImportReceipt_ImportID} LIKE '%{ImportID}%'";
             return database.ExcuteSQL_CheckDuplicate(sqlCommand);
         }
+
 
     }
 }

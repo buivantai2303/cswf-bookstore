@@ -39,22 +39,41 @@ namespace LibraryManagement_BuiVanTai.Tab
             dataTable_ImportReceipt = DB_ImportReceipt.getTable();
 
             // Add PublisherName fill to CBB_PubName:
-            CBB_PubName.DisplayMember = ClassDefineName.table_Publishers_PublisherName;
-            DataTable publisherNames = DB_ImportReceipt.GetPublisherNames();
+            CBB_PubID.DisplayMember = ClassDefineName.table_Publishers_PublisherID;
+            DataTable DT_publisherID = DB_ImportReceipt.GetPublisherID();
 
             // Add PublisherName fill to CBB_PubName:
-            CBB_StaffName.DisplayMember = ClassDefineName.table_Staffs_StaffName;
-            DataTable staffName = DB_ImportReceipt.GetStaffName();
+            CBB_StaffID.DisplayMember = ClassDefineName.table_Staffs_StaffID;
+            DataTable DT_staffID = DB_ImportReceipt.GetStaffID();
 
-            if (publisherNames != null && staffName != null)
+
+            if (DT_publisherID != null && DT_staffID != null)
             {
-                CBB_PubName.DataSource = publisherNames;
-                CBB_StaffName.DataSource = staffName;
+                CBB_PubID.DataSource = DT_publisherID;
+                CBB_StaffID.DataSource = DT_staffID;
             }
             else
             {
                 MessageBox.Show("Failed to retrieve publisher names from the database.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            // Assuming that GetStaffName and GetPublisherName return DataTables with a column named "StaffName" and "PublisherName" respectively.
+
+            DataTable staffNameTable = DB_ImportReceipt.GetStaffName(CBB_StaffID.Text);
+            DataTable pubNameTable = DB_ImportReceipt.GetPublisherName(CBB_PubID.Text);
+
+            foreach (DataRow row in staffNameTable.Rows)
+            {
+                // Assuming "StaffName" is the column name in the DataTable
+                TB_StaffName.Text = row["StaffName"].ToString();
+            }
+
+            foreach (DataRow row in pubNameTable.Rows)
+            {
+                // Assuming "PublisherName" is the column name in the DataTable
+                TB_PubName.Text = row["PublisherName"].ToString();
+            }
+
 
             // 
             if (dataTable_ImportReceipt != null)
@@ -97,7 +116,6 @@ namespace LibraryManagement_BuiVanTai.Tab
         // Select and Delete data by click in the items =================================================================================
         private void DGView_ImportReceipt_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
             // Export data to ComboBox & TextBox
             if (e.RowIndex >= 0)
             {
@@ -119,33 +137,26 @@ namespace LibraryManagement_BuiVanTai.Tab
                     MessageBox.Show("Error parsing import date.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
-                CBB_PubName.Text = selectedRow.Cells[3].Value.ToString();
-                CBB_StaffName.Text = selectedRow.Cells[4].Value.ToString();
+                // Retrieve PublisherID based on PublisherName
+                string selectedPublisherName = selectedRow.Cells[3].Value.ToString();
+                DataTable publisherIDTable = DB_ImportReceipt.GetPublisherID(selectedPublisherName);
+
+                foreach (DataRow DR in publisherIDTable.Rows)
+                {
+                    CBB_PubID.Text = DR["PublisherID"].ToString();
+                }
+
+
+                string selectedStaffName = selectedRow.Cells[4].Value.ToString();
+                DataTable sstaffIDTable = DB_ImportReceipt.GetStaffID(selectedStaffName);
+
+                foreach (DataRow DR in sstaffIDTable.Rows)
+                {
+                    CBB_StaffID.Text = DR["StaffID"].ToString();
+                }
+
 
                 GridViewFormLoad_ImportReceiptDetails(ClassDefineName.servername, ClassDefineName.database_name, selectedRow.Cells[1].Value.ToString());
-                return;
-            }
-
-
-
-
-            Class_Suppliers suppliers = new Class_Suppliers(TB_ImportReceipt_ImportID.Text);
-            string columnIDValue = DGV_ImportReceipt.Rows[e.RowIndex].Cells[1].Value.ToString();
-
-            // Select only delete icon and question to delete access
-            if (e.RowIndex >= 0 && DGV_ImportReceipt.Columns[e.ColumnIndex].Name == "ActionColumn")
-            {
-                DialogResult result = MessageBox.Show("Are you sure you want to delete this row?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (result == DialogResult.Yes)
-                {
-                    DB_ImportReceipt.DeletDataByID(columnIDValue);
-                    int rowIndex = DGV_ImportReceipt.CurrentCell.RowIndex;
-                    DGV_ImportReceipt.Rows.RemoveAt(rowIndex);
-
-                    MessageBox.Show("Row deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
                 return;
             }
         }
@@ -179,6 +190,7 @@ namespace LibraryManagement_BuiVanTai.Tab
             GridViewFormLoad_ImportReceipt(ClassDefineName.servername, ClassDefineName.database_name);
             getEmptyTextBox();
             TB_ImportReceipt_ImportID.Enabled = Enabled;
+            Date_ImportDate.Enabled = Enabled;
         }
 
 
@@ -199,7 +211,7 @@ namespace LibraryManagement_BuiVanTai.Tab
                     DialogResult result = MessageBox.Show("Do you want to add new Import Receipt?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (result == DialogResult.Yes)
                     {
-                        if (DB_ImportReceipt.InsertData(importReceipt, CBB_PubName, CBB_StaffName))
+                        if (DB_ImportReceipt.InsertData(importReceipt, CBB_PubID, CBB_StaffID))
                         {
                             MessageBox.Show("New import receipt added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -207,8 +219,8 @@ namespace LibraryManagement_BuiVanTai.Tab
                             DataRow dataGridImport = dataTable_ImportReceipt.NewRow();
                             dataGridImport[0] = TB_ImportReceipt_ImportID.Text;
                             dataGridImport[1] = Date_ImportDate.Text;
-                            dataGridImport[2] = CBB_PubName.Text;
-                            dataGridImport[3] = CBB_StaffName.Text;
+                            dataGridImport[2] = CBB_PubID.Text;
+                            dataGridImport[3] = CBB_StaffID.Text;
                             dataTable_ImportReceipt.Rows.Add(dataGridImport);
 
                             getEmptyTextBox();
@@ -232,16 +244,28 @@ namespace LibraryManagement_BuiVanTai.Tab
         private void CBB_PubName_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddButtonState();
+            DataTable pubNameTable = DB_ImportReceipt.GetPublisherName(CBB_PubID.Text);
+
+            foreach (DataRow row in pubNameTable.Rows)
+            {
+                TB_PubName.Text = row["PublisherName"].ToString();
+            }
         }
 
         private void CBB_StaffName_SelectedIndexChanged(object sender, EventArgs e)
         {
             AddButtonState();
+            DataTable staffNameTable = DB_ImportReceipt.GetStaffName(CBB_StaffID.Text);
+
+            foreach (DataRow row in staffNameTable.Rows)
+            {
+                TB_StaffName.Text = row["StaffName"].ToString();
+            }
         }
 
         private void AddButtonState()
         {
-            if (TB_ImportReceipt_ImportID.Text == "" || CBB_PubName.Text == "" || CBB_StaffName.Text == "" || !IsValidDate(Date_ImportDate.Text))
+            if (TB_ImportReceipt_ImportID.Text == "" || CBB_PubID.Text == "" || CBB_StaffID.Text == "" || !IsValidDate(Date_ImportDate.Text))
             {
                 BTN_ImportReceipt_Add.Enabled = false;
             }
@@ -257,8 +281,8 @@ namespace LibraryManagement_BuiVanTai.Tab
         {
             TB_ImportReceipt_ImportID.Text = null;
             Date_ImportDate.Text = DateTime.Now.ToString();
-            CBB_PubName.Text = null;
-            CBB_StaffName.Text = null;
+            CBB_PubID.Text = null;
+            CBB_StaffID.Text = null;
         }
 
         // Data condition checking:
@@ -270,10 +294,10 @@ namespace LibraryManagement_BuiVanTai.Tab
             if (!IsValidImportIdLength())
                 return false;
 
-            if (!IsValidSelectedItem(CBB_PubName, "existing supplier"))
+            if (!IsValidSelectedItem(CBB_PubID, "existing supplier"))
                 return false;
 
-            if (!IsValidSelectedItem(CBB_StaffName, "existing staff name"))
+            if (!IsValidSelectedItem(CBB_StaffID, "existing staff name"))
                 return false;
 
             if (!IsValidDate(Date_ImportDate.Text))
