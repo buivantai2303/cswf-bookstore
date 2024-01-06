@@ -14,6 +14,10 @@ namespace LibraryManagement_BuiVanTai.Class
         public string PublisherTel { get; set; }
         public string PublisherState { get; set; }
 
+        public Class_Publisher(string publisherId) 
+        {
+            PublisherId = publisherId;
+        }
         public Class_Publisher(string publisherId, string publisherName, string publisherAddress, string publisherTel)
         {
             PublisherId = publisherId;

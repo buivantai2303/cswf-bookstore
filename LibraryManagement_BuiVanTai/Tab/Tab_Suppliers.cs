@@ -103,8 +103,6 @@ namespace LibraryManagement_BuiVanTai
         // Use delete buton to dataGridView_Suppliers function ============================================
         private void dataGridView_Suppliers_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Class_Suppliers suppliers = new Class_Suppliers(TB_Suppliers_ID.Text);
-
             // Select only delete icon and question to delete access
             if (e.RowIndex >= 0 && DGV_Suppliers.Columns[e.ColumnIndex].Name == "ActionColumn")
             {

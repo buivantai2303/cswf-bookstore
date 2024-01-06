@@ -14,6 +14,11 @@ namespace LibraryManagement_BuiVanTai.Class
         public string AuthorAddress { get; set; }
         public string AuthorEmail { get; set; }
 
+        public Class_Author(string authorId) 
+        {
+            AuthorId = authorId;
+        }
+
         public Class_Author(string authorId, string authorName, string authorDOB, string authorAddress, string authorEmail)
         {
             AuthorId = authorId;
