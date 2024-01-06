@@ -116,6 +116,7 @@ namespace LibraryManagement_BuiVanTai
         // Use delete buton to dataGridView_Suppliers function ============================================
         private void dataGridView_Suppliers_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            // Select only delete icon and question to delete access
             if (e.RowIndex >= 0 && DGV_Suppliers.Columns[e.ColumnIndex].Name == "ActionColumn")
             {
                 DialogResult result = MessageBox.Show("Are you sure you want to delete this row?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);

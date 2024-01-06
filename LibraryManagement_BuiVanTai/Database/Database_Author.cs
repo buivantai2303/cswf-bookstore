@@ -19,7 +19,7 @@ namespace LibraryManagement_BuiVanTai.Database
             db = new Database(servername, databasename);
         }
 
-        public DataTable getTable(string tableName)
+        public DataTable getTable()
         {
             dt = new DataTable();
             dt = db.getTable("Authors");
@@ -32,7 +32,7 @@ namespace LibraryManagement_BuiVanTai.Database
             return db.ExecuteSQL(query);
         }
 
-        public bool UpdateDate(Class_Author at)
+        public bool UpdateData(Class_Author at)
         {
             string query = "UPDATE Authors " +
             "Set AuthorName = " + "\'" + at.AuthorName + "\'," + "AuthorDOB = " + "\'" + at.AuthorDOB + "\'," + "AuthorAddress = " + "\'" + at.AuthorAddress + "\'," + "AuthorEmail = " + "\'" + at.AuthorEmail + "\',"
@@ -40,10 +40,15 @@ namespace LibraryManagement_BuiVanTai.Database
             return db.ExecuteSQL(query);
         }
 
-        public bool DeleteDate(Class_Author at)
+        public bool DeleteData(Class_Author at)
         {
             string query = "DELETE FROM Authors WHERE AuthorID = \'" + at.AuthorId + "\'";
             return db.ExecuteSQL(query);
+        }
+
+        public string toName(Class_Author at)
+        { 
+            return at.AuthorName; 
         }
     }
 }
