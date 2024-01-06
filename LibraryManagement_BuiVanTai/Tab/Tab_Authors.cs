@@ -207,5 +207,10 @@ namespace LibraryManagement_BuiVanTai.Tab
             TB_Authors_Address.Text = selectedRow.Cells[4].Value.ToString();
             TB_Authors_Email.Text = selectedRow.Cells[5].Value.ToString();
         }
+
+        private void TB_Authors_Search_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

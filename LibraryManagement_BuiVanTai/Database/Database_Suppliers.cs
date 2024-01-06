@@ -20,7 +20,7 @@ namespace LibraryManagement_BuiVanTai.Database
 
 
         // Declare new connection ====================================================================================
-        public Database_Suppliers(string servername, string databasename, string user = "", string pass = "") 
+        public Database_Suppliers(string servername, string databasename) 
         {
             database = new Database(servername, databasename);
         }

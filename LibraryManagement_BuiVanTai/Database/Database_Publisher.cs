@@ -44,5 +44,11 @@ namespace LibraryManagement_BuiVanTai.Database
             string query = "DELETE FROM Publishers WHERE PublisherID = \'" + pub.PublisherId +"\'";
             return db.ExecuteSQL(query);
         }
+
+/*        public string toID(string name)
+        {
+            
+            return pub.PublisherId;
+        }*/
     }
 }

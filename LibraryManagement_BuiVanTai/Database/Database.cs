@@ -27,11 +27,11 @@ namespace LibraryManagement_BuiVanTai.Database
         }
 
 
-        public Database(string servername, string databasename, string user = "", string pass = "")
+        public Database(string servername, string databasename, string user = "sa", string pass = "Duong.1802")
         {
             // Kết nối csdl theo servername và database name
             DS = new DataSet();
-            CONSTRING = "Data Source=" + servername + ";Initial Catalog=" + databasename + ";Integrated Security=True";
+            CONSTRING = "Data Source=" + servername + ";Initial Catalog=" + databasename + ";PersistSecurityInfo=True;User ID=" + user + ";Password=" + pass + ";Encrypt=True;TrustServerCertificate=True";
             SQLCONN = new SqlConnection(CONSTRING);
             SQLCONN.Open();
         }
@@ -135,6 +135,15 @@ namespace LibraryManagement_BuiVanTai.Database
                 MessageBox.Show("Error executing SQL command: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
+        }
+
+        public DataTable ExecuteSQLReturnTable(string sqlCommand)
+        {
+            DataTable datatable = new DataTable();
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(sqlCommand, this.SQLCONN);
+            dataAdapter.Fill(datatable);
+            DS.Tables.Add(datatable);
+            return datatable;
         }
 
 

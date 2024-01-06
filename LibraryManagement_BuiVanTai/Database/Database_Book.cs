@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace LibraryManagement_BuiVanTai.Database
 {
@@ -31,7 +32,7 @@ namespace LibraryManagement_BuiVanTai.Database
             return db.ExecuteSQL(query);
         }
 
-        public bool UpdateDate(Class_Book book)
+        public bool UpdateData(Class_Book book)
         {
             string query = "UPDATE Books " +
             "Set BookName = " + "\'" + book.BookTitle + "\'," + "Remaining = " + "\'" + book.Remaining + "\'," + "BookType = " + "\'" + book.BookType + "\'," + "PublisherID = " + "\'" + book.PublisherId + "\'," + "AuthorID = " + "\'" + book.AuthorId +"\'," + "Price = " + "\'" + book.Price +"\',"
@@ -39,10 +40,17 @@ namespace LibraryManagement_BuiVanTai.Database
             return db.ExecuteSQL(query);
         }
 
-        public bool DeleteDate(Class_Book book)
+        public bool DeleteData(Class_Book book)
         {
             string query = "DELETE FROM Books WHERE BookID = \'" + book.BookId + "\'";
             return db.ExecuteSQL(query);
+        }
+
+        public DataTable getCustomTable(string command)
+        {
+            DataTable dt2 = new DataTable();
+            dt2 = db.ExecuteSQLReturnTable(command);
+            return dt2;
         }
     }
 }

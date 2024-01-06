@@ -379,6 +379,7 @@
             this.TB_Authors_Search.Name = "TB_Authors_Search";
             this.TB_Authors_Search.Size = new System.Drawing.Size(508, 29);
             this.TB_Authors_Search.TabIndex = 2;
+            this.TB_Authors_Search.TextChanged += new System.EventHandler(this.TB_Authors_Search_TextChanged);
             // 
             // panel3
             // 
