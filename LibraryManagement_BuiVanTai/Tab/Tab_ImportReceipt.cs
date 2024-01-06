@@ -212,7 +212,7 @@ namespace LibraryManagement_BuiVanTai.Tab
                     DialogResult result = MessageBox.Show("Do you want to add new Import Receipt?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (result == DialogResult.Yes)
                     {
-                        if (DB_ImportReceipt.InsertData(importReceipt, CBB_PubID, CBB_StaffID))
+                        if (DB_ImportReceipt.InsertData(importReceipt, TB_PubName.Text, TB_StaffName.Text))
                         {
                             // Add new data to dataGridSuppliers
                             DataRow dataGridImport = dataTable_ImportReceipt.NewRow();
@@ -222,10 +222,10 @@ namespace LibraryManagement_BuiVanTai.Tab
                             dataGridImport[3] = CBB_StaffID.Text;
                             dataTable_ImportReceipt.Rows.Add(dataGridImport);
 
-                            
+
                             GridViewFormLoad_ImportReceipt(ClassDefineName.servername, ClassDefineName.database_name);
 
-                            Form_ImportReceiptDetails form_ImportReceiptDetails = new Form_ImportReceiptDetails();
+                            Form_ImportReceiptDetails form_ImportReceiptDetails = new Form_ImportReceiptDetails(TB_ImportReceipt_ImportID.Text);
                             form_ImportReceiptDetails.ShowDialog();
 
 
@@ -342,6 +342,6 @@ namespace LibraryManagement_BuiVanTai.Tab
             return DateTime.TryParse(dateString, out date);
         }
 
-        
+
     }
 }
