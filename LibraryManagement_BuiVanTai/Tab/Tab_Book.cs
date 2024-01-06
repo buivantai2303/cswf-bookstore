@@ -43,14 +43,13 @@ namespace LibraryManagement_BuiVanTai.Tab
 
         private void Tab_Book_Load(object sender, EventArgs e)
         {
-
+            GridViewFormLoad(ClassDefineName.servername, ClassDefineName.database_name);
         }
 
         public void GridViewFormLoad(string ServerName, string DatabaseName)
         {
             Database_Book = new Database_Book(ServerName, DatabaseName);
             dt = Database_Book.getTable();
-
 
             if (dt != null)
             {
