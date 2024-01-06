@@ -69,7 +69,7 @@
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ImportAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SupplierName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -463,7 +463,7 @@
             this.DGV_ImportReceipt_ReceiptDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DGV_ImportReceipt_ReceiptDetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
+            this.ImportAmount,
             this.SupplierName,
             this.dataGridViewTextBoxColumn4});
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -601,14 +601,14 @@
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn2
+            // ImportAmount
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "ImportAmount ";
-            this.dataGridViewTextBoxColumn2.FillWeight = 81.32249F;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Amount";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 2;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.ImportAmount.DataPropertyName = "ImportAmount";
+            this.ImportAmount.FillWeight = 81.32249F;
+            this.ImportAmount.HeaderText = "Amount";
+            this.ImportAmount.MinimumWidth = 2;
+            this.ImportAmount.Name = "ImportAmount";
+            this.ImportAmount.ReadOnly = true;
             // 
             // SupplierName
             // 
@@ -695,7 +695,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn StaffName;
         private System.Windows.Forms.DataGridViewImageColumn ActionColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ImportAmount;
         private System.Windows.Forms.DataGridViewTextBoxColumn SupplierName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
     }

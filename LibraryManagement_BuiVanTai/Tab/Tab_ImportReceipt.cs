@@ -82,7 +82,7 @@ namespace LibraryManagement_BuiVanTai.Tab
 
             if (dataTable_ImportReceiptDetails != null)
             {
-                DGV_ImportReceipt_ReceiptDetails.DataSource = dataTable_ImportReceipt;
+                DGV_ImportReceipt_ReceiptDetails.DataSource = dataTable_ImportReceiptDetails;
                 DGV_ImportReceipt_ReceiptDetails.RowHeadersVisible = false;
             }
             else
