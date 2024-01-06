@@ -538,7 +538,6 @@
             this.DGV_Suppliers.ShowRowErrors = false;
             this.DGV_Suppliers.Size = new System.Drawing.Size(881, 359);
             this.DGV_Suppliers.TabIndex = 8;
-            this.DGV_Suppliers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Suppliers_CellContentClick);
             this.DGV_Suppliers.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Suppliers_CellClick);
             // 
             // SupplierID
