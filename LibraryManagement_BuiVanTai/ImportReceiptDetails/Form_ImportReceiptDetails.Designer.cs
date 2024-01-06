@@ -30,8 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.BTN_SeachBook_Reset = new System.Windows.Forms.Button();
-            this.BTN_Submit = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,6 +48,10 @@
             this.TB_ImportID = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
+            this.Label_ImportAmountNotification = new System.Windows.Forms.Label();
+            this.BTN_Cancel = new System.Windows.Forms.Button();
+            this.BTN_SeachBook_Reset = new System.Windows.Forms.Button();
+            this.BTN_Submit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -67,7 +69,7 @@
             this.panel1.Controls.Add(this.label8);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(719, 313);
+            this.panel1.Size = new System.Drawing.Size(719, 347);
             this.panel1.TabIndex = 0;
             // 
             // panel5
@@ -76,49 +78,18 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.PeachPuff;
+            this.panel5.Controls.Add(this.BTN_Cancel);
             this.panel5.Controls.Add(this.BTN_SeachBook_Reset);
             this.panel5.Controls.Add(this.BTN_Submit);
             this.panel5.Location = new System.Drawing.Point(600, 71);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(105, 214);
+            this.panel5.Size = new System.Drawing.Size(105, 248);
             this.panel5.TabIndex = 43;
-            // 
-            // BTN_SeachBook_Reset
-            // 
-            this.BTN_SeachBook_Reset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BTN_SeachBook_Reset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            this.BTN_SeachBook_Reset.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_SeachBook_Reset.ForeColor = System.Drawing.Color.White;
-            this.BTN_SeachBook_Reset.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Reset;
-            this.BTN_SeachBook_Reset.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BTN_SeachBook_Reset.Location = new System.Drawing.Point(20, 94);
-            this.BTN_SeachBook_Reset.Name = "BTN_SeachBook_Reset";
-            this.BTN_SeachBook_Reset.Size = new System.Drawing.Size(66, 58);
-            this.BTN_SeachBook_Reset.TabIndex = 33;
-            this.BTN_SeachBook_Reset.Text = "Reset";
-            this.BTN_SeachBook_Reset.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BTN_SeachBook_Reset.UseVisualStyleBackColor = false;
-            // 
-            // BTN_Submit
-            // 
-            this.BTN_Submit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BTN_Submit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(137)))), ((int)(((byte)(86)))));
-            this.BTN_Submit.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Submit.ForeColor = System.Drawing.Color.White;
-            this.BTN_Submit.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Wallet1;
-            this.BTN_Submit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BTN_Submit.Location = new System.Drawing.Point(20, 30);
-            this.BTN_Submit.Name = "BTN_Submit";
-            this.BTN_Submit.Size = new System.Drawing.Size(66, 58);
-            this.BTN_Submit.TabIndex = 32;
-            this.BTN_Submit.Text = "Submit";
-            this.BTN_Submit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BTN_Submit.UseVisualStyleBackColor = false;
-            this.BTN_Submit.Click += new System.EventHandler(this.BTN_SeachBook_Pay_Click);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.MistyRose;
+            this.panel3.Controls.Add(this.Label_ImportAmountNotification);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.TB_SupplierName);
@@ -136,7 +107,7 @@
             this.panel3.Controls.Add(this.TB_ImportID);
             this.panel3.Location = new System.Drawing.Point(19, 71);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(575, 214);
+            this.panel3.Size = new System.Drawing.Size(575, 248);
             this.panel3.TabIndex = 42;
             // 
             // label2
@@ -241,6 +212,7 @@
             this.TB_ImportAmount.Name = "TB_ImportAmount";
             this.TB_ImportAmount.Size = new System.Drawing.Size(224, 25);
             this.TB_ImportAmount.TabIndex = 7;
+            this.TB_ImportAmount.TextChanged += new System.EventHandler(this.TB_ImportAmount_TextChanged);
             // 
             // ImportAmount
             // 
@@ -304,13 +276,75 @@
             this.label8.TabIndex = 40;
             this.label8.Text = "Receipt Details";
             // 
+            // Label_ImportAmountNotification
+            // 
+            this.Label_ImportAmountNotification.AutoSize = true;
+            this.Label_ImportAmountNotification.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_ImportAmountNotification.ForeColor = System.Drawing.Color.Red;
+            this.Label_ImportAmountNotification.Location = new System.Drawing.Point(16, 219);
+            this.Label_ImportAmountNotification.Name = "Label_ImportAmountNotification";
+            this.Label_ImportAmountNotification.Size = new System.Drawing.Size(45, 17);
+            this.Label_ImportAmountNotification.TabIndex = 19;
+            this.Label_ImportAmountNotification.Text = "Note: ";
+            // 
+            // BTN_Cancel
+            // 
+            this.BTN_Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BTN_Cancel.BackColor = System.Drawing.Color.Firebrick;
+            this.BTN_Cancel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Cancel.ForeColor = System.Drawing.Color.White;
+            this.BTN_Cancel.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Cancel1;
+            this.BTN_Cancel.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BTN_Cancel.Location = new System.Drawing.Point(21, 158);
+            this.BTN_Cancel.Name = "BTN_Cancel";
+            this.BTN_Cancel.Size = new System.Drawing.Size(66, 58);
+            this.BTN_Cancel.TabIndex = 34;
+            this.BTN_Cancel.Text = "Cancel";
+            this.BTN_Cancel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BTN_Cancel.UseVisualStyleBackColor = false;
+            this.BTN_Cancel.Click += new System.EventHandler(this.BTN_Cancel_Click);
+            // 
+            // BTN_SeachBook_Reset
+            // 
+            this.BTN_SeachBook_Reset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BTN_SeachBook_Reset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            this.BTN_SeachBook_Reset.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_SeachBook_Reset.ForeColor = System.Drawing.Color.White;
+            this.BTN_SeachBook_Reset.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Reset;
+            this.BTN_SeachBook_Reset.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BTN_SeachBook_Reset.Location = new System.Drawing.Point(21, 94);
+            this.BTN_SeachBook_Reset.Name = "BTN_SeachBook_Reset";
+            this.BTN_SeachBook_Reset.Size = new System.Drawing.Size(66, 58);
+            this.BTN_SeachBook_Reset.TabIndex = 33;
+            this.BTN_SeachBook_Reset.Text = "Reset";
+            this.BTN_SeachBook_Reset.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BTN_SeachBook_Reset.UseVisualStyleBackColor = false;
+            // 
+            // BTN_Submit
+            // 
+            this.BTN_Submit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BTN_Submit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(137)))), ((int)(((byte)(86)))));
+            this.BTN_Submit.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Submit.ForeColor = System.Drawing.Color.White;
+            this.BTN_Submit.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Wallet1;
+            this.BTN_Submit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BTN_Submit.Location = new System.Drawing.Point(21, 30);
+            this.BTN_Submit.Name = "BTN_Submit";
+            this.BTN_Submit.Size = new System.Drawing.Size(66, 58);
+            this.BTN_Submit.TabIndex = 32;
+            this.BTN_Submit.Text = "Submit";
+            this.BTN_Submit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BTN_Submit.UseVisualStyleBackColor = false;
+            this.BTN_Submit.Click += new System.EventHandler(this.BTN_SeachBook_Pay_Click);
+            // 
             // Form_ImportReceiptDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            this.ClientSize = new System.Drawing.Size(743, 337);
+            this.ClientSize = new System.Drawing.Size(743, 371);
             this.Controls.Add(this.panel1);
+            this.MaximumSize = new System.Drawing.Size(759, 410);
             this.MinimumSize = new System.Drawing.Size(576, 376);
             this.Name = "Form_ImportReceiptDetails";
             this.Text = "ImportReceiptDetails";
@@ -348,5 +382,7 @@
         private System.Windows.Forms.TextBox TB_SupplierName;
         private System.Windows.Forms.TextBox TB_BookName;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label Label_ImportAmountNotification;
+        private System.Windows.Forms.Button BTN_Cancel;
     }
 }

@@ -212,7 +212,7 @@ namespace LibraryManagement_BuiVanTai.Tab
                     DialogResult result = MessageBox.Show("Do you want to add new Import Receipt?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (result == DialogResult.Yes)
                     {
-                        if (DB_ImportReceipt.InsertData(importReceipt, CBB_PubID, CBB_StaffID))
+                        if (DB_ImportReceipt.InsertData(importReceipt, TB_PubName.Text, TB_StaffName.Text))
                         {
                             // Add new data to dataGridSuppliers
                             DataRow dataGridImport = dataTable_ImportReceipt.NewRow();

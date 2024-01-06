@@ -47,12 +47,12 @@ namespace LibraryManagement_BuiVanTai.Database
 
 
         // Insert value to SQL =============================================================================
-        public bool InsertData(Class_ImportReceipt obj, ComboBox PublisherName, ComboBox staffName)
+        public bool InsertData(Class_ImportReceipt obj, string PublisherName, string staffName)
         {
             string sqlCommand = $"INSERT INTO {ClassDefineName.table_ImportReceipt_TableName} ({ClassDefineName.table_ImportReceipt_ImportID}, {ClassDefineName.table_ImportReceipt_ImportDate}, {ClassDefineName.table_ImportReceipt_PublisherID}, {ClassDefineName.table_ImportReceipt_StaffID})" +
                 $"VALUES ('{obj.ImportID1}', '{obj.ImportDate1}'," +
-                $"(SELECT {ClassDefineName.table_Publishers_PublisherID} FROM {ClassDefineName.table_Publishers_TableName} WHERE {ClassDefineName.table_Publishers_PublisherName} = '{PublisherName.Text}')," +
-                $"(SELECT {ClassDefineName.table_Staffs_StaffID} FROM {ClassDefineName.table_Staffs_TableName} WHERE {ClassDefineName.table_Staffs_StaffName} = '{staffName.Text}')" +
+                $"(SELECT {ClassDefineName.table_Publishers_PublisherID} FROM {ClassDefineName.table_Publishers_TableName} WHERE {ClassDefineName.table_Publishers_PublisherName} = '{PublisherName}')," +
+                $"(SELECT {ClassDefineName.table_Staffs_StaffID} FROM {ClassDefineName.table_Staffs_TableName} WHERE {ClassDefineName.table_Staffs_StaffName} = '{staffName}')" +
                 $");";
             return database.ExecuteSQL(sqlCommand); 
         }

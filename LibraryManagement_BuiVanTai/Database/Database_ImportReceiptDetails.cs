@@ -1,5 +1,6 @@
 ﻿using LibraryManagement_BuiVanTai.Class;
 using System.Data;
+using System.Net;
 
 namespace LibraryManagement_BuiVanTai.Database
 {
@@ -64,6 +65,19 @@ namespace LibraryManagement_BuiVanTai.Database
         {
             string sqlCommand = $"SELECT {ClassDefineName.table_Suppliers_SupplierID} FROM {ClassDefineName.table_Suppliers_TableName};";
             return database.GetDataTable(sqlCommand);
+        }
+
+        public DataTable GetBookPrice(string BookID)
+        {
+            string sqlCommand = $"SELECT {ClassDefineName.table_Books_Price} FROM {ClassDefineName.table_Books_TableName} WHERE {ClassDefineName.table_Books_BookID} LIKE '%{BookID}%';";
+            return database.GetDataTable(sqlCommand);
+        }
+
+        public DataTable DeleteData(string ImportID)
+        {
+            string sqlCommand = $"DELETE FROM {ClassDefineName.table_ImportReceipt_TableName} WHERE {ClassDefineName.table_ImportReceipt_ImportID} = '{ImportID}';";
+            return database.GetDataTable(sqlCommand);
+            { }
         }
     }
 }
