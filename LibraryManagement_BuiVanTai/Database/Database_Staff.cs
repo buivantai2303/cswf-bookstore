@@ -18,7 +18,7 @@ namespace LibraryManagement_BuiVanTai.Database
             db = new Database(servername, databasename);
         }
 
-        public DataTable getTable(string tableName)
+        public DataTable getTable()
         {
             dt = new DataTable();
             dt = db.getTable("Staffs");

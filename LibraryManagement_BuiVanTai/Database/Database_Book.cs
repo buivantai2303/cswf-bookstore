@@ -28,15 +28,15 @@ namespace LibraryManagement_BuiVanTai.Database
 
         public bool InsertData(Class_Book book)
         {
-            string query = "INSERT INTO Books VALUES (\'" + book.BookId + "\'," + "\'" + book.BookTitle + "\'," + "\'" + book.Remaining + "\'," + "\'" + book.BookType + "\'," + "\'" + book.PublisherId + "\'" + "\'" + book.AuthorId + "\'" + "\'" + book.Price + "\')";
+            string query = "INSERT INTO Books VALUES (\'" + book.BookId + "\'," + "\'" + book.BookTitle + "\'," + "\'" + book.Remaining + "\'," + "\'" + book.BookType + "\'," + "\'" + book.PublisherId + "\'," + "\'" + book.AuthorId + "\'," + "\'" + book.Price + "\')";
             return db.ExecuteSQL(query);
         }
 
         public bool UpdateData(Class_Book book)
         {
             string query = "UPDATE Books " +
-            "Set BookName = " + "\'" + book.BookTitle + "\'," + "Remaining = " + "\'" + book.Remaining + "\'," + "BookType = " + "\'" + book.BookType + "\'," + "PublisherID = " + "\'" + book.PublisherId + "\'," + "AuthorID = " + "\'" + book.AuthorId +"\'," + "Price = " + "\'" + book.Price +"\',"
-            + "WHERE BookID = \'" + book.BookId + "\'";
+            "Set BookName = " + "\'" + book.BookTitle + "\'," + "Remaining = " + "\'" + book.Remaining + "\'," + "BookType = " + "\'" + book.BookType + "\'," + "PublisherID = " + "\'" + book.PublisherId + "\'," + "AuthorID = " + "\'" + book.AuthorId +"\'," + "Price = " + "\'" + book.Price +"\'"
+            + "WHERE BookID = \'" + book.BookId + "\';";
             return db.ExecuteSQL(query);
         }
 
@@ -51,6 +51,12 @@ namespace LibraryManagement_BuiVanTai.Database
             DataTable dt2 = new DataTable();
             dt2 = db.ExecuteSQLReturnTable(command);
             return dt2;
+        }
+
+        public DataTable searchData(string keyword)
+        {
+            dt = db.ExecuteSQLReturnTable("SELECT BookID, BookName, Remaining, BookType, PublisherName, AuthorName, Price FROM Books b \r\nINNER JOIN Publishers p ON b.PublisherID=p.PublisherID\r\nINNER JOIN Authors a ON a.AuthorID=b.AuthorID\r\nWHERE BookName like '%" + keyword + "%'");
+            return dt;
         }
     }
 }

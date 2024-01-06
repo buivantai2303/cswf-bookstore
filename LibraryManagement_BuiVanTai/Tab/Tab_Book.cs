@@ -30,6 +30,8 @@ namespace LibraryManagement_BuiVanTai.Tab
                 if (Database_Book.InsertData(book) == true)
                 {
                     MessageBox.Show("Add Successfuly");
+                    refresh();
+                    GridViewFormLoad(ClassDefineName.servername, ClassDefineName.database_name);
                 }
                 else
                 {
@@ -50,9 +52,10 @@ namespace LibraryManagement_BuiVanTai.Tab
         public void GridViewFormLoad(string ServerName, string DatabaseName)
         {
             Database_Book = new Database_Book(ServerName, DatabaseName);
-            dt = Database_Book.getCustomTable("SELECT BookID, BookName, Remaining, BookType, PublisherName, AuthorName, Price FROM Books b \r\nINNER JOIN Publishers p ON b.PublisherID=p.PublisherID\r\nINNER JOIN Authors a ON a.AuthorID=b.AuthorID");
+            dt = Database_Book.getCustomTable("SELECT BookID, BookName, Remaining, BookType, b.PublisherID, b.AuthorID, Price FROM Books b \r\nINNER JOIN Publishers p ON b.PublisherID=p.PublisherID\r\nINNER JOIN Authors a ON a.AuthorID=b.AuthorID");
             DataTable dtAuthor = Database_Book.getCustomTable("SELECT AuthorID FROM Authors");
             DataTable dtPublisher = Database_Book.getCustomTable("SELECT PublisherID FROM Publishers");
+
 
             CBB_Books_AuthorID.DisplayMember = "AuthorID";
             CBB_Books_PublisherID.DisplayMember = "PublisherID";
@@ -70,17 +73,32 @@ namespace LibraryManagement_BuiVanTai.Tab
             }
         }
 
+        public void refresh()
+        {
+            TB_Books_ID.Text = "";
+            TB_Books_Name.Text = "";
+            TB_Books_Price.Text = "";
+            TB_Books_Remaining.Text = "";
+            CBB_Books_AuthorID.Text = "";
+            CBB_Books_PublisherID.Text = "";
+            TB_Books_Type.Text = "";
+        }
+
+        public void CheckNull()
+        {
+            if (TB_Books_Remaining.Text == "" || TB_Books_ID.Text == "" || TB_Books_Name.Text == "" || TB_Books_Type.Text == "" || TB_Books_Price.Text == "")
+            {
+                BTN_Books_Add.Enabled = false;
+            } else
+            {
+                BTN_Books_Add.Enabled = true;
+            }
+        }
+
         private void BTN_Books_Refresh_Click(object sender, EventArgs e)
         {
             TB_Books_ID.Enabled = true;
-            TB_Books_ID.Text = null;
-            GridViewFormLoad(ClassDefineName.servername, ClassDefineName.database_name);
-            TB_Books_Name.Text = null;
-            TB_Books_Price.Text = null;
-            TB_Books_Remaining.Text = null;
-            CBB_Books_AuthorID.Text = null;
-            CBB_Books_PublisherID.Text = null;
-            TB_Books_Type.Text = null;
+            refresh();
         }
 
         private void DGV_Books_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -96,6 +114,7 @@ namespace LibraryManagement_BuiVanTai.Tab
             CBB_Books_PublisherID.Text = selectedRow.Cells[5].Value.ToString();
             CBB_Books_AuthorID.Text = selectedRow.Cells[6].Value.ToString();
             TB_Books_Price.Text = selectedRow.Cells[7].Value.ToString();
+            BTN_Books_Add.Enabled = false;
         }
 
         private void DGV_Books_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -128,6 +147,9 @@ namespace LibraryManagement_BuiVanTai.Tab
                 if (Database_Book.UpdateData(book) == true)
                 {
                     MessageBox.Show("Add Successfuly");
+                    TB_Books_ID.Enabled = true;
+                    refresh();
+                    GridViewFormLoad(ClassDefineName.servername, ClassDefineName.database_name);
                 }
                 else
                 {
@@ -164,6 +186,37 @@ namespace LibraryManagement_BuiVanTai.Tab
                     TB_Books_AuthorName.Text = dr[1].ToString();
                 }
             }
+        }
+
+        private void TB_Books_Search_TextChanged(object sender, EventArgs e)
+        {
+            dt = Database_Book.searchData(TB_Books_Search.Text);
+            DGV_Books.DataSource = dt;
+        }
+
+        private void TB_Books_ID_TextChanged(object sender, EventArgs e)
+        {
+            CheckNull();
+        }
+
+        private void TB_Books_Name_TextChanged(object sender, EventArgs e)
+        {
+            CheckNull();
+        }
+
+        private void TB_Books_Remaining_TextChanged(object sender, EventArgs e)
+        {
+            CheckNull();
+        }
+
+        private void TB_Books_Type_TextChanged(object sender, EventArgs e)
+        {
+            CheckNull();
+        }
+
+        private void TB_Books_Price_TextChanged(object sender, EventArgs e)
+        {
+            CheckNull();
         }
     }
 }

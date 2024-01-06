@@ -46,9 +46,10 @@ namespace LibraryManagement_BuiVanTai.Database
             return db.ExecuteSQL(query);
         }
 
-        public string toID(Class_Author at)
-        { 
-            return at.AuthorId; 
+        public DataTable searchData(string keyword)
+        {
+            dt = db.ExecuteSQLReturnTable("SELECT * FROM Authors WHERE AuthorName like '%" + keyword + "%' OR AuthorID like '%" + keyword + "%'");
+            return dt;
         }
     }
 }

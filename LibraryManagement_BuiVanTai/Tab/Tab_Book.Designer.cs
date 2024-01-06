@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
             this.DGV_Books = new System.Windows.Forms.DataGridView();
             this.BookID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Remaining = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PublisherName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AuthorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PublisherID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AuthorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ActionColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.BTN_Books_Refresh = new System.Windows.Forms.Button();
@@ -56,6 +56,7 @@
             this.LB_Books_Total = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.TB_Books_AuthorName = new System.Windows.Forms.TextBox();
             this.TB_Books_PublisherName = new System.Windows.Forms.TextBox();
             this.TB_Books_Price = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -63,6 +64,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.CBB_Books_PublisherID = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.TB_Books_Type = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.TB_Books_Remaining = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -71,8 +73,6 @@
             this.TB_Books_ID = new System.Windows.Forms.TextBox();
             this.Label_SupplierID = new System.Windows.Forms.Label();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.TB_Books_AuthorName = new System.Windows.Forms.TextBox();
-            this.TB_Books_Type = new System.Windows.Forms.TextBox();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Books)).BeginInit();
             this.panel1.SuspendLayout();
@@ -114,14 +114,14 @@
             this.DGV_Books.BackgroundColor = System.Drawing.Color.White;
             this.DGV_Books.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DGV_Books.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_Books.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_Books.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.DGV_Books.ColumnHeadersHeight = 29;
             this.DGV_Books.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DGV_Books.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -129,32 +129,32 @@
             this.BookName,
             this.Remaining,
             this.BookType,
-            this.PublisherName,
-            this.AuthorName,
+            this.PublisherID,
+            this.AuthorID,
             this.Price,
             this.ActionColumn});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(151)))), ((int)(((byte)(196)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGV_Books.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(151)))), ((int)(((byte)(196)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGV_Books.DefaultCellStyle = dataGridViewCellStyle11;
             this.DGV_Books.EnableHeadersVisualStyles = false;
             this.DGV_Books.Location = new System.Drawing.Point(24, 103);
             this.DGV_Books.Margin = new System.Windows.Forms.Padding(4);
             this.DGV_Books.MultiSelect = false;
             this.DGV_Books.Name = "DGV_Books";
             this.DGV_Books.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_Books.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_Books.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.DGV_Books.RowHeadersWidth = 51;
             this.DGV_Books.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.DGV_Books.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -204,22 +204,22 @@
             this.BookType.Name = "BookType";
             this.BookType.ReadOnly = true;
             // 
-            // PublisherName
+            // PublisherID
             // 
-            this.PublisherName.DataPropertyName = "PublisherName";
-            this.PublisherName.FillWeight = 89.54315F;
-            this.PublisherName.HeaderText = "Publisher Name";
-            this.PublisherName.MinimumWidth = 6;
-            this.PublisherName.Name = "PublisherName";
-            this.PublisherName.ReadOnly = true;
+            this.PublisherID.DataPropertyName = "PublisherID";
+            this.PublisherID.FillWeight = 89.54315F;
+            this.PublisherID.HeaderText = "PublisherID";
+            this.PublisherID.MinimumWidth = 6;
+            this.PublisherID.Name = "PublisherID";
+            this.PublisherID.ReadOnly = true;
             // 
-            // AuthorName
+            // AuthorID
             // 
-            this.AuthorName.DataPropertyName = "AuthorName";
-            this.AuthorName.HeaderText = "Author Name";
-            this.AuthorName.MinimumWidth = 6;
-            this.AuthorName.Name = "AuthorName";
-            this.AuthorName.ReadOnly = true;
+            this.AuthorID.DataPropertyName = "AuthorID";
+            this.AuthorID.HeaderText = "AuthorID";
+            this.AuthorID.MinimumWidth = 6;
+            this.AuthorID.Name = "AuthorID";
+            this.AuthorID.ReadOnly = true;
             // 
             // Price
             // 
@@ -276,6 +276,7 @@
             this.TB_Books_Search.Name = "TB_Books_Search";
             this.TB_Books_Search.Size = new System.Drawing.Size(508, 29);
             this.TB_Books_Search.TabIndex = 2;
+            this.TB_Books_Search.TextChanged += new System.EventHandler(this.TB_Books_Search_TextChanged);
             // 
             // BTN_Books_Save
             // 
@@ -298,6 +299,7 @@
             // 
             this.BTN_Books_Add.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.BTN_Books_Add.BackColor = System.Drawing.Color.SeaShell;
+            this.BTN_Books_Add.Enabled = false;
             this.BTN_Books_Add.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Books_Add.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Add;
             this.BTN_Books_Add.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -436,6 +438,19 @@
             this.panel3.Size = new System.Drawing.Size(892, 148);
             this.panel3.TabIndex = 7;
             // 
+            // TB_Books_AuthorName
+            // 
+            this.TB_Books_AuthorName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.TB_Books_AuthorName.BackColor = System.Drawing.Color.White;
+            this.TB_Books_AuthorName.Enabled = false;
+            this.TB_Books_AuthorName.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_Books_AuthorName.Location = new System.Drawing.Point(652, 103);
+            this.TB_Books_AuthorName.Margin = new System.Windows.Forms.Padding(4);
+            this.TB_Books_AuthorName.Name = "TB_Books_AuthorName";
+            this.TB_Books_AuthorName.Size = new System.Drawing.Size(114, 29);
+            this.TB_Books_AuthorName.TabIndex = 24;
+            // 
             // TB_Books_PublisherName
             // 
             this.TB_Books_PublisherName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -460,6 +475,7 @@
             this.TB_Books_Price.Name = "TB_Books_Price";
             this.TB_Books_Price.Size = new System.Drawing.Size(96, 29);
             this.TB_Books_Price.TabIndex = 22;
+            this.TB_Books_Price.TextChanged += new System.EventHandler(this.TB_Books_Price_TextChanged);
             // 
             // label10
             // 
@@ -538,6 +554,22 @@
             this.label8.TabIndex = 16;
             this.label8.Text = "Publisher ID";
             // 
+            // TB_Books_Type
+            // 
+            this.TB_Books_Type.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TB_Books_Type.BackColor = System.Drawing.Color.White;
+            this.TB_Books_Type.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_Books_Type.Location = new System.Drawing.Point(257, 105);
+            this.TB_Books_Type.Margin = new System.Windows.Forms.Padding(4);
+            this.TB_Books_Type.MaximumSize = new System.Drawing.Size(193, 25);
+            this.TB_Books_Type.MinimumSize = new System.Drawing.Size(193, 25);
+            this.TB_Books_Type.Name = "TB_Books_Type";
+            this.TB_Books_Type.Size = new System.Drawing.Size(193, 29);
+            this.TB_Books_Type.TabIndex = 15;
+            this.TB_Books_Type.TextChanged += new System.EventHandler(this.TB_Books_Type_TextChanged);
+            // 
             // label6
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -557,15 +589,15 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TB_Books_Remaining.BackColor = System.Drawing.Color.White;
-            this.TB_Books_Remaining.Enabled = false;
             this.TB_Books_Remaining.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TB_Books_Remaining.Location = new System.Drawing.Point(257, 36);
             this.TB_Books_Remaining.Margin = new System.Windows.Forms.Padding(4);
             this.TB_Books_Remaining.MaximumSize = new System.Drawing.Size(193, 25);
             this.TB_Books_Remaining.MinimumSize = new System.Drawing.Size(193, 25);
             this.TB_Books_Remaining.Name = "TB_Books_Remaining";
-            this.TB_Books_Remaining.Size = new System.Drawing.Size(193, 25);
+            this.TB_Books_Remaining.Size = new System.Drawing.Size(193, 29);
             this.TB_Books_Remaining.TabIndex = 13;
+            this.TB_Books_Remaining.TextChanged += new System.EventHandler(this.TB_Books_Remaining_TextChanged);
             // 
             // label5
             // 
@@ -594,6 +626,7 @@
             this.TB_Books_Name.Name = "TB_Books_Name";
             this.TB_Books_Name.Size = new System.Drawing.Size(223, 29);
             this.TB_Books_Name.TabIndex = 11;
+            this.TB_Books_Name.TextChanged += new System.EventHandler(this.TB_Books_Name_TextChanged);
             // 
             // Label_SupplierName
             // 
@@ -623,6 +656,7 @@
             this.TB_Books_ID.Name = "TB_Books_ID";
             this.TB_Books_ID.Size = new System.Drawing.Size(223, 29);
             this.TB_Books_ID.TabIndex = 9;
+            this.TB_Books_ID.TextChanged += new System.EventHandler(this.TB_Books_ID_TextChanged);
             // 
             // Label_SupplierID
             // 
@@ -650,34 +684,6 @@
             this.dataGridViewImageColumn1.ReadOnly = true;
             this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewImageColumn1.Width = 66;
-            // 
-            // TB_Books_AuthorName
-            // 
-            this.TB_Books_AuthorName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.TB_Books_AuthorName.BackColor = System.Drawing.Color.White;
-            this.TB_Books_AuthorName.Enabled = false;
-            this.TB_Books_AuthorName.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TB_Books_AuthorName.Location = new System.Drawing.Point(652, 103);
-            this.TB_Books_AuthorName.Margin = new System.Windows.Forms.Padding(4);
-            this.TB_Books_AuthorName.Name = "TB_Books_AuthorName";
-            this.TB_Books_AuthorName.Size = new System.Drawing.Size(114, 29);
-            this.TB_Books_AuthorName.TabIndex = 24;
-            // 
-            // TB_Books_Type
-            // 
-            this.TB_Books_Type.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TB_Books_Type.BackColor = System.Drawing.Color.White;
-            this.TB_Books_Type.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TB_Books_Type.Location = new System.Drawing.Point(257, 105);
-            this.TB_Books_Type.Margin = new System.Windows.Forms.Padding(4);
-            this.TB_Books_Type.MaximumSize = new System.Drawing.Size(193, 25);
-            this.TB_Books_Type.MinimumSize = new System.Drawing.Size(193, 25);
-            this.TB_Books_Type.Name = "TB_Books_Type";
-            this.TB_Books_Type.Size = new System.Drawing.Size(193, 25);
-            this.TB_Books_Type.TabIndex = 15;
             // 
             // Tab_Book
             // 
@@ -739,16 +745,16 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox CBB_Books_AuthorID;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox TB_Books_PublisherName;
+        private System.Windows.Forms.TextBox TB_Books_AuthorName;
+        private System.Windows.Forms.TextBox TB_Books_Type;
         private System.Windows.Forms.DataGridViewTextBoxColumn BookID;
         private System.Windows.Forms.DataGridViewTextBoxColumn BookName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Remaining;
         private System.Windows.Forms.DataGridViewTextBoxColumn BookType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PublisherName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AuthorName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PublisherID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AuthorID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewImageColumn ActionColumn;
-        private System.Windows.Forms.TextBox TB_Books_PublisherName;
-        private System.Windows.Forms.TextBox TB_Books_AuthorName;
-        private System.Windows.Forms.TextBox TB_Books_Type;
     }
 }
