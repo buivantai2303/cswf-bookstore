@@ -29,7 +29,8 @@ namespace LibraryManagement_BuiVanTai.Tab
         }
 
 
-        // Load GridView from database
+
+        // Load GridView from database =======================================================================================
         public void GridViewFormLoad(string ServerName, string DatabaseName)
         {
             DB_ImportReceipt = new Database_ImportReceipt(ServerName, DatabaseName);
@@ -71,6 +72,8 @@ namespace LibraryManagement_BuiVanTai.Tab
         }
 
 
+
+        // Delete data by click in the items =================================================================================
         private void DGView_ImportReceipt_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             Class_Suppliers suppliers = new Class_Suppliers(TB_ImportReceipt_ImportID.Text);
@@ -96,6 +99,8 @@ namespace LibraryManagement_BuiVanTai.Tab
         }
 
 
+
+        // Fill data from SQL to Grid ========================================================================================
         private void DGView_ImportReceipt_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             // Check if the clicked cell is not in the header
@@ -115,7 +120,7 @@ namespace LibraryManagement_BuiVanTai.Tab
                 else
                 {
                     // Handle parsing error if necessary
-                    // MessageBox.Show("Error parsing import date.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Error parsing import date.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
                 CBB_PubName.Text = selectedRow.Cells[3].Value.ToString();
@@ -125,7 +130,99 @@ namespace LibraryManagement_BuiVanTai.Tab
 
 
 
+        // Search fuction ====================================================================================================
+        private void PerformSearch()
+        {
+            string formattedDate = Date_ImportReceipt_TimeSearch.Value.ToString("yyyy-MM-dd");
+            dataTable_ImportReceipt = DB_ImportReceipt.SearchData(TB_ImportReceipt_Search.Text, formattedDate);
+            DGV_ImportReceipt.DataSource = dataTable_ImportReceipt;
+        }
 
+        private void TB_ImportReceipt_Search_TextChanged(object sender, EventArgs e)
+        {
+            PerformSearch();
+        }
+
+        private void Date_ImportReceipt_TimeSearch_ValueChanged(object sender, EventArgs e)
+        {
+            PerformSearch();
+        }
+
+
+
+        // Refresh fucntion ==================================================================================================
+        private void BTN_ImportReceipt_Refresh_Click(object sender, EventArgs e)
+        {
+            GridViewFormLoad(ClassDefineName.servername, ClassDefineName.database_name);
+            TB_ImportReceipt_ImportID.Text = null;
+            Date_ImportDate.Text = DateTime.Now.ToString();
+            CBB_PubName.Text = null;
+            CBB_StaffID.Text = null;
+        }
+
+
+
+        // Add button fuction ================================================================================================
+        private void BTN_ImportReceipt_Add_Click(object sender, EventArgs e)
+        {
+            if (DataConditional())
+            {
+
+            }
+        }
+
+
+
+        // Data condition checking:
+        private const int MinImportIdLength = 3;
+        private const int MaxImportIdLength = 10;
+
+        private bool DataConditional()
+        {
+            if (!IsValidImportIdLength())
+                return false;
+
+            if (!IsValidSelectedItem(CBB_PubName, "existing supplier"))
+                return false;
+
+            if (!IsValidSelectedItem(CBB_StaffID, "existing staff name"))
+                return false;
+
+            if (!IsValidDate(Date_ImportDate.Text))
+                return false;
+
+            return true;
+        }
+
+        private bool IsValidImportIdLength()
+        {
+            string importId = TB_ImportReceipt_ImportID.Text;
+            if (string.IsNullOrEmpty(importId) || importId.Length < MinImportIdLength || importId.Length > MaxImportIdLength)
+            {
+                MessageBox.Show($"The 'Import ID' must be between {MinImportIdLength} and {MaxImportIdLength} characters.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            return true;
+        }
+
+        private bool IsValidSelectedItem(ComboBox comboBox, string itemName)
+        {
+            if (comboBox.SelectedIndex == -1)
+            {
+                MessageBox.Show($"Please select the correct name of the existing {itemName}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            return true;
+        }
+
+
+        private bool IsValidDate(string dateString)
+        {
+            DateTime date;
+            return DateTime.TryParse(dateString, out date);
+        }
 
     }
 }

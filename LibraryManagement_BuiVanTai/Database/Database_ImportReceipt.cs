@@ -68,10 +68,14 @@ namespace LibraryManagement_BuiVanTai.Database
 
 
         // Insert value to SQL =============================================================================
-        public bool InsertData(Class_Suppliers obj)
+        public bool c(Class_ImportReceipt obj, string SupplierName, string staffName)
         {
-            string sqlCommand = $"INSERT INTO {ClassDefineName.table_Suppliers_SupplierID} VALUES ('{obj.SupplierID1}', '{obj.SupplierName1}', '{obj.SupplierAddress1}', '{obj.SupplierTel1}', '{obj.SupplierState1}';)";
-            return database.ExecuteSQL(sqlCommand);
+            string sqlCommand = $"INSERT INTO {ClassDefineName.table_ImportReceipt_TableName}" +
+                $"VALUES ('{obj.ImportID1}', '{obj.ImportDate1}'," +
+                $"(SELECT {ClassDefineName.table_Publishers_PublisherID} FROM {ClassDefineName.table_Publishers_TableName} WHERE {ClassDefineName.table_Publishers_PublisherName} = '{SupplierName}')," +
+                $"(SELECT {ClassDefineName.table_Staffs_StaffID} FROM {ClassDefineName.table_Staffs_TableName} WHERE {ClassDefineName.table_Staffs_StaffName} = '{staffName}')" +
+                $");";
+            return database.ExecuteSQL(sqlCommand); 
         }
 
         // Update data by click "Add" button ===============================================================
@@ -95,11 +99,10 @@ namespace LibraryManagement_BuiVanTai.Database
         }
 
         // Searching data by search funtion from user ======================================================
-        public DataTable SearchDataNonState(string keyWords, string State)
+        public DataTable SearchData(string keyWords, string date)
         {
-            dataTable = new DataTable();
-            dataTable = database.getSeachAndDisplayTableNonState(ClassDefineName.table_Suppliers_TableName, ClassDefineName.table_Suppliers_SupplierName, keyWords);
-            return dataTable;
+            string sqlCommand = $"SELECT * FROM {ClassDefineName.table_ImportReceipt_TableName} WHERE {ClassDefineName.table_ImportReceipt_ImportID} LIKE '%{keyWords}%' AND {ClassDefineName.table_ImportReceipt_ImportDate} LIKE '%{date}%';";
+            return database.GetDataTable(sqlCommand);
         }
 
         // Get PublisherName to the CBB_ImportReceipt_SupplierName =========================================
@@ -114,6 +117,8 @@ namespace LibraryManagement_BuiVanTai.Database
             string sqlCommand = $"SELECT {ClassDefineName.table_Staffs_StaffName} FROM {ClassDefineName.table_Staffs_TableName};";
             return database.GetDataTable(sqlCommand);
         }
+
+
 
     }
 }
