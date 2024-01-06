@@ -14,6 +14,9 @@ namespace LibraryManagement_BuiVanTai.Tab
         Database_ImportReceipt DB_ImportReceipt = null;
         System.Data.DataTable dataTable_ImportReceipt = null;
 
+        Database_ImportReceiptDetails DB_ImportReceiptDetails = null;
+        System.Data.DataTable dataTable_ImportReceiptDetails = null;
+
 
         public Tab_ImportReceipt()
         {
@@ -22,16 +25,15 @@ namespace LibraryManagement_BuiVanTai.Tab
 
         private void Tab_ImportReceipt_Load(object sender, EventArgs e)
         {
-
             // Load data to GridView.
-            GridViewFormLoad(ClassDefineName.servername, ClassDefineName.database_name);
+            GridViewFormLoad_ImportReceipt(ClassDefineName.servername, ClassDefineName.database_name);
             DB_ImportReceipt = new Database_ImportReceipt(ClassDefineName.servername, ClassDefineName.database_name);
         }
 
 
 
         // Load GridView from database =======================================================================================
-        public void GridViewFormLoad(string ServerName, string DatabaseName)
+        public void GridViewFormLoad_ImportReceipt(string ServerName, string DatabaseName)
         {
             DB_ImportReceipt = new Database_ImportReceipt(ServerName, DatabaseName);
             dataTable_ImportReceipt = DB_ImportReceipt.getTable();
@@ -73,6 +75,25 @@ namespace LibraryManagement_BuiVanTai.Tab
 
 
 
+        public void GridViewFormLoad_ImportReceiptDetails(string ServerName, string DatabaseName, string SelectedID)
+        {
+            DB_ImportReceiptDetails = new Database_ImportReceiptDetails(ServerName, DatabaseName);
+            dataTable_ImportReceiptDetails = DB_ImportReceiptDetails.getTable(SelectedID);
+
+            if (dataTable_ImportReceiptDetails != null)
+            {
+                DGV_ImportReceipt_ReceiptDetails.DataSource = dataTable_ImportReceiptDetails;
+                DGV_ImportReceipt_ReceiptDetails.RowHeadersVisible = false;
+            }
+            else
+            {
+                MessageBox.Show("Failed to retrieve data from the database.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
+
+
+
         // Select and Delete data by click in the items =================================================================================
         private void DGView_ImportReceipt_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -100,6 +121,9 @@ namespace LibraryManagement_BuiVanTai.Tab
 
                 CBB_PubName.Text = selectedRow.Cells[3].Value.ToString();
                 CBB_StaffName.Text = selectedRow.Cells[4].Value.ToString();
+
+                GridViewFormLoad_ImportReceiptDetails(ClassDefineName.servername, ClassDefineName.database_name, selectedRow.Cells[1].Value.ToString());
+                return;
             }
 
 
@@ -152,7 +176,7 @@ namespace LibraryManagement_BuiVanTai.Tab
         // Refresh fucntion ==================================================================================================
         private void BTN_ImportReceipt_Refresh_Click(object sender, EventArgs e)
         {
-            GridViewFormLoad(ClassDefineName.servername, ClassDefineName.database_name);
+            GridViewFormLoad_ImportReceipt(ClassDefineName.servername, ClassDefineName.database_name);
             getEmptyTextBox();
             TB_ImportReceipt_ImportID.Enabled = Enabled;
         }
@@ -188,7 +212,7 @@ namespace LibraryManagement_BuiVanTai.Tab
                             dataTable_ImportReceipt.Rows.Add(dataGridImport);
 
                             getEmptyTextBox();
-                            GridViewFormLoad(ClassDefineName.servername, ClassDefineName.database_name);
+                            GridViewFormLoad_ImportReceipt(ClassDefineName.servername, ClassDefineName.database_name);
                         }
                     }
                 }

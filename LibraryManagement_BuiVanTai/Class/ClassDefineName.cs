@@ -88,7 +88,8 @@ namespace LibraryManagement_BuiVanTai.Class
         public static string table_ImportReceiptDetails_ImportID = "ImportID";
         public static string table_ImportReceiptDetails_BookID = "BookID";
         public static string table_ImportReceiptDetails_ImportAmount = "ImportAmount";
-        public static string table_ImportReceiptDetails_SupplierID = "Price";
+        public static string table_ImportReceiptDetails_SupplierID = "SupplierID";
+        public static string table_ImportReceiptDetails_Price = "Price";
 
 
 
