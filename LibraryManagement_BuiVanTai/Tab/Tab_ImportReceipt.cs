@@ -82,7 +82,6 @@ namespace LibraryManagement_BuiVanTai.Tab
                 DGV_ImportReceipt.DataSource = dataTable_ImportReceipt;
                 DGV_ImportReceipt.RowHeadersVisible = false;
                 DGV_ImportReceipt_ReceiptDetails.RowHeadersVisible = false;
-                BTN_ImportReceipt_Save.Enabled = false;
 
                 // Set the DateTimePicker format to "yyyy-MM-dd"
                 Date_ImportDate.Format = DateTimePickerFormat.Custom;
@@ -250,7 +249,6 @@ namespace LibraryManagement_BuiVanTai.Tab
 
         private void CBB_PubName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            BTN_ImportReceipt_Save.Enabled = true;
             AddButtonState();
             DataTable pubNameTable = DB_ImportReceipt.GetPublisherName(CBB_PubID.Text);
 
@@ -262,7 +260,6 @@ namespace LibraryManagement_BuiVanTai.Tab
 
         private void CBB_StaffName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            BTN_ImportReceipt_Save.Enabled = true;
             AddButtonState();
             DataTable staffNameTable = DB_ImportReceipt.GetStaffName(CBB_StaffID.Text);
 
