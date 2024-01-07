@@ -12,27 +12,26 @@ namespace LibraryManagement_BuiVanTai.Database
 {
     public class Database_SaleReceipts
     {
-        Database database;
-        DataTable dataTable;
+        Database db1;
+        DataTable dt;
 
         public Database_SaleReceipts(string servername, string databasename)
         {
-            database = new Database(servername, databasename);
+            db = new Database(servername, databasename);
         }
 
         public DataTable getTable()
         {
-            string sqlCommand = $"SELECT {ClassDefineName.table_SaleReceipts_ReceiptID}, {ClassDefineName.table_Staffs_StaffName}, {ClassDefineName.table_SaleReceipts_SaleDate} " +
-                $"FROM {ClassDefineName.table_SaleReceipts_TableName} " +
-                $"JOIN {ClassDefineName.table_Staffs_TableName} ON {ClassDefineName.table_Staffs_TableName}.{ClassDefineName.table_Staffs_StaffID} = {ClassDefineName.table_SaleReceipts_TableName}.{ClassDefineName.table_SaleReceipts_StaffID}";
-            return database.GetDataTable(sqlCommand);
+            dt = new DataTable();
+            dt = db.getTable("SaleReceipts");
+            return dt;
         }
 
 
         public bool InsertData(Class_SaleReceipt sale)
         {
             string query = "INSERT INTO SaleReceipts VALUES (\'" + sale.ReceiptID + "\'," + "\'" + sale.StaffID + "\'," + "\'" + sale.SaleDate + "\')";
-            return database.ExecuteSQL(query);
+            return db.ExecuteSQL(query);
         }
 
 /*        public bool UpdateData(Class_SaleReceipt sale)
@@ -46,19 +45,26 @@ namespace LibraryManagement_BuiVanTai.Database
         public bool DeleteData(Class_SaleReceipt sale)
         {
             string query = "DELETE FROM SaleReceipts WHERE ReceiptID = \'" + sale.ReceiptID + "\'";
-            return database.ExecuteSQL(query);
+            return db.ExecuteSQL(query);
         }
 
-/*        public DataTable searchData(string keyword)
+        /*        public DataTable searchData(string keyword)
+                {
+                    dt = db.ExecuteSQLReturnTable("SELECT * FROM SaleReceipts WHERE ReceiptID like '%" + keyword + "%'");
+                    return dt;
+                }*/
+
+        public DataTable getCustomTable(string command)
         {
-            dt = db.ExecuteSQLReturnTable("SELECT * FROM SaleReceipts WHERE ReceiptID like '%" + keyword + "%'");
-            return dt;
-        }*/
+            DataTable dt2 = new DataTable();
+            dt2 = db1.ExecuteSQLReturnTable(command);
+            return dt2;
+        }
 
         public DataTable searchLeftData(string keyword)
         {
             DataTable dt2 = new DataTable();
-            dt2 = database.ExecuteSQLReturnTable("SELECT BookID, BookName, BookType, Remaining, Price FROM Books WHERE BookName like '%" + keyword + "%'");
+            dt2 = db.ExecuteSQLReturnTable("SELECT BookID, BookName, BookType, Remaining, Price FROM Books WHERE BookName like '%" + keyword + "%'");
             return dt2;
         }
 
