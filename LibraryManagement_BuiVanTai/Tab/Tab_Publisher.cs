@@ -28,6 +28,7 @@ namespace LibraryManagement_BuiVanTai.Tab
 
         public void GridViewFormLoad(string ServerName, string DatabaseName)
         {
+            CBB_Publisher_StateSearch.Text = ClassDefineName.table_Suppliers_SupplierState_AllState;
             DB_Publisher = new Database_Publisher(ServerName, DatabaseName);
             DataTable dt = DB_Publisher.getCustomTable($"SELECT * FROM {ClassDefineName.table_Publishers_TableName}");
             TB_Publisher_ID.Enabled = false;
@@ -118,7 +119,7 @@ namespace LibraryManagement_BuiVanTai.Tab
             TB_Publisher_Address.Text = SelectedRow.Cells[3].Value.ToString();
             TB_Publisher_Tel.Text = SelectedRow.Cells[4].Value.ToString();
             CBB_Publisher_StateEdit.Text = SelectedRow.Cells[5].Value.ToString();
-
+            return;
         }
 
 
@@ -158,13 +159,19 @@ namespace LibraryManagement_BuiVanTai.Tab
                 if (DB_Publisher.IsDuplicatePublisherID(TB_Publisher_ID.Text) > 0)
                 {
                     LB_Note.ForeColor = Color.Red;
-                    LB_Note.Text = "Duplicate publisher found. Please check the Publisher ID";
+                    LB_Note.Text = "Duplicate publisher found.\nPlease check the Publisher ID";
                     return;
                 }
                 else if (DB_Publisher.IsDuplicatePublisherTel(TB_Publisher_Tel.Text) > 0)
                 {
                     LB_Note.ForeColor = Color.Red;
-                    LB_Note.Text = "Duplicate publisher found. Please check the telephone";
+                    LB_Note.Text = "Duplicate publisher found.\nPlease check the Publisher telephone";
+                    return;
+                }
+                else if (DB_Publisher.IsDuplicatePublisherName(TB_Publisher_Name.Text) > 0)
+                {
+                    LB_Note.ForeColor = Color.Red;
+                    LB_Note.Text = "Duplicate publisher found.\nPlease check the Publisher name";
                     return;
                 }
                 else
@@ -175,18 +182,7 @@ namespace LibraryManagement_BuiVanTai.Tab
                     {
                         if (DB_Publisher.InsertData(publisher))
                         {
-                            // Notifocation added successfull
                             MessageBox.Show("Publisher added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                            // Add new data to dataGridSuppliers
-                            DataRow dataGridPublisher = dataTable_Publisher.NewRow();
-                            dataGridPublisher[0] = TB_Publisher_ID.Text;
-                            dataGridPublisher[1] = TB_Publisher_Name.Text;
-                            dataGridPublisher[2] = TB_Publisher_Address.Text;
-                            dataGridPublisher[3] = TB_Publisher_Tel.Text;
-                            dataGridPublisher[4] = CBB_Publisher_StateEdit.Text;
-                            dataTable_Publisher.Rows.Add(dataGridPublisher);
-
                             getEmptyTextBox();
                             GridViewFormLoad(ClassDefineName.servername, ClassDefineName.database_name);
                         }
@@ -335,6 +331,33 @@ namespace LibraryManagement_BuiVanTai.Tab
                         MessageBox.Show("Row deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
+            }
+        }
+
+        private void TB_Publisher_Search_TextChanged(object sender, EventArgs e)
+        {
+            if (CBB_Publisher_StateSearch.Text == ClassDefineName.table_Suppliers_SupplierState_AllState)
+            {
+                dataTable_Publisher = DB_Publisher.SearchDataNonState(TB_Publisher_Search.Text);
+                DGV_Publisher.DataSource = dataTable_Publisher;
+                return;
+            }
+            else if (CBB_Publisher_StateSearch.Text == ClassDefineName.table_Suppliers_SupplierState_Active)
+            {
+                dataTable_Publisher = DB_Publisher.SearchDataWithState(TB_Publisher_Search.Text, ClassDefineName.table_Suppliers_SupplierState_Active);
+                DGV_Publisher.DataSource = dataTable_Publisher;
+                return;
+            }
+            else if (CBB_Publisher_StateSearch.Text == ClassDefineName.table_Suppliers_SupplierState_Inactive)
+            {
+                dataTable_Publisher = DB_Publisher.SearchDataWithState(TB_Publisher_Search.Text, ClassDefineName.table_Suppliers_SupplierState_Inactive);
+                DGV_Publisher.DataSource = dataTable_Publisher;
+                return;
+            }
+            else
+            {
+                MessageBox.Show("Invalid status.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
         }
     }

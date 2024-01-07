@@ -86,7 +86,27 @@ namespace LibraryManagement_BuiVanTai.Database
             return database.ExcuteSQL_CheckDuplicate(sqlCommand);
         }
 
+        public int IsDuplicatePublisherName(string publisherName)
+        {
+            string sqlCommand = $"SELECT COUNT(*) FROM {ClassDefineName.table_Publishers_TableName} WHERE {ClassDefineName.table_Publishers_PublisherName} = '{publisherName}'";
 
+            return database.ExcuteSQL_CheckDuplicate(sqlCommand);
+        }
+
+        public DataTable SearchDataWithState(string keyWords, string State)
+        {
+            dataTable = new DataTable();
+            dataTable = database.getSeachAndDisplayTable(ClassDefineName.table_Publishers_TableName,
+                ClassDefineName.table_Publishers_PublisherState, State, ClassDefineName.table_Publishers_PublisherName, keyWords);
+            return dataTable;
+        }
+
+        public DataTable SearchDataNonState(string keyWords)
+        {
+            dataTable = new DataTable();
+            dataTable = database.getSeachAndDisplayTableNonState(ClassDefineName.table_Publishers_TableName, ClassDefineName.table_Publishers_PublisherName, keyWords);
+            return dataTable;
+        }
 
     }
 }
