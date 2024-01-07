@@ -35,24 +35,12 @@
             this.Label_Suppliers_TotalNumbers = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.PTB_Suppliers_Menu = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.TB_Customer_Search = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.BTN_Customer_Refresh = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.BTN_Customer_Save = new System.Windows.Forms.Button();
-            this.BTN_Customer_Add = new System.Windows.Forms.Button();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.ActionColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CustomerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DGV_Customer = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
             this.TB_Customer_Address = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -65,13 +53,25 @@
             this.TB_Customer_ID = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.DGV_Publisger = new System.Windows.Forms.DataGridView();
+            this.CustomerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.ActionColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.BTN_Customer_Save = new System.Windows.Forms.Button();
+            this.BTN_Customer_Add = new System.Windows.Forms.Button();
+            this.PTB_Suppliers_Menu = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PTB_Suppliers_Menu)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_Customer)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Publisger)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PTB_Suppliers_Menu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Label_Suppliers_1
@@ -121,15 +121,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Customers";
             // 
-            // PTB_Suppliers_Menu
-            // 
-            this.PTB_Suppliers_Menu.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Menu;
-            this.PTB_Suppliers_Menu.Location = new System.Drawing.Point(12, 12);
-            this.PTB_Suppliers_Menu.Name = "PTB_Suppliers_Menu";
-            this.PTB_Suppliers_Menu.Size = new System.Drawing.Size(26, 26);
-            this.PTB_Suppliers_Menu.TabIndex = 0;
-            this.PTB_Suppliers_Menu.TabStop = false;
-            // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -144,15 +135,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(227, 120);
             this.panel2.TabIndex = 10;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Customer;
-            this.pictureBox1.Location = new System.Drawing.Point(157, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(55, 50);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // panel3
             // 
@@ -208,7 +190,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.panel5);
-            this.panel4.Controls.Add(this.DGV_Customer);
+            this.panel4.Controls.Add(this.DGV_Publisger);
             this.panel4.Controls.Add(this.BTN_Customer_Save);
             this.panel4.Controls.Add(this.BTN_Customer_Add);
             this.panel4.Controls.Add(this.BTN_Customer_Refresh);
@@ -216,8 +198,291 @@
             this.panel4.Controls.Add(this.TB_Customer_Search);
             this.panel4.Location = new System.Drawing.Point(0, 180);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(899, 468);
+            this.panel4.Size = new System.Drawing.Size(899, 523);
             this.panel4.TabIndex = 12;
+            // 
+            // panel5
+            // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel5.BackColor = System.Drawing.Color.NavajoWhite;
+            this.panel5.Controls.Add(this.TB_Customer_Address);
+            this.panel5.Controls.Add(this.label15);
+            this.panel5.Controls.Add(this.TB_Customer_Tel);
+            this.panel5.Controls.Add(this.label14);
+            this.panel5.Controls.Add(this.TB_Customer_LastName);
+            this.panel5.Controls.Add(this.label13);
+            this.panel5.Controls.Add(this.TB_Customer_Firstname);
+            this.panel5.Controls.Add(this.label12);
+            this.panel5.Controls.Add(this.TB_Customer_ID);
+            this.panel5.Controls.Add(this.label11);
+            this.panel5.Controls.Add(this.label3);
+            this.panel5.Location = new System.Drawing.Point(635, 78);
+            this.panel5.MaximumSize = new System.Drawing.Size(261, 0);
+            this.panel5.MinimumSize = new System.Drawing.Size(261, 387);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(261, 442);
+            this.panel5.TabIndex = 27;
+            // 
+            // TB_Customer_Address
+            // 
+            this.TB_Customer_Address.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TB_Customer_Address.BackColor = System.Drawing.Color.White;
+            this.TB_Customer_Address.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_Customer_Address.Location = new System.Drawing.Point(8, 307);
+            this.TB_Customer_Address.MinimumSize = new System.Drawing.Size(168, 25);
+            this.TB_Customer_Address.Name = "TB_Customer_Address";
+            this.TB_Customer_Address.Size = new System.Drawing.Size(228, 25);
+            this.TB_Customer_Address.TabIndex = 53;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label15.Location = new System.Drawing.Point(5, 287);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(70, 17);
+            this.label15.TabIndex = 52;
+            this.label15.Text = "- Address:";
+            // 
+            // TB_Customer_Tel
+            // 
+            this.TB_Customer_Tel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TB_Customer_Tel.BackColor = System.Drawing.Color.White;
+            this.TB_Customer_Tel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_Customer_Tel.Location = new System.Drawing.Point(8, 246);
+            this.TB_Customer_Tel.MinimumSize = new System.Drawing.Size(168, 25);
+            this.TB_Customer_Tel.Name = "TB_Customer_Tel";
+            this.TB_Customer_Tel.Size = new System.Drawing.Size(228, 25);
+            this.TB_Customer_Tel.TabIndex = 51;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label14.Location = new System.Drawing.Point(5, 226);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(85, 17);
+            this.label14.TabIndex = 50;
+            this.label14.Text = "- Telephone:";
+            // 
+            // TB_Customer_LastName
+            // 
+            this.TB_Customer_LastName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TB_Customer_LastName.BackColor = System.Drawing.Color.White;
+            this.TB_Customer_LastName.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_Customer_LastName.Location = new System.Drawing.Point(8, 188);
+            this.TB_Customer_LastName.MinimumSize = new System.Drawing.Size(168, 25);
+            this.TB_Customer_LastName.Name = "TB_Customer_LastName";
+            this.TB_Customer_LastName.Size = new System.Drawing.Size(228, 25);
+            this.TB_Customer_LastName.TabIndex = 49;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label13.Location = new System.Drawing.Point(5, 168);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(84, 17);
+            this.label13.TabIndex = 48;
+            this.label13.Text = "- Last name:";
+            // 
+            // TB_Customer_Firstname
+            // 
+            this.TB_Customer_Firstname.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TB_Customer_Firstname.BackColor = System.Drawing.Color.White;
+            this.TB_Customer_Firstname.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_Customer_Firstname.Location = new System.Drawing.Point(8, 125);
+            this.TB_Customer_Firstname.MinimumSize = new System.Drawing.Size(168, 25);
+            this.TB_Customer_Firstname.Name = "TB_Customer_Firstname";
+            this.TB_Customer_Firstname.Size = new System.Drawing.Size(228, 25);
+            this.TB_Customer_Firstname.TabIndex = 47;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label12.Location = new System.Drawing.Point(5, 105);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(86, 17);
+            this.label12.TabIndex = 46;
+            this.label12.Text = "- First name:";
+            // 
+            // TB_Customer_ID
+            // 
+            this.TB_Customer_ID.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TB_Customer_ID.BackColor = System.Drawing.Color.White;
+            this.TB_Customer_ID.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_Customer_ID.Location = new System.Drawing.Point(8, 69);
+            this.TB_Customer_ID.MinimumSize = new System.Drawing.Size(168, 25);
+            this.TB_Customer_ID.Name = "TB_Customer_ID";
+            this.TB_Customer_ID.Size = new System.Drawing.Size(228, 25);
+            this.TB_Customer_ID.TabIndex = 45;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label11.Location = new System.Drawing.Point(5, 49);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(98, 17);
+            this.label11.TabIndex = 43;
+            this.label11.Text = "- Customer ID:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label3.Location = new System.Drawing.Point(3, 10);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 30);
+            this.label3.TabIndex = 44;
+            this.label3.Text = "Profile:";
+            // 
+            // DGV_Publisger
+            // 
+            this.DGV_Publisger.AllowUserToAddRows = false;
+            this.DGV_Publisger.AllowUserToDeleteRows = false;
+            this.DGV_Publisger.AllowUserToResizeColumns = false;
+            this.DGV_Publisger.AllowUserToResizeRows = false;
+            this.DGV_Publisger.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DGV_Publisger.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DGV_Publisger.BackgroundColor = System.Drawing.Color.White;
+            this.DGV_Publisger.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.DGV_Publisger.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_Publisger.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.DGV_Publisger.ColumnHeadersHeight = 29;
+            this.DGV_Publisger.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.DGV_Publisger.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CustomerID,
+            this.FirstName,
+            this.LastName,
+            this.Tel,
+            this.Address,
+            this.ActionColumn});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(151)))), ((int)(((byte)(196)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGV_Publisger.DefaultCellStyle = dataGridViewCellStyle2;
+            this.DGV_Publisger.EnableHeadersVisualStyles = false;
+            this.DGV_Publisger.Location = new System.Drawing.Point(3, 78);
+            this.DGV_Publisger.MultiSelect = false;
+            this.DGV_Publisger.Name = "DGV_Publisger";
+            this.DGV_Publisger.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_Publisger.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.DGV_Publisger.RowHeadersWidth = 51;
+            this.DGV_Publisger.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.DGV_Publisger.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGV_Publisger.ShowCellErrors = false;
+            this.DGV_Publisger.ShowCellToolTips = false;
+            this.DGV_Publisger.ShowEditingIcon = false;
+            this.DGV_Publisger.ShowRowErrors = false;
+            this.DGV_Publisger.Size = new System.Drawing.Size(626, 445);
+            this.DGV_Publisger.TabIndex = 26;
+            this.DGV_Publisger.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Customer_CellClick);
+            this.DGV_Publisger.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Customer_CellContentDoubleClick);
+            this.DGV_Publisger.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Customer_CellContentDoubleClick);
+            // 
+            // CustomerID
+            // 
+            this.CustomerID.DataPropertyName = "CustomerID";
+            this.CustomerID.FillWeight = 81.32249F;
+            this.CustomerID.HeaderText = "Customer ID";
+            this.CustomerID.MinimumWidth = 2;
+            this.CustomerID.Name = "CustomerID";
+            this.CustomerID.ReadOnly = true;
+            // 
+            // FirstName
+            // 
+            this.FirstName.DataPropertyName = "FirstName";
+            this.FirstName.FillWeight = 81.32249F;
+            this.FirstName.HeaderText = "First Name";
+            this.FirstName.MinimumWidth = 2;
+            this.FirstName.Name = "FirstName";
+            this.FirstName.ReadOnly = true;
+            // 
+            // LastName
+            // 
+            this.LastName.DataPropertyName = "LastName";
+            this.LastName.FillWeight = 81.32249F;
+            this.LastName.HeaderText = "Last Name";
+            this.LastName.MinimumWidth = 2;
+            this.LastName.Name = "LastName";
+            this.LastName.ReadOnly = true;
+            // 
+            // Tel
+            // 
+            this.Tel.DataPropertyName = "Tel";
+            this.Tel.FillWeight = 81.32249F;
+            this.Tel.HeaderText = "Telephone";
+            this.Tel.MinimumWidth = 2;
+            this.Tel.Name = "Tel";
+            this.Tel.ReadOnly = true;
+            // 
+            // Address
+            // 
+            this.Address.DataPropertyName = "Address";
+            this.Address.HeaderText = "Address";
+            this.Address.MinimumWidth = 6;
+            this.Address.Name = "Address";
+            this.Address.ReadOnly = true;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.Description = "Details";
+            this.dataGridViewImageColumn1.FillWeight = 40F;
+            this.dataGridViewImageColumn1.HeaderText = "Action";
+            this.dataGridViewImageColumn1.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Delete;
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn1.MinimumWidth = 6;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn1.Width = 66;
+            // 
+            // ActionColumn
+            // 
+            this.ActionColumn.HeaderText = "Action";
+            this.ActionColumn.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Delete2;
+            this.ActionColumn.MinimumWidth = 6;
+            this.ActionColumn.Name = "ActionColumn";
+            this.ActionColumn.ReadOnly = true;
             // 
             // BTN_Customer_Save
             // 
@@ -249,287 +514,23 @@
             this.BTN_Customer_Add.UseVisualStyleBackColor = false;
             this.BTN_Customer_Add.Click += new System.EventHandler(this.BTN_Customer_Add_Click);
             // 
-            // dataGridViewImageColumn1
+            // PTB_Suppliers_Menu
             // 
-            this.dataGridViewImageColumn1.Description = "Details";
-            this.dataGridViewImageColumn1.FillWeight = 40F;
-            this.dataGridViewImageColumn1.HeaderText = "Action";
-            this.dataGridViewImageColumn1.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Delete;
-            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn1.MinimumWidth = 6;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.ReadOnly = true;
-            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewImageColumn1.Width = 66;
+            this.PTB_Suppliers_Menu.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Menu;
+            this.PTB_Suppliers_Menu.Location = new System.Drawing.Point(12, 12);
+            this.PTB_Suppliers_Menu.Name = "PTB_Suppliers_Menu";
+            this.PTB_Suppliers_Menu.Size = new System.Drawing.Size(26, 26);
+            this.PTB_Suppliers_Menu.TabIndex = 0;
+            this.PTB_Suppliers_Menu.TabStop = false;
             // 
-            // ActionColumn
+            // pictureBox1
             // 
-            this.ActionColumn.HeaderText = "Action";
-            this.ActionColumn.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Delete2;
-            this.ActionColumn.MinimumWidth = 6;
-            this.ActionColumn.Name = "ActionColumn";
-            this.ActionColumn.ReadOnly = true;
-            // 
-            // Address
-            // 
-            this.Address.DataPropertyName = "Address";
-            this.Address.HeaderText = "Address";
-            this.Address.MinimumWidth = 6;
-            this.Address.Name = "Address";
-            this.Address.ReadOnly = true;
-            // 
-            // Tel
-            // 
-            this.Tel.DataPropertyName = "Tel";
-            this.Tel.FillWeight = 81.32249F;
-            this.Tel.HeaderText = "Telephone";
-            this.Tel.MinimumWidth = 2;
-            this.Tel.Name = "Tel";
-            this.Tel.ReadOnly = true;
-            // 
-            // LastName
-            // 
-            this.LastName.DataPropertyName = "LastName";
-            this.LastName.FillWeight = 81.32249F;
-            this.LastName.HeaderText = "Last Name";
-            this.LastName.MinimumWidth = 2;
-            this.LastName.Name = "LastName";
-            this.LastName.ReadOnly = true;
-            // 
-            // FirstName
-            // 
-            this.FirstName.DataPropertyName = "FirstName";
-            this.FirstName.FillWeight = 81.32249F;
-            this.FirstName.HeaderText = "First Name";
-            this.FirstName.MinimumWidth = 2;
-            this.FirstName.Name = "FirstName";
-            this.FirstName.ReadOnly = true;
-            // 
-            // CustomerID
-            // 
-            this.CustomerID.DataPropertyName = "CustomerID";
-            this.CustomerID.FillWeight = 81.32249F;
-            this.CustomerID.HeaderText = "Customer ID";
-            this.CustomerID.MinimumWidth = 2;
-            this.CustomerID.Name = "CustomerID";
-            this.CustomerID.ReadOnly = true;
-            // 
-            // DGV_Customer
-            // 
-            this.DGV_Customer.AllowUserToAddRows = false;
-            this.DGV_Customer.AllowUserToDeleteRows = false;
-            this.DGV_Customer.AllowUserToResizeColumns = false;
-            this.DGV_Customer.AllowUserToResizeRows = false;
-            this.DGV_Customer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DGV_Customer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DGV_Customer.BackgroundColor = System.Drawing.Color.White;
-            this.DGV_Customer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.DGV_Customer.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_Customer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.DGV_Customer.ColumnHeadersHeight = 29;
-            this.DGV_Customer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.DGV_Customer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CustomerID,
-            this.FirstName,
-            this.LastName,
-            this.Tel,
-            this.Address,
-            this.ActionColumn});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(151)))), ((int)(((byte)(196)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGV_Customer.DefaultCellStyle = dataGridViewCellStyle2;
-            this.DGV_Customer.EnableHeadersVisualStyles = false;
-            this.DGV_Customer.Location = new System.Drawing.Point(3, 78);
-            this.DGV_Customer.MultiSelect = false;
-            this.DGV_Customer.Name = "DGV_Customer";
-            this.DGV_Customer.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_Customer.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.DGV_Customer.RowHeadersWidth = 51;
-            this.DGV_Customer.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.DGV_Customer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_Customer.ShowCellErrors = false;
-            this.DGV_Customer.ShowCellToolTips = false;
-            this.DGV_Customer.ShowEditingIcon = false;
-            this.DGV_Customer.ShowRowErrors = false;
-            this.DGV_Customer.Size = new System.Drawing.Size(626, 390);
-            this.DGV_Customer.TabIndex = 26;
-            this.DGV_Customer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Customer_CellClick);
-            this.DGV_Customer.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Customer_CellContentDoubleClick);
-            this.DGV_Customer.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Customer_CellContentDoubleClick);
-            // 
-            // panel5
-            // 
-            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel5.Controls.Add(this.TB_Customer_Address);
-            this.panel5.Controls.Add(this.label15);
-            this.panel5.Controls.Add(this.TB_Customer_Tel);
-            this.panel5.Controls.Add(this.label14);
-            this.panel5.Controls.Add(this.TB_Customer_LastName);
-            this.panel5.Controls.Add(this.label13);
-            this.panel5.Controls.Add(this.TB_Customer_Firstname);
-            this.panel5.Controls.Add(this.label12);
-            this.panel5.Controls.Add(this.TB_Customer_ID);
-            this.panel5.Controls.Add(this.label11);
-            this.panel5.Controls.Add(this.label3);
-            this.panel5.Location = new System.Drawing.Point(635, 78);
-            this.panel5.MaximumSize = new System.Drawing.Size(261, 387);
-            this.panel5.MinimumSize = new System.Drawing.Size(261, 387);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(261, 387);
-            this.panel5.TabIndex = 27;
-            // 
-            // TB_Customer_Address
-            // 
-            this.TB_Customer_Address.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TB_Customer_Address.BackColor = System.Drawing.Color.White;
-            this.TB_Customer_Address.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TB_Customer_Address.Location = new System.Drawing.Point(8, 307);
-            this.TB_Customer_Address.MinimumSize = new System.Drawing.Size(168, 25);
-            this.TB_Customer_Address.Name = "TB_Customer_Address";
-            this.TB_Customer_Address.Size = new System.Drawing.Size(176, 25);
-            this.TB_Customer_Address.TabIndex = 53;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label15.Location = new System.Drawing.Point(5, 287);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(70, 17);
-            this.label15.TabIndex = 52;
-            this.label15.Text = "- Address:";
-            // 
-            // TB_Customer_Tel
-            // 
-            this.TB_Customer_Tel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TB_Customer_Tel.BackColor = System.Drawing.Color.White;
-            this.TB_Customer_Tel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TB_Customer_Tel.Location = new System.Drawing.Point(8, 246);
-            this.TB_Customer_Tel.MinimumSize = new System.Drawing.Size(168, 25);
-            this.TB_Customer_Tel.Name = "TB_Customer_Tel";
-            this.TB_Customer_Tel.Size = new System.Drawing.Size(176, 25);
-            this.TB_Customer_Tel.TabIndex = 51;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label14.Location = new System.Drawing.Point(5, 226);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(85, 17);
-            this.label14.TabIndex = 50;
-            this.label14.Text = "- Telephone:";
-            // 
-            // TB_Customer_LastName
-            // 
-            this.TB_Customer_LastName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TB_Customer_LastName.BackColor = System.Drawing.Color.White;
-            this.TB_Customer_LastName.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TB_Customer_LastName.Location = new System.Drawing.Point(8, 188);
-            this.TB_Customer_LastName.MinimumSize = new System.Drawing.Size(168, 25);
-            this.TB_Customer_LastName.Name = "TB_Customer_LastName";
-            this.TB_Customer_LastName.Size = new System.Drawing.Size(176, 25);
-            this.TB_Customer_LastName.TabIndex = 49;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label13.Location = new System.Drawing.Point(5, 168);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(84, 17);
-            this.label13.TabIndex = 48;
-            this.label13.Text = "- Last name:";
-            // 
-            // TB_Customer_Firstname
-            // 
-            this.TB_Customer_Firstname.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TB_Customer_Firstname.BackColor = System.Drawing.Color.White;
-            this.TB_Customer_Firstname.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TB_Customer_Firstname.Location = new System.Drawing.Point(8, 125);
-            this.TB_Customer_Firstname.MinimumSize = new System.Drawing.Size(168, 25);
-            this.TB_Customer_Firstname.Name = "TB_Customer_Firstname";
-            this.TB_Customer_Firstname.Size = new System.Drawing.Size(176, 25);
-            this.TB_Customer_Firstname.TabIndex = 47;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label12.Location = new System.Drawing.Point(5, 105);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(86, 17);
-            this.label12.TabIndex = 46;
-            this.label12.Text = "- First name:";
-            // 
-            // TB_Customer_ID
-            // 
-            this.TB_Customer_ID.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TB_Customer_ID.BackColor = System.Drawing.Color.White;
-            this.TB_Customer_ID.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TB_Customer_ID.Location = new System.Drawing.Point(8, 69);
-            this.TB_Customer_ID.MinimumSize = new System.Drawing.Size(168, 25);
-            this.TB_Customer_ID.Name = "TB_Customer_ID";
-            this.TB_Customer_ID.Size = new System.Drawing.Size(176, 25);
-            this.TB_Customer_ID.TabIndex = 45;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label11.Location = new System.Drawing.Point(5, 49);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(98, 17);
-            this.label11.TabIndex = 43;
-            this.label11.Text = "- Customer ID:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label3.Location = new System.Drawing.Point(3, 10);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 30);
-            this.label3.TabIndex = 44;
-            this.label3.Text = "Profile:";
+            this.pictureBox1.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Customer;
+            this.pictureBox1.Location = new System.Drawing.Point(157, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(55, 50);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // Tab_Customers
             // 
@@ -539,21 +540,21 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.MinimumSize = new System.Drawing.Size(902, 651);
+            this.MinimumSize = new System.Drawing.Size(902, 706);
             this.Name = "Tab_Customers";
-            this.Size = new System.Drawing.Size(902, 651);
+            this.Size = new System.Drawing.Size(902, 706);
             this.Load += new System.EventHandler(this.Tab_Customers_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PTB_Suppliers_Menu)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_Customer)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Publisger)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PTB_Suppliers_Menu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -587,7 +588,7 @@
         private System.Windows.Forms.TextBox TB_Customer_ID;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView DGV_Customer;
+        private System.Windows.Forms.DataGridView DGV_Publisger;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerID;
         private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn LastName;

@@ -21,6 +21,7 @@ namespace LibraryManagement_BuiVanTai
         private void Form_Main_Load(object sender, EventArgs e)
         {
             tab_SearchBooks.BringToFront();
+
         }
 
 
@@ -44,6 +45,7 @@ namespace LibraryManagement_BuiVanTai
             Button_Main_ImportReceipt.BackColor = originalButtonColor;
             Button_Main_Staff.BackColor = originalButtonColor;
             Button_Main_Books.BackColor = originalButtonColor;
+            Button_Main_Publisher.BackColor = originalButtonColor;
         }
 
 
@@ -63,6 +65,7 @@ namespace LibraryManagement_BuiVanTai
             tab_Customers.Visible = false;
             tab_Authors.Visible = false;
             tab_Suppliers.Visible = false;
+            tab_Publisher.Visible = false;
             tab_SalesReceipt.Visible = false;
             tab_ImportReceipt.Visible = false;
             tab_Staffs.Visible = false;
@@ -87,6 +90,7 @@ namespace LibraryManagement_BuiVanTai
             tab_Customers.Visible = false;
             tab_Authors.Visible = true;
             tab_Suppliers.Visible = false;
+            tab_Publisher.Visible = false;
             tab_SalesReceipt.Visible = false;
             tab_ImportReceipt.Visible = false;
             tab_Staffs.Visible = false;
@@ -110,6 +114,7 @@ namespace LibraryManagement_BuiVanTai
             tab_SearchBooks.Visible = false;
             tab_Customers.Visible = true;
             tab_Authors.Visible = false;
+            tab_Publisher.Visible = false;
             tab_Suppliers.Visible = false;
             tab_SalesReceipt.Visible = false;
             tab_ImportReceipt.Visible = false;
@@ -135,6 +140,7 @@ namespace LibraryManagement_BuiVanTai
             tab_Customers.Visible = false;
             tab_Authors.Visible = false;
             tab_Suppliers.Visible = true;
+            tab_Publisher.Visible = false;
             tab_SalesReceipt.Visible = false;
             tab_ImportReceipt.Visible = false;
             tab_Staffs.Visible = false;
@@ -161,6 +167,7 @@ namespace LibraryManagement_BuiVanTai
             tab_Customers.Visible = false;
             tab_Authors.Visible = false;
             tab_Suppliers.Visible = false;
+            tab_Publisher.Visible = false;
             tab_SalesReceipt.Visible = true;
             tab_ImportReceipt.Visible = false;
             tab_Staffs.Visible = false;
@@ -184,6 +191,7 @@ namespace LibraryManagement_BuiVanTai
             tab_Customers.Visible = false;
             tab_Authors.Visible = false;
             tab_Suppliers.Visible = false;
+            tab_Publisher.Visible = false;
             tab_SalesReceipt.Visible = false;
             tab_ImportReceipt.Visible = true;
             tab_Staffs.Visible = false;
@@ -208,6 +216,7 @@ namespace LibraryManagement_BuiVanTai
             tab_Customers.Visible = false;
             tab_Authors.Visible = false;
             tab_Suppliers.Visible = false;
+            tab_Publisher.Visible = false;
             tab_SalesReceipt.Visible = false;
             tab_ImportReceipt.Visible = false;
             tab_Staffs.Visible = true;
@@ -238,12 +247,32 @@ namespace LibraryManagement_BuiVanTai
             tab_Customers.Visible = false;
             tab_Authors.Visible = false;
             tab_Suppliers.Visible = false;
+            tab_Publisher.Visible = false;
             tab_SalesReceipt.Visible = false;
             tab_ImportReceipt.Visible = false;
             tab_Staffs.Visible = false;
             tab_Book1.Visible = true;
         }
 
+        private void Button_Main_Publisher_Click(object sender, EventArgs e)
+        {
+            if (originalButtonColor == default(Color))
+            {
+                originalButtonColor = Button_Main_SeachBooks.BackColor;
+            }
+            ResetButtonColors();
+            MovePanel(Button_Main_Publisher);
+            Button_Main_Publisher.BackColor = Color.FromArgb(0, 67, 147);
 
+            tab_SearchBooks.Visible = false;
+            tab_Customers.Visible = false;
+            tab_Authors.Visible = false;
+            tab_Suppliers.Visible = false;
+            tab_Publisher.Visible = true;
+            tab_SalesReceipt.Visible = false;
+            tab_ImportReceipt.Visible = false;
+            tab_Staffs.Visible = false;
+            tab_Book1.Visible = false;
+        }
     }
 }
