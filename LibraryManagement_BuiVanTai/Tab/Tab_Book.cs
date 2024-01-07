@@ -217,5 +217,10 @@ namespace LibraryManagement_BuiVanTai.Tab
         {
             CheckNull();
         }
+
+        private void DGV_Books_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

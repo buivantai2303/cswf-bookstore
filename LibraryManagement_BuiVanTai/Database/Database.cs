@@ -27,7 +27,7 @@ namespace LibraryManagement_BuiVanTai.Database
         }
 
 
-        public Database(string servername, string databasename, string user = "sa", string pass = "180403")
+        public Database(string servername, string databasename, string user = "sa", string pass = "Duong.1802")
         {
             // Kết nối csdl theo servername và database name
             DS = new DataSet();
@@ -144,6 +144,13 @@ namespace LibraryManagement_BuiVanTai.Database
             dataAdapter.Fill(datatable);
             DS.Tables.Add(datatable);
             return datatable;
+        }
+
+        public DataTable getCustomTable(string command)
+        {
+            DataTable dt2 = new DataTable();
+            dt2 = ExecuteSQLReturnTable(command);
+            return dt2;
         }
 
 

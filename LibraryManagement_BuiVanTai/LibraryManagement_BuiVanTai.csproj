@@ -62,6 +62,8 @@
     <Compile Include="Class\Class_Book.cs" />
     <Compile Include="Class\Class_Customer.cs" />
     <Compile Include="Class\Class_Publisher.cs" />
+    <Compile Include="Class\Class_SaleReceipt.cs" />
+    <Compile Include="Class\Class_SaleReceiptDetails.cs" />
     <Compile Include="Class\Class_Staff.cs" />
     <Compile Include="Class\Class_Suppliers.cs" />
     <Compile Include="Class\Class_ImportReceipt.cs" />
@@ -73,6 +75,8 @@
     <Compile Include="Database\Database_Customer.cs" />
     <Compile Include="Database\Database_ImportReceipt.cs" />
     <Compile Include="Database\Database_Publisher.cs" />
+    <Compile Include="Database\Database_SaleReceiptDetail.cs" />
+    <Compile Include="Database\Database_SaleReceipts.cs" />
     <Compile Include="Database\Database_Staff.cs" />
     <Compile Include="Database\Database_Suppliers.cs" />
     <Compile Include="Database\Database_ImportReceiptDetails.cs" />
@@ -203,6 +207,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Recipt\Recipt.xlsx" />
     <None Include="Resources\User_Icon.png" />
   </ItemGroup>
   <ItemGroup>
@@ -318,5 +323,6 @@
   <ItemGroup>
     <None Include="Resources\Delete2.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
