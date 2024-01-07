@@ -217,7 +217,7 @@
             this.panel6.Controls.Add(this.label3);
             this.panel6.Location = new System.Drawing.Point(655, 73);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(241, 384);
+            this.panel6.Size = new System.Drawing.Size(241, 439);
             this.panel6.TabIndex = 31;
             // 
             // Date_Staffs
@@ -363,7 +363,7 @@
             this.panel4.Controls.Add(this.TB__Staff_Search);
             this.panel4.Location = new System.Drawing.Point(0, 180);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(899, 468);
+            this.panel4.Size = new System.Drawing.Size(899, 523);
             this.panel4.TabIndex = 16;
             // 
             // panel5
@@ -374,7 +374,7 @@
             this.panel5.Controls.Add(this.DGV_Staff);
             this.panel5.Location = new System.Drawing.Point(3, 76);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(646, 381);
+            this.panel5.Size = new System.Drawing.Size(646, 436);
             this.panel5.TabIndex = 32;
             // 
             // DGV_Staff
@@ -433,7 +433,7 @@
             this.DGV_Staff.ShowCellToolTips = false;
             this.DGV_Staff.ShowEditingIcon = false;
             this.DGV_Staff.ShowRowErrors = false;
-            this.DGV_Staff.Size = new System.Drawing.Size(646, 381);
+            this.DGV_Staff.Size = new System.Drawing.Size(646, 436);
             this.DGV_Staff.TabIndex = 31;
             // 
             // StaffID
@@ -558,9 +558,9 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.MinimumSize = new System.Drawing.Size(902, 651);
+            this.MinimumSize = new System.Drawing.Size(902, 706);
             this.Name = "Tab_Staffs";
-            this.Size = new System.Drawing.Size(902, 651);
+            this.Size = new System.Drawing.Size(902, 706);
             this.Load += new System.EventHandler(this.Tab_Staffs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PTB_Suppliers_Menu)).EndInit();
             this.panel1.ResumeLayout(false);

@@ -45,17 +45,16 @@
             this.Button_Main_SeachBooks = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.tab_Publisher = new LibraryManagement_BuiVanTai.Tab.Tab_Publisher();
-            this.tab_Book1 = new LibraryManagement_BuiVanTai.Tab.Tab_Book();
-            this.tab_SalesReceipt = new LibraryManagement_BuiVanTai.Tab.Tab_SalesReceipt();
-            this.tab_Authors = new LibraryManagement_BuiVanTai.Tab.Tab_Authors();
-            this.tab_Staffs = new LibraryManagement_BuiVanTai.Tab.Tab_Staffs();
-            this.tab_Customers = new LibraryManagement_BuiVanTai.Tab.Tab_Customers();
-            this.tab_SearchBooks = new LibraryManagement_BuiVanTai.Tab.Tab_SearchBooks();
-            this.tab_ImportReceipt = new LibraryManagement_BuiVanTai.Tab.Tab_ImportReceipt();
             this.tab_Suppliers = new LibraryManagement_BuiVanTai.Tab_Suppliers();
+            this.tab_Staffs = new LibraryManagement_BuiVanTai.Tab.Tab_Staffs();
+            this.tab_SearchBooks = new LibraryManagement_BuiVanTai.Tab.Tab_SearchBooks();
+            this.tab_SalesReceipt = new LibraryManagement_BuiVanTai.Tab.Tab_SalesReceipt();
+            this.tab_Publisher = new LibraryManagement_BuiVanTai.Tab.Tab_Publisher();
+            this.tab_ImportReceipt = new LibraryManagement_BuiVanTai.Tab.Tab_ImportReceipt();
+            this.tab_Customers = new LibraryManagement_BuiVanTai.Tab.Tab_Customers();
+            this.tab_Book = new LibraryManagement_BuiVanTai.Tab.Tab_Book();
+            this.tab_Authors = new LibraryManagement_BuiVanTai.Tab.Tab_Authors();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
@@ -82,10 +81,10 @@
             this.panel2.Controls.Add(this.Button_Main_Authors);
             this.panel2.Controls.Add(this.Button_Main_SeachBooks);
             this.panel2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panel2.Location = new System.Drawing.Point(1, 44);
-            this.panel2.MinimumSize = new System.Drawing.Size(162, 599);
+            this.panel2.Location = new System.Drawing.Point(1, 42);
+            this.panel2.MinimumSize = new System.Drawing.Size(162, 706);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(162, 701);
+            this.panel2.Size = new System.Drawing.Size(162, 706);
             this.panel2.TabIndex = 1;
             // 
             // MovePanelForBTN
@@ -105,12 +104,12 @@
             this.Button_Main_Publisher.ForeColor = System.Drawing.Color.White;
             this.Button_Main_Publisher.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Truck1;
             this.Button_Main_Publisher.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Button_Main_Publisher.Location = new System.Drawing.Point(2, 362);
+            this.Button_Main_Publisher.Location = new System.Drawing.Point(3, 445);
             this.Button_Main_Publisher.Margin = new System.Windows.Forms.Padding(2);
             this.Button_Main_Publisher.Name = "Button_Main_Publisher";
-            this.Button_Main_Publisher.Size = new System.Drawing.Size(117, 35);
+            this.Button_Main_Publisher.Size = new System.Drawing.Size(156, 35);
             this.Button_Main_Publisher.TabIndex = 14;
-            this.Button_Main_Publisher.Text = " Publisher";
+            this.Button_Main_Publisher.Text = "  Publisher";
             this.Button_Main_Publisher.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Button_Main_Publisher.UseVisualStyleBackColor = false;
             this.Button_Main_Publisher.Click += new System.EventHandler(this.Button_Main_Publisher_Click);
@@ -143,7 +142,7 @@
             this.Button_Supplier_AboutUs.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_Supplier_AboutUs.ForeColor = System.Drawing.Color.White;
             this.Button_Supplier_AboutUs.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Info;
-            this.Button_Supplier_AboutUs.Location = new System.Drawing.Point(75, 603);
+            this.Button_Supplier_AboutUs.Location = new System.Drawing.Point(106, 644);
             this.Button_Supplier_AboutUs.Margin = new System.Windows.Forms.Padding(2);
             this.Button_Supplier_AboutUs.Name = "Button_Supplier_AboutUs";
             this.Button_Supplier_AboutUs.Size = new System.Drawing.Size(32, 32);
@@ -197,7 +196,7 @@
             this.Button_Main_SignOut.ForeColor = System.Drawing.Color.White;
             this.Button_Main_SignOut.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Logout2;
             this.Button_Main_SignOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_Main_SignOut.Location = new System.Drawing.Point(10, 603);
+            this.Button_Main_SignOut.Location = new System.Drawing.Point(18, 644);
             this.Button_Main_SignOut.Margin = new System.Windows.Forms.Padding(2);
             this.Button_Main_SignOut.Name = "Button_Main_SignOut";
             this.Button_Main_SignOut.Size = new System.Drawing.Size(84, 32);
@@ -210,7 +209,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.User_Icon;
-            this.pictureBox1.Location = new System.Drawing.Point(43, 52);
+            this.pictureBox1.Location = new System.Drawing.Point(36, 28);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(75, 75);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -238,7 +237,7 @@
             this.Button_Main_ImportReceipt.ForeColor = System.Drawing.Color.White;
             this.Button_Main_ImportReceipt.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Receipt_and_Change;
             this.Button_Main_ImportReceipt.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Button_Main_ImportReceipt.Location = new System.Drawing.Point(2, 402);
+            this.Button_Main_ImportReceipt.Location = new System.Drawing.Point(3, 484);
             this.Button_Main_ImportReceipt.Margin = new System.Windows.Forms.Padding(2);
             this.Button_Main_ImportReceipt.Name = "Button_Main_ImportReceipt";
             this.Button_Main_ImportReceipt.Size = new System.Drawing.Size(156, 43);
@@ -257,7 +256,7 @@
             this.Button_Main_SaleReceipt.ForeColor = System.Drawing.Color.White;
             this.Button_Main_SaleReceipt.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Receipt_and_Change;
             this.Button_Main_SaleReceipt.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Button_Main_SaleReceipt.Location = new System.Drawing.Point(2, 362);
+            this.Button_Main_SaleReceipt.Location = new System.Drawing.Point(3, 531);
             this.Button_Main_SaleReceipt.Margin = new System.Windows.Forms.Padding(2);
             this.Button_Main_SaleReceipt.Name = "Button_Main_SaleReceipt";
             this.Button_Main_SaleReceipt.Size = new System.Drawing.Size(156, 43);
@@ -276,7 +275,7 @@
             this.Button_Main_Staff.ForeColor = System.Drawing.Color.White;
             this.Button_Main_Staff.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Staff;
             this.Button_Main_Staff.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Button_Main_Staff.Location = new System.Drawing.Point(2, 442);
+            this.Button_Main_Staff.Location = new System.Drawing.Point(3, 578);
             this.Button_Main_Staff.Margin = new System.Windows.Forms.Padding(2);
             this.Button_Main_Staff.Name = "Button_Main_Staff";
             this.Button_Main_Staff.Size = new System.Drawing.Size(156, 43);
@@ -336,83 +335,45 @@
             // 
             // panel4
             // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
             this.panel4.Controls.Add(this.label1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.ForeColor = System.Drawing.SystemColors.Control;
-            this.panel4.Location = new System.Drawing.Point(1, 1);
+            this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.MinimumSize = new System.Drawing.Size(772, 37);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(802, 37);
+            this.panel4.Size = new System.Drawing.Size(1072, 37);
             this.panel4.TabIndex = 3;
-            // 
-            // panel3
-            // 
-            this.panel3.Location = new System.Drawing.Point(-118, -28);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(328, 23);
-            this.panel3.TabIndex = 0;
             // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.tab_Publisher);
-            this.panel1.Controls.Add(this.tab_Book1);
-            this.panel1.Controls.Add(this.tab_SalesReceipt);
-            this.panel1.Controls.Add(this.tab_Authors);
-            this.panel1.Controls.Add(this.tab_Staffs);
-            this.panel1.Controls.Add(this.tab_Customers);
-            this.panel1.Controls.Add(this.tab_SearchBooks);
-            this.panel1.Controls.Add(this.tab_ImportReceipt);
             this.panel1.Controls.Add(this.tab_Suppliers);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Location = new System.Drawing.Point(127, 42);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.MinimumSize = new System.Drawing.Size(676, 529);
+            this.panel1.Controls.Add(this.tab_Staffs);
+            this.panel1.Controls.Add(this.tab_SearchBooks);
+            this.panel1.Controls.Add(this.tab_SalesReceipt);
+            this.panel1.Controls.Add(this.tab_Publisher);
+            this.panel1.Controls.Add(this.tab_ImportReceipt);
+            this.panel1.Controls.Add(this.tab_Customers);
+            this.panel1.Controls.Add(this.tab_Book);
+            this.panel1.Controls.Add(this.tab_Authors);
+            this.panel1.Location = new System.Drawing.Point(169, 42);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(676, 631);
-            this.panel1.TabIndex = 0;
+            this.panel1.Size = new System.Drawing.Size(902, 706);
+            this.panel1.TabIndex = 4;
             // 
-            // tab_Publisher
+            // tab_Suppliers
             // 
-            this.tab_Publisher.Location = new System.Drawing.Point(0, 0);
-            this.tab_Publisher.MinimumSize = new System.Drawing.Size(902, 706);
-            this.tab_Publisher.Name = "tab_Publisher";
-            this.tab_Publisher.Size = new System.Drawing.Size(902, 706);
-            this.tab_Publisher.TabIndex = 0;
-            // 
-            // tab_Book1
-            // 
-            this.tab_Book1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tab_Book1.Location = new System.Drawing.Point(0, 0);
-            this.tab_Book1.MinimumSize = new System.Drawing.Size(676, 529);
-            this.tab_Book1.Name = "tab_Book1";
-            this.tab_Book1.Size = new System.Drawing.Size(676, 631);
-            this.tab_Book1.TabIndex = 8;
-            // 
-            // tab_SalesReceipt
-            // 
-            this.tab_SalesReceipt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tab_SalesReceipt.Location = new System.Drawing.Point(0, 0);
-            this.tab_SalesReceipt.MinimumSize = new System.Drawing.Size(676, 529);
-            this.tab_SalesReceipt.Name = "tab_SalesReceipt";
-            this.tab_SalesReceipt.Size = new System.Drawing.Size(676, 631);
-            this.tab_SalesReceipt.TabIndex = 7;
-            // 
-            // tab_Authors
-            // 
-            this.tab_Authors.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tab_Authors.Location = new System.Drawing.Point(0, 0);
-            this.tab_Authors.MinimumSize = new System.Drawing.Size(676, 529);
-            this.tab_Authors.Name = "tab_Authors";
-            this.tab_Authors.Size = new System.Drawing.Size(676, 631);
-            this.tab_Authors.TabIndex = 6;
+            this.tab_Suppliers.BackColor = System.Drawing.Color.Gainsboro;
+            this.tab_Suppliers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab_Suppliers.Location = new System.Drawing.Point(0, 0);
+            this.tab_Suppliers.MinimumSize = new System.Drawing.Size(902, 706);
+            this.tab_Suppliers.Name = "tab_Suppliers";
+            this.tab_Suppliers.Size = new System.Drawing.Size(902, 706);
+            this.tab_Suppliers.TabIndex = 9;
             // 
             // tab_Staffs
             // 
@@ -420,57 +381,82 @@
             this.tab_Staffs.Location = new System.Drawing.Point(0, 0);
             this.tab_Staffs.MinimumSize = new System.Drawing.Size(902, 651);
             this.tab_Staffs.Name = "tab_Staffs";
-            this.tab_Staffs.Size = new System.Drawing.Size(902, 651);
-            this.tab_Staffs.TabIndex = 5;
-            // 
-            // tab_Customers
-            // 
-            this.tab_Customers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tab_Customers.Location = new System.Drawing.Point(0, 0);
-            this.tab_Customers.MinimumSize = new System.Drawing.Size(676, 529);
-            this.tab_Customers.Name = "tab_Customers";
-            this.tab_Customers.Size = new System.Drawing.Size(676, 631);
-            this.tab_Customers.TabIndex = 4;
+            this.tab_Staffs.Size = new System.Drawing.Size(902, 706);
+            this.tab_Staffs.TabIndex = 8;
             // 
             // tab_SearchBooks
             // 
             this.tab_SearchBooks.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tab_SearchBooks.Location = new System.Drawing.Point(0, 0);
-            this.tab_SearchBooks.MinimumSize = new System.Drawing.Size(676, 529);
+            this.tab_SearchBooks.MinimumSize = new System.Drawing.Size(902, 651);
             this.tab_SearchBooks.Name = "tab_SearchBooks";
-            this.tab_SearchBooks.Size = new System.Drawing.Size(676, 631);
-            this.tab_SearchBooks.TabIndex = 3;
+            this.tab_SearchBooks.Size = new System.Drawing.Size(902, 706);
+            this.tab_SearchBooks.TabIndex = 7;
+            // 
+            // tab_SalesReceipt
+            // 
+            this.tab_SalesReceipt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab_SalesReceipt.Location = new System.Drawing.Point(0, 0);
+            this.tab_SalesReceipt.MinimumSize = new System.Drawing.Size(902, 651);
+            this.tab_SalesReceipt.Name = "tab_SalesReceipt";
+            this.tab_SalesReceipt.Size = new System.Drawing.Size(902, 706);
+            this.tab_SalesReceipt.TabIndex = 6;
+            // 
+            // tab_Publisher
+            // 
+            this.tab_Publisher.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab_Publisher.Location = new System.Drawing.Point(0, 0);
+            this.tab_Publisher.MinimumSize = new System.Drawing.Size(902, 706);
+            this.tab_Publisher.Name = "tab_Publisher";
+            this.tab_Publisher.Size = new System.Drawing.Size(902, 706);
+            this.tab_Publisher.TabIndex = 5;
             // 
             // tab_ImportReceipt
             // 
             this.tab_ImportReceipt.BackColor = System.Drawing.Color.Gainsboro;
             this.tab_ImportReceipt.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tab_ImportReceipt.Location = new System.Drawing.Point(0, 0);
-            this.tab_ImportReceipt.MinimumSize = new System.Drawing.Size(676, 529);
+            this.tab_ImportReceipt.MinimumSize = new System.Drawing.Size(902, 651);
             this.tab_ImportReceipt.Name = "tab_ImportReceipt";
-            this.tab_ImportReceipt.Size = new System.Drawing.Size(676, 631);
-            this.tab_ImportReceipt.TabIndex = 2;
+            this.tab_ImportReceipt.Size = new System.Drawing.Size(902, 706);
+            this.tab_ImportReceipt.TabIndex = 4;
             // 
-            // tab_Suppliers
+            // tab_Customers
             // 
-            this.tab_Suppliers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tab_Suppliers.BackColor = System.Drawing.Color.Gainsboro;
-            this.tab_Suppliers.Location = new System.Drawing.Point(0, 0);
-            this.tab_Suppliers.Name = "tab_Suppliers";
-            this.tab_Suppliers.Size = new System.Drawing.Size(674, 631);
-            this.tab_Suppliers.TabIndex = 1;
+            this.tab_Customers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab_Customers.Location = new System.Drawing.Point(0, 0);
+            this.tab_Customers.MinimumSize = new System.Drawing.Size(902, 706);
+            this.tab_Customers.Name = "tab_Customers";
+            this.tab_Customers.Size = new System.Drawing.Size(902, 706);
+            this.tab_Customers.TabIndex = 3;
+            // 
+            // tab_Book
+            // 
+            this.tab_Book.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab_Book.Location = new System.Drawing.Point(0, 0);
+            this.tab_Book.MinimumSize = new System.Drawing.Size(902, 651);
+            this.tab_Book.Name = "tab_Book";
+            this.tab_Book.Size = new System.Drawing.Size(902, 706);
+            this.tab_Book.TabIndex = 1;
+            // 
+            // tab_Authors
+            // 
+            this.tab_Authors.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab_Authors.Location = new System.Drawing.Point(0, 0);
+            this.tab_Authors.MinimumSize = new System.Drawing.Size(902, 651);
+            this.tab_Authors.Name = "tab_Authors";
+            this.tab_Authors.Size = new System.Drawing.Size(902, 706);
+            this.tab_Authors.TabIndex = 0;
             // 
             // Form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(1072, 805);
+            this.ClientSize = new System.Drawing.Size(1072, 760);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.MinimumSize = new System.Drawing.Size(1088, 742);
             this.Name = "Form_Main";
             this.Text = "Suppliers";
@@ -497,22 +483,21 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button Button_Main_SignOut;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button Button_Main_Suppliers;
         private System.Windows.Forms.Panel MovePanelForBTN;
         private System.Windows.Forms.Button Button_Main_Customer;
-        private Tab_Suppliers tab_Suppliers;
         private System.Windows.Forms.Button Button_Supplier_AboutUs;
-        private Tab.Tab_ImportReceipt tab_ImportReceipt;
-        private Tab.Tab_SearchBooks tab_SearchBooks;
-        private Tab.Tab_Staffs tab_Staffs;
-        private Tab.Tab_Customers tab_Customers;
-        private Tab.Tab_SalesReceipt tab_SalesReceipt;
-        private Tab.Tab_Authors tab_Authors;
         private System.Windows.Forms.Button Button_Main_Books;
-        private Tab.Tab_Book tab_Book1;
         private System.Windows.Forms.Button Button_Main_Publisher;
+        private System.Windows.Forms.Panel panel1;
+        private Tab.Tab_ImportReceipt tab_ImportReceipt;
+        private Tab.Tab_Customers tab_Customers;
+        private Tab.Tab_Book tab_Book;
+        private Tab.Tab_Authors tab_Authors;
+        private Tab_Suppliers tab_Suppliers;
+        private Tab.Tab_Staffs tab_Staffs;
+        private Tab.Tab_SearchBooks tab_SearchBooks;
+        private Tab.Tab_SalesReceipt tab_SalesReceipt;
         private Tab.Tab_Publisher tab_Publisher;
     }
 }
