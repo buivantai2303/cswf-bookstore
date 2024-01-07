@@ -19,14 +19,14 @@ namespace LibraryManagement_BuiVanTai.Database
         public Database_ImportReceipt() { }
 
 
-        // Declare new connection ====================================================================================
+        // Declare new connection ============================================================================================
         public Database_ImportReceipt(string servername, string databasename)
         {
             database = new Database(servername, databasename);
         }
 
 
-        // Get data from table ImportReceipt =========================================================================
+        // Get data from table ImportReceipt =================================================================================
         public DataTable getTable()
         {
             string sqlCommand = $"SELECT {ClassDefineName.table_ImportReceiptDetails_ImportID}, " +
@@ -45,8 +45,7 @@ namespace LibraryManagement_BuiVanTai.Database
         }
 
 
-
-        // Insert value to SQL =============================================================================
+        // Insert value to SQL ===============================================================================================
         public bool InsertData(Class_ImportReceipt obj, string PublisherName, string staffName)
         {
             string sqlCommand = $"INSERT INTO {ClassDefineName.table_ImportReceipt_TableName} ({ClassDefineName.table_ImportReceipt_ImportID}, {ClassDefineName.table_ImportReceipt_ImportDate}, {ClassDefineName.table_ImportReceipt_PublisherID}, {ClassDefineName.table_ImportReceipt_StaffID})" +
@@ -58,7 +57,7 @@ namespace LibraryManagement_BuiVanTai.Database
         }
 
 
-        // Delete data row by click in action column== =====================================================
+        // Delete data row by click in action column== =======================================================================
         public bool DeletDataByID(string ID)
         {
             string sqlCommand = $"DELETE FROM {ClassDefineName.table_ImportReceipt_TableName} WHERE {ClassDefineName.table_ImportReceiptDetails_ImportID} = '{ID}';" +
@@ -69,14 +68,14 @@ namespace LibraryManagement_BuiVanTai.Database
 
 
 
-        // Searching data by search funtion from user ======================================================
+        // Searching data by search funtion from user ========================================================================
         public DataTable SearchData(string keyWords, string date)
         {
             string sqlCommand = $"SELECT * FROM {ClassDefineName.table_ImportReceipt_TableName} WHERE {ClassDefineName.table_ImportReceipt_ImportID} LIKE '%{keyWords}%' AND {ClassDefineName.table_ImportReceipt_ImportDate} LIKE '%{date}%';";
             return database.GetDataTable(sqlCommand);
         }
 
-        // Get PublisherName to the CBB_ImportReceipt_SupplierName =========================================
+        // Get PublisherName to the CBB_ImportReceipt_SupplierName ===========================================================
         public DataTable GetPublisherName(string PubID)
         {
             string sqlCommand = $"SELECT {ClassDefineName.table_Publishers_PublisherName} FROM {ClassDefineName.table_Publishers_TableName} WHERE {ClassDefineName.table_Publishers_PublisherID} LIKE '%{PubID}%';";
