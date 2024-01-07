@@ -79,18 +79,20 @@
             this.panel2.Controls.Add(this.Button_Main_Authors);
             this.panel2.Controls.Add(this.Button_Main_SeachBooks);
             this.panel2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panel2.Location = new System.Drawing.Point(1, 44);
-            this.panel2.MinimumSize = new System.Drawing.Size(162, 599);
+            this.panel2.Location = new System.Drawing.Point(1, 54);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.MinimumSize = new System.Drawing.Size(216, 737);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(162, 659);
+            this.panel2.Size = new System.Drawing.Size(216, 811);
             this.panel2.TabIndex = 1;
             // 
             // MovePanelForBTN
             // 
             this.MovePanelForBTN.BackColor = System.Drawing.Color.White;
-            this.MovePanelForBTN.Location = new System.Drawing.Point(3, 203);
+            this.MovePanelForBTN.Location = new System.Drawing.Point(4, 250);
+            this.MovePanelForBTN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MovePanelForBTN.Name = "MovePanelForBTN";
-            this.MovePanelForBTN.Size = new System.Drawing.Size(5, 41);
+            this.MovePanelForBTN.Size = new System.Drawing.Size(7, 50);
             this.MovePanelForBTN.TabIndex = 10;
             // 
             // Button_Main_Books
@@ -102,9 +104,10 @@
             this.Button_Main_Books.ForeColor = System.Drawing.Color.White;
             this.Button_Main_Books.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Book1;
             this.Button_Main_Books.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Button_Main_Books.Location = new System.Drawing.Point(3, 250);
+            this.Button_Main_Books.Location = new System.Drawing.Point(4, 308);
+            this.Button_Main_Books.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Button_Main_Books.Name = "Button_Main_Books";
-            this.Button_Main_Books.Size = new System.Drawing.Size(156, 43);
+            this.Button_Main_Books.Size = new System.Drawing.Size(208, 53);
             this.Button_Main_Books.TabIndex = 13;
             this.Button_Main_Books.Text = "  Books";
             this.Button_Main_Books.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -121,9 +124,10 @@
             this.Button_Supplier_AboutUs.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_Supplier_AboutUs.ForeColor = System.Drawing.Color.White;
             this.Button_Supplier_AboutUs.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Info;
-            this.Button_Supplier_AboutUs.Location = new System.Drawing.Point(100, 617);
+            this.Button_Supplier_AboutUs.Location = new System.Drawing.Point(133, 759);
+            this.Button_Supplier_AboutUs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Button_Supplier_AboutUs.Name = "Button_Supplier_AboutUs";
-            this.Button_Supplier_AboutUs.Size = new System.Drawing.Size(32, 32);
+            this.Button_Supplier_AboutUs.Size = new System.Drawing.Size(43, 39);
             this.Button_Supplier_AboutUs.TabIndex = 12;
             this.Button_Supplier_AboutUs.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Button_Supplier_AboutUs.UseVisualStyleBackColor = true;
@@ -137,9 +141,10 @@
             this.Button_Main_Customer.ForeColor = System.Drawing.Color.White;
             this.Button_Main_Customer.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Staff;
             this.Button_Main_Customer.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Button_Main_Customer.Location = new System.Drawing.Point(3, 299);
+            this.Button_Main_Customer.Location = new System.Drawing.Point(4, 368);
+            this.Button_Main_Customer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Button_Main_Customer.Name = "Button_Main_Customer";
-            this.Button_Main_Customer.Size = new System.Drawing.Size(156, 43);
+            this.Button_Main_Customer.Size = new System.Drawing.Size(208, 53);
             this.Button_Main_Customer.TabIndex = 11;
             this.Button_Main_Customer.Text = "  Customer";
             this.Button_Main_Customer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -154,9 +159,10 @@
             this.Button_Main_Suppliers.ForeColor = System.Drawing.Color.White;
             this.Button_Main_Suppliers.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Supplier1;
             this.Button_Main_Suppliers.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Button_Main_Suppliers.Location = new System.Drawing.Point(3, 397);
+            this.Button_Main_Suppliers.Location = new System.Drawing.Point(4, 489);
+            this.Button_Main_Suppliers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Button_Main_Suppliers.Name = "Button_Main_Suppliers";
-            this.Button_Main_Suppliers.Size = new System.Drawing.Size(156, 43);
+            this.Button_Main_Suppliers.Size = new System.Drawing.Size(208, 53);
             this.Button_Main_Suppliers.TabIndex = 9;
             this.Button_Main_Suppliers.Text = "  Suppliers";
             this.Button_Main_Suppliers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -174,9 +180,10 @@
             this.Button_Main_SignOut.ForeColor = System.Drawing.Color.White;
             this.Button_Main_SignOut.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Logout2;
             this.Button_Main_SignOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_Main_SignOut.Location = new System.Drawing.Point(14, 617);
+            this.Button_Main_SignOut.Location = new System.Drawing.Point(19, 759);
+            this.Button_Main_SignOut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Button_Main_SignOut.Name = "Button_Main_SignOut";
-            this.Button_Main_SignOut.Size = new System.Drawing.Size(84, 32);
+            this.Button_Main_SignOut.Size = new System.Drawing.Size(112, 39);
             this.Button_Main_SignOut.TabIndex = 8;
             this.Button_Main_SignOut.Text = "Sign out";
             this.Button_Main_SignOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -186,9 +193,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.User_Icon;
-            this.pictureBox1.Location = new System.Drawing.Point(43, 52);
+            this.pictureBox1.Location = new System.Drawing.Point(57, 64);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(75, 75);
+            this.pictureBox1.Size = new System.Drawing.Size(100, 92);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
@@ -198,9 +206,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(31, 130);
+            this.label2.Location = new System.Drawing.Point(41, 160);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 17);
+            this.label2.Size = new System.Drawing.Size(127, 23);
             this.label2.TabIndex = 6;
             this.label2.Text = "Welcome, user!";
             // 
@@ -213,9 +222,10 @@
             this.Button_Main_ImportReceipt.ForeColor = System.Drawing.Color.White;
             this.Button_Main_ImportReceipt.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Receipt_and_Change;
             this.Button_Main_ImportReceipt.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Button_Main_ImportReceipt.Location = new System.Drawing.Point(3, 495);
+            this.Button_Main_ImportReceipt.Location = new System.Drawing.Point(4, 609);
+            this.Button_Main_ImportReceipt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Button_Main_ImportReceipt.Name = "Button_Main_ImportReceipt";
-            this.Button_Main_ImportReceipt.Size = new System.Drawing.Size(156, 43);
+            this.Button_Main_ImportReceipt.Size = new System.Drawing.Size(208, 53);
             this.Button_Main_ImportReceipt.TabIndex = 5;
             this.Button_Main_ImportReceipt.Text = "  Import Receipt";
             this.Button_Main_ImportReceipt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -231,9 +241,10 @@
             this.Button_Main_SaleReceipt.ForeColor = System.Drawing.Color.White;
             this.Button_Main_SaleReceipt.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Receipt_and_Change;
             this.Button_Main_SaleReceipt.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Button_Main_SaleReceipt.Location = new System.Drawing.Point(3, 446);
+            this.Button_Main_SaleReceipt.Location = new System.Drawing.Point(4, 549);
+            this.Button_Main_SaleReceipt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Button_Main_SaleReceipt.Name = "Button_Main_SaleReceipt";
-            this.Button_Main_SaleReceipt.Size = new System.Drawing.Size(156, 43);
+            this.Button_Main_SaleReceipt.Size = new System.Drawing.Size(208, 53);
             this.Button_Main_SaleReceipt.TabIndex = 3;
             this.Button_Main_SaleReceipt.Text = "  Sales Reciept";
             this.Button_Main_SaleReceipt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -249,9 +260,10 @@
             this.Button_Main_Staff.ForeColor = System.Drawing.Color.White;
             this.Button_Main_Staff.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Staff;
             this.Button_Main_Staff.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Button_Main_Staff.Location = new System.Drawing.Point(3, 544);
+            this.Button_Main_Staff.Location = new System.Drawing.Point(4, 670);
+            this.Button_Main_Staff.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Button_Main_Staff.Name = "Button_Main_Staff";
-            this.Button_Main_Staff.Size = new System.Drawing.Size(156, 43);
+            this.Button_Main_Staff.Size = new System.Drawing.Size(208, 53);
             this.Button_Main_Staff.TabIndex = 2;
             this.Button_Main_Staff.Text = "  Staffs";
             this.Button_Main_Staff.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -267,10 +279,11 @@
             this.Button_Main_Authors.ForeColor = System.Drawing.Color.White;
             this.Button_Main_Authors.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Author;
             this.Button_Main_Authors.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Button_Main_Authors.Location = new System.Drawing.Point(3, 348);
+            this.Button_Main_Authors.Location = new System.Drawing.Point(4, 428);
+            this.Button_Main_Authors.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Button_Main_Authors.Name = "Button_Main_Authors";
             this.Button_Main_Authors.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Button_Main_Authors.Size = new System.Drawing.Size(156, 43);
+            this.Button_Main_Authors.Size = new System.Drawing.Size(208, 53);
             this.Button_Main_Authors.TabIndex = 1;
             this.Button_Main_Authors.Text = "  Authors";
             this.Button_Main_Authors.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -286,9 +299,10 @@
             this.Button_Main_SeachBooks.ForeColor = System.Drawing.Color.White;
             this.Button_Main_SeachBooks.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Search_2;
             this.Button_Main_SeachBooks.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Button_Main_SeachBooks.Location = new System.Drawing.Point(3, 201);
+            this.Button_Main_SeachBooks.Location = new System.Drawing.Point(4, 247);
+            this.Button_Main_SeachBooks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Button_Main_SeachBooks.Name = "Button_Main_SeachBooks";
-            this.Button_Main_SeachBooks.Size = new System.Drawing.Size(156, 43);
+            this.Button_Main_SeachBooks.Size = new System.Drawing.Size(208, 53);
             this.Button_Main_SeachBooks.TabIndex = 0;
             this.Button_Main_SeachBooks.Text = "  Search Books";
             this.Button_Main_SeachBooks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -299,9 +313,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(10, 11);
+            this.label1.Location = new System.Drawing.Point(13, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(258, 21);
+            this.label1.Size = new System.Drawing.Size(321, 28);
             this.label1.TabIndex = 2;
             this.label1.Text = "Book Store Management System";
             // 
@@ -313,16 +328,18 @@
             this.panel4.Controls.Add(this.label1);
             this.panel4.ForeColor = System.Drawing.SystemColors.Control;
             this.panel4.Location = new System.Drawing.Point(1, 1);
-            this.panel4.MinimumSize = new System.Drawing.Size(1030, 45);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.MinimumSize = new System.Drawing.Size(1373, 55);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1070, 45);
+            this.panel4.Size = new System.Drawing.Size(1427, 55);
             this.panel4.TabIndex = 3;
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(-157, -34);
+            this.panel3.Location = new System.Drawing.Point(-209, -42);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(438, 28);
+            this.panel3.Size = new System.Drawing.Size(584, 34);
             this.panel3.TabIndex = 0;
             // 
             // panel1
@@ -340,70 +357,71 @@
             this.panel1.Controls.Add(this.tab_ImportReceipt);
             this.panel1.Controls.Add(this.tab_Suppliers);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Location = new System.Drawing.Point(169, 52);
-            this.panel1.MinimumSize = new System.Drawing.Size(902, 651);
+            this.panel1.Location = new System.Drawing.Point(225, 64);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.MinimumSize = new System.Drawing.Size(1203, 801);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(902, 651);
+            this.panel1.Size = new System.Drawing.Size(1203, 801);
             this.panel1.TabIndex = 0;
             // 
             // tab_Book1
             // 
             this.tab_Book1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tab_Book1.Location = new System.Drawing.Point(0, 0);
-            this.tab_Book1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tab_Book1.MinimumSize = new System.Drawing.Size(902, 651);
+            this.tab_Book1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tab_Book1.MinimumSize = new System.Drawing.Size(1203, 801);
             this.tab_Book1.Name = "tab_Book1";
-            this.tab_Book1.Size = new System.Drawing.Size(902, 651);
+            this.tab_Book1.Size = new System.Drawing.Size(1203, 801);
             this.tab_Book1.TabIndex = 8;
             // 
             // tab_SalesReceipt
             // 
             this.tab_SalesReceipt.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tab_SalesReceipt.Location = new System.Drawing.Point(0, 0);
-            this.tab_SalesReceipt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tab_SalesReceipt.MinimumSize = new System.Drawing.Size(902, 651);
+            this.tab_SalesReceipt.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tab_SalesReceipt.MinimumSize = new System.Drawing.Size(1203, 801);
             this.tab_SalesReceipt.Name = "tab_SalesReceipt";
-            this.tab_SalesReceipt.Size = new System.Drawing.Size(902, 651);
+            this.tab_SalesReceipt.Size = new System.Drawing.Size(1203, 801);
             this.tab_SalesReceipt.TabIndex = 7;
             // 
             // tab_Authors
             // 
             this.tab_Authors.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tab_Authors.Location = new System.Drawing.Point(0, 0);
-            this.tab_Authors.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tab_Authors.MinimumSize = new System.Drawing.Size(902, 651);
+            this.tab_Authors.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tab_Authors.MinimumSize = new System.Drawing.Size(1203, 801);
             this.tab_Authors.Name = "tab_Authors";
-            this.tab_Authors.Size = new System.Drawing.Size(902, 651);
+            this.tab_Authors.Size = new System.Drawing.Size(1203, 801);
             this.tab_Authors.TabIndex = 6;
             // 
             // tab_Staffs
             // 
             this.tab_Staffs.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tab_Staffs.Location = new System.Drawing.Point(0, 0);
-            this.tab_Staffs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tab_Staffs.MinimumSize = new System.Drawing.Size(1203, 801);
+            this.tab_Staffs.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tab_Staffs.MinimumSize = new System.Drawing.Size(1604, 986);
             this.tab_Staffs.Name = "tab_Staffs";
-            this.tab_Staffs.Size = new System.Drawing.Size(1203, 801);
+            this.tab_Staffs.Size = new System.Drawing.Size(1604, 986);
             this.tab_Staffs.TabIndex = 5;
             // 
             // tab_Customers
             // 
             this.tab_Customers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tab_Customers.Location = new System.Drawing.Point(0, 0);
-            this.tab_Customers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tab_Customers.MinimumSize = new System.Drawing.Size(902, 651);
+            this.tab_Customers.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tab_Customers.MinimumSize = new System.Drawing.Size(1203, 801);
             this.tab_Customers.Name = "tab_Customers";
-            this.tab_Customers.Size = new System.Drawing.Size(902, 651);
+            this.tab_Customers.Size = new System.Drawing.Size(1203, 801);
             this.tab_Customers.TabIndex = 4;
             // 
             // tab_SearchBooks
             // 
             this.tab_SearchBooks.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tab_SearchBooks.Location = new System.Drawing.Point(0, 0);
-            this.tab_SearchBooks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tab_SearchBooks.MinimumSize = new System.Drawing.Size(902, 651);
+            this.tab_SearchBooks.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tab_SearchBooks.MinimumSize = new System.Drawing.Size(1203, 801);
             this.tab_SearchBooks.Name = "tab_SearchBooks";
-            this.tab_SearchBooks.Size = new System.Drawing.Size(902, 651);
+            this.tab_SearchBooks.Size = new System.Drawing.Size(1203, 801);
             this.tab_SearchBooks.TabIndex = 3;
             // 
             // tab_ImportReceipt
@@ -411,10 +429,10 @@
             this.tab_ImportReceipt.BackColor = System.Drawing.Color.Gainsboro;
             this.tab_ImportReceipt.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tab_ImportReceipt.Location = new System.Drawing.Point(0, 0);
-            this.tab_ImportReceipt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tab_ImportReceipt.MinimumSize = new System.Drawing.Size(902, 651);
+            this.tab_ImportReceipt.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tab_ImportReceipt.MinimumSize = new System.Drawing.Size(1203, 801);
             this.tab_ImportReceipt.Name = "tab_ImportReceipt";
-            this.tab_ImportReceipt.Size = new System.Drawing.Size(902, 651);
+            this.tab_ImportReceipt.Size = new System.Drawing.Size(1203, 801);
             this.tab_ImportReceipt.TabIndex = 2;
             // 
             // tab_Suppliers
@@ -424,21 +442,22 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tab_Suppliers.BackColor = System.Drawing.Color.Gainsboro;
             this.tab_Suppliers.Location = new System.Drawing.Point(0, 0);
-            this.tab_Suppliers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tab_Suppliers.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.tab_Suppliers.Name = "tab_Suppliers";
-            this.tab_Suppliers.Size = new System.Drawing.Size(899, 651);
+            this.tab_Suppliers.Size = new System.Drawing.Size(1199, 801);
             this.tab_Suppliers.TabIndex = 1;
             // 
             // Form_Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(1073, 705);
+            this.ClientSize = new System.Drawing.Size(1431, 868);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.MinimumSize = new System.Drawing.Size(1088, 743);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(1445, 904);
             this.Name = "Form_Main";
             this.Text = "Suppliers";
             this.Load += new System.EventHandler(this.Form_Main_Load);

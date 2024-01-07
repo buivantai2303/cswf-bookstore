@@ -50,6 +50,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.TB_StaffName = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.CBB_StaffID = new System.Windows.Forms.ComboBox();
+            this.TB_CustomerName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.CBB_CustomerID = new System.Windows.Forms.ComboBox();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -64,10 +68,6 @@
             this.BTN_SeachBook_Pay = new System.Windows.Forms.Button();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.TB_CustomerName = new System.Windows.Forms.TextBox();
-            this.TB_StaffName = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.CBB_StaffID = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PTB_Suppliers_Menu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -278,6 +278,7 @@
             this.TB_SearchBook_Search.Name = "TB_SearchBook_Search";
             this.TB_SearchBook_Search.Size = new System.Drawing.Size(556, 22);
             this.TB_SearchBook_Search.TabIndex = 0;
+            this.TB_SearchBook_Search.TextChanged += new System.EventHandler(this.TB_SearchBook_Search_TextChanged);
             // 
             // panel2
             // 
@@ -324,8 +325,58 @@
             this.panel3.Size = new System.Drawing.Size(617, 742);
             this.panel3.TabIndex = 0;
             // 
+            // TB_StaffName
+            // 
+            this.TB_StaffName.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.TB_StaffName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TB_StaffName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_StaffName.Location = new System.Drawing.Point(340, 506);
+            this.TB_StaffName.Margin = new System.Windows.Forms.Padding(4);
+            this.TB_StaffName.Name = "TB_StaffName";
+            this.TB_StaffName.ReadOnly = true;
+            this.TB_StaffName.Size = new System.Drawing.Size(231, 27);
+            this.TB_StaffName.TabIndex = 38;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label5.Location = new System.Drawing.Point(17, 508);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(73, 23);
+            this.label5.TabIndex = 37;
+            this.label5.Text = "StaffID:";
+            // 
+            // CBB_StaffID
+            // 
+            this.CBB_StaffID.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.CBB_StaffID.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CBB_StaffID.FormattingEnabled = true;
+            this.CBB_StaffID.Location = new System.Drawing.Point(134, 504);
+            this.CBB_StaffID.Name = "CBB_StaffID";
+            this.CBB_StaffID.Size = new System.Drawing.Size(199, 31);
+            this.CBB_StaffID.TabIndex = 36;
+            this.CBB_StaffID.SelectedIndexChanged += new System.EventHandler(this.CBB_StaffID_SelectedIndexChanged);
+            // 
+            // TB_CustomerName
+            // 
+            this.TB_CustomerName.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.TB_CustomerName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TB_CustomerName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_CustomerName.Location = new System.Drawing.Point(340, 449);
+            this.TB_CustomerName.Margin = new System.Windows.Forms.Padding(4);
+            this.TB_CustomerName.Name = "TB_CustomerName";
+            this.TB_CustomerName.ReadOnly = true;
+            this.TB_CustomerName.Size = new System.Drawing.Size(231, 27);
+            this.TB_CustomerName.TabIndex = 35;
+            this.TB_CustomerName.TextChanged += new System.EventHandler(this.TB_CustomerName_TextChanged);
+            // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -338,6 +389,7 @@
             // 
             // CBB_CustomerID
             // 
+            this.CBB_CustomerID.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.CBB_CustomerID.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CBB_CustomerID.FormattingEnabled = true;
             this.CBB_CustomerID.Location = new System.Drawing.Point(134, 447);
@@ -447,6 +499,8 @@
             this.DGV_SearchBook_Right.ShowRowErrors = false;
             this.DGV_SearchBook_Right.Size = new System.Drawing.Size(612, 391);
             this.DGV_SearchBook_Right.TabIndex = 30;
+            this.DGV_SearchBook_Right.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_SearchBook_Right_CellValueChanged);
+            this.DGV_SearchBook_Right.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.DGV_SearchBook_Right_RowsAdded);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -531,50 +585,6 @@
             this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
             this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewImageColumn2.Width = 65;
-            // 
-            // TB_CustomerName
-            // 
-            this.TB_CustomerName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TB_CustomerName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TB_CustomerName.Location = new System.Drawing.Point(340, 449);
-            this.TB_CustomerName.Margin = new System.Windows.Forms.Padding(4);
-            this.TB_CustomerName.Name = "TB_CustomerName";
-            this.TB_CustomerName.ReadOnly = true;
-            this.TB_CustomerName.Size = new System.Drawing.Size(231, 27);
-            this.TB_CustomerName.TabIndex = 35;
-            // 
-            // TB_StaffName
-            // 
-            this.TB_StaffName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TB_StaffName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TB_StaffName.Location = new System.Drawing.Point(340, 506);
-            this.TB_StaffName.Margin = new System.Windows.Forms.Padding(4);
-            this.TB_StaffName.Name = "TB_StaffName";
-            this.TB_StaffName.ReadOnly = true;
-            this.TB_StaffName.Size = new System.Drawing.Size(231, 27);
-            this.TB_StaffName.TabIndex = 38;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(17, 508);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 23);
-            this.label5.TabIndex = 37;
-            this.label5.Text = "StaffID:";
-            // 
-            // CBB_StaffID
-            // 
-            this.CBB_StaffID.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CBB_StaffID.FormattingEnabled = true;
-            this.CBB_StaffID.Location = new System.Drawing.Point(134, 504);
-            this.CBB_StaffID.Name = "CBB_StaffID";
-            this.CBB_StaffID.Size = new System.Drawing.Size(199, 31);
-            this.CBB_StaffID.TabIndex = 36;
-            this.CBB_StaffID.SelectedIndexChanged += new System.EventHandler(this.CBB_StaffID_SelectedIndexChanged);
             // 
             // Tab_SearchBooks
             // 

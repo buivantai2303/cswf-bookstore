@@ -175,15 +175,20 @@ namespace LibraryManagement_BuiVanTai.Tab
             }
         }
 
-        public int CountTotal(int[]BookAmount, int[]Price)
+        public int CountTotal(int[] BookAmount, int[] Price, int i = 0, int sum = 0)
         {
-
-            return 0;
+            if (i == BookAmount.Length)
+            {
+                return sum;
+            }
+            sum += BookAmount[i] * Price[i];
+            i++;
+            return CountTotal(BookAmount, Price, i, sum);
         }
 
         private void CBB_CustomerID_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DataTable dtCustomer = database_Book.getCustomTable("SELECT PublisherID, PublisherName FROM Publishers");
+            DataTable dtCustomer = database_Book.getCustomTable("SELECT CustomerID, FirstName FROM Customers");
 
             foreach (DataRow dr in dtCustomer.Rows)
             {
@@ -197,6 +202,7 @@ namespace LibraryManagement_BuiVanTai.Tab
         private void BTN_SeachBook_Reset_Click(object sender, EventArgs e)
         {
             DGV_SearchBook_Right.Rows.Clear();
+            LB_SearchBook_Total.Text = "Total:    0";
         }
 
         private void CBB_StaffID_SelectedIndexChanged(object sender, EventArgs e)
@@ -210,6 +216,48 @@ namespace LibraryManagement_BuiVanTai.Tab
                     TB_StaffName.Text = dr[1].ToString();
                 }
             }
+        }
+
+        private void TB_CustomerName_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void DGV_SearchBook_Right_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            int[] price = new int[DGV_SearchBook_Right.Rows.Count];
+            for (int i = 0; i < price.Length; i++)
+            {
+                price[i] = Int32.Parse(DGV_SearchBook_Right.Rows[i].Cells[3].Value.ToString());
+            }
+            int[] amount = new int[DGV_SearchBook_Right.Rows.Count];
+            for (int i = 0; i < price.Length; i++)
+            {
+                amount[i] = Int32.Parse(DGV_SearchBook_Right.Rows[i].Cells[4].Value.ToString());
+            }
+            LB_SearchBook_Total.Text = "Total:    " + CountTotal(price, amount).ToString();
+        }
+
+        private void DGV_SearchBook_Right_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            int[] price = new int[DGV_SearchBook_Right.Rows.Count];
+            for (int i = 0; i < price.Length; i++)
+            {
+                price[i] = Int32.Parse(DGV_SearchBook_Right.Rows[i].Cells[3].Value.ToString());
+            }
+            int[] amount = new int[DGV_SearchBook_Right.Rows.Count];
+            for (int i = 0; i < price.Length; i++)
+            {
+                amount[i] = Int32.Parse(DGV_SearchBook_Right.Rows[i].Cells[4].Value.ToString());
+            }
+            LB_SearchBook_Total.Text = "Total:    " + CountTotal(price, amount).ToString();
+        }
+
+        private void TB_SearchBook_Search_TextChanged(object sender, EventArgs e)
+        {
+            DataTable dt2 = new DataTable();
+            dt2 = database_SaleReceipts.searchLeftData(TB_SearchBook_Search.Text);
+            DGV_SearchBook_Left.DataSource = dt2;
         }
     }
 }

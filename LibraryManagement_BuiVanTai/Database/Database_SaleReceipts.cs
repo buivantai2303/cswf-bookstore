@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
+using System.Windows.Forms;
 
 namespace LibraryManagement_BuiVanTai.Database
 {
@@ -45,10 +47,17 @@ namespace LibraryManagement_BuiVanTai.Database
             return db.ExecuteSQL(query);
         }
 
-        public DataTable searchData(string keyword)
+/*        public DataTable searchData(string keyword)
         {
             dt = db.ExecuteSQLReturnTable("SELECT * FROM SaleReceipts WHERE ReceiptID like '%" + keyword + "%'");
             return dt;
+        }*/
+
+        public DataTable searchLeftData(string keyword)
+        {
+            DataTable dt2 = new DataTable();
+            dt2 = db.ExecuteSQLReturnTable("SELECT BookID, BookName, BookType, Remaining, Price FROM Books WHERE BookName like '%" + keyword + "%'");
+            return dt2;
         }
     }
 }
