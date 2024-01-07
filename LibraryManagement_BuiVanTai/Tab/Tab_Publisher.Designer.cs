@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.PTB_Suppliers_Menu = new System.Windows.Forms.PictureBox();
@@ -127,6 +127,7 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.Label_Publisher_Total);
             this.panel2.Controls.Add(this.Label_Publisher_TotalNumbers);
             this.panel2.Controls.Add(this.pictureBox1);
@@ -178,8 +179,6 @@
             this.panel4.Controls.Add(this.CBB_Publisher_StateSearch);
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.DGV_Publisher);
-            this.panel4.Controls.Add(this.BTN_Publisher_Save);
-            this.panel4.Controls.Add(this.BTN_Publisher_Add);
             this.panel4.Controls.Add(this.BTN_Publisher_Refresh);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.TB_Publisher_Search);
@@ -217,12 +216,14 @@
             // 
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel5.BackColor = System.Drawing.Color.NavajoWhite;
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(234)))), ((int)(((byte)(242)))));
             this.panel5.Controls.Add(this.LB_Note);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.CBB_Publisher_StateEdit);
             this.panel5.Controls.Add(this.TB_Publisher_Address);
+            this.panel5.Controls.Add(this.BTN_Publisher_Save);
             this.panel5.Controls.Add(this.label15);
+            this.panel5.Controls.Add(this.BTN_Publisher_Add);
             this.panel5.Controls.Add(this.TB_Publisher_Tel);
             this.panel5.Controls.Add(this.label14);
             this.panel5.Controls.Add(this.TB_Publisher_Name);
@@ -230,7 +231,7 @@
             this.panel5.Controls.Add(this.TB_Publisher_ID);
             this.panel5.Controls.Add(this.label11);
             this.panel5.Controls.Add(this.label3);
-            this.panel5.ForeColor = System.Drawing.Color.Red;
+            this.panel5.ForeColor = System.Drawing.Color.Black;
             this.panel5.Location = new System.Drawing.Point(635, 78);
             this.panel5.MinimumSize = new System.Drawing.Size(261, 442);
             this.panel5.Name = "panel5";
@@ -242,7 +243,7 @@
             this.LB_Note.AutoSize = true;
             this.LB_Note.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_Note.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.LB_Note.Location = new System.Drawing.Point(5, 413);
+            this.LB_Note.Location = new System.Drawing.Point(5, 348);
             this.LB_Note.Name = "LB_Note";
             this.LB_Note.Size = new System.Drawing.Size(12, 17);
             this.LB_Note.TabIndex = 30;
@@ -269,7 +270,7 @@
             "All"});
             this.CBB_Publisher_StateEdit.Location = new System.Drawing.Point(8, 307);
             this.CBB_Publisher_StateEdit.Name = "CBB_Publisher_StateEdit";
-            this.CBB_Publisher_StateEdit.Size = new System.Drawing.Size(176, 25);
+            this.CBB_Publisher_StateEdit.Size = new System.Drawing.Size(230, 25);
             this.CBB_Publisher_StateEdit.TabIndex = 54;
             this.CBB_Publisher_StateEdit.SelectedIndexChanged += new System.EventHandler(this.CBB_Publisher_StateEdit_SelectedIndexChanged);
             // 
@@ -283,7 +284,7 @@
             this.TB_Publisher_Address.Location = new System.Drawing.Point(8, 249);
             this.TB_Publisher_Address.MinimumSize = new System.Drawing.Size(168, 25);
             this.TB_Publisher_Address.Name = "TB_Publisher_Address";
-            this.TB_Publisher_Address.Size = new System.Drawing.Size(176, 25);
+            this.TB_Publisher_Address.Size = new System.Drawing.Size(230, 25);
             this.TB_Publisher_Address.TabIndex = 53;
             this.TB_Publisher_Address.TextChanged += new System.EventHandler(this.TB_Publisher_Address_TextChanged);
             // 
@@ -308,7 +309,7 @@
             this.TB_Publisher_Tel.Location = new System.Drawing.Point(8, 188);
             this.TB_Publisher_Tel.MinimumSize = new System.Drawing.Size(168, 25);
             this.TB_Publisher_Tel.Name = "TB_Publisher_Tel";
-            this.TB_Publisher_Tel.Size = new System.Drawing.Size(176, 25);
+            this.TB_Publisher_Tel.Size = new System.Drawing.Size(230, 25);
             this.TB_Publisher_Tel.TabIndex = 51;
             this.TB_Publisher_Tel.TextChanged += new System.EventHandler(this.TB_Publisher_Tel_TextChanged);
             // 
@@ -333,7 +334,7 @@
             this.TB_Publisher_Name.Location = new System.Drawing.Point(8, 130);
             this.TB_Publisher_Name.MinimumSize = new System.Drawing.Size(168, 25);
             this.TB_Publisher_Name.Name = "TB_Publisher_Name";
-            this.TB_Publisher_Name.Size = new System.Drawing.Size(176, 25);
+            this.TB_Publisher_Name.Size = new System.Drawing.Size(230, 25);
             this.TB_Publisher_Name.TabIndex = 49;
             this.TB_Publisher_Name.TextChanged += new System.EventHandler(this.TB_Publisher_LastName_TextChanged);
             // 
@@ -359,7 +360,7 @@
             this.TB_Publisher_ID.Location = new System.Drawing.Point(8, 69);
             this.TB_Publisher_ID.MinimumSize = new System.Drawing.Size(168, 25);
             this.TB_Publisher_ID.Name = "TB_Publisher_ID";
-            this.TB_Publisher_ID.Size = new System.Drawing.Size(176, 25);
+            this.TB_Publisher_ID.Size = new System.Drawing.Size(230, 25);
             this.TB_Publisher_ID.TabIndex = 45;
             this.TB_Publisher_ID.TextChanged += new System.EventHandler(this.TB_Publisher_ID_TextChanged);
             // 
@@ -398,14 +399,14 @@
             this.DGV_Publisher.BackgroundColor = System.Drawing.Color.White;
             this.DGV_Publisher.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DGV_Publisher.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_Publisher.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_Publisher.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.DGV_Publisher.ColumnHeadersHeight = 29;
             this.DGV_Publisher.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DGV_Publisher.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -415,27 +416,27 @@
             this.PublisherTel,
             this.PublisherState,
             this.ActionColumn});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(151)))), ((int)(((byte)(196)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGV_Publisher.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(151)))), ((int)(((byte)(196)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGV_Publisher.DefaultCellStyle = dataGridViewCellStyle5;
             this.DGV_Publisher.EnableHeadersVisualStyles = false;
             this.DGV_Publisher.Location = new System.Drawing.Point(3, 78);
             this.DGV_Publisher.MultiSelect = false;
             this.DGV_Publisher.Name = "DGV_Publisher";
             this.DGV_Publisher.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_Publisher.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_Publisher.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.DGV_Publisher.RowHeadersWidth = 51;
             this.DGV_Publisher.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.DGV_Publisher.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -506,7 +507,7 @@
             this.BTN_Publisher_Save.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Publisher_Save.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Save2;
             this.BTN_Publisher_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_Publisher_Save.Location = new System.Drawing.Point(758, 37);
+            this.BTN_Publisher_Save.Location = new System.Drawing.Point(105, 378);
             this.BTN_Publisher_Save.Name = "BTN_Publisher_Save";
             this.BTN_Publisher_Save.Size = new System.Drawing.Size(87, 35);
             this.BTN_Publisher_Save.TabIndex = 17;
@@ -521,7 +522,7 @@
             this.BTN_Publisher_Add.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Publisher_Add.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Add;
             this.BTN_Publisher_Add.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_Publisher_Add.Location = new System.Drawing.Point(661, 37);
+            this.BTN_Publisher_Add.Location = new System.Drawing.Point(8, 378);
             this.BTN_Publisher_Add.Name = "BTN_Publisher_Add";
             this.BTN_Publisher_Add.Size = new System.Drawing.Size(91, 35);
             this.BTN_Publisher_Add.TabIndex = 18;

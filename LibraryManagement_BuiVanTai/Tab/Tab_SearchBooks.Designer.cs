@@ -204,7 +204,7 @@
             this.DGV_SearchBook_Left.ShowCellToolTips = false;
             this.DGV_SearchBook_Left.ShowEditingIcon = false;
             this.DGV_SearchBook_Left.ShowRowErrors = false;
-            this.DGV_SearchBook_Left.Size = new System.Drawing.Size(433, 443);
+            this.DGV_SearchBook_Left.Size = new System.Drawing.Size(433, 388);
             this.DGV_SearchBook_Left.TabIndex = 25;
             this.DGV_SearchBook_Left.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_SearchBook_Left_CellClick);
             this.DGV_SearchBook_Left.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_SearchBook_Left_CellClick);

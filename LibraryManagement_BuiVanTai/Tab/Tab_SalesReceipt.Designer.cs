@@ -119,7 +119,7 @@
             this.Panel_ImportReceipt_Right.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Panel_ImportReceipt_Right.BackColor = System.Drawing.Color.White;
+            this.Panel_ImportReceipt_Right.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(234)))), ((int)(((byte)(242)))));
             this.Panel_ImportReceipt_Right.Controls.Add(this.DGV_SaleReceipt_Left);
             this.Panel_ImportReceipt_Right.Controls.Add(this.panel2);
             this.Panel_ImportReceipt_Right.Controls.Add(this.label8);
