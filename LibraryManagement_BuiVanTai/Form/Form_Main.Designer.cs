@@ -85,7 +85,7 @@
             this.panel2.Location = new System.Drawing.Point(1, 44);
             this.panel2.MinimumSize = new System.Drawing.Size(162, 599);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(162, 599);
+            this.panel2.Size = new System.Drawing.Size(162, 701);
             this.panel2.TabIndex = 1;
             // 
             // MovePanelForBTN
@@ -143,7 +143,7 @@
             this.Button_Supplier_AboutUs.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_Supplier_AboutUs.ForeColor = System.Drawing.Color.White;
             this.Button_Supplier_AboutUs.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Info;
-            this.Button_Supplier_AboutUs.Location = new System.Drawing.Point(75, 501);
+            this.Button_Supplier_AboutUs.Location = new System.Drawing.Point(75, 603);
             this.Button_Supplier_AboutUs.Margin = new System.Windows.Forms.Padding(2);
             this.Button_Supplier_AboutUs.Name = "Button_Supplier_AboutUs";
             this.Button_Supplier_AboutUs.Size = new System.Drawing.Size(32, 32);
@@ -197,7 +197,7 @@
             this.Button_Main_SignOut.ForeColor = System.Drawing.Color.White;
             this.Button_Main_SignOut.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Logout2;
             this.Button_Main_SignOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_Main_SignOut.Location = new System.Drawing.Point(10, 501);
+            this.Button_Main_SignOut.Location = new System.Drawing.Point(10, 603);
             this.Button_Main_SignOut.Margin = new System.Windows.Forms.Padding(2);
             this.Button_Main_SignOut.Name = "Button_Main_SignOut";
             this.Button_Main_SignOut.Size = new System.Drawing.Size(84, 32);
@@ -376,7 +376,7 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.MinimumSize = new System.Drawing.Size(676, 529);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(676, 529);
+            this.panel1.Size = new System.Drawing.Size(676, 631);
             this.panel1.TabIndex = 0;
             // 
             // tab_Publisher
@@ -393,7 +393,7 @@
             this.tab_Book1.Location = new System.Drawing.Point(0, 0);
             this.tab_Book1.MinimumSize = new System.Drawing.Size(676, 529);
             this.tab_Book1.Name = "tab_Book1";
-            this.tab_Book1.Size = new System.Drawing.Size(676, 529);
+            this.tab_Book1.Size = new System.Drawing.Size(676, 631);
             this.tab_Book1.TabIndex = 8;
             // 
             // tab_SalesReceipt
@@ -402,7 +402,7 @@
             this.tab_SalesReceipt.Location = new System.Drawing.Point(0, 0);
             this.tab_SalesReceipt.MinimumSize = new System.Drawing.Size(676, 529);
             this.tab_SalesReceipt.Name = "tab_SalesReceipt";
-            this.tab_SalesReceipt.Size = new System.Drawing.Size(676, 529);
+            this.tab_SalesReceipt.Size = new System.Drawing.Size(676, 631);
             this.tab_SalesReceipt.TabIndex = 7;
             // 
             // tab_Authors
@@ -411,7 +411,7 @@
             this.tab_Authors.Location = new System.Drawing.Point(0, 0);
             this.tab_Authors.MinimumSize = new System.Drawing.Size(676, 529);
             this.tab_Authors.Name = "tab_Authors";
-            this.tab_Authors.Size = new System.Drawing.Size(676, 529);
+            this.tab_Authors.Size = new System.Drawing.Size(676, 631);
             this.tab_Authors.TabIndex = 6;
             // 
             // tab_Staffs
@@ -429,7 +429,7 @@
             this.tab_Customers.Location = new System.Drawing.Point(0, 0);
             this.tab_Customers.MinimumSize = new System.Drawing.Size(676, 529);
             this.tab_Customers.Name = "tab_Customers";
-            this.tab_Customers.Size = new System.Drawing.Size(676, 529);
+            this.tab_Customers.Size = new System.Drawing.Size(676, 631);
             this.tab_Customers.TabIndex = 4;
             // 
             // tab_SearchBooks
@@ -438,7 +438,7 @@
             this.tab_SearchBooks.Location = new System.Drawing.Point(0, 0);
             this.tab_SearchBooks.MinimumSize = new System.Drawing.Size(676, 529);
             this.tab_SearchBooks.Name = "tab_SearchBooks";
-            this.tab_SearchBooks.Size = new System.Drawing.Size(676, 529);
+            this.tab_SearchBooks.Size = new System.Drawing.Size(676, 631);
             this.tab_SearchBooks.TabIndex = 3;
             // 
             // tab_ImportReceipt
@@ -448,7 +448,7 @@
             this.tab_ImportReceipt.Location = new System.Drawing.Point(0, 0);
             this.tab_ImportReceipt.MinimumSize = new System.Drawing.Size(676, 529);
             this.tab_ImportReceipt.Name = "tab_ImportReceipt";
-            this.tab_ImportReceipt.Size = new System.Drawing.Size(676, 529);
+            this.tab_ImportReceipt.Size = new System.Drawing.Size(676, 631);
             this.tab_ImportReceipt.TabIndex = 2;
             // 
             // tab_Suppliers
@@ -459,7 +459,7 @@
             this.tab_Suppliers.BackColor = System.Drawing.Color.Gainsboro;
             this.tab_Suppliers.Location = new System.Drawing.Point(0, 0);
             this.tab_Suppliers.Name = "tab_Suppliers";
-            this.tab_Suppliers.Size = new System.Drawing.Size(674, 529);
+            this.tab_Suppliers.Size = new System.Drawing.Size(674, 631);
             this.tab_Suppliers.TabIndex = 1;
             // 
             // Form_Main
@@ -467,7 +467,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(1072, 703);
+            this.ClientSize = new System.Drawing.Size(1072, 805);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

@@ -161,9 +161,11 @@ namespace LibraryManagement_BuiVanTai.Tab
                     LB_Note.Text = "Duplicate publisher found. Please check the Publisher ID";
                     return;
                 }
-                else if (DB_Publisher.IsDuplicatePublisherTel(TB_))
+                else if (DB_Publisher.IsDuplicatePublisherTel(TB_Publisher_Tel.Text) > 0)
                 {
-
+                    LB_Note.ForeColor = Color.Red;
+                    LB_Note.Text = "Duplicate publisher found. Please check the telephone";
+                    return;
                 }
                 else
                 {
