@@ -18,7 +18,8 @@ namespace LibraryManagement_BuiVanTai.Tab
         private void Tab_Customers_Load(object sender, EventArgs e)
         {
             GridViewFormLoad(ClassDefineName.servername, ClassDefineName.database_name);
-        }
+/*            splitContainer1.IsSplitterFixed = true;
+*/        }
 
         public void GridViewFormLoad(string SererName, string DatabaseName)
         {
