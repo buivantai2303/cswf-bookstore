@@ -10,45 +10,83 @@ namespace LibraryManagement_BuiVanTai.Database
 {
     public class Database_Publisher
     {
-        Database db;
-        DataTable dt;
+        Database database;
+        DataTable dataTable;
 
         public Database_Publisher(string servername, string databasename)
         {
-            db = new Database(servername, databasename);
+            database = new Database(servername, databasename);
         }
 
         public DataTable getTable()
         {
-            dt = new DataTable();
-            dt = db.getTable("Publishers");
-            return dt;
+            dataTable = new DataTable();
+            dataTable = database.getTable("Publishers");
+            return dataTable;
         }
+
+        //  Get data rows active suppliers ================================================================
+        public DataTable getActiveTable()
+        {
+            dataTable = new DataTable();
+            dataTable = database.getTableByState(ClassDefineName.table_Publishers_TableName,
+                ClassDefineName.table_Publishers_PublisherState, "Active");
+            return dataTable;
+        }
+
+
+        // Get data rows Inactive suppliers ===============================================================
+        public DataTable getInActiveTable()
+        {
+            dataTable = new DataTable();
+            dataTable = database.getTableByState(ClassDefineName.table_Publishers_TableName,
+                ClassDefineName.table_Publishers_PublisherState, "Inactive");
+            return dataTable;
+        }
+
 
         public bool InsertData(Class_Publisher pub)
         {
             string query = "INSERT INTO Publishers VALUES (\'" + pub.PublisherId +"\'," + "\'" + pub.PublisherName +"\'," + "\'" + pub.PublisherAddress +"\'," + "\'" + pub.PublisherTel +"\'," + "\'" + pub.PublisherState +"\')";
-            return db.ExecuteSQL(query);
+            return database.ExecuteSQL(query);
         }
 
-        public bool UpdateDate(Class_Publisher pub)
+        public bool UpdatePub(Class_Publisher pub)
         {
             string query = "UPDATE Publishers " +
             "Set PublisherName = " + "\'" + pub.PublisherName +"\'," + "PublisherAddress = " + "\'" + pub.PublisherAddress +"\'," + "PublisherTel = " + "\'" + pub.PublisherTel +"\'," + "PublisherState = " + "\'" + pub.PublisherState +"\',"
             + "WHERE PublisherID = \'" + pub.PublisherId +"\'";
-            return db.ExecuteSQL(query);
+            return database.ExecuteSQL(query);
         }
 
-        public bool DeleteDate(Class_Publisher pub)
+        public bool DeletePubByID(Class_Publisher pub)
         {
             string query = "DELETE FROM Publishers WHERE PublisherID = \'" + pub.PublisherId +"\'";
-            return db.ExecuteSQL(query);
+            return database.ExecuteSQL(query);
         }
 
-/*        public string toID(string name)
+        public DataTable getCustomTable(string command)
         {
-            
-            return pub.PublisherId;
-        }*/
+            DataTable dt2 = new DataTable();
+            dt2 = database.ExecuteSQLReturnTable(command);
+            return dt2;
+        }
+
+        public int IsDuplicatePublisherID(string publisherID)
+        {
+            string sqlCommand = $"SELECT COUNT(*) FROM {ClassDefineName.table_Publishers_TableName} WHERE {ClassDefineName.table_Publishers_PublisherID} = '{publisherID}'";
+
+            return database.ExcuteSQL_CheckDuplicate(sqlCommand);
+        }
+
+        public int IsDuplicatePublisherTel(string publisherTel)
+        {
+            string sqlCommand = $"SELECT COUNT(*) FROM {ClassDefineName.table_Publishers_TableName} WHERE {ClassDefineName.table_Publishers_PublisherTel} = '{publisherTel}'";
+
+            return database.ExcuteSQL_CheckDuplicate(sqlCommand);
+        }
+
+
+
     }
 }

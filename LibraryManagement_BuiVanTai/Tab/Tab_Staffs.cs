@@ -184,9 +184,6 @@ namespace LibraryManagement_BuiVanTai.Tab
             TB_Staff_Tel.Text = selectedRow.Cells[5].Value.ToString();
         }
 
-        private void DGV_Staff_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
     }   
 }

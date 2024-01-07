@@ -28,8 +28,8 @@ namespace LibraryManagement_BuiVanTai.Tab
 
             if (dt != null)
             {
-                DGV_Customer.DataSource = dt;
-                DGV_Customer.RowHeadersVisible = false;
+                DGV_Publisger.DataSource = dt;
+                DGV_Publisger.RowHeadersVisible = false;
             }
             else
             {
@@ -110,18 +110,18 @@ namespace LibraryManagement_BuiVanTai.Tab
         private void DGV_Customer_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             Class_Customer cus = new Class_Customer(TB_Customer_ID.Text);
-            if (e.RowIndex >= 0 && DGV_Customer.Columns[e.ColumnIndex].Name == "ActionColumn")
+            if (e.RowIndex >= 0 && DGV_Publisger.Columns[e.ColumnIndex].Name == "ActionColumn")
             {
                 DialogResult result = MessageBox.Show("Are you sure you want to delete this row?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (result == DialogResult.Yes)
                 {
-                    string columnIDValue = DGV_Customer.Rows[e.RowIndex].Cells[1].Value.ToString();
-                    Class_Author at = new Class_Author(DGV_Customer.Rows[e.RowIndex].Cells[1].Value.ToString());
+                    string columnIDValue = DGV_Publisger.Rows[e.RowIndex].Cells[1].Value.ToString();
+                    Class_Author at = new Class_Author(DGV_Publisger.Rows[e.RowIndex].Cells[1].Value.ToString());
                     if (Database_Customer.DeleteData(cus) == true)
                     {
-                        int rowIndex = DGV_Customer.CurrentCell.RowIndex;
-                        DGV_Customer.Rows.RemoveAt(rowIndex);
+                        int rowIndex = DGV_Publisger.CurrentCell.RowIndex;
+                        DGV_Publisger.Rows.RemoveAt(rowIndex);
 
                         MessageBox.Show("Row deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -133,7 +133,7 @@ namespace LibraryManagement_BuiVanTai.Tab
         {
             TB_Customer_ID.Enabled = false;
             int index = e.RowIndex;
-            DataGridViewRow selectedRow = DGV_Customer.Rows[index];
+            DataGridViewRow selectedRow = DGV_Publisger.Rows[index];
 
             TB_Customer_ID.Text = selectedRow.Cells[1].Value.ToString();
             TB_Customer_Firstname.Text = selectedRow.Cells[2].Value.ToString();
@@ -146,7 +146,7 @@ namespace LibraryManagement_BuiVanTai.Tab
         private void TB_Customer_Search_TextChanged(object sender, EventArgs e)
         {
             dt = Database_Customer.searchData(TB_Customer_Search.Text);
-            DGV_Customer.DataSource = dt;
+            DGV_Publisger.DataSource = dt;
         }
     }
 }

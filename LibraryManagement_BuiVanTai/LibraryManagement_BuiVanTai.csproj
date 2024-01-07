@@ -118,6 +118,12 @@
     <Compile Include="Tab\Tab_ImportReceipt.Designer.cs">
       <DependentUpon>Tab_ImportReceipt.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tab\Tab_Publisher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tab\Tab_Publisher.Designer.cs">
+      <DependentUpon>Tab_Publisher.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tab\Tab_SalesReceipt.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -175,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tab\Tab_ImportReceipt.resx">
       <DependentUpon>Tab_ImportReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tab\Tab_Publisher.resx">
+      <DependentUpon>Tab_Publisher.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tab\Tab_SalesReceipt.resx">
       <DependentUpon>Tab_SalesReceipt.cs</DependentUpon>
@@ -323,6 +332,15 @@
   <ItemGroup>
     <None Include="Resources\Delete2.png" />
   </ItemGroup>
+<<<<<<< HEAD
+  <ItemGroup>
+    <None Include="Resources\Truck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Truck1.png" />
+  </ItemGroup>
+=======
   <ItemGroup />
+>>>>>>> ad626aeaf7fda37630975795343b80e1bb6cf1d4
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
