@@ -158,14 +158,12 @@ namespace LibraryManagement_BuiVanTai.Tab
                 if (DB_Publisher.IsDuplicatePublisherID(TB_Publisher_ID.Text) > 0)
                 {
                     LB_Note.ForeColor = Color.Red;
-                    LB_Note.Text = "Duplicate publisher ID found. Please check the Publisher ID";
+                    LB_Note.Text = "Duplicate publisher found. Please check the Publisher ID";
                     return;
                 }
-                else if (DB_Publisher.IsDuplicatePublisherTel(TB_Publisher_Tel.Text) > 0)
+                else if (DB_Publisher.IsDuplicatePublisherTel(TB_))
                 {
-                    LB_Note.ForeColor = Color.Red;
-                    LB_Note.Text = "Duplicate publisher telephone found. Please check the Publisher ID";
-                    return;
+
                 }
                 else
                 {
