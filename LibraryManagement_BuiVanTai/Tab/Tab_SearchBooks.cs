@@ -46,11 +46,19 @@ namespace LibraryManagement_BuiVanTai.Tab
         {
             string col = DGV_SearchBook_Left.Columns[e.ColumnIndex].Name;
             int amount = 0;
-            if (col == "ActionColumn")
+            /*            if (col == "ActionColumn")
+                        {*/
+            foreach (DataGridViewRow dgr in DGV_SearchBook_Right.Rows)
             {
-                amount++;
-                DGV_SearchBook_Right.Rows.Add(DGV_SearchBook_Left.Rows[e.RowIndex].Cells[1].Value.ToString(), DGV_SearchBook_Left.Rows[e.RowIndex].Cells[2].Value.ToString(), DGV_SearchBook_Left.Rows[e.RowIndex].Cells[3].Value.ToString(), DGV_SearchBook_Left.Rows[e.RowIndex].Cells[5].Value.ToString(), amount);
+                if (DGV_SearchBook_Left.Rows[e.RowIndex].Cells[1].Value.ToString() == dgr.Cells[1].Value.ToString())
+                {
+                    amount++;
+                    dgr.Cells[5].Value = amount;
+                    return;
+                }
             }
+            DGV_SearchBook_Right.Rows.Add(DGV_SearchBook_Left.Rows[e.RowIndex].Cells[1].Value.ToString(), DGV_SearchBook_Left.Rows[e.RowIndex].Cells[2].Value.ToString(), DGV_SearchBook_Left.Rows[e.RowIndex].Cells[3].Value.ToString(), DGV_SearchBook_Left.Rows[e.RowIndex].Cells[5].Value.ToString(), amount);
+/*            }*/
         }
     }
 }
