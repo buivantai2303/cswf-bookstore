@@ -322,7 +322,6 @@ namespace LibraryManagement_BuiVanTai.Tab
 
                 if (result == DialogResult.Yes)
                 {
-                    Class_Publisher at = new Class_Publisher(DGV_Publisher.Rows[e.RowIndex].Cells[1].Value.ToString());
                     if (DB_Publisher.DeletePubByID(publisher) == true)
                     {
                         int rowIndex = DGV_Publisher.CurrentCell.RowIndex;

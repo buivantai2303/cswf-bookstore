@@ -10,37 +10,44 @@ namespace LibraryManagement_BuiVanTai.Database
 {
     public class Database_SaleReceiptDetail
     {
-        Database db;
-        DataTable dt;
+        Database database;
+        DataTable dataTable;
 
         public Database_SaleReceiptDetail(string servername, string databasename)
         {
-            db = new Database(servername, databasename);
+            database = new Database(servername, databasename);
         }
 
-        public DataTable getTable()
+        public DataTable getTable(string SaleID)
         {
-            dt = new DataTable();
-            dt = db.getTable("SaleReceiptDetails");
-            return dt;
+            dataTable = new DataTable();
+            dataTable = database.ExecuteSQLReturnTable($"SELECT {ClassDefineName.table_Books_TableName}.{ClassDefineName.table_Books_BookName}, " +
+                $"{ClassDefineName.table_SaleReceiptDetails_TableName}.{ClassDefineName.table_SaleReceiptDetails_SaleNumber}, " +
+                $"{ClassDefineName.table_Suppliers_TableName}.{ClassDefineName.table_Suppliers_SupplierName}, " +
+                $"{ClassDefineName.table_SaleReceiptDetails_TableName}.{ClassDefineName.table_ImportReceiptDetails_Price} " +
+                $"FROM {ClassDefineName.table_SaleReceiptDetails_TableName} " +
+                $"JOIN {ClassDefineName.table_Books_TableName} ON {ClassDefineName.table_Books_TableName}.{ClassDefineName.table_Books_BookID} = {ClassDefineName.table_SaleReceiptDetails_TableName}.{ClassDefineName.table_SaleReceiptDetails_BookID} " +
+                $"JOIN {ClassDefineName.table_Suppliers_TableName} ON {ClassDefineName.table_Suppliers_TableName}.{ClassDefineName.table_Suppliers_SupplierID} = {ClassDefineName.table_SaleReceiptDetails_TableName}.{ClassDefineName.table_SaleReceiptDetails_SupplierID} " +
+                $"WHERE {ClassDefineName.table_SaleReceiptDetails_ReceiptID} = '{SaleID}';");
+            return dataTable;
         }
 
         public bool InsertData(Class_SaleReceiptDetails sale)
         {
             string query = "INSERT INTO SaleReceiptDetails VALUES (\'" + sale.ReceiptID + "\'," + "\'" + sale.BookID + "\'," + "\'" + sale.SaleNumber + "\'," + "\'" + sale.CustomerID + "\'," + "\'" + sale.Price + "\')";
-            return db.ExecuteSQL(query);
+            return database.ExecuteSQL(query);
         }
 
         public bool DeleteData(Class_SaleReceiptDetails sale)
         {
             string query = "DELETE FROM SaleReceiptDetails WHERE ReceiptID = \'" + sale.ReceiptID + "\'";
-            return db.ExecuteSQL(query);
+            return database.ExecuteSQL(query);
         }
 
         public DataTable searchData(string keyword)
         {
-            dt = db.ExecuteSQLReturnTable("SELECT * FROM SaleReceiptDetails WHERE ReceiptID like '%" + keyword + "%'");
-            return dt;
+            dataTable = database.ExecuteSQLReturnTable("SELECT * FROM SaleReceiptDetails WHERE ReceiptID like '%" + keyword + "%'");
+            return dataTable;
         }
     }
 }

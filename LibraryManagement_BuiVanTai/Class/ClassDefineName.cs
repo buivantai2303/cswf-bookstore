@@ -70,7 +70,7 @@ namespace LibraryManagement_BuiVanTai.Class
         public static string table_Suppliers_SupplierState_OffState = "";
         public static string table_Suppliers_Supplier_ExportFileName = "Suppliers";
 
-        // Class Table Suppliers define name
+        // Class Table SaleReceipt define name
         public static string table_SaleReceipts_TableName = "SaleReceipts";
         public static string table_SaleReceipts_ReceiptID = "ReceiptID";
         public static string table_SaleReceipts_StaffID = "StaffID";
@@ -82,6 +82,14 @@ namespace LibraryManagement_BuiVanTai.Class
         public static string table_ImportReceipt_ImportDate = "ImportDate";
         public static string table_ImportReceipt_PublisherID = "PublisherID";
         public static string table_ImportReceipt_StaffID = "StaffID";
+
+        // Class Table ImportReceiptDetail define name
+        public static string table_SaleReceiptDetails_TableName = "SaleReceiptDetails";
+        public static string table_SaleReceiptDetails_ReceiptID = "ReceiptID";
+        public static string table_SaleReceiptDetails_BookID = "BookID";
+        public static string table_SaleReceiptDetails_SaleNumber = "SaleNumber";
+        public static string table_SaleReceiptDetails_SupplierID = "SupplierID";
+        public static string table_SaleReceiptDetails_Price = "Price";
 
         // Class Table ImportReceiptDetails name.
         public static string table_ImportReceiptDetails_TableName = "ImportReceiptDetails";
