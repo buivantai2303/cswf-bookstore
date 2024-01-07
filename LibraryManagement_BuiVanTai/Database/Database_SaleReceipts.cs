@@ -12,25 +12,25 @@ namespace LibraryManagement_BuiVanTai.Database
 {
     public class Database_SaleReceipts
     {
-        Database db;
+        Database db1;
         DataTable dt;
 
         public Database_SaleReceipts(string servername, string databasename)
         {
-            db = new Database(servername, databasename);
+            db1 = new Database(servername, databasename);
         }
 
         public DataTable getTable()
         {
             dt = new DataTable();
-            dt = db.getTable("SaleReceipts");
+            dt = db1.getTable("SaleReceipts");
             return dt;
         }
 
         public bool InsertData(Class_SaleReceipt sale)
         {
             string query = "INSERT INTO SaleReceipts VALUES (\'" + sale.ReceiptID + "\'," + "\'" + sale.StaffID + "\'," + "\'" + sale.SaleDate + "\')";
-            return db.ExecuteSQL(query);
+            return db1.ExecuteSQL(query);
         }
 
 /*        public bool UpdateData(Class_SaleReceipt sale)
@@ -44,19 +44,26 @@ namespace LibraryManagement_BuiVanTai.Database
         public bool DeleteData(Class_SaleReceipt sale)
         {
             string query = "DELETE FROM SaleReceipts WHERE ReceiptID = \'" + sale.ReceiptID + "\'";
-            return db.ExecuteSQL(query);
+            return db1.ExecuteSQL(query);
         }
 
-/*        public DataTable searchData(string keyword)
+        /*        public DataTable searchData(string keyword)
+                {
+                    dt = db.ExecuteSQLReturnTable("SELECT * FROM SaleReceipts WHERE ReceiptID like '%" + keyword + "%'");
+                    return dt;
+                }*/
+
+        public DataTable getCustomTable(string command)
         {
-            dt = db.ExecuteSQLReturnTable("SELECT * FROM SaleReceipts WHERE ReceiptID like '%" + keyword + "%'");
-            return dt;
-        }*/
+            DataTable dt2 = new DataTable();
+            dt2 = db1.ExecuteSQLReturnTable(command);
+            return dt2;
+        }
 
         public DataTable searchLeftData(string keyword)
         {
             DataTable dt2 = new DataTable();
-            dt2 = db.ExecuteSQLReturnTable("SELECT BookID, BookName, BookType, Remaining, Price FROM Books WHERE BookName like '%" + keyword + "%'");
+            dt2 = db1.ExecuteSQLReturnTable("SELECT BookID, BookName, BookType, Remaining, Price FROM Books WHERE BookName like '%" + keyword + "%'");
             return dt2;
         }
     }

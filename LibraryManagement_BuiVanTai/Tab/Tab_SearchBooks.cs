@@ -14,7 +14,6 @@ namespace LibraryManagement_BuiVanTai.Tab
 {
     public partial class Tab_SearchBooks : UserControl
     {
-        Database_Book database_Book;
         DataTable dt;
         Database_SaleReceipts database_SaleReceipts;
         Database_SaleReceiptDetail database_Details;
@@ -27,8 +26,8 @@ namespace LibraryManagement_BuiVanTai.Tab
         private void Tab_SearchBooks_Load(object sender, EventArgs e)
         {
             GridViewFormLoadLeft(ClassDefineName.servername, ClassDefineName.database_name);
-            DataTable dtCustomer = database_Book.getCustomTable("SELECT CustomerID FROM Customers");
-            DataTable dtStaff = database_Book.getCustomTable("SELECT StaffID FROM Staffs");
+            DataTable dtCustomer = database_SaleReceipts.getCustomTable("SELECT CustomerID FROM Customers");
+            DataTable dtStaff = database_SaleReceipts.getCustomTable("SELECT StaffID FROM Staffs");
 
             CBB_StaffID.DisplayMember = "StaffID";
             CBB_StaffID.DataSource = dtStaff;
@@ -38,9 +37,10 @@ namespace LibraryManagement_BuiVanTai.Tab
 
         public void GridViewFormLoadLeft(string SererName, string DatabaseName)
         {
-            database_Book = new Database_Book(SererName, DatabaseName);
-            dt = database_Book.getCustomTable("SELECT BookID, BookName, BookType, Remaining, Price FROM Books");
-            DataTable dtCustomer = database_Book.getCustomTable("SELECT CustomerID FROM Customers");
+            database_Details = new Database_SaleReceiptDetail(SererName, DatabaseName);
+            database_SaleReceipts = new Database_SaleReceipts(SererName, DatabaseName);
+            dt = database_SaleReceipts.getCustomTable("SELECT BookID, BookName, BookType, Remaining, Price FROM Books");
+            DataTable dtCustomer = database_SaleReceipts.getCustomTable("SELECT CustomerID FROM Customers");
 
             if (dt != null)
             {
@@ -79,7 +79,7 @@ namespace LibraryManagement_BuiVanTai.Tab
         private void BTN_SeachBook_Pay_Click(object sender, EventArgs e)
         {
             addtoSaleReceipt();
-
+            LB_SearchBook_Total.Text = "Total:";
         }
 
         public void addtoSaleReceipt()
@@ -87,12 +87,13 @@ namespace LibraryManagement_BuiVanTai.Tab
             string receiptID = "RECPT" + getID();
             try
             {
-                Class_SaleReceipt sr = new Class_SaleReceipt(receiptID, CBB_CustomerID.Text, DateTime.Now);
+                Class_SaleReceipt sr = new Class_SaleReceipt(receiptID, CBB_StaffID.Text, DateTime.Now);
                  
                 if (database_SaleReceipts.InsertData(sr) == true)
                 {
                     MessageBox.Show("Add Successfuly");
-                    /*refresh();*/
+                    GridViewFormLoadLeft(ClassDefineName.servername, ClassDefineName.database_name);
+                    DGV_SearchBook_Right.Rows.Clear();
                 }
                 else
                 {
@@ -101,7 +102,7 @@ namespace LibraryManagement_BuiVanTai.Tab
 
                 foreach (DataGridViewRow dgr in DGV_SearchBook_Right.Rows)
                 {
-                    Class_SaleReceiptDetails srd = new Class_SaleReceiptDetails(receiptID, dgr.Cells[1].Value.ToString(), Int32.Parse(dgr.Cells[5].Value.ToString()), CBB_CustomerID.Text, 0);
+                    Class_SaleReceiptDetails srd = new Class_SaleReceiptDetails(receiptID, dgr.Cells[0].Value.ToString(), Int32.Parse(dgr.Cells[4].Value.ToString()), CBB_CustomerID.Text, Int32.Parse(dgr.Cells[4].Value.ToString())* Int32.Parse(dgr.Cells[3].Value.ToString()));
                     try
                     {
                         database_Details.InsertData(srd);
@@ -119,14 +120,32 @@ namespace LibraryManagement_BuiVanTai.Tab
 
         public string getID()
         {
-            dt = database_Book.getCustomTable("SELECT ReceiptID FROM SaleReceipts");
+            int rid;
+            dt = database_SaleReceipts.getCustomTable("SELECT ReceiptID FROM SaleReceipts");
+            if (dt == null)
+            {
+                rid = 1;
+                return rid.ToString();
+            }
             string id = dt.Rows[dt.Rows.Count - 1][0].ToString();
-            int rid = Int32.Parse(id.Substring(5, 4));
+            rid = Int32.Parse(id.Substring(5)) + 1;
+
             return rid.ToString();
         }
 
         public void CheckOut(DataTable dt, string filename, string custName)
         {
+            int[] price = new int[DGV_SearchBook_Right.Rows.Count];
+            for (int i = 0; i < price.Length; i++)
+            {
+                price[i] = Int32.Parse(DGV_SearchBook_Right.Rows[i].Cells[3].Value.ToString());
+            }
+            int[] amount = new int[DGV_SearchBook_Right.Rows.Count];
+            for (int i = 0; i < price.Length; i++)
+            {
+                amount[i] = Int32.Parse(DGV_SearchBook_Right.Rows[i].Cells[4].Value.ToString());
+            }
+
             string currentPath = System.Reflection.Assembly.GetExecutingAssembly().Location;
             int binIndex = currentPath.LastIndexOf("bin");
             string Path = currentPath.Substring(0, binIndex) + "\\Recipt\\Recipt.xlsx";
@@ -154,7 +173,7 @@ namespace LibraryManagement_BuiVanTai.Tab
                     }
                 }
 
-/*                workSheet.Cells[19, 5] = CountTotal();*/
+                workSheet.Cells[19, 5] = CountTotal(price, amount);
 
                 workbook.SaveAs(filename);
 
@@ -188,7 +207,7 @@ namespace LibraryManagement_BuiVanTai.Tab
 
         private void CBB_CustomerID_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DataTable dtCustomer = database_Book.getCustomTable("SELECT CustomerID, FirstName FROM Customers");
+            DataTable dtCustomer = database_SaleReceipts.getCustomTable("SELECT CustomerID, FirstName FROM Customers");
 
             foreach (DataRow dr in dtCustomer.Rows)
             {
@@ -207,7 +226,7 @@ namespace LibraryManagement_BuiVanTai.Tab
 
         private void CBB_StaffID_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DataTable dtStaff = database_Book.getCustomTable("SELECT StaffID, StaffName FROM Staffs");
+            DataTable dtStaff = database_SaleReceipts.getCustomTable("SELECT StaffID, StaffName FROM Staffs");
 
             foreach (DataRow dr in dtStaff.Rows)
             {
