@@ -332,15 +332,12 @@
   <ItemGroup>
     <None Include="Resources\Delete2.png" />
   </ItemGroup>
-<<<<<<< HEAD
   <ItemGroup>
     <None Include="Resources\Truck.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Truck1.png" />
   </ItemGroup>
-=======
   <ItemGroup />
->>>>>>> ad626aeaf7fda37630975795343b80e1bb6cf1d4
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
