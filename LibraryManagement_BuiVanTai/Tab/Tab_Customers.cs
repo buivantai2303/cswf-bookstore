@@ -82,6 +82,7 @@ namespace LibraryManagement_BuiVanTai.Tab
         }
         public void refresh()
         {
+            TB_Customer_ID.Enabled = true;
             TB_Customer_ID.Text = "";
             TB_Customer_Firstname.Text = "";
             TB_Customer_LastName.Text = "";
