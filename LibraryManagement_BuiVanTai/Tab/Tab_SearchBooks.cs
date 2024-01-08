@@ -17,6 +17,7 @@ namespace LibraryManagement_BuiVanTai.Tab
         DataTable dt;
         Database_SaleReceipts database_SaleReceipts;
         Database_SaleReceiptDetail database_Details;
+        Database_Book database_Book;
         int amount = 1;
         public Tab_SearchBooks()
         {
@@ -37,6 +38,7 @@ namespace LibraryManagement_BuiVanTai.Tab
 
         public void GridViewFormLoadLeft(string SererName, string DatabaseName)
         {
+            database_Book = new Database_Book(SererName, DatabaseName);
             database_Details = new Database_SaleReceiptDetail(SererName, DatabaseName);
             database_SaleReceipts = new Database_SaleReceipts(SererName, DatabaseName);
             dt = database_SaleReceipts.getCustomTable("SELECT BookID, BookName, BookType, Remaining, Price FROM Books");
@@ -59,27 +61,32 @@ namespace LibraryManagement_BuiVanTai.Tab
         private void DGV_SearchBook_Left_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             string col = DGV_SearchBook_Left.Columns[e.ColumnIndex].Name;
-            
-            /*            if (col == "ActionColumn")
-                        {*/
-            foreach (DataGridViewRow dgr in DGV_SearchBook_Right.Rows)
+
+            if (Int32.Parse(DGV_SearchBook_Left.Rows[e.RowIndex].Cells[4].Value.ToString()) != 0)
             {
-                if (DGV_SearchBook_Left.Rows[e.RowIndex].Cells[1].Value.ToString() == dgr.Cells[0].Value.ToString())
+                foreach (DataGridViewRow dgr in DGV_SearchBook_Right.Rows)
                 {
-                    int temp = Int32.Parse(dgr.Cells[4].Value.ToString());
-                    temp++;
-                    dgr.Cells[4].Value = temp;
-                    return;
+                    if (DGV_SearchBook_Left.Rows[e.RowIndex].Cells[1].Value.ToString() == dgr.Cells[0].Value.ToString())
+                    {
+                        int temp = Int32.Parse(dgr.Cells[4].Value.ToString());
+                        temp++;
+                        dgr.Cells[4].Value = temp;
+                        return;
+                    }
                 }
+                DGV_SearchBook_Right.Rows.Add(DGV_SearchBook_Left.Rows[e.RowIndex].Cells[1].Value.ToString(), DGV_SearchBook_Left.Rows[e.RowIndex].Cells[2].Value.ToString(), DGV_SearchBook_Left.Rows[e.RowIndex].Cells[3].Value.ToString(), DGV_SearchBook_Left.Rows[e.RowIndex].Cells[5].Value.ToString(), amount);
             }
-            DGV_SearchBook_Right.Rows.Add(DGV_SearchBook_Left.Rows[e.RowIndex].Cells[1].Value.ToString(), DGV_SearchBook_Left.Rows[e.RowIndex].Cells[2].Value.ToString(), DGV_SearchBook_Left.Rows[e.RowIndex].Cells[3].Value.ToString(), DGV_SearchBook_Left.Rows[e.RowIndex].Cells[5].Value.ToString(), amount);
-/*            }*/
         }
 
         private void BTN_SeachBook_Pay_Click(object sender, EventArgs e)
         {
             addtoSaleReceipt();
             LB_SearchBook_Total.Text = "Total:";
+            foreach (DataGridViewRow dr  in DGV_SearchBook_Right.Rows)
+            {
+                database_Book.executeCMD($"UPDATE Books SET Remaining = (Remaining - {Int32.Parse(dr.Cells[4].Value.ToString())} WHERE BookID = {dr.Cells[0].Value.ToString()}");
+            }
+            GridViewFormLoadLeft(ClassDefineName.servername, ClassDefineName.database_name);
         }
 
         public void addtoSaleReceipt()
@@ -112,7 +119,7 @@ namespace LibraryManagement_BuiVanTai.Tab
                         MessageBox.Show("There is something wrong!! Please Contact IT support");
                     }
                 }
-                CheckOut();
+                CheckOut(receiptID, TB_CustomerName.Text);
                 DGV_SearchBook_Right.Rows.Clear();
             }
             catch
@@ -171,14 +178,15 @@ namespace LibraryManagement_BuiVanTai.Tab
                 {
                     for (int i = 0; i < DGV_SearchBook_Right.Rows.Count; i++)
                     {
-                        for (int j = 0; j < 5; j++)
+                        for (int j = 0; j < 7; j++)
                         {
-                            /*if () { }*/
+                            workSheet.Rows[i + 8][j+2] = row.Cells[j].Value.ToString();
                         }
                     }
                 }
 
                 workSheet.Cells[19, 5] = CountTotal(price, amount);
+                workSheet.Cells[4, 1] = "Tên khách hàng: " + custName;
 
                 workbook.SaveAs(filename);
 
@@ -282,6 +290,11 @@ namespace LibraryManagement_BuiVanTai.Tab
             DataTable dt2 = new DataTable();
             dt2 = database_SaleReceipts.searchLeftData(TB_SearchBook_Search.Text);
             DGV_SearchBook_Left.DataSource = dt2;
+        }
+
+        private void DGV_SearchBook_Left_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
