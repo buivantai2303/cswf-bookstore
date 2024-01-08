@@ -35,7 +35,7 @@ namespace LibraryManagement_BuiVanTai.Database
         public bool UpdateData(Class_Author at)
         {
             string query = "UPDATE Authors " +
-            "Set AuthorName = " + "\'" + at.AuthorName + "\'," + "AuthorDOB = " + "\'" + at.AuthorDOB + "\'," + "AuthorAddress = " + "\'" + at.AuthorAddress + "\'," + "AuthorEmail = " + "\'" + at.AuthorEmail + "\',"
+            "Set AuthorName = " + "\'" + at.AuthorName + "\'," + "AuthorDOB = " + "\'" + at.AuthorDOB + "\'," + "AuthorAddress = " + "\'" + at.AuthorAddress + "\'," + "AuthorEmail = " + "\'" + at.AuthorEmail + "\'"
             + "WHERE AuthorID = \'" + at.AuthorId + "\'";
             return db.ExecuteSQL(query);
         }

@@ -96,12 +96,14 @@ namespace LibraryManagement_BuiVanTai.Tab
 
         private void BTN_Books_Refresh_Click(object sender, EventArgs e)
         {
+            BTN_Books_Save.Enabled = false;
             TB_Books_ID.Enabled = true;
             refresh();
         }
 
         private void DGV_Books_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            BTN_Books_Save.Enabled = true;
             TB_Books_ID.Enabled = false;
             int index = e.RowIndex;
             DataGridViewRow selectedRow = DGV_Books.Rows[index];
@@ -159,6 +161,7 @@ namespace LibraryManagement_BuiVanTai.Tab
             {
                 MessageBox.Show("There is something wrong!! Please Contact IT support");
             }
+            BTN_Books_Save.Enabled = false;
         }
 
         private void CBB_Books_PublisherName_SelectedIndexChanged(object sender, EventArgs e)

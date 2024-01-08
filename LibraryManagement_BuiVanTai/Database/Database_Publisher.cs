@@ -54,7 +54,7 @@ namespace LibraryManagement_BuiVanTai.Database
         public bool UpdatePub(Class_Publisher pub)
         {
             string query = "UPDATE Publishers " +
-            "Set PublisherName = " + "\'" + pub.PublisherName +"\'," + "PublisherAddress = " + "\'" + pub.PublisherAddress +"\'," + "PublisherTel = " + "\'" + pub.PublisherTel +"\'," + "PublisherState = " + "\'" + pub.PublisherState +"\',"
+            "Set PublisherName = " + "\'" + pub.PublisherName +"\'," + "PublisherAddress = " + "\'" + pub.PublisherAddress +"\'," + "PublisherTel = " + "\'" + pub.PublisherTel +"\'," + "PublisherState = " + "\'" + pub.PublisherState +"\'"
             + "WHERE PublisherID = \'" + pub.PublisherId +"\'";
             return database.ExecuteSQL(query);
         }

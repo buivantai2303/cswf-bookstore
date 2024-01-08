@@ -45,6 +45,7 @@ namespace LibraryManagement_BuiVanTai.Tab
 
         public void refresh()
         {
+            BTN_Staff_Save.Enabled = false;
             TB_Staff_ID.Enabled = true;
             TB_Staff_ID.Text = null;
             TB_Staff_Name.Text = null;
@@ -97,6 +98,7 @@ namespace LibraryManagement_BuiVanTai.Tab
             {
                 MessageBox.Show("There is something wrong!! Please Contact IT support");
             }
+            BTN_Staff_Save.Enabled = false;
         }
 
         public void CheckNull()
@@ -144,6 +146,7 @@ namespace LibraryManagement_BuiVanTai.Tab
 
         private void DGV_Staff_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            BTN_Staff_Save.Enabled = true;
             if (e.RowIndex >= 0 && DGV_Staff.Columns[e.ColumnIndex].Name == "ActionColumn")
             {
                 DialogResult result = MessageBox.Show("Are you sure you want to delete this row?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -184,6 +187,9 @@ namespace LibraryManagement_BuiVanTai.Tab
             TB_Staff_Tel.Text = selectedRow.Cells[5].Value.ToString();
         }
 
+        private void DGV_Staff_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
+        }
     }   
 }

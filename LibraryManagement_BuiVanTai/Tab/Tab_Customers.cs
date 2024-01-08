@@ -104,12 +104,14 @@ namespace LibraryManagement_BuiVanTai.Tab
 
         private void BTN_Customer_Refresh_Click(object sender, EventArgs e)
         {
-            BTN_Customer_Add.Enabled = true;
+            BTN_Customer_Save.Enabled = false;
+            BTN_Customer_Add.Enabled = false;
             refresh();
         }
 
         private void DGV_Customer_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            BTN_Customer_Save.Enabled = true;
             Class_Customer cus = new Class_Customer(TB_Customer_ID.Text);
             if (e.RowIndex >= 0 && DGV_Publisger.Columns[e.ColumnIndex].Name == "ActionColumn")
             {
@@ -148,6 +150,11 @@ namespace LibraryManagement_BuiVanTai.Tab
         {
             dt = Database_Customer.searchData(TB_Customer_Search.Text);
             DGV_Publisger.DataSource = dt;
+        }
+
+        private void DGV_Publisger_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

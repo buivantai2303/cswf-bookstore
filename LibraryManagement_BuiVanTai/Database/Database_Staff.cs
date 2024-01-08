@@ -34,7 +34,7 @@ namespace LibraryManagement_BuiVanTai.Database
         public bool UpdateData(Class_Staff st)
         {
             string query = "UPDATE Staffs " +
-            "Set StaffName = " + "\'" + st.StaffName +"\'," + "StaffDOB = " + "\'" + st.StaffDOB +"\'," + "StaffAddress = " + "\'" + st.StaffAddress +"\'," + "StaffTel = " + "\'" + st.StaffTel +"\',"
+            "Set StaffName = " + "\'" + st.StaffName +"\'," + "StaffDOB = " + "\'" + st.StaffDOB +"\'," + "StaffAddress = " + "\'" + st.StaffAddress +"\'," + "StaffTel = " + "\'" + st.StaffTel +"\'"
             + "WHERE StaffID = \'" + st.StaffId +"\'";
             return db.ExecuteSQL(query);
         }

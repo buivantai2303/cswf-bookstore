@@ -94,10 +94,11 @@
             this.panel4.Controls.Add(this.TB_Books_Search);
             this.panel4.Controls.Add(this.BTN_Books_Save);
             this.panel4.Controls.Add(this.BTN_Books_Add);
-            this.panel4.Location = new System.Drawing.Point(0, 180);
-            this.panel4.MinimumSize = new System.Drawing.Size(902, 471);
+            this.panel4.Location = new System.Drawing.Point(0, 222);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.MinimumSize = new System.Drawing.Size(1203, 580);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(902, 471);
+            this.panel4.Size = new System.Drawing.Size(1203, 580);
             this.panel4.TabIndex = 8;
             // 
             // DGV_Books
@@ -141,7 +142,8 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DGV_Books.DefaultCellStyle = dataGridViewCellStyle2;
             this.DGV_Books.EnableHeadersVisualStyles = false;
-            this.DGV_Books.Location = new System.Drawing.Point(18, 84);
+            this.DGV_Books.Location = new System.Drawing.Point(24, 103);
+            this.DGV_Books.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DGV_Books.MultiSelect = false;
             this.DGV_Books.Name = "DGV_Books";
             this.DGV_Books.ReadOnly = true;
@@ -160,7 +162,7 @@
             this.DGV_Books.ShowCellToolTips = false;
             this.DGV_Books.ShowEditingIcon = false;
             this.DGV_Books.ShowRowErrors = false;
-            this.DGV_Books.Size = new System.Drawing.Size(881, 359);
+            this.DGV_Books.Size = new System.Drawing.Size(1175, 442);
             this.DGV_Books.TabIndex = 8;
             this.DGV_Books.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Books_CellClick);
             this.DGV_Books.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Books_CellContentClick);
@@ -245,9 +247,10 @@
             this.BTN_Books_Refresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
             this.BTN_Books_Refresh.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Books_Refresh.ForeColor = System.Drawing.Color.White;
-            this.BTN_Books_Refresh.Location = new System.Drawing.Point(432, 37);
+            this.BTN_Books_Refresh.Location = new System.Drawing.Point(576, 46);
+            this.BTN_Books_Refresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BTN_Books_Refresh.Name = "BTN_Books_Refresh";
-            this.BTN_Books_Refresh.Size = new System.Drawing.Size(118, 35);
+            this.BTN_Books_Refresh.Size = new System.Drawing.Size(157, 43);
             this.BTN_Books_Refresh.TabIndex = 7;
             this.BTN_Books_Refresh.Text = "Refresh";
             this.BTN_Books_Refresh.UseVisualStyleBackColor = false;
@@ -258,9 +261,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(25, 22);
+            this.label2.Location = new System.Drawing.Point(33, 27);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(153, 17);
+            this.label2.Size = new System.Drawing.Size(200, 23);
             this.label2.TabIndex = 4;
             this.label2.Text = "Search Suppliers Name:";
             // 
@@ -268,21 +272,24 @@
             // 
             this.TB_Books_Search.BackColor = System.Drawing.Color.White;
             this.TB_Books_Search.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TB_Books_Search.Location = new System.Drawing.Point(18, 42);
+            this.TB_Books_Search.Location = new System.Drawing.Point(24, 52);
+            this.TB_Books_Search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TB_Books_Search.Name = "TB_Books_Search";
-            this.TB_Books_Search.Size = new System.Drawing.Size(382, 25);
+            this.TB_Books_Search.Size = new System.Drawing.Size(508, 29);
             this.TB_Books_Search.TabIndex = 2;
             this.TB_Books_Search.TextChanged += new System.EventHandler(this.TB_Books_Search_TextChanged);
             // 
             // BTN_Books_Save
             // 
             this.BTN_Books_Save.BackColor = System.Drawing.Color.SeaShell;
+            this.BTN_Books_Save.Enabled = false;
             this.BTN_Books_Save.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Books_Save.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Save2;
             this.BTN_Books_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_Books_Save.Location = new System.Drawing.Point(685, 37);
+            this.BTN_Books_Save.Location = new System.Drawing.Point(913, 46);
+            this.BTN_Books_Save.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BTN_Books_Save.Name = "BTN_Books_Save";
-            this.BTN_Books_Save.Size = new System.Drawing.Size(79, 33);
+            this.BTN_Books_Save.Size = new System.Drawing.Size(105, 41);
             this.BTN_Books_Save.TabIndex = 17;
             this.BTN_Books_Save.Text = "Save";
             this.BTN_Books_Save.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -296,9 +303,10 @@
             this.BTN_Books_Add.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Books_Add.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Add;
             this.BTN_Books_Add.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_Books_Add.Location = new System.Drawing.Point(584, 37);
+            this.BTN_Books_Add.Location = new System.Drawing.Point(779, 46);
+            this.BTN_Books_Add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BTN_Books_Add.Name = "BTN_Books_Add";
-            this.BTN_Books_Add.Size = new System.Drawing.Size(81, 33);
+            this.BTN_Books_Add.Size = new System.Drawing.Size(108, 41);
             this.BTN_Books_Add.TabIndex = 18;
             this.BTN_Books_Add.Text = "Add";
             this.BTN_Books_Add.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -320,10 +328,11 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.PTB_Suppliers_Menu);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.MaximumSize = new System.Drawing.Size(0, 48);
-            this.panel1.MinimumSize = new System.Drawing.Size(902, 48);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.MaximumSize = new System.Drawing.Size(0, 59);
+            this.panel1.MinimumSize = new System.Drawing.Size(1203, 59);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(902, 48);
+            this.panel1.Size = new System.Drawing.Size(1203, 59);
             this.panel1.TabIndex = 5;
             // 
             // label1
@@ -331,18 +340,20 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label1.Location = new System.Drawing.Point(44, 13);
+            this.label1.Location = new System.Drawing.Point(59, 16);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 25);
+            this.label1.Size = new System.Drawing.Size(80, 32);
             this.label1.TabIndex = 1;
             this.label1.Text = "Books";
             // 
             // PTB_Suppliers_Menu
             // 
             this.PTB_Suppliers_Menu.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Menu;
-            this.PTB_Suppliers_Menu.Location = new System.Drawing.Point(12, 12);
+            this.PTB_Suppliers_Menu.Location = new System.Drawing.Point(16, 15);
+            this.PTB_Suppliers_Menu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PTB_Suppliers_Menu.Name = "PTB_Suppliers_Menu";
-            this.PTB_Suppliers_Menu.Size = new System.Drawing.Size(26, 26);
+            this.PTB_Suppliers_Menu.Size = new System.Drawing.Size(35, 32);
             this.PTB_Suppliers_Menu.TabIndex = 0;
             this.PTB_Suppliers_Menu.TabStop = false;
             // 
@@ -355,11 +366,12 @@
             this.panel2.Controls.Add(this.Label_Suppliers_1);
             this.panel2.Controls.Add(this.LB_Books_Total);
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(0, 54);
-            this.panel2.MaximumSize = new System.Drawing.Size(227, 120);
-            this.panel2.MinimumSize = new System.Drawing.Size(227, 120);
+            this.panel2.Location = new System.Drawing.Point(0, 66);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.MaximumSize = new System.Drawing.Size(303, 148);
+            this.panel2.MinimumSize = new System.Drawing.Size(303, 148);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(227, 120);
+            this.panel2.Size = new System.Drawing.Size(303, 148);
             this.panel2.TabIndex = 6;
             // 
             // Label_Suppliers_1
@@ -367,9 +379,10 @@
             this.Label_Suppliers_1.AutoSize = true;
             this.Label_Suppliers_1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label_Suppliers_1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Label_Suppliers_1.Location = new System.Drawing.Point(15, 53);
+            this.Label_Suppliers_1.Location = new System.Drawing.Point(20, 65);
+            this.Label_Suppliers_1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label_Suppliers_1.Name = "Label_Suppliers_1";
-            this.Label_Suppliers_1.Size = new System.Drawing.Size(84, 17);
+            this.Label_Suppliers_1.Size = new System.Drawing.Size(107, 23);
             this.Label_Suppliers_1.TabIndex = 2;
             this.Label_Suppliers_1.Text = "Total books:";
             // 
@@ -378,18 +391,20 @@
             this.LB_Books_Total.AutoSize = true;
             this.LB_Books_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_Books_Total.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.LB_Books_Total.Location = new System.Drawing.Point(10, 9);
+            this.LB_Books_Total.Location = new System.Drawing.Point(13, 11);
+            this.LB_Books_Total.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LB_Books_Total.Name = "LB_Books_Total";
-            this.LB_Books_Total.Size = new System.Drawing.Size(78, 31);
+            this.LB_Books_Total.Size = new System.Drawing.Size(97, 39);
             this.LB_Books_Total.TabIndex = 1;
             this.LB_Books_Total.Text = "8888";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Book_50;
-            this.pictureBox1.Location = new System.Drawing.Point(157, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(209, 11);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(55, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(73, 62);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -415,11 +430,12 @@
             this.panel3.Controls.Add(this.Label_SupplierName);
             this.panel3.Controls.Add(this.TB_Books_ID);
             this.panel3.Controls.Add(this.Label_SupplierID);
-            this.panel3.Location = new System.Drawing.Point(233, 54);
-            this.panel3.MaximumSize = new System.Drawing.Size(0, 120);
-            this.panel3.MinimumSize = new System.Drawing.Size(669, 120);
+            this.panel3.Location = new System.Drawing.Point(311, 66);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.MaximumSize = new System.Drawing.Size(0, 148);
+            this.panel3.MinimumSize = new System.Drawing.Size(892, 148);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(669, 120);
+            this.panel3.Size = new System.Drawing.Size(892, 148);
             this.panel3.TabIndex = 7;
             // 
             // TB_Books_AuthorName
@@ -429,9 +445,10 @@
             this.TB_Books_AuthorName.BackColor = System.Drawing.Color.White;
             this.TB_Books_AuthorName.Enabled = false;
             this.TB_Books_AuthorName.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TB_Books_AuthorName.Location = new System.Drawing.Point(489, 84);
+            this.TB_Books_AuthorName.Location = new System.Drawing.Point(652, 103);
+            this.TB_Books_AuthorName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TB_Books_AuthorName.Name = "TB_Books_AuthorName";
-            this.TB_Books_AuthorName.Size = new System.Drawing.Size(86, 25);
+            this.TB_Books_AuthorName.Size = new System.Drawing.Size(113, 29);
             this.TB_Books_AuthorName.TabIndex = 24;
             // 
             // TB_Books_PublisherName
@@ -441,9 +458,10 @@
             this.TB_Books_PublisherName.BackColor = System.Drawing.Color.White;
             this.TB_Books_PublisherName.Enabled = false;
             this.TB_Books_PublisherName.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TB_Books_PublisherName.Location = new System.Drawing.Point(489, 28);
+            this.TB_Books_PublisherName.Location = new System.Drawing.Point(652, 34);
+            this.TB_Books_PublisherName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TB_Books_PublisherName.Name = "TB_Books_PublisherName";
-            this.TB_Books_PublisherName.Size = new System.Drawing.Size(164, 25);
+            this.TB_Books_PublisherName.Size = new System.Drawing.Size(217, 29);
             this.TB_Books_PublisherName.TabIndex = 23;
             // 
             // TB_Books_Price
@@ -452,9 +470,10 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.TB_Books_Price.BackColor = System.Drawing.Color.White;
             this.TB_Books_Price.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TB_Books_Price.Location = new System.Drawing.Point(580, 84);
+            this.TB_Books_Price.Location = new System.Drawing.Point(773, 103);
+            this.TB_Books_Price.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TB_Books_Price.Name = "TB_Books_Price";
-            this.TB_Books_Price.Size = new System.Drawing.Size(73, 25);
+            this.TB_Books_Price.Size = new System.Drawing.Size(96, 29);
             this.TB_Books_Price.TabIndex = 22;
             this.TB_Books_Price.TextChanged += new System.EventHandler(this.TB_Books_Price_TextChanged);
             // 
@@ -464,9 +483,10 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(578, 62);
+            this.label10.Location = new System.Drawing.Point(771, 76);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(77, 17);
+            this.label10.Size = new System.Drawing.Size(100, 23);
             this.label10.TabIndex = 21;
             this.label10.Text = "Book Price:";
             // 
@@ -480,11 +500,12 @@
             this.CBB_Books_AuthorID.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
-            this.CBB_Books_AuthorID.Location = new System.Drawing.Point(351, 84);
-            this.CBB_Books_AuthorID.MaximumSize = new System.Drawing.Size(120, 0);
-            this.CBB_Books_AuthorID.MinimumSize = new System.Drawing.Size(120, 0);
+            this.CBB_Books_AuthorID.Location = new System.Drawing.Point(468, 103);
+            this.CBB_Books_AuthorID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CBB_Books_AuthorID.MaximumSize = new System.Drawing.Size(159, 0);
+            this.CBB_Books_AuthorID.MinimumSize = new System.Drawing.Size(159, 0);
             this.CBB_Books_AuthorID.Name = "CBB_Books_AuthorID";
-            this.CBB_Books_AuthorID.Size = new System.Drawing.Size(120, 25);
+            this.CBB_Books_AuthorID.Size = new System.Drawing.Size(159, 29);
             this.CBB_Books_AuthorID.TabIndex = 19;
             this.CBB_Books_AuthorID.SelectedIndexChanged += new System.EventHandler(this.CBB_Books_AuthorID_SelectedIndexChanged);
             // 
@@ -494,9 +515,10 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(348, 63);
+            this.label9.Location = new System.Drawing.Point(464, 78);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(69, 17);
+            this.label9.Size = new System.Drawing.Size(89, 23);
             this.label9.TabIndex = 20;
             this.label9.Text = "Author ID";
             // 
@@ -510,11 +532,12 @@
             this.CBB_Books_PublisherID.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
-            this.CBB_Books_PublisherID.Location = new System.Drawing.Point(351, 28);
-            this.CBB_Books_PublisherID.MaximumSize = new System.Drawing.Size(120, 0);
-            this.CBB_Books_PublisherID.MinimumSize = new System.Drawing.Size(120, 0);
+            this.CBB_Books_PublisherID.Location = new System.Drawing.Point(468, 34);
+            this.CBB_Books_PublisherID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CBB_Books_PublisherID.MaximumSize = new System.Drawing.Size(159, 0);
+            this.CBB_Books_PublisherID.MinimumSize = new System.Drawing.Size(159, 0);
             this.CBB_Books_PublisherID.Name = "CBB_Books_PublisherID";
-            this.CBB_Books_PublisherID.Size = new System.Drawing.Size(120, 25);
+            this.CBB_Books_PublisherID.Size = new System.Drawing.Size(159, 29);
             this.CBB_Books_PublisherID.TabIndex = 13;
             this.CBB_Books_PublisherID.SelectedIndexChanged += new System.EventHandler(this.CBB_Books_PublisherName_SelectedIndexChanged);
             // 
@@ -524,9 +547,10 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(348, 7);
+            this.label8.Location = new System.Drawing.Point(464, 9);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 17);
+            this.label8.Size = new System.Drawing.Size(107, 23);
             this.label8.TabIndex = 16;
             this.label8.Text = "Publisher ID";
             // 
@@ -537,11 +561,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TB_Books_Type.BackColor = System.Drawing.Color.White;
             this.TB_Books_Type.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TB_Books_Type.Location = new System.Drawing.Point(193, 85);
-            this.TB_Books_Type.MaximumSize = new System.Drawing.Size(146, 25);
-            this.TB_Books_Type.MinimumSize = new System.Drawing.Size(146, 25);
+            this.TB_Books_Type.Location = new System.Drawing.Point(257, 105);
+            this.TB_Books_Type.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TB_Books_Type.MaximumSize = new System.Drawing.Size(193, 25);
+            this.TB_Books_Type.MinimumSize = new System.Drawing.Size(193, 25);
             this.TB_Books_Type.Name = "TB_Books_Type";
-            this.TB_Books_Type.Size = new System.Drawing.Size(146, 25);
+            this.TB_Books_Type.Size = new System.Drawing.Size(193, 29);
             this.TB_Books_Type.TabIndex = 15;
             this.TB_Books_Type.TextChanged += new System.EventHandler(this.TB_Books_Type_TextChanged);
             // 
@@ -551,9 +576,10 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(193, 64);
+            this.label6.Location = new System.Drawing.Point(257, 79);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 17);
+            this.label6.Size = new System.Drawing.Size(94, 23);
             this.label6.TabIndex = 14;
             this.label6.Text = "BookType:";
             // 
@@ -564,11 +590,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TB_Books_Remaining.BackColor = System.Drawing.Color.White;
             this.TB_Books_Remaining.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TB_Books_Remaining.Location = new System.Drawing.Point(193, 29);
-            this.TB_Books_Remaining.MaximumSize = new System.Drawing.Size(146, 25);
-            this.TB_Books_Remaining.MinimumSize = new System.Drawing.Size(146, 25);
+            this.TB_Books_Remaining.Location = new System.Drawing.Point(257, 36);
+            this.TB_Books_Remaining.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TB_Books_Remaining.MaximumSize = new System.Drawing.Size(193, 25);
+            this.TB_Books_Remaining.MinimumSize = new System.Drawing.Size(193, 25);
             this.TB_Books_Remaining.Name = "TB_Books_Remaining";
-            this.TB_Books_Remaining.Size = new System.Drawing.Size(146, 25);
+            this.TB_Books_Remaining.Size = new System.Drawing.Size(193, 29);
             this.TB_Books_Remaining.TabIndex = 13;
             this.TB_Books_Remaining.TextChanged += new System.EventHandler(this.TB_Books_Remaining_TextChanged);
             // 
@@ -578,9 +605,10 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(193, 7);
+            this.label5.Location = new System.Drawing.Point(257, 9);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 17);
+            this.label5.Size = new System.Drawing.Size(101, 23);
             this.label5.TabIndex = 12;
             this.label5.Text = "Remaining:";
             // 
@@ -591,11 +619,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TB_Books_Name.BackColor = System.Drawing.Color.White;
             this.TB_Books_Name.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TB_Books_Name.Location = new System.Drawing.Point(15, 84);
-            this.TB_Books_Name.MaximumSize = new System.Drawing.Size(168, 25);
-            this.TB_Books_Name.MinimumSize = new System.Drawing.Size(168, 25);
+            this.TB_Books_Name.Location = new System.Drawing.Point(20, 103);
+            this.TB_Books_Name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TB_Books_Name.MaximumSize = new System.Drawing.Size(223, 25);
+            this.TB_Books_Name.MinimumSize = new System.Drawing.Size(223, 25);
             this.TB_Books_Name.Name = "TB_Books_Name";
-            this.TB_Books_Name.Size = new System.Drawing.Size(168, 25);
+            this.TB_Books_Name.Size = new System.Drawing.Size(223, 29);
             this.TB_Books_Name.TabIndex = 11;
             this.TB_Books_Name.TextChanged += new System.EventHandler(this.TB_Books_Name_TextChanged);
             // 
@@ -606,9 +635,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Label_SupplierName.AutoSize = true;
             this.Label_SupplierName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_SupplierName.Location = new System.Drawing.Point(15, 64);
+            this.Label_SupplierName.Location = new System.Drawing.Point(20, 79);
+            this.Label_SupplierName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label_SupplierName.Name = "Label_SupplierName";
-            this.Label_SupplierName.Size = new System.Drawing.Size(79, 17);
+            this.Label_SupplierName.Size = new System.Drawing.Size(103, 23);
             this.Label_SupplierName.TabIndex = 10;
             this.Label_SupplierName.Text = "BookName:";
             // 
@@ -619,11 +649,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TB_Books_ID.BackColor = System.Drawing.Color.White;
             this.TB_Books_ID.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TB_Books_ID.Location = new System.Drawing.Point(15, 28);
-            this.TB_Books_ID.MaximumSize = new System.Drawing.Size(168, 25);
-            this.TB_Books_ID.MinimumSize = new System.Drawing.Size(168, 25);
+            this.TB_Books_ID.Location = new System.Drawing.Point(20, 34);
+            this.TB_Books_ID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TB_Books_ID.MaximumSize = new System.Drawing.Size(223, 25);
+            this.TB_Books_ID.MinimumSize = new System.Drawing.Size(223, 25);
             this.TB_Books_ID.Name = "TB_Books_ID";
-            this.TB_Books_ID.Size = new System.Drawing.Size(168, 25);
+            this.TB_Books_ID.Size = new System.Drawing.Size(223, 29);
             this.TB_Books_ID.TabIndex = 9;
             this.TB_Books_ID.TextChanged += new System.EventHandler(this.TB_Books_ID_TextChanged);
             // 
@@ -634,9 +665,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Label_SupplierID.AutoSize = true;
             this.Label_SupplierID.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_SupplierID.Location = new System.Drawing.Point(15, 7);
+            this.Label_SupplierID.Location = new System.Drawing.Point(20, 9);
+            this.Label_SupplierID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label_SupplierID.Name = "Label_SupplierID";
-            this.Label_SupplierID.Size = new System.Drawing.Size(61, 17);
+            this.Label_SupplierID.Size = new System.Drawing.Size(79, 23);
             this.Label_SupplierID.TabIndex = 0;
             this.Label_SupplierID.Text = "Book ID:";
             // 
@@ -655,15 +687,16 @@
             // 
             // Tab_Book
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
-            this.MinimumSize = new System.Drawing.Size(902, 651);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(1203, 801);
             this.Name = "Tab_Book";
-            this.Size = new System.Drawing.Size(902, 651);
+            this.Size = new System.Drawing.Size(1203, 801);
             this.Load += new System.EventHandler(this.Tab_Book_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();

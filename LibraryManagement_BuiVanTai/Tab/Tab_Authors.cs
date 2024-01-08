@@ -109,11 +109,13 @@ namespace LibraryManagement_BuiVanTai.Tab
             {
                 MessageBox.Show("There is something wrong!! Please Contact IT support");
             }
+            BTN_Authors_Save.Enabled = false;
 
         }
 
         public void refresh()
         {
+            BTN_Authors_Save.Enabled = false;
             TB_Authors_ID.Enabled = true;
             TB_Authors_ID.Text = null;
             TB_Authors_Name.Text = null;
@@ -161,6 +163,7 @@ namespace LibraryManagement_BuiVanTai.Tab
         }
         private void DGV_Authors_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            BTN_Authors_Save.Enabled = true;
             if (e.RowIndex >= 0 && DGV_Authors.Columns[e.ColumnIndex].Name == "ActionColumn")
             {
                 DialogResult result = MessageBox.Show("Are you sure you want to delete this row?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);

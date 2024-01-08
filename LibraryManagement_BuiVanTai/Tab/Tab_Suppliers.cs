@@ -88,6 +88,8 @@ namespace LibraryManagement_BuiVanTai
             GridViewFormLoad(ClassDefineName.servername, ClassDefineName.database_name);
             getEmptyTextBox();
             TB_Suppliers_ID.Enabled = false;
+            BTN_Suppliers_Add.Enabled = false;
+            BTN_Suppliers_Save.Enabled = false;
             return;
         }
 
@@ -116,6 +118,7 @@ namespace LibraryManagement_BuiVanTai
         // Use delete buton to dataGridView_Suppliers function ============================================
         private void dataGridView_Suppliers_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            BTN_Suppliers_Save.Enabled = true;
             int index = e.RowIndex;
             TB_Suppliers_ID.Enabled = true;
             DataGridViewRow SelectedRow = DGV_Suppliers.Rows[index];
@@ -224,6 +227,7 @@ namespace LibraryManagement_BuiVanTai
                 MessageBox.Show("Please select a row before saving.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+            BTN_Suppliers_Save.Enabled = false;
         }
 
 
@@ -451,6 +455,11 @@ namespace LibraryManagement_BuiVanTai
             {
                 BTN_Suppliers_Add.Enabled = true;
             }
+        }
+
+        private void DGV_Suppliers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 

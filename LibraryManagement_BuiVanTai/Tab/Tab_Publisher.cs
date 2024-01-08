@@ -110,7 +110,7 @@ namespace LibraryManagement_BuiVanTai.Tab
 
         private void DGV_Publisher_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            BTN_Publisher_Save.Enabled=true;
             int index = e.RowIndex;
             TB_Publisher_ID.Enabled = true;
             DataGridViewRow SelectedRow = DGV_Publisher.Rows[index];
@@ -302,6 +302,7 @@ namespace LibraryManagement_BuiVanTai.Tab
                 MessageBox.Show("Please select a row before saving.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+            BTN_Publisher_Save.Enabled = false;
         }
 
         private void BTN_Publisher_Refresh_Click(object sender, EventArgs e)
@@ -310,6 +311,7 @@ namespace LibraryManagement_BuiVanTai.Tab
             GridViewFormLoad(ClassDefineName.servername, ClassDefineName.database_name);
             getEmptyTextBox();
             TB_Publisher_ID.Enabled = false;
+            BTN_Publisher_Save.Enabled = false;
             return;
         }
 
@@ -358,6 +360,11 @@ namespace LibraryManagement_BuiVanTai.Tab
                 MessageBox.Show("Invalid status.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+        }
+
+        private void DGV_Publisher_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 
