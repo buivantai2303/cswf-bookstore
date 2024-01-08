@@ -185,7 +185,7 @@ namespace LibraryManagement_BuiVanTai.Tab
 
         private void DGV_Authors_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            BTN_Authors_Add.Enabled = false;
+            
             BTN_Authors_Save.Enabled = true;
             TB_Authors_ID.Enabled = false;
             int index = e.RowIndex;
@@ -203,6 +203,7 @@ namespace LibraryManagement_BuiVanTai.Tab
             }
             TB_Authors_Address.Text = selectedRow.Cells[4].Value.ToString();
             TB_Authors_Email.Text = selectedRow.Cells[5].Value.ToString();
+            BTN_Authors_Add.Enabled = false;
         }
 
         private void TB_Authors_Search_TextChanged(object sender, EventArgs e)

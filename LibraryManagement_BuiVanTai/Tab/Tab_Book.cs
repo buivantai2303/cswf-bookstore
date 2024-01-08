@@ -103,7 +103,6 @@ namespace LibraryManagement_BuiVanTai.Tab
 
         private void DGV_Books_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            BTN_Books_Add.Enabled = false;
             BTN_Books_Save.Enabled = true;
             TB_Books_ID.Enabled = false;
             int index = e.RowIndex;

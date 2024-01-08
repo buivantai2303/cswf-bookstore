@@ -214,7 +214,7 @@
             this.DGV_SearchBook_Left.Size = new System.Drawing.Size(577, 517);
             this.DGV_SearchBook_Left.TabIndex = 25;
             this.DGV_SearchBook_Left.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_SearchBook_Left_CellClick);
-            this.DGV_SearchBook_Left.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_SearchBook_Left_CellContentClick);
+            this.DGV_SearchBook_Left.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_SearchBook_Left_CellClick);
             this.DGV_SearchBook_Left.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_SearchBook_Left_CellClick);
             // 
             // ImportID

@@ -169,7 +169,7 @@ namespace LibraryManagement_BuiVanTai.Tab
 
         private void DGV_Staff_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            BTN_Staff_Add.Enabled = false;
+            
             TB_Staff_ID.Enabled = false;
             int index = e.RowIndex;
             DataGridViewRow selectedRow = DGV_Staff.Rows[index];
@@ -186,6 +186,8 @@ namespace LibraryManagement_BuiVanTai.Tab
             }
             TB_Staff_Address.Text = selectedRow.Cells[4].Value.ToString();
             TB_Staff_Tel.Text = selectedRow.Cells[5].Value.ToString();
+
+            BTN_Staff_Add.Enabled = false;
         }
     }   
 }

@@ -81,7 +81,7 @@
             this.TB_Authors_Email.BackColor = System.Drawing.Color.White;
             this.TB_Authors_Email.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TB_Authors_Email.Location = new System.Drawing.Point(241, 103);
-            this.TB_Authors_Email.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TB_Authors_Email.Margin = new System.Windows.Forms.Padding(4);
             this.TB_Authors_Email.MaximumSize = new System.Drawing.Size(265, 25);
             this.TB_Authors_Email.Name = "TB_Authors_Email";
             this.TB_Authors_Email.Size = new System.Drawing.Size(265, 29);
@@ -121,7 +121,7 @@
             this.TB_Authors_Name.BackColor = System.Drawing.Color.White;
             this.TB_Authors_Name.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TB_Authors_Name.Location = new System.Drawing.Point(20, 103);
-            this.TB_Authors_Name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TB_Authors_Name.Margin = new System.Windows.Forms.Padding(4);
             this.TB_Authors_Name.MaximumSize = new System.Drawing.Size(223, 25);
             this.TB_Authors_Name.MinimumSize = new System.Drawing.Size(201, 25);
             this.TB_Authors_Name.Name = "TB_Authors_Name";
@@ -150,7 +150,7 @@
             this.TB_Authors_ID.BackColor = System.Drawing.Color.White;
             this.TB_Authors_ID.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TB_Authors_ID.Location = new System.Drawing.Point(20, 34);
-            this.TB_Authors_ID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TB_Authors_ID.Margin = new System.Windows.Forms.Padding(4);
             this.TB_Authors_ID.MaximumSize = new System.Drawing.Size(201, 25);
             this.TB_Authors_ID.MinimumSize = new System.Drawing.Size(201, 25);
             this.TB_Authors_ID.Name = "TB_Authors_ID";
@@ -185,7 +185,7 @@
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.TB_Authors_Search);
             this.panel4.Location = new System.Drawing.Point(0, 222);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.MinimumSize = new System.Drawing.Size(1203, 580);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1203, 580);
@@ -198,7 +198,7 @@
             this.BTN_Authors_Save.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Save2;
             this.BTN_Authors_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BTN_Authors_Save.Location = new System.Drawing.Point(920, 37);
-            this.BTN_Authors_Save.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BTN_Authors_Save.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_Authors_Save.Name = "BTN_Authors_Save";
             this.BTN_Authors_Save.Size = new System.Drawing.Size(125, 46);
             this.BTN_Authors_Save.TabIndex = 17;
@@ -214,7 +214,7 @@
             this.BTN_Authors_Add.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Add;
             this.BTN_Authors_Add.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BTN_Authors_Add.Location = new System.Drawing.Point(772, 37);
-            this.BTN_Authors_Add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BTN_Authors_Add.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_Authors_Add.Name = "BTN_Authors_Add";
             this.BTN_Authors_Add.Size = new System.Drawing.Size(125, 47);
             this.BTN_Authors_Add.TabIndex = 18;
@@ -263,7 +263,7 @@
             this.DGV_Authors.DefaultCellStyle = dataGridViewCellStyle2;
             this.DGV_Authors.EnableHeadersVisualStyles = false;
             this.DGV_Authors.Location = new System.Drawing.Point(24, 103);
-            this.DGV_Authors.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DGV_Authors.Margin = new System.Windows.Forms.Padding(4);
             this.DGV_Authors.MultiSelect = false;
             this.DGV_Authors.Name = "DGV_Authors";
             this.DGV_Authors.ReadOnly = true;
@@ -286,6 +286,7 @@
             this.DGV_Authors.TabIndex = 8;
             this.DGV_Authors.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Authors_CellClick);
             this.DGV_Authors.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Authors_CellContentClick);
+            this.DGV_Authors.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Authors_CellDoubleClick);
             this.DGV_Authors.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Authors_CellDoubleClick);
             // 
             // AuthorID
@@ -350,7 +351,7 @@
             this.BTN_Authors_Refresh.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Authors_Refresh.ForeColor = System.Drawing.Color.White;
             this.BTN_Authors_Refresh.Location = new System.Drawing.Point(576, 46);
-            this.BTN_Authors_Refresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BTN_Authors_Refresh.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_Authors_Refresh.Name = "BTN_Authors_Refresh";
             this.BTN_Authors_Refresh.Size = new System.Drawing.Size(157, 43);
             this.BTN_Authors_Refresh.TabIndex = 7;
@@ -375,7 +376,7 @@
             this.TB_Authors_Search.BackColor = System.Drawing.Color.White;
             this.TB_Authors_Search.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TB_Authors_Search.Location = new System.Drawing.Point(24, 52);
-            this.TB_Authors_Search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TB_Authors_Search.Margin = new System.Windows.Forms.Padding(4);
             this.TB_Authors_Search.Name = "TB_Authors_Search";
             this.TB_Authors_Search.Size = new System.Drawing.Size(508, 29);
             this.TB_Authors_Search.TabIndex = 2;
@@ -398,7 +399,7 @@
             this.panel3.Controls.Add(this.TB_Authors_ID);
             this.panel3.Controls.Add(this.LB);
             this.panel3.Location = new System.Drawing.Point(311, 66);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.MaximumSize = new System.Drawing.Size(0, 148);
             this.panel3.MinimumSize = new System.Drawing.Size(892, 148);
             this.panel3.Name = "panel3";
@@ -411,7 +412,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.Date_Authors_AuthorID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Date_Authors_AuthorID.Location = new System.Drawing.Point(245, 38);
-            this.Date_Authors_AuthorID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Date_Authors_AuthorID.Margin = new System.Windows.Forms.Padding(4);
             this.Date_Authors_AuthorID.MaximumSize = new System.Drawing.Size(321, 22);
             this.Date_Authors_AuthorID.MinimumSize = new System.Drawing.Size(321, 22);
             this.Date_Authors_AuthorID.Name = "Date_Authors_AuthorID";
@@ -426,7 +427,7 @@
             this.TB_Authors_Address.BackColor = System.Drawing.Color.White;
             this.TB_Authors_Address.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TB_Authors_Address.Location = new System.Drawing.Point(527, 103);
-            this.TB_Authors_Address.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TB_Authors_Address.Margin = new System.Windows.Forms.Padding(4);
             this.TB_Authors_Address.Name = "TB_Authors_Address";
             this.TB_Authors_Address.Size = new System.Drawing.Size(227, 29);
             this.TB_Authors_Address.TabIndex = 22;
@@ -460,7 +461,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.PTB_Suppliers_Menu);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.MaximumSize = new System.Drawing.Size(0, 59);
             this.panel1.MinimumSize = new System.Drawing.Size(1203, 59);
             this.panel1.Name = "panel1";
@@ -483,7 +484,7 @@
             // 
             this.PTB_Suppliers_Menu.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Menu;
             this.PTB_Suppliers_Menu.Location = new System.Drawing.Point(16, 15);
-            this.PTB_Suppliers_Menu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PTB_Suppliers_Menu.Margin = new System.Windows.Forms.Padding(4);
             this.PTB_Suppliers_Menu.Name = "PTB_Suppliers_Menu";
             this.PTB_Suppliers_Menu.Size = new System.Drawing.Size(35, 32);
             this.PTB_Suppliers_Menu.TabIndex = 0;
@@ -499,7 +500,7 @@
             this.panel2.Controls.Add(this.LB_Authors_Total);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(0, 66);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.MaximumSize = new System.Drawing.Size(303, 148);
             this.panel2.MinimumSize = new System.Drawing.Size(303, 148);
             this.panel2.Name = "panel2";
@@ -535,7 +536,7 @@
             // 
             this.pictureBox1.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.SupplierTotal;
             this.pictureBox1.Location = new System.Drawing.Point(209, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(73, 62);
             this.pictureBox1.TabIndex = 0;
@@ -562,7 +563,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1203, 801);
             this.Name = "Tab_Authors";
             this.Size = new System.Drawing.Size(1203, 801);

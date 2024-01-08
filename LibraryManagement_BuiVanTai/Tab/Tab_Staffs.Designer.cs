@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PTB_Suppliers_Menu = new System.Windows.Forms.PictureBox();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -82,7 +82,7 @@
             // 
             this.PTB_Suppliers_Menu.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Menu;
             this.PTB_Suppliers_Menu.Location = new System.Drawing.Point(16, 15);
-            this.PTB_Suppliers_Menu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PTB_Suppliers_Menu.Margin = new System.Windows.Forms.Padding(4);
             this.PTB_Suppliers_Menu.Name = "PTB_Suppliers_Menu";
             this.PTB_Suppliers_Menu.Size = new System.Drawing.Size(35, 32);
             this.PTB_Suppliers_Menu.TabIndex = 0;
@@ -116,7 +116,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.PTB_Suppliers_Menu);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.MaximumSize = new System.Drawing.Size(0, 59);
             this.panel1.MinimumSize = new System.Drawing.Size(1203, 59);
             this.panel1.Name = "panel1";
@@ -140,7 +140,7 @@
             this.TB__Staff_Search.BackColor = System.Drawing.Color.White;
             this.TB__Staff_Search.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TB__Staff_Search.Location = new System.Drawing.Point(24, 52);
-            this.TB__Staff_Search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TB__Staff_Search.Margin = new System.Windows.Forms.Padding(4);
             this.TB__Staff_Search.MaximumSize = new System.Drawing.Size(349, 25);
             this.TB__Staff_Search.MinimumSize = new System.Drawing.Size(349, 25);
             this.TB__Staff_Search.Name = "TB__Staff_Search";
@@ -166,7 +166,7 @@
             this.BTN_Staff_Refresh.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Staff_Refresh.ForeColor = System.Drawing.Color.White;
             this.BTN_Staff_Refresh.Location = new System.Drawing.Point(383, 46);
-            this.BTN_Staff_Refresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BTN_Staff_Refresh.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_Staff_Refresh.MaximumSize = new System.Drawing.Size(157, 43);
             this.BTN_Staff_Refresh.MinimumSize = new System.Drawing.Size(157, 43);
             this.BTN_Staff_Refresh.Name = "BTN_Staff_Refresh";
@@ -184,7 +184,7 @@
             this.BTN_Staff_Add.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Add;
             this.BTN_Staff_Add.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BTN_Staff_Add.Location = new System.Drawing.Point(565, 39);
-            this.BTN_Staff_Add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BTN_Staff_Add.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_Staff_Add.Name = "BTN_Staff_Add";
             this.BTN_Staff_Add.Size = new System.Drawing.Size(121, 43);
             this.BTN_Staff_Add.TabIndex = 18;
@@ -201,7 +201,7 @@
             this.BTN_Staff_Save.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Save2;
             this.BTN_Staff_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BTN_Staff_Save.Location = new System.Drawing.Point(699, 39);
-            this.BTN_Staff_Save.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BTN_Staff_Save.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_Staff_Save.Name = "BTN_Staff_Save";
             this.BTN_Staff_Save.Size = new System.Drawing.Size(116, 43);
             this.BTN_Staff_Save.TabIndex = 17;
@@ -227,7 +227,7 @@
             this.panel6.Controls.Add(this.label11);
             this.panel6.Controls.Add(this.label3);
             this.panel6.Location = new System.Drawing.Point(873, 90);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(321, 540);
             this.panel6.TabIndex = 31;
@@ -238,7 +238,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Date_Staffs.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Date_Staffs.Location = new System.Drawing.Point(11, 223);
-            this.Date_Staffs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Date_Staffs.Margin = new System.Windows.Forms.Padding(4);
             this.Date_Staffs.Name = "Date_Staffs";
             this.Date_Staffs.Size = new System.Drawing.Size(272, 27);
             this.Date_Staffs.TabIndex = 32;
@@ -251,7 +251,7 @@
             this.TB_Staff_Address.BackColor = System.Drawing.Color.White;
             this.TB_Staff_Address.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TB_Staff_Address.Location = new System.Drawing.Point(11, 369);
-            this.TB_Staff_Address.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TB_Staff_Address.Margin = new System.Windows.Forms.Padding(4);
             this.TB_Staff_Address.MinimumSize = new System.Drawing.Size(223, 25);
             this.TB_Staff_Address.Name = "TB_Staff_Address";
             this.TB_Staff_Address.Size = new System.Drawing.Size(272, 29);
@@ -278,7 +278,7 @@
             this.TB_Staff_Tel.BackColor = System.Drawing.Color.White;
             this.TB_Staff_Tel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TB_Staff_Tel.Location = new System.Drawing.Point(11, 294);
-            this.TB_Staff_Tel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TB_Staff_Tel.Margin = new System.Windows.Forms.Padding(4);
             this.TB_Staff_Tel.MinimumSize = new System.Drawing.Size(223, 25);
             this.TB_Staff_Tel.Name = "TB_Staff_Tel";
             this.TB_Staff_Tel.Size = new System.Drawing.Size(272, 29);
@@ -317,7 +317,7 @@
             this.TB_Staff_Name.BackColor = System.Drawing.Color.White;
             this.TB_Staff_Name.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TB_Staff_Name.Location = new System.Drawing.Point(11, 145);
-            this.TB_Staff_Name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TB_Staff_Name.Margin = new System.Windows.Forms.Padding(4);
             this.TB_Staff_Name.MinimumSize = new System.Drawing.Size(223, 25);
             this.TB_Staff_Name.Name = "TB_Staff_Name";
             this.TB_Staff_Name.Size = new System.Drawing.Size(272, 29);
@@ -344,7 +344,7 @@
             this.TB_Staff_ID.BackColor = System.Drawing.Color.White;
             this.TB_Staff_ID.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TB_Staff_ID.Location = new System.Drawing.Point(11, 76);
-            this.TB_Staff_ID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TB_Staff_ID.Margin = new System.Windows.Forms.Padding(4);
             this.TB_Staff_ID.MinimumSize = new System.Drawing.Size(223, 25);
             this.TB_Staff_ID.Name = "TB_Staff_ID";
             this.TB_Staff_ID.Size = new System.Drawing.Size(272, 29);
@@ -389,7 +389,7 @@
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.TB__Staff_Search);
             this.panel4.Location = new System.Drawing.Point(0, 222);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1199, 644);
             this.panel4.TabIndex = 16;
@@ -401,7 +401,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.Controls.Add(this.DGV_Staff);
             this.panel5.Location = new System.Drawing.Point(4, 94);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(861, 537);
             this.panel5.TabIndex = 32;
@@ -416,14 +416,14 @@
             this.DGV_Staff.BackgroundColor = System.Drawing.Color.White;
             this.DGV_Staff.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DGV_Staff.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_Staff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_Staff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DGV_Staff.ColumnHeadersHeight = 29;
             this.DGV_Staff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DGV_Staff.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -433,29 +433,29 @@
             this.StaffAddress,
             this.StaffTell,
             this.ActionColumn});
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(151)))), ((int)(((byte)(196)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGV_Staff.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(151)))), ((int)(((byte)(196)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGV_Staff.DefaultCellStyle = dataGridViewCellStyle2;
             this.DGV_Staff.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DGV_Staff.EnableHeadersVisualStyles = false;
             this.DGV_Staff.Location = new System.Drawing.Point(0, 0);
-            this.DGV_Staff.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DGV_Staff.Margin = new System.Windows.Forms.Padding(4);
             this.DGV_Staff.MultiSelect = false;
             this.DGV_Staff.Name = "DGV_Staff";
             this.DGV_Staff.ReadOnly = true;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_Staff.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_Staff.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DGV_Staff.RowHeadersWidth = 51;
             this.DGV_Staff.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.DGV_Staff.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -526,7 +526,7 @@
             // 
             this.pictureBox1.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Customer;
             this.pictureBox1.Location = new System.Drawing.Point(209, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(73, 62);
             this.pictureBox1.TabIndex = 0;
@@ -566,7 +566,7 @@
             this.panel2.Controls.Add(this.LB_Staff_Total);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(0, 66);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.MaximumSize = new System.Drawing.Size(303, 148);
             this.panel2.MinimumSize = new System.Drawing.Size(303, 148);
             this.panel2.Name = "panel2";
@@ -580,7 +580,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
             this.panel3.Location = new System.Drawing.Point(311, 66);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.MaximumSize = new System.Drawing.Size(0, 148);
             this.panel3.MinimumSize = new System.Drawing.Size(892, 148);
             this.panel3.Name = "panel3";
@@ -595,7 +595,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1203, 869);
             this.Name = "Tab_Staffs";
             this.Size = new System.Drawing.Size(1203, 869);

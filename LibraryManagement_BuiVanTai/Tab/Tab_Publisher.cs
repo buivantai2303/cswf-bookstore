@@ -40,6 +40,11 @@ namespace LibraryManagement_BuiVanTai.Tab
             {
                 DGV_Publisher.DataSource = dt;
                 DGV_Publisher.RowHeadersVisible = false;
+
+                foreach (DataGridViewColumn column in DGV_Publisher.Columns)
+                {
+                    column.SortMode = DataGridViewColumnSortMode.NotSortable;
+                }
             }
             else
             {
@@ -316,8 +321,7 @@ namespace LibraryManagement_BuiVanTai.Tab
         }
 
         private void DGV_Publisher_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            BTN_Publisher_Add.Enabled = false;
+        { 
             Class_Publisher publisher = new Class_Publisher(TB_Publisher_ID.Text);
             if (e.RowIndex >= 0 && DGV_Publisher.Columns[e.ColumnIndex].Name == "ActionColumn")
             {
@@ -334,6 +338,7 @@ namespace LibraryManagement_BuiVanTai.Tab
                     }
                 }
             }
+            BTN_Publisher_Add.Enabled = false;
         }
 
         private void TB_Publisher_Search_TextChanged(object sender, EventArgs e)

@@ -291,10 +291,5 @@ namespace LibraryManagement_BuiVanTai.Tab
             dt2 = database_SaleReceipts.searchLeftData(TB_SearchBook_Search.Text);
             DGV_SearchBook_Left.DataSource = dt2;
         }
-
-        private void DGV_SearchBook_Left_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

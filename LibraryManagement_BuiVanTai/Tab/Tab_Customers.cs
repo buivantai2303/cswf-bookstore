@@ -156,5 +156,10 @@ namespace LibraryManagement_BuiVanTai.Tab
         {
 
         }
+
+        private void TB_Customer_ID_TextChanged(object sender, EventArgs e)
+        {
+            CheckNull();
+        }
     }
 }
