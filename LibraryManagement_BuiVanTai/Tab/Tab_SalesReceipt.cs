@@ -42,6 +42,8 @@ namespace LibraryManagement_BuiVanTai.Tab
             {
                 DGV_SaleReceipt_ImportReceipt.DataSource = dataTable_SaleReceipt;
                 DGV_SaleReceipt_ImportReceipt.RowHeadersVisible = false;
+                DGV_SaleReceipt_ImportReceipt.RowHeadersVisible = false;
+
                 // Set the DateTimePicker format to "yyyy-MM-dd"
                 /*                Date_ImportDate.Format = DateTimePickerFormat.Custom;
                                 Date_ImportDate.CustomFormat = "yyyy-MM-dd";*/
@@ -74,13 +76,15 @@ namespace LibraryManagement_BuiVanTai.Tab
 
             foreach (DataGridViewRow row in DGV_SaleReceipt_ReciptDetails.Rows)
             {
-                if (row.Cells["Price"].Value != null && decimal.TryParse(row.Cells["Price"].Value.ToString(), out decimal price))
+                if (row.Cells[3].Value != null)
                 {
-                    totalPrice += price;
+                    decimal price = decimal.Parse(row.Cells[3].Value.ToString());
+                    decimal amount = decimal.Parse(row.Cells[1].Value.ToString());
+                    totalPrice += price*amount;
                 }
             }
 
-            LB_SaleReceipt_Total.Text = $"Total: {totalPrice:C}";
+            LB_SaleReceipt_Total.Text = $"Total: {totalPrice} ";
         }
 
 
@@ -131,6 +135,14 @@ namespace LibraryManagement_BuiVanTai.Tab
             }
         }
 
-       
+        private void DGV_SaleReceipt_ImportReceipt_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void BTN_Refresh_Click(object sender, EventArgs e)
+        {
+            GridViewFormLoad_ImportReceipt(ClassDefineName.servername, ClassDefineName.database_name);
+        }
     }
 }

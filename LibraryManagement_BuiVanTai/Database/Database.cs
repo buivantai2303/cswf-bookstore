@@ -27,7 +27,7 @@ namespace LibraryManagement_BuiVanTai.Database
         }
 
 
-        public Database(string servername, string databasename, string user = "sa", string pass = "180403")
+        public Database(string servername, string databasename, string user = "sa", string pass = "Duong.1802")
         {
             // Kết nối csdl theo servername và database name
             DS = new DataSet();
@@ -46,14 +46,6 @@ namespace LibraryManagement_BuiVanTai.Database
             return true;
         }
 
-        public DataTable getSaleTable(string tablename)
-        {
-            DataTable datatable = new DataTable();
-            SqlDataAdapter dataAdapter = new SqlDataAdapter($"SELECT ReceiptID, StaffName, SaleDate \r\nFROM {tablename} \r\nJOIN Staffs ON Staffs.StaffID = SaleReceipts.StaffID", this.SQLCONN);
-            dataAdapter.Fill(datatable);
-            DS.Tables.Add(datatable);
-            return datatable;
-        }
 
         public DataTable getTable(string tablename)
         {

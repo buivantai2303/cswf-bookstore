@@ -10,10 +10,10 @@ namespace LibraryManagement_BuiVanTai.Class
     {
 
         // Server name
-        public static string servername = "BANHMIBIETBAY";
+        public static string servername = "TAGO-MARK2\\TAGOS";
 
         // Database name
-        public static string database_name = "QuanLyCuaHangSach";
+        public static string database_name = "QuanLyCuaHangSach2";
 
         // Class Table Customers.
         public static string table_Customer_TableName = "Customers";
@@ -88,7 +88,7 @@ namespace LibraryManagement_BuiVanTai.Class
         public static string table_SaleReceiptDetails_ReceiptID = "ReceiptID";
         public static string table_SaleReceiptDetails_BookID = "BookID";
         public static string table_SaleReceiptDetails_SaleNumber = "SaleNumber";
-        public static string table_SaleReceiptDetails_SupplierID = "SupplierID";
+        public static string table_SaleReceiptDetails_CustomerID = "CustomerID";
         public static string table_SaleReceiptDetails_Price = "Price";
 
         // Class Table ImportReceiptDetails name.

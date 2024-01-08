@@ -162,7 +162,8 @@ namespace LibraryManagement_BuiVanTai
             ResetButtonColors();
             MovePanel(Button_Main_SaleReceipt);
             Button_Main_SaleReceipt.BackColor = Color.FromArgb(0, 67, 147);
-                           
+            
+
             tab_SearchBooks.Visible = false;
             tab_Customers.Visible = false;
             tab_Authors.Visible = false;

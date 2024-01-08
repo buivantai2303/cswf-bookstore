@@ -73,26 +73,8 @@ namespace LibraryManagement_BuiVanTai.Tab
                 }
             }
             DGV_SearchBook_Right.Rows.Add(DGV_SearchBook_Left.Rows[e.RowIndex].Cells[1].Value.ToString(), DGV_SearchBook_Left.Rows[e.RowIndex].Cells[2].Value.ToString(), DGV_SearchBook_Left.Rows[e.RowIndex].Cells[3].Value.ToString(), DGV_SearchBook_Left.Rows[e.RowIndex].Cells[5].Value.ToString(), amount);
-/*            CalculateTotalPrice();
-*/            /*            }*/
+/*            }*/
         }
-
-
-
-/*        private void CalculateTotalPrice()
-        {
-            decimal totalPrice = 0;
-
-            foreach (DataGridViewRow row in DGV_SearchBook_Right.Rows)
-            {
-                if (row.Cells["Price"].Value != null && decimal.TryParse(row.Cells["Price"].Value.ToString(), out decimal price))
-                {
-                    totalPrice += price;
-                }
-            }
-
-            LB_SearchBook_Total.Text = $"Total: {totalPrice:C}";
-        }*/
 
         private void BTN_SeachBook_Pay_Click(object sender, EventArgs e)
         {
@@ -111,7 +93,7 @@ namespace LibraryManagement_BuiVanTai.Tab
                 {
                     MessageBox.Show("Add Successfuly");
                     GridViewFormLoadLeft(ClassDefineName.servername, ClassDefineName.database_name);
-                    DGV_SearchBook_Right.Rows.Clear();
+                    
                 }
                 else
                 {
@@ -120,15 +102,18 @@ namespace LibraryManagement_BuiVanTai.Tab
 
                 foreach (DataGridViewRow dgr in DGV_SearchBook_Right.Rows)
                 {
-                    Class_SaleReceiptDetails srd = new Class_SaleReceiptDetails(receiptID, dgr.Cells[0].Value.ToString(), Int32.Parse(dgr.Cells[4].Value.ToString()), CBB_CustomerID.Text, Int32.Parse(dgr.Cells[4].Value.ToString())* Int32.Parse(dgr.Cells[3].Value.ToString()));
+                    Class_SaleReceiptDetails srd = new Class_SaleReceiptDetails(receiptID, dgr.Cells[0].Value.ToString(), Int32.Parse(dgr.Cells[4].Value.ToString()), CBB_CustomerID.Text, Int32.Parse(dgr.Cells[3].Value.ToString()));
                     try
                     {
                         database_Details.InsertData(srd);
+                        
                     } catch
                     {
                         MessageBox.Show("There is something wrong!! Please Contact IT support");
                     }
                 }
+                CheckOut();
+                DGV_SearchBook_Right.Rows.Clear();
             }
             catch
             {
@@ -151,7 +136,7 @@ namespace LibraryManagement_BuiVanTai.Tab
             return rid.ToString();
         }
 
-        public void CheckOut(DataTable dt, string filename, string custName)
+        public void CheckOut(string filename, string custName)
         {
             int[] price = new int[DGV_SearchBook_Right.Rows.Count];
             for (int i = 0; i < price.Length; i++)
@@ -182,12 +167,14 @@ namespace LibraryManagement_BuiVanTai.Tab
                 workbook = excel.Workbooks.Open(Path);
                 workSheet = (Microsoft.Office.Interop.Excel.Worksheet)workbook.Sheets["Hóa Đơn Bán Hàng"];
 
-
-                for (int i = 0; i < dt.Rows.Count; i++)
+                foreach(DataGridViewRow row in DGV_SearchBook_Right.Rows)
                 {
-                    for (int j = 0; j < dt.Columns.Count; j++)
+                    for (int i = 0; i < DGV_SearchBook_Right.Rows.Count; i++)
                     {
-                        workSheet.Cells[i + 8, j + 1] = dt.Rows[i][j].ToString();
+                        for (int j = 0; j < 5; j++)
+                        {
+                            /*if () { }*/
+                        }
                     }
                 }
 

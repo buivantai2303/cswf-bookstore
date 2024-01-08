@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using System.Reflection;
 
 namespace LibraryManagement_BuiVanTai.Database
 {
@@ -21,14 +22,7 @@ namespace LibraryManagement_BuiVanTai.Database
         public DataTable getTable(string SaleID)
         {
             dataTable = new DataTable();
-            dataTable = database.ExecuteSQLReturnTable($"SELECT {ClassDefineName.table_Books_TableName}.{ClassDefineName.table_Books_BookName}, " +
-                $"{ClassDefineName.table_SaleReceiptDetails_TableName}.{ClassDefineName.table_SaleReceiptDetails_SaleNumber}, " +
-                $"{ClassDefineName.table_Suppliers_TableName}.{ClassDefineName.table_Suppliers_SupplierName}, " +
-                $"{ClassDefineName.table_SaleReceiptDetails_TableName}.{ClassDefineName.table_ImportReceiptDetails_Price} " +
-                $"FROM {ClassDefineName.table_SaleReceiptDetails_TableName} " +
-                $"JOIN {ClassDefineName.table_Books_TableName} ON {ClassDefineName.table_Books_TableName}.{ClassDefineName.table_Books_BookID} = {ClassDefineName.table_SaleReceiptDetails_TableName}.{ClassDefineName.table_SaleReceiptDetails_BookID} " +
-                $"JOIN {ClassDefineName.table_Suppliers_TableName} ON {ClassDefineName.table_Suppliers_TableName}.{ClassDefineName.table_Suppliers_SupplierID} = {ClassDefineName.table_SaleReceiptDetails_TableName}.{ClassDefineName.table_SaleReceiptDetails_SupplierID} " +
-                $"WHERE {ClassDefineName.table_SaleReceiptDetails_ReceiptID} = '{SaleID}';");
+            dataTable = database.ExecuteSQLReturnTable($"SELECT BookName, SaleNumber, sd.CustomerID, sd.Price FROM SaleReceiptDetails sd INNER JOIN Books b ON sd.BookID = b.BookID WHERE sd.ReceiptID = '{SaleID}'");
             return dataTable;
         }
 

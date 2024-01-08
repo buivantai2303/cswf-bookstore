@@ -12,40 +12,40 @@ namespace LibraryManagement_BuiVanTai.Database
 {
     public class Database_SaleReceipts
     {
-        Database database;
-        DataTable dataTable;
+        Database db;
+        DataTable dt;
 
         public Database_SaleReceipts(string servername, string databasename)
         {
-            database = new Database(servername, databasename);
+            db = new Database(servername, databasename);
         }
 
         public DataTable getTable()
         {
-            dataTable = new DataTable();
-            dataTable = database.getSaleTable("SaleReceipts");
-            return dataTable;
+            dt = new DataTable();
+            dt = db.getTable("SaleReceipts");
+            return dt;
         }
 
 
         public bool InsertData(Class_SaleReceipt sale)
         {
             string query = "INSERT INTO SaleReceipts VALUES (\'" + sale.ReceiptID + "\'," + "\'" + sale.StaffID + "\'," + "\'" + sale.SaleDate + "\')";
-            return database.ExecuteSQL(query);
+            return db.ExecuteSQL(query);
         }
 
-        /*        public bool UpdateData(Class_SaleReceipt sale)
-                {
-                    string query = "UPDATE SaleReceipts " +
-                    "Set  = " + "\'" +  + "\'," + " = " + "\'" +  + "\'," + " = " + "\'" +  + "\'," + " = " + "\'" +  + "\',"
-                    + "WHERE ReceiptID = \'" +  + "\'";
-                    return db.ExecuteSQL(query);
-                }*/
+/*        public bool UpdateData(Class_SaleReceipt sale)
+        {
+            string query = "UPDATE SaleReceipts " +
+            "Set  = " + "\'" +  + "\'," + " = " + "\'" +  + "\'," + " = " + "\'" +  + "\'," + " = " + "\'" +  + "\',"
+            + "WHERE ReceiptID = \'" +  + "\'";
+            return db.ExecuteSQL(query);
+        }*/
 
         public bool DeleteData(Class_SaleReceipt sale)
         {
             string query = "DELETE FROM SaleReceipts WHERE ReceiptID = \'" + sale.ReceiptID + "\'";
-            return database.ExecuteSQL(query);
+            return db.ExecuteSQL(query);
         }
 
         /*        public DataTable searchData(string keyword)
@@ -57,14 +57,14 @@ namespace LibraryManagement_BuiVanTai.Database
         public DataTable getCustomTable(string command)
         {
             DataTable dt2 = new DataTable();
-            dt2 = database.ExecuteSQLReturnTable(command);
+            dt2 = db.ExecuteSQLReturnTable(command);
             return dt2;
         }
 
         public DataTable searchLeftData(string keyword)
         {
             DataTable dt2 = new DataTable();
-            dt2 = database.ExecuteSQLReturnTable("SELECT BookID, BookName, BookType, Remaining, Price FROM Books WHERE BookName like '%" + keyword + "%'");
+            dt2 = db.ExecuteSQLReturnTable("SELECT BookID, BookName, BookType, Remaining, Price FROM Books WHERE BookName like '%" + keyword + "%'");
             return dt2;
         }
 
@@ -72,20 +72,16 @@ namespace LibraryManagement_BuiVanTai.Database
         public DataTable GetPublisherID()
         {
             string sqlCommand = $"SELECT {ClassDefineName.table_SaleReceipts_ReceiptID} FROM {ClassDefineName.table_Publishers_TableName};";
-            return database.GetDataTable(sqlCommand);
+            return db.GetDataTable(sqlCommand);
         }
 
         public bool DeleteSaleByID(Class_SaleReceipt sale)
         {
             string query = $"DELETE FROM SaleReceiptDetails WHERE ReceiptID = '{sale.ReceiptID}' " +
                 $"DELETE FROM SaleReceipts WHERE ReceiptID = '{sale.ReceiptID}'";
-            return database.ExecuteSQL(query);
+            return db.ExecuteSQL(query);
         }
 
-        /*        public void getTableByCommand()
-                {
-                    database.ExecuteSQL(sqlCommand);
-                }
-            }*/
+
     }
 }
