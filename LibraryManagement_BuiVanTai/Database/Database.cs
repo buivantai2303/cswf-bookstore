@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace LibraryManagement_BuiVanTai.Database
 {
-    internal class Database
+    public class Database
     {
         SqlConnection SQLCONN;
         SqlCommand CMD;

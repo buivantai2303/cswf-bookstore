@@ -58,5 +58,10 @@ namespace LibraryManagement_BuiVanTai.Database
             dt = db.ExecuteSQLReturnTable("SELECT BookID, BookName, Remaining, BookType, PublisherName, AuthorName, Price FROM Books b \r\nINNER JOIN Publishers p ON b.PublisherID=p.PublisherID\r\nINNER JOIN Authors a ON a.AuthorID=b.AuthorID\r\nWHERE BookName like '%" + keyword + "%'");
             return dt;
         }
+
+        public bool executeCMD(string sqlcommand)
+        {
+            return db.ExecuteSQL(sqlcommand);
+        }
     }
 }
