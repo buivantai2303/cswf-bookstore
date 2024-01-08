@@ -158,7 +158,7 @@ namespace LibraryManagement_BuiVanTai.Tab
 
             string currentPath = System.Reflection.Assembly.GetExecutingAssembly().Location;
             int binIndex = currentPath.LastIndexOf("bin");
-            string Path = currentPath.Substring(0, binIndex) + "\\Recipt\\Recipt.xlsx";
+            string Path = currentPath.Substring(0, binIndex) + "\\Recipt\\Recipt1.xlsx";
 
 
             Microsoft.Office.Interop.Excel.Application excel;
@@ -173,19 +173,16 @@ namespace LibraryManagement_BuiVanTai.Tab
                 excel.DisplayAlerts = false;
                 workbook = excel.Workbooks.Open(Path);
                 workSheet = (Microsoft.Office.Interop.Excel.Worksheet)workbook.Sheets["Hóa Đơn Bán Hàng"];
-
-                foreach(DataGridViewRow row in DGV_SearchBook_Right.Rows)
+                 
+                for (int i = 0; i < DGV_SearchBook_Right.Rows.Count; i++)
                 {
-                    for (int i = 0; i < DGV_SearchBook_Right.Rows.Count; i++)
+                    for (int j = 0; j < DGV_SearchBook_Right.Columns.Count; j++)
                     {
-                        for (int j = 0; j < 7; j++)
-                        {
-                            workSheet.Rows[i + 8][j+2] = row.Cells[j].Value.ToString();
-                        }
+                        workSheet.Cells[i + 8, j + 2] = DGV_SearchBook_Right.Rows[i].Cells[j].Value.ToString();
                     }
                 }
 
-                workSheet.Cells[19, 5] = CountTotal(price, amount);
+                workSheet.Cells[18, 2] = CountTotal(price, amount);
                 workSheet.Cells[4, 1] = "Tên khách hàng: " + custName;
 
                 workbook.SaveAs(filename);
