@@ -12,7 +12,7 @@ namespace LibraryManagement_BuiVanTai.Database
 {
     public class Database_SaleReceipts
     {
-        Database db1;
+        Database db;
         DataTable dt;
 
         public Database_SaleReceipts(string servername, string databasename)
@@ -57,7 +57,7 @@ namespace LibraryManagement_BuiVanTai.Database
         public DataTable getCustomTable(string command)
         {
             DataTable dt2 = new DataTable();
-            dt2 = db1.ExecuteSQLReturnTable(command);
+            dt2 = db.ExecuteSQLReturnTable(command);
             return dt2;
         }
 
@@ -72,14 +72,14 @@ namespace LibraryManagement_BuiVanTai.Database
         public DataTable GetPublisherID()
         {
             string sqlCommand = $"SELECT {ClassDefineName.table_SaleReceipts_ReceiptID} FROM {ClassDefineName.table_Publishers_TableName};";
-            return database.GetDataTable(sqlCommand);
+            return db.GetDataTable(sqlCommand);
         }
 
         public bool DeleteSaleByID(Class_SaleReceipt sale)
         {
             string query = $"DELETE FROM SaleReceiptDetails WHERE ReceiptID = '{sale.ReceiptID}' " +
                 $"DELETE FROM SaleReceipts WHERE ReceiptID = '{sale.ReceiptID}'";
-            return database.ExecuteSQL(query);
+            return db.ExecuteSQL(query);
         }
 
 
