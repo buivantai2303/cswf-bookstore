@@ -42,8 +42,6 @@ namespace LibraryManagement_BuiVanTai.Tab
             {
                 DGV_SaleReceipt_ImportReceipt.DataSource = dataTable_SaleReceipt;
                 DGV_SaleReceipt_ImportReceipt.RowHeadersVisible = false;
-                DGV_SaleReceipt_ImportReceipt.RowHeadersVisible = false;
-
                 // Set the DateTimePicker format to "yyyy-MM-dd"
                 /*                Date_ImportDate.Format = DateTimePickerFormat.Custom;
                                 Date_ImportDate.CustomFormat = "yyyy-MM-dd";*/

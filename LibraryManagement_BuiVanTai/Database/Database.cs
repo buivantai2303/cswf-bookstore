@@ -46,6 +46,14 @@ namespace LibraryManagement_BuiVanTai.Database
             return true;
         }
 
+        public DataTable getSaleTable(string tablename)
+        {
+            DataTable datatable = new DataTable();
+            SqlDataAdapter dataAdapter = new SqlDataAdapter($"SELECT ReceiptID, StaffName, SaleDate \r\nFROM {tablename} \r\nJOIN Staffs ON Staffs.StaffID = SaleReceipts.StaffID", this.SQLCONN);
+            dataAdapter.Fill(datatable);
+            DS.Tables.Add(datatable);
+            return datatable;
+        }
 
         public DataTable getTable(string tablename)
         {
