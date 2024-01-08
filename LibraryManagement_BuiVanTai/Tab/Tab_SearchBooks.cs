@@ -132,7 +132,7 @@ namespace LibraryManagement_BuiVanTai.Tab
         {
             int rid;
             dt = database_SaleReceipts.getCustomTable("SELECT ReceiptID FROM SaleReceipts");
-            if (dt == null)
+            if (dt.Rows.Count == 0)
             {
                 rid = 1;
                 return rid.ToString();
