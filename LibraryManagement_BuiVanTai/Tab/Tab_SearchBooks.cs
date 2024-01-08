@@ -112,8 +112,8 @@ namespace LibraryManagement_BuiVanTai.Tab
                         MessageBox.Show("There is something wrong!! Please Contact IT support");
                     }
                 }
-                CheckOut();
-                DGV_SearchBook_Right.Rows.Clear();
+/*                CheckOut();
+*/                DGV_SearchBook_Right.Rows.Clear();
             }
             catch
             {
