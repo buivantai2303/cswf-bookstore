@@ -182,7 +182,7 @@ namespace LibraryManagement_BuiVanTai.Tab
                     }
                 }
 
-                workSheet.Cells[18, 2] = CountTotal(price, amount);
+                workSheet.Cells[18, 2] = CountTotal(price, amount).ToString();
                 workSheet.Cells[4, 1] = "Tên khách hàng: " + custName;
 
                 workbook.SaveAs(filename);
