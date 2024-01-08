@@ -111,7 +111,6 @@ namespace LibraryManagement_BuiVanTai.Tab
 
         private void DGV_Customer_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            BTN_Customer_Save.Enabled = true;
             Class_Customer cus = new Class_Customer(TB_Customer_ID.Text);
             if (e.RowIndex >= 0 && DGV_Publisger.Columns[e.ColumnIndex].Name == "ActionColumn")
             {
@@ -134,6 +133,7 @@ namespace LibraryManagement_BuiVanTai.Tab
 
         private void DGV_Customer_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            BTN_Customer_Save.Enabled = true;
             TB_Customer_ID.Enabled = false;
             int index = e.RowIndex;
             DataGridViewRow selectedRow = DGV_Publisger.Rows[index];

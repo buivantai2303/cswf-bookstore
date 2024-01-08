@@ -163,7 +163,7 @@ namespace LibraryManagement_BuiVanTai.Tab
         }
         private void DGV_Authors_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            BTN_Authors_Save.Enabled = true;
+            
             if (e.RowIndex >= 0 && DGV_Authors.Columns[e.ColumnIndex].Name == "ActionColumn")
             {
                 DialogResult result = MessageBox.Show("Are you sure you want to delete this row?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -185,6 +185,8 @@ namespace LibraryManagement_BuiVanTai.Tab
 
         private void DGV_Authors_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            BTN_Authors_Add.Enabled = false;
+            BTN_Authors_Save.Enabled = true;
             TB_Authors_ID.Enabled = false;
             int index = e.RowIndex;
             DataGridViewRow selectedRow = DGV_Authors.Rows[index];

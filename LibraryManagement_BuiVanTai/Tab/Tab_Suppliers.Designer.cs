@@ -92,7 +92,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.PTB_Suppliers_Menu);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.MaximumSize = new System.Drawing.Size(0, 59);
             this.panel1.MinimumSize = new System.Drawing.Size(1203, 59);
             this.panel1.Name = "panel1";
@@ -115,7 +115,7 @@
             // 
             this.PTB_Suppliers_Menu.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Menu;
             this.PTB_Suppliers_Menu.Location = new System.Drawing.Point(16, 15);
-            this.PTB_Suppliers_Menu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PTB_Suppliers_Menu.Margin = new System.Windows.Forms.Padding(4);
             this.PTB_Suppliers_Menu.Name = "PTB_Suppliers_Menu";
             this.PTB_Suppliers_Menu.Size = new System.Drawing.Size(35, 32);
             this.PTB_Suppliers_Menu.TabIndex = 0;
@@ -133,7 +133,7 @@
             this.panel2.Controls.Add(this.Label_Suppliers_TotalNumbers);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(0, 66);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.MaximumSize = new System.Drawing.Size(303, 148);
             this.panel2.MinimumSize = new System.Drawing.Size(303, 148);
             this.panel2.Name = "panel2";
@@ -192,7 +192,7 @@
             // 
             this.pictureBox1.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.SupplierTotal;
             this.pictureBox1.Location = new System.Drawing.Point(209, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(73, 62);
             this.pictureBox1.TabIndex = 0;
@@ -217,7 +217,7 @@
             this.panel3.Controls.Add(this.TB_Suppliers_ID);
             this.panel3.Controls.Add(this.Label_SupplierID);
             this.panel3.Location = new System.Drawing.Point(311, 66);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.MaximumSize = new System.Drawing.Size(0, 148);
             this.panel3.MinimumSize = new System.Drawing.Size(892, 148);
             this.panel3.Name = "panel3";
@@ -233,7 +233,7 @@
             this.BTN_Suppliers_Save.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Save2;
             this.BTN_Suppliers_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BTN_Suppliers_Save.Location = new System.Drawing.Point(772, 27);
-            this.BTN_Suppliers_Save.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BTN_Suppliers_Save.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_Suppliers_Save.Name = "BTN_Suppliers_Save";
             this.BTN_Suppliers_Save.Size = new System.Drawing.Size(87, 59);
             this.BTN_Suppliers_Save.TabIndex = 17;
@@ -253,7 +253,7 @@
             "Active",
             "Inactive"});
             this.CBB_Suppliers_Suppliers_StatusFix.Location = new System.Drawing.Point(485, 34);
-            this.CBB_Suppliers_Suppliers_StatusFix.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CBB_Suppliers_Suppliers_StatusFix.Margin = new System.Windows.Forms.Padding(4);
             this.CBB_Suppliers_Suppliers_StatusFix.MaximumSize = new System.Drawing.Size(159, 0);
             this.CBB_Suppliers_Suppliers_StatusFix.MinimumSize = new System.Drawing.Size(159, 0);
             this.CBB_Suppliers_Suppliers_StatusFix.Name = "CBB_Suppliers_Suppliers_StatusFix";
@@ -270,7 +270,7 @@
             this.BTN_Suppliers_Add.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Add;
             this.BTN_Suppliers_Add.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BTN_Suppliers_Add.Location = new System.Drawing.Point(677, 27);
-            this.BTN_Suppliers_Add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BTN_Suppliers_Add.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_Suppliers_Add.Name = "BTN_Suppliers_Add";
             this.BTN_Suppliers_Add.Size = new System.Drawing.Size(87, 59);
             this.BTN_Suppliers_Add.TabIndex = 18;
@@ -300,7 +300,7 @@
             this.TB_Suppliers_Address.BackColor = System.Drawing.Color.White;
             this.TB_Suppliers_Address.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TB_Suppliers_Address.Location = new System.Drawing.Point(481, 103);
-            this.TB_Suppliers_Address.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TB_Suppliers_Address.Margin = new System.Windows.Forms.Padding(4);
             this.TB_Suppliers_Address.Name = "TB_Suppliers_Address";
             this.TB_Suppliers_Address.Size = new System.Drawing.Size(376, 29);
             this.TB_Suppliers_Address.TabIndex = 15;
@@ -327,7 +327,7 @@
             this.TB_Suppliers_Telephone.BackColor = System.Drawing.Color.White;
             this.TB_Suppliers_Telephone.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TB_Suppliers_Telephone.Location = new System.Drawing.Point(265, 34);
-            this.TB_Suppliers_Telephone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TB_Suppliers_Telephone.Margin = new System.Windows.Forms.Padding(4);
             this.TB_Suppliers_Telephone.MaximumSize = new System.Drawing.Size(193, 25);
             this.TB_Suppliers_Telephone.MinimumSize = new System.Drawing.Size(193, 25);
             this.TB_Suppliers_Telephone.Name = "TB_Suppliers_Telephone";
@@ -356,7 +356,7 @@
             this.TB_Suppliers_Name.BackColor = System.Drawing.Color.White;
             this.TB_Suppliers_Name.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TB_Suppliers_Name.Location = new System.Drawing.Point(20, 103);
-            this.TB_Suppliers_Name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TB_Suppliers_Name.Margin = new System.Windows.Forms.Padding(4);
             this.TB_Suppliers_Name.MaximumSize = new System.Drawing.Size(439, 25);
             this.TB_Suppliers_Name.MinimumSize = new System.Drawing.Size(439, 25);
             this.TB_Suppliers_Name.Name = "TB_Suppliers_Name";
@@ -386,7 +386,7 @@
             this.TB_Suppliers_ID.BackColor = System.Drawing.Color.White;
             this.TB_Suppliers_ID.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TB_Suppliers_ID.Location = new System.Drawing.Point(20, 34);
-            this.TB_Suppliers_ID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TB_Suppliers_ID.Margin = new System.Windows.Forms.Padding(4);
             this.TB_Suppliers_ID.MaximumSize = new System.Drawing.Size(223, 25);
             this.TB_Suppliers_ID.MinimumSize = new System.Drawing.Size(223, 25);
             this.TB_Suppliers_ID.Name = "TB_Suppliers_ID";
@@ -413,7 +413,7 @@
             this.TB_Suppliers_Search.BackColor = System.Drawing.Color.White;
             this.TB_Suppliers_Search.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TB_Suppliers_Search.Location = new System.Drawing.Point(24, 52);
-            this.TB_Suppliers_Search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TB_Suppliers_Search.Margin = new System.Windows.Forms.Padding(4);
             this.TB_Suppliers_Search.Name = "TB_Suppliers_Search";
             this.TB_Suppliers_Search.Size = new System.Drawing.Size(508, 29);
             this.TB_Suppliers_Search.TabIndex = 2;
@@ -443,7 +443,7 @@
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.TB_Suppliers_Search);
             this.panel4.Location = new System.Drawing.Point(0, 222);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.MinimumSize = new System.Drawing.Size(1203, 580);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1203, 647);
@@ -457,7 +457,7 @@
             this.BTN_Suppliers_Report.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Health_Graph;
             this.BTN_Suppliers_Report.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BTN_Suppliers_Report.Location = new System.Drawing.Point(900, 46);
-            this.BTN_Suppliers_Report.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BTN_Suppliers_Report.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_Suppliers_Report.Name = "BTN_Suppliers_Report";
             this.BTN_Suppliers_Report.Size = new System.Drawing.Size(159, 43);
             this.BTN_Suppliers_Report.TabIndex = 19;
@@ -552,7 +552,7 @@
             this.DGV_Suppliers.DefaultCellStyle = dataGridViewCellStyle2;
             this.DGV_Suppliers.EnableHeadersVisualStyles = false;
             this.DGV_Suppliers.Location = new System.Drawing.Point(24, 103);
-            this.DGV_Suppliers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DGV_Suppliers.Margin = new System.Windows.Forms.Padding(4);
             this.DGV_Suppliers.MultiSelect = false;
             this.DGV_Suppliers.Name = "DGV_Suppliers";
             this.DGV_Suppliers.ReadOnly = true;
@@ -573,8 +573,8 @@
             this.DGV_Suppliers.ShowRowErrors = false;
             this.DGV_Suppliers.Size = new System.Drawing.Size(1175, 510);
             this.DGV_Suppliers.TabIndex = 8;
-            this.DGV_Suppliers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Suppliers_CellContentClick);
-            this.DGV_Suppliers.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Suppliers_CellClick);
+            this.DGV_Suppliers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Suppliers_CellClick);
+            this.DGV_Suppliers.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Suppliers_CellDoubleClick);
             // 
             // SupplierID
             // 
@@ -639,7 +639,7 @@
             this.BTN_Suppliers_Refresh.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Suppliers_Refresh.ForeColor = System.Drawing.Color.White;
             this.BTN_Suppliers_Refresh.Location = new System.Drawing.Point(721, 46);
-            this.BTN_Suppliers_Refresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BTN_Suppliers_Refresh.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_Suppliers_Refresh.Name = "BTN_Suppliers_Refresh";
             this.BTN_Suppliers_Refresh.Size = new System.Drawing.Size(157, 43);
             this.BTN_Suppliers_Refresh.TabIndex = 7;
@@ -668,7 +668,7 @@
             "Inactive",
             "All"});
             this.ComboBox_Suppliers_Status.Location = new System.Drawing.Point(541, 52);
-            this.ComboBox_Suppliers_Status.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ComboBox_Suppliers_Status.Margin = new System.Windows.Forms.Padding(4);
             this.ComboBox_Suppliers_Status.Name = "ComboBox_Suppliers_Status";
             this.ComboBox_Suppliers_Status.Size = new System.Drawing.Size(149, 29);
             this.ComboBox_Suppliers_Status.TabIndex = 5;
@@ -708,7 +708,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1203, 869);
             this.Name = "Tab_Suppliers";
             this.Size = new System.Drawing.Size(1203, 869);
