@@ -34,7 +34,7 @@ namespace LibraryManagement_BuiVanTai.Database
         public bool UpdateData(Class_Customer ct)
         {
             string query = "UPDATE Customers " +
-            "Set FirstName = " + "\'" + ct.FirstName + "\'," + "LastName = " + "\'" + ct.LastName + "\'," + "Tel = " + "\'" + ct.Tel + "\'," + "Address = " + "\'" + ct.Address + "\',"
+            "Set FirstName = " + "\'" + ct.FirstName + "\'," + "LastName = " + "\'" + ct.LastName + "\'," + "Tel = " + "\'" + ct.Tel + "\'," + "Address = " + "\'" + ct.Address + "\'"
             + "WHERE CustomerID = \'" + ct.Id + "\'";
             return db.ExecuteSQL(query);
         }
