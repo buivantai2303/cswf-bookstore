@@ -71,7 +71,7 @@ namespace LibraryManagement_BuiVanTai.Database
         // Searching data by search funtion from user ========================================================================
         public DataTable SearchData(string keyWords, string date)
         {
-            string sqlCommand = $"SELECT * FROM {ClassDefineName.table_ImportReceipt_TableName} WHERE {ClassDefineName.table_ImportReceipt_ImportID} LIKE '%{keyWords}%' AND {ClassDefineName.table_ImportReceipt_ImportDate} LIKE '%{date}%';";
+            string sqlCommand = $"SELECT * FROM ImportReceipt WHERE ImportID LIKE '%{keyWords}%' AND ImportDate LIKE '%{date}%' OR StaffID LIKE '%{keyWords}%' AND ImportDate LIKE '%{date}%' OR PublisherID LIKE '%{keyWords}%' AND ImportDate LIKE '%{date}%';";
             return database.GetDataTable(sqlCommand);
         }
 

@@ -118,6 +118,15 @@ namespace LibraryManagement_BuiVanTai
         // Use delete buton to dataGridView_Suppliers function ============================================
         private void dataGridView_Suppliers_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            BTN_Suppliers_Save.Enabled = true;
+            int index = e.RowIndex;
+            TB_Suppliers_ID.Enabled = true;
+            DataGridViewRow SelectedRow = DGV_Suppliers.Rows[index];
+            TB_Suppliers_ID.Text = SelectedRow.Cells[1].Value.ToString();
+            TB_Suppliers_Name.Text = SelectedRow.Cells[2].Value.ToString();
+            TB_Suppliers_Address.Text = SelectedRow.Cells[3].Value.ToString();
+            TB_Suppliers_Telephone.Text = SelectedRow.Cells[4].Value.ToString();
+            CBB_Suppliers_Suppliers_StatusFix.Text = SelectedRow.Cells[5].Value.ToString();
 
             if (e.RowIndex >= 0 && DGV_Suppliers.Columns[e.ColumnIndex].Name == "ActionColumn")
             {
@@ -448,8 +457,11 @@ namespace LibraryManagement_BuiVanTai
             }
         }
 
-        private void DGV_Suppliers_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void DGV_Suppliers_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+<<<<<<< HEAD
+
+=======
             TB_Suppliers_ID.Enabled = false;
             BTN_Suppliers_Save.Enabled = true;
             int index = e.RowIndex;
@@ -460,6 +472,7 @@ namespace LibraryManagement_BuiVanTai
             TB_Suppliers_Telephone.Text = SelectedRow.Cells[4].Value.ToString();
             CBB_Suppliers_Suppliers_StatusFix.Text = SelectedRow.Cells[5].Value.ToString();
             BTN_Suppliers_Add.Enabled = false;
+>>>>>>> 3db5a80dc21529ae36d001e5a806417d6d6dbe30
         }
     }
 
