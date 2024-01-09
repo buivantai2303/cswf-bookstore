@@ -133,6 +133,11 @@ namespace LibraryManagement_BuiVanTai.Tab
             CheckNull();
         }
 
+        private void TB__Staff_Search_TextChanged(object sender, EventArgs e)
+        {
+            dt = database_Staff.searchData(TB__Staff_Search.Text);
+            DGV_Staff.DataSource = dt;
+        }
 
         private void BTN_Staff_Refresh_Click(object sender, EventArgs e)
         {
@@ -183,12 +188,6 @@ namespace LibraryManagement_BuiVanTai.Tab
             TB_Staff_Tel.Text = selectedRow.Cells[5].Value.ToString();
 
             BTN_Staff_Add.Enabled = false;
-        }
-
-        private void TB_Staff_Search_TextChanged(object sender, EventArgs e)
-        {
-            dt = database_Staff.searchData(TB_Staff_Search.Text);
-            DGV_Staff.DataSource = dt;
         }
     }   
 }
