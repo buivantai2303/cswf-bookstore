@@ -5,7 +5,7 @@
         /// <summary> 
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        public System.ComponentModel.IContainer components = null;
 
         /// <summary> 
         /// Clean up any resources being used.
@@ -26,7 +26,7 @@
         /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        public void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -596,41 +596,41 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox PTB_Suppliers_Menu;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label Label_Publisher_Total;
-        private System.Windows.Forms.Label Label_Publisher_TotalNumbers;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox TB_Publisher_Address;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox TB_Publisher_Tel;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox TB_Publisher_Name;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox TB_Publisher_ID;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView DGV_Publisher;
-        private System.Windows.Forms.Button BTN_Publisher_Save;
-        private System.Windows.Forms.Button BTN_Publisher_Add;
-        private System.Windows.Forms.Button BTN_Publisher_Refresh;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox TB_Publisher_Search;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PublisherID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PublisherName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PublisherAddress;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PublisherTel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PublisherState;
-        private System.Windows.Forms.DataGridViewImageColumn ActionColumn;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox CBB_Publisher_StateSearch;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox CBB_Publisher_StateEdit;
-        private System.Windows.Forms.Label LB_Note;
+        public System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.PictureBox PTB_Suppliers_Menu;
+        public System.Windows.Forms.Panel panel3;
+        public System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.Label Label_Publisher_Total;
+        public System.Windows.Forms.Label Label_Publisher_TotalNumbers;
+        public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Panel panel4;
+        public System.Windows.Forms.Panel panel5;
+        public System.Windows.Forms.TextBox TB_Publisher_Address;
+        public System.Windows.Forms.Label label15;
+        public System.Windows.Forms.TextBox TB_Publisher_Tel;
+        public System.Windows.Forms.Label label14;
+        public System.Windows.Forms.TextBox TB_Publisher_Name;
+        public System.Windows.Forms.Label label13;
+        public System.Windows.Forms.TextBox TB_Publisher_ID;
+        public System.Windows.Forms.Label label11;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.DataGridView DGV_Publisher;
+        public System.Windows.Forms.Button BTN_Publisher_Save;
+        public System.Windows.Forms.Button BTN_Publisher_Add;
+        public System.Windows.Forms.Button BTN_Publisher_Refresh;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.TextBox TB_Publisher_Search;
+        public System.Windows.Forms.DataGridViewTextBoxColumn PublisherID;
+        public System.Windows.Forms.DataGridViewTextBoxColumn PublisherName;
+        public System.Windows.Forms.DataGridViewTextBoxColumn PublisherAddress;
+        public System.Windows.Forms.DataGridViewTextBoxColumn PublisherTel;
+        public System.Windows.Forms.DataGridViewTextBoxColumn PublisherState;
+        public System.Windows.Forms.DataGridViewImageColumn ActionColumn;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.ComboBox CBB_Publisher_StateSearch;
+        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.ComboBox CBB_Publisher_StateEdit;
+        public System.Windows.Forms.Label LB_Note;
     }
 }

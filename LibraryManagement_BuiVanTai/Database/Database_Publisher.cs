@@ -18,12 +18,6 @@ namespace LibraryManagement_BuiVanTai.Database
             database = new Database(servername, databasename);
         }
 
-        public DataTable getTable()
-        {
-            dataTable = new DataTable();
-            dataTable = database.getTable("Publishers");
-            return dataTable;
-        }
 
         //  Get data rows active suppliers ================================================================
         public DataTable getActiveTable()
