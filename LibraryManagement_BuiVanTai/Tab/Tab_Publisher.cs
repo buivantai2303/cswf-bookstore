@@ -113,20 +113,6 @@ namespace LibraryManagement_BuiVanTai.Tab
             DataConditional();
         }
 
-        private void DGV_Publisher_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            BTN_Publisher_Save.Enabled=true;
-            int index = e.RowIndex;
-            TB_Publisher_ID.Enabled = true;
-            DataGridViewRow SelectedRow = DGV_Publisher.Rows[index];
-            TB_Publisher_ID.Text = SelectedRow.Cells[1].Value.ToString();
-            TB_Publisher_Name.Text = SelectedRow.Cells[2].Value.ToString();
-            TB_Publisher_Address.Text = SelectedRow.Cells[3].Value.ToString();
-            TB_Publisher_Tel.Text = SelectedRow.Cells[4].Value.ToString();
-            CBB_Publisher_StateEdit.Text = SelectedRow.Cells[5].Value.ToString();
-            return;
-        }
-
 
         private void CBB_Publisher_StateSearch_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -321,7 +307,20 @@ namespace LibraryManagement_BuiVanTai.Tab
         }
 
         private void DGV_Publisher_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        { 
+        {
+            BTN_Publisher_Save.Enabled = false;
+            TB_Publisher_ID.Enabled = false;
+
+            int index = e.RowIndex;
+            TB_Publisher_ID.Enabled = true;
+            DataGridViewRow SelectedRow = DGV_Publisher.Rows[index];
+            TB_Publisher_ID.Text = SelectedRow.Cells[1].Value.ToString();
+            TB_Publisher_Name.Text = SelectedRow.Cells[2].Value.ToString();
+            TB_Publisher_Address.Text = SelectedRow.Cells[3].Value.ToString();
+            TB_Publisher_Tel.Text = SelectedRow.Cells[4].Value.ToString();
+            CBB_Publisher_StateEdit.Text = SelectedRow.Cells[5].Value.ToString();
+
+
             Class_Publisher publisher = new Class_Publisher(TB_Publisher_ID.Text);
             if (e.RowIndex >= 0 && DGV_Publisher.Columns[e.ColumnIndex].Name == "ActionColumn")
             {
@@ -366,11 +365,6 @@ namespace LibraryManagement_BuiVanTai.Tab
                 MessageBox.Show("Invalid status.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-        }
-
-        private void DGV_Publisher_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 

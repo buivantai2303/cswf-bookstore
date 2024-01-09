@@ -38,10 +38,5 @@ namespace LibraryManagement_BuiVanTai.Database
             return database.ExecuteSQL(query);
         }
 
-        public DataTable searchData(string keyword)
-        {
-            dataTable = database.ExecuteSQLReturnTable("SELECT * FROM SaleReceiptDetails WHERE ReceiptID like '%" + keyword + "%'");
-            return dataTable;
-        }
     }
 }

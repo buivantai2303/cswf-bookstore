@@ -111,18 +111,12 @@ namespace LibraryManagement_BuiVanTai.Database
             return dataTable;
         }
 
-       
-        public bool getColumnID (string ColumnID, string ID)
-        {
-            string sqlCommand = $"SELECT {ColumnID} FROM {ClassDefineName.table_Suppliers_TableName} WHERE {ClassDefineName.table_Suppliers_SupplierID} = '{ID}';";
-            return database.ExecuteSQL(sqlCommand);
-        }
 
         public int IsDuplicateSupplier(string supplierID)
         {
             string sqlCommand = $"SELECT COUNT(*) FROM {ClassDefineName.table_Suppliers_TableName} WHERE {ClassDefineName.table_Suppliers_SupplierID} = '{supplierID}'";
 
-            return database.ExcuteSQL_CheckDuplicate(sqlCommand);
+            return database.ExecuteSQL_CheckDuplicate(sqlCommand);
         }
 
     }

@@ -76,21 +76,21 @@ namespace LibraryManagement_BuiVanTai.Database
         {
             string sqlCommand = $"SELECT COUNT(*) FROM {ClassDefineName.table_Publishers_TableName} WHERE {ClassDefineName.table_Publishers_PublisherID} = '{publisherID}'";
 
-            return database.ExcuteSQL_CheckDuplicate(sqlCommand);
+            return database.ExecuteSQL_CheckDuplicate(sqlCommand);
         }
 
         public int IsDuplicatePublisherTel(string publisherTel)
         {
             string sqlCommand = $"SELECT COUNT(*) FROM {ClassDefineName.table_Publishers_TableName} WHERE {ClassDefineName.table_Publishers_PublisherTel} = '{publisherTel}'";
 
-            return database.ExcuteSQL_CheckDuplicate(sqlCommand);
+            return database.ExecuteSQL_CheckDuplicate(sqlCommand);
         }
 
         public int IsDuplicatePublisherName(string publisherName)
         {
             string sqlCommand = $"SELECT COUNT(*) FROM {ClassDefineName.table_Publishers_TableName} WHERE {ClassDefineName.table_Publishers_PublisherName} = '{publisherName}'";
 
-            return database.ExcuteSQL_CheckDuplicate(sqlCommand);
+            return database.ExecuteSQL_CheckDuplicate(sqlCommand);
         }
 
         public DataTable SearchDataWithState(string keyWords, string State)

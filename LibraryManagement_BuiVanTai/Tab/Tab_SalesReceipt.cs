@@ -135,14 +135,16 @@ namespace LibraryManagement_BuiVanTai.Tab
             }
         }
 
-        private void DGV_SaleReceipt_ImportReceipt_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void BTN_Refresh_Click(object sender, EventArgs e)
         {
             GridViewFormLoad_ImportReceipt(ClassDefineName.servername, ClassDefineName.database_name);
+        }
+
+        private void TB_ImportReceipt_Search_TextChanged(object sender, EventArgs e)
+        {
+            dataTable_SaleReceipt = DB_SaleReceipt.searchSaleReceipt(TB_ImportReceipt_Search.Text);
+            DGV_SaleReceipt_ImportReceipt.DataSource = dataTable_SaleReceipt;
+            return;
         }
     }
 }

@@ -26,6 +26,11 @@ namespace LibraryManagement_BuiVanTai.Class
             ImportDate = importDate;
         }
 
+        public Class_ImportReceipt(string importID)
+        {
+            ImportID = importID;
+        }
+
         public Class_ImportReceipt(string importID, DateTime importDate, string publisherID, string staffID)
         {
             ImportID = importID;

@@ -20,11 +20,12 @@ namespace LibraryManagement_BuiVanTai.Database
             db = new Database(servername, databasename);
         }
 
+
         public DataTable getTable()
         {
-            dt = new DataTable();
-            dt = db.getTable("SaleReceipts");
-            return dt;
+            string sqlCommand = $"SELECT * FROM SaleReceipts";
+            return db.GetDataTable(sqlCommand);
+
         }
 
 
@@ -34,13 +35,6 @@ namespace LibraryManagement_BuiVanTai.Database
             return db.ExecuteSQL(query);
         }
 
-/*        public bool UpdateData(Class_SaleReceipt sale)
-        {
-            string query = "UPDATE SaleReceipts " +
-            "Set  = " + "\'" +  + "\'," + " = " + "\'" +  + "\'," + " = " + "\'" +  + "\'," + " = " + "\'" +  + "\',"
-            + "WHERE ReceiptID = \'" +  + "\'";
-            return db.ExecuteSQL(query);
-        }*/
 
         public bool DeleteData(Class_SaleReceipt sale)
         {
@@ -48,11 +42,6 @@ namespace LibraryManagement_BuiVanTai.Database
             return db.ExecuteSQL(query);
         }
 
-        /*        public DataTable searchData(string keyword)
-                {
-                    dt = db.ExecuteSQLReturnTable("SELECT * FROM SaleReceipts WHERE ReceiptID like '%" + keyword + "%'");
-                    return dt;
-                }*/
 
         public DataTable getCustomTable(string command)
         {
@@ -65,6 +54,14 @@ namespace LibraryManagement_BuiVanTai.Database
         {
             DataTable dt2 = new DataTable();
             dt2 = db.ExecuteSQLReturnTable("SELECT BookID, BookName, BookType, Remaining, Price FROM Books WHERE BookName like '%" + keyword + "%'");
+            return dt2;
+        }
+
+        public DataTable searchSaleReceipt(string keyword)
+        {
+            DataTable dt2 = new DataTable();
+            string sqlCommand = $"SELECT * FROM SaleReceipts WHERE ReceiptID LIKE '%{keyword}' OR StaffID LIKE '%{keyword}%' OR SaleDate LIKE '%{keyword}%'";
+            dt2 = db.ExecuteSQLReturnTable(sqlCommand);
             return dt2;
         }
 

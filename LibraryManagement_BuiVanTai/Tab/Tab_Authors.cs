@@ -208,8 +208,8 @@ namespace LibraryManagement_BuiVanTai.Tab
 
         private void TB_Authors_Search_TextChanged(object sender, EventArgs e)
         {
-/*            dt = Database_Author.searchData(TB_Authors_Search.Text);
-            DGV_Authors.DataSource = dt;*/
+            dt = Database_Author.searchData(TB_Authors_Search.Text);
+            DGV_Authors.DataSource = dt;
         }
     }
 }

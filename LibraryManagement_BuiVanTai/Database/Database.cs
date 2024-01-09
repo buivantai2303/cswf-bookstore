@@ -17,16 +17,6 @@ namespace LibraryManagement_BuiVanTai.Database
         DataSet DS;
 
 
-        public DataSet Ds { get => DS; set => DS = value; }
-
-
-        public Database()
-        {
-            //tùy cũng có thể có lệnh mặc định
-            DS = new DataSet();
-        }
-
-
         public Database(string servername, string databasename, string user = "sa", string pass = "180403")
         {
             // Kết nối csdl theo servername và database name
@@ -36,15 +26,6 @@ namespace LibraryManagement_BuiVanTai.Database
             SQLCONN.Open();
         }
 
-
-        public bool CheckConnect()
-        {
-            if (SQLCONN.State != ConnectionState.Open)
-            {
-                return false;
-            }
-            return true;
-        }
 
 
         public DataTable getTable(string tablename)
@@ -87,15 +68,6 @@ namespace LibraryManagement_BuiVanTai.Database
             return datatable;
         }
 
-
-        public DataTable deleteData(string tablename, string columnName, string id)
-        {
-            DataTable datatable = new DataTable();
-            SqlDataAdapter dataAdapter = new SqlDataAdapter("DELETE FROM " + tablename + " WHERE " + columnName + " = '" + id + "';", this.SQLCONN);
-            dataAdapter.Fill(datatable);
-            DS.Tables.Add(datatable);
-            return datatable;
-        }
 
 
         public DataTable GetDataTable(string sqlCommand)
@@ -146,15 +118,9 @@ namespace LibraryManagement_BuiVanTai.Database
             return datatable;
         }
 
-        public DataTable getCustomTable(string command)
-        {
-            DataTable dt2 = new DataTable();
-            dt2 = ExecuteSQLReturnTable(command);
-            return dt2;
-        }
 
 
-        public int ExcuteSQL_CheckDuplicate(string sqlCommand)
+        public int ExecuteSQL_CheckDuplicate(string sqlCommand)
         {
             try
             {
@@ -173,6 +139,8 @@ namespace LibraryManagement_BuiVanTai.Database
                 return -1; // Return -1 to indicate failure
             }
         }
+
+   
 
 
 

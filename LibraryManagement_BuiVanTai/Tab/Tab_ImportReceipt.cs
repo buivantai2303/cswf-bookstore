@@ -117,6 +117,9 @@ namespace LibraryManagement_BuiVanTai.Tab
         // Select and Delete data by click in the items =================================================================================
         private void DGView_ImportReceipt_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            BTN_ImportReceipt_Add.Enabled = false;
+            TB_ImportReceipt_ImportID.Enabled = false;
+            
             // Export data to ComboBox & TextBox
             if (e.RowIndex >= 0)
             {
@@ -342,6 +345,25 @@ namespace LibraryManagement_BuiVanTai.Tab
             return DateTime.TryParse(dateString, out date);
         }
 
+        private void DGV_ImportReceipt_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Class_ImportReceipt importReceipt = new Class_ImportReceipt(TB_ImportReceipt_ImportID.Text);
+            if (e.RowIndex >= 0 && DGV_ImportReceipt.Columns[e.ColumnIndex].Name == "ActionColumn")
+            {
+                DialogResult result = MessageBox.Show("Are you sure you want to delete this row?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+                if (result == DialogResult.Yes)
+                {
+                    if (DB_ImportReceipt.DeletDataByID(importReceipt) == true)
+                    {
+                        int rowIndex = DGV_ImportReceipt.CurrentCell.RowIndex;
+                        DGV_ImportReceipt.Rows.RemoveAt(rowIndex);
+
+                        MessageBox.Show("Row deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            BTN_ImportReceipt_Add.Enabled = false;
+        }
     }
 }

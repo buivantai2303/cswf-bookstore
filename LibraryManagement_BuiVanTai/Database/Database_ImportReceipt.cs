@@ -58,10 +58,10 @@ namespace LibraryManagement_BuiVanTai.Database
 
 
         // Delete data row by click in action column== =======================================================================
-        public bool DeletDataByID(string ID)
+        public bool DeletDataByID(Class_ImportReceipt obj)
         {
-            string sqlCommand = $"DELETE FROM {ClassDefineName.table_ImportReceipt_TableName} WHERE {ClassDefineName.table_ImportReceiptDetails_ImportID} = '{ID}';" +
-                                $"DELETE FROM {ClassDefineName.table_ImportReceipt_TableName} WHERE {ClassDefineName.table_ImportReceipt_ImportID} = '{ID}';";
+            string sqlCommand = $"DELETE FROM {ClassDefineName.table_ImportReceiptDetails_TableName} WHERE {ClassDefineName.table_ImportReceiptDetails_ImportID} = '{obj.ImportID1}';" +
+                                $"DELETE FROM {ClassDefineName.table_ImportReceipt_TableName} WHERE {ClassDefineName.table_ImportReceipt_ImportID} = '{obj.ImportID1}';";
             return database.ExecuteSQL(sqlCommand);
         }
 
@@ -115,7 +115,7 @@ namespace LibraryManagement_BuiVanTai.Database
         public int IsDuplicateSupplier(string ImportID)
         {
             string sqlCommand = $"SELECT COUNT(*) FROM {ClassDefineName.table_ImportReceipt_TableName} WHERE {ClassDefineName.table_ImportReceipt_ImportID} LIKE '%{ImportID}%'";
-            return database.ExcuteSQL_CheckDuplicate(sqlCommand);
+            return database.ExecuteSQL_CheckDuplicate(sqlCommand);
         }
 
 
