@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LibraryManagement_BuiVanTai.Tab
+namespace LibraryManagement_BuiVanTai.Form_NewImportReceipt
 {
-    public partial class Tab_NewImportReceipt : UserControl
+    public partial class NewImportReceipt : Form
     {
-        public Tab_NewImportReceipt()
+        public NewImportReceipt()
         {
             InitializeComponent();
-        }
-
-        public void Tab_NewImportReceipt_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

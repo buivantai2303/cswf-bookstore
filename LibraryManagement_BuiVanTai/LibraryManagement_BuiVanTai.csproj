@@ -86,6 +86,12 @@
     <Compile Include="Form\Form_Main.Designer.cs">
       <DependentUpon>Form_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_NewImportReceipt\NewImportReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_NewImportReceipt\NewImportReceipt.Designer.cs">
+      <DependentUpon>NewImportReceipt.cs</DependentUpon>
+    </Compile>
     <Compile Include="ImportReceiptDetails\Form_ImportReceiptDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,9 @@
     </Compile>
     <EmbeddedResource Include="Form\Form_Main.resx">
       <DependentUpon>Form_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_NewImportReceipt\NewImportReceipt.resx">
+      <DependentUpon>NewImportReceipt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ImportReceiptDetails\Form_ImportReceiptDetails.resx">
       <DependentUpon>Form_ImportReceiptDetails.cs</DependentUpon>
