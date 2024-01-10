@@ -422,14 +422,13 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label5.Location = new System.Drawing.Point(9, 6);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 17);
+            this.label5.Size = new System.Drawing.Size(89, 17);
             this.label5.TabIndex = 34;
-            this.label5.Text = "Import ID:";
+            this.label5.Text = "Import Code:";
             // 
             // TB_ImportReceipt_ImportID
             // 
             this.TB_ImportReceipt_ImportID.BackColor = System.Drawing.Color.White;
-            this.TB_ImportReceipt_ImportID.Enabled = false;
             this.TB_ImportReceipt_ImportID.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TB_ImportReceipt_ImportID.Location = new System.Drawing.Point(12, 26);
             this.TB_ImportReceipt_ImportID.MaximumSize = new System.Drawing.Size(216, 25);
