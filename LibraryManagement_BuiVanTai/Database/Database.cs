@@ -91,6 +91,36 @@ namespace LibraryManagement_BuiVanTai.Database
             }
         }
 
+        public DataTable GetDataTable(string sqlCommand, Dictionary<string, object> parameters = null)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(CONSTRING))
+                using (SqlCommand command = new SqlCommand(sqlCommand, connection))
+                {
+                    if (parameters != null)
+                    {
+                        foreach (var parameter in parameters)
+                        {
+                            command.Parameters.AddWithValue(parameter.Key, parameter.Value);
+                        }
+                    }
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                    {
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+                        return dataTable;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error retrieving data from the database: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
 
         public bool ExecuteSQL(string sqlCommand)
         {

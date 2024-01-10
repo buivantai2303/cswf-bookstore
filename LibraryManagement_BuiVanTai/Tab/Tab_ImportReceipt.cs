@@ -1,6 +1,8 @@
 ﻿using LibraryManagement_BuiVanTai.Class;
 using LibraryManagement_BuiVanTai.Database;
 using LibraryManagement_BuiVanTai.ImportReceiptDetails;
+using LibraryManagement_BuiVanTai.Form_NewImportReceipt;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -202,39 +204,33 @@ namespace LibraryManagement_BuiVanTai.Tab
         // Add button fuction ================================================================================================
         private void BTN_ImportReceipt_Add_Click(object sender, EventArgs e)
         {
+
+            string receiptID = "IMPRT" + getID();
             Class_ImportReceipt importReceipt = new Class_ImportReceipt(TB_ImportReceipt_ImportID.Text, Date_ImportDate.Value);
             if (DataConditional())
             {
-                if (DB_ImportReceipt.IsDuplicateSupplier(TB_ImportReceipt_ImportID.Text) > 0)
+                DialogResult result = MessageBox.Show("Do you want to add new Import Receipt?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
                 {
-                    MessageBox.Show("Duplicate 'ImportID' found. Please check the Supplier ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-                else
-                {
-                    DialogResult result = MessageBox.Show("Do you want to add new Import Receipt?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (result == DialogResult.Yes)
+                    if (DB_ImportReceipt.InsertData(importReceipt, TB_PubName.Text, TB_StaffName.Text))
                     {
-                        if (DB_ImportReceipt.InsertData(importReceipt, TB_PubName.Text, TB_StaffName.Text))
-                        {
-                            // Add new data to dataGridSuppliers
-                            DataRow dataGridImport = dataTable_ImportReceipt.NewRow();
-                            dataGridImport[0] = TB_ImportReceipt_ImportID.Text;
-                            dataGridImport[1] = Date_ImportDate.Text;
-                            dataGridImport[2] = CBB_PubID.Text;
-                            dataGridImport[3] = CBB_StaffID.Text;
-                            dataTable_ImportReceipt.Rows.Add(dataGridImport);
+                        // Add new data to dataGridSuppliers
+                        DataRow dataGridImport = dataTable_ImportReceipt.NewRow();
+                        dataGridImport[0] = TB_ImportReceipt_ImportID.Text;
+                        dataGridImport[1] = Date_ImportDate.Text;
+                        dataGridImport[2] = CBB_PubID.Text;
+                        dataGridImport[3] = CBB_StaffID.Text;
+                        dataTable_ImportReceipt.Rows.Add(dataGridImport);
 
 
-                            GridViewFormLoad_ImportReceipt(ClassDefineName.servername, ClassDefineName.database_name);
-
-                            Form_ImportReceiptDetails form_ImportReceiptDetails = new Form_ImportReceiptDetails(TB_ImportReceipt_ImportID.Text);
-                            form_ImportReceiptDetails.ShowDialog();
+                        GridViewFormLoad_ImportReceipt(ClassDefineName.servername, ClassDefineName.database_name);
 
 
-                            getEmptyTextBox();
+                        NewImportReceipt form_NewImportReceipt = new NewImportReceipt(receiptID, Date_ImportDate.Text, CBB_PubID.Text, TB_PubName.Text, CBB_StaffID.Text, TB_StaffName.Text);
+                        form_NewImportReceipt.ShowDialog();
 
-                        }
+                        getEmptyTextBox();
+
                     }
                 }
             }
@@ -276,7 +272,7 @@ namespace LibraryManagement_BuiVanTai.Tab
         {
             if (TB_ImportReceipt_ImportID.Text == "" || CBB_PubID.Text == "" || CBB_StaffID.Text == "" || !IsValidDate(Date_ImportDate.Text))
             {
-                BTN_ImportReceipt_Add.Enabled = false;
+                BTN_ImportReceipt_Add.Enabled = true;
             }
             else
             {
@@ -318,12 +314,6 @@ namespace LibraryManagement_BuiVanTai.Tab
         private bool IsValidImportIdLength()
         {
             string importId = TB_ImportReceipt_ImportID.Text;
-            if (string.IsNullOrEmpty(importId) || importId.Length < MinImportIdLength || importId.Length > MaxImportIdLength)
-            {
-                MessageBox.Show($"The 'Import ID' must be between {MinImportIdLength} and {MaxImportIdLength} characters.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-
             return true;
         }
 
@@ -364,6 +354,21 @@ namespace LibraryManagement_BuiVanTai.Tab
                 }
             }
             BTN_ImportReceipt_Add.Enabled = false;
+        }
+
+        public string getID()
+        {
+            int rid;
+            dataTable_ImportReceipt = DB_ImportReceipt.getCustomTable("SELECT ImportID FROM ImportReceipt");
+            if (dataTable_ImportReceipt.Rows.Count == 0)
+            {
+                rid = 1;
+                return rid.ToString();
+            }
+            string id = dataTable_ImportReceipt.Rows[dataTable_ImportReceipt.Rows.Count - 1][0].ToString();
+            rid = Int32.Parse(id.Substring(5)) + 1;
+
+            return rid.ToString();
         }
     }
 }
