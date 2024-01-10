@@ -15,6 +15,10 @@ namespace LibraryManagement_BuiVanTai.Class
         // Database name
         public static string database_name = "QuanLyCuaHangSach2";
 
+        // Test database name
+
+        public static string database_test = "QuanLyCuaHangSach_Test";
+
         // Class Table Customers.
         public static string table_Customer_TableName = "Customers";
         public static string table_Customer_CustomerID = "CustomerID";
