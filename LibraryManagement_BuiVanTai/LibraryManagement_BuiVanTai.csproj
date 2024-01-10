@@ -348,10 +348,14 @@
     <None Include="Resources\Truck1.png" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
+    <None Include="Resources\Cancel2.png" />
+=======
     <None Include="Resources\Logo-Full-Blue%404x.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logo-Full-Blue_small.png" />
+>>>>>>> 158b4f601e0b5d8f9f7ea303aa40e717b5e98397
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

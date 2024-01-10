@@ -29,6 +29,26 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+<<<<<<< HEAD
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.TB_StaffName = new System.Windows.Forms.TextBox();
+            this.TB_PubName = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.Date_ImportDate = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
+            this.CBB_StaffID = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.CBB_PubID = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.TB_ImportReceipt_ImportID = new System.Windows.Forms.TextBox();
+            this.BTN_Books_Save = new System.Windows.Forms.Button();
+            this.BTN_Books_Add = new System.Windows.Forms.Button();
+=======
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -52,6 +72,7 @@
             this.Label_SupplierID = new System.Windows.Forms.Label();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.LB_Books_Total = new System.Windows.Forms.Label();
+>>>>>>> 158b4f601e0b5d8f9f7ea303aa40e717b5e98397
             this.DGV_Books = new System.Windows.Forms.DataGridView();
             this.BookID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,6 +82,7 @@
             this.AuthorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ActionColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.BTN_AddToTable = new System.Windows.Forms.Button();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -84,8 +106,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.PTB_Suppliers_Menu = new System.Windows.Forms.PictureBox();
+<<<<<<< HEAD
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+=======
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+>>>>>>> 158b4f601e0b5d8f9f7ea303aa40e717b5e98397
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Books)).BeginInit();
             this.panel4.SuspendLayout();
@@ -354,6 +380,176 @@
             this.panel3.MaximumSize = new System.Drawing.Size(0, 148);
             this.panel3.MinimumSize = new System.Drawing.Size(892, 148);
             this.panel3.Name = "panel3";
+<<<<<<< HEAD
+            this.panel3.Size = new System.Drawing.Size(899, 120);
+            this.panel3.TabIndex = 11;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label5.Location = new System.Drawing.Point(488, 65);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(81, 17);
+            this.label5.TabIndex = 57;
+            this.label5.Text = "Staff Name:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label6.Location = new System.Drawing.Point(488, 10);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(110, 17);
+            this.label6.TabIndex = 56;
+            this.label6.Text = "Publisher Name:";
+            // 
+            // TB_StaffName
+            // 
+            this.TB_StaffName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TB_StaffName.BackColor = System.Drawing.Color.White;
+            this.TB_StaffName.Enabled = false;
+            this.TB_StaffName.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_StaffName.Location = new System.Drawing.Point(491, 85);
+            this.TB_StaffName.Name = "TB_StaffName";
+            this.TB_StaffName.Size = new System.Drawing.Size(399, 25);
+            this.TB_StaffName.TabIndex = 55;
+            // 
+            // TB_PubName
+            // 
+            this.TB_PubName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TB_PubName.BackColor = System.Drawing.Color.White;
+            this.TB_PubName.Enabled = false;
+            this.TB_PubName.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_PubName.Location = new System.Drawing.Point(491, 30);
+            this.TB_PubName.Name = "TB_PubName";
+            this.TB_PubName.Size = new System.Drawing.Size(399, 25);
+            this.TB_PubName.TabIndex = 54;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label9.Location = new System.Drawing.Point(15, 69);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(87, 17);
+            this.label9.TabIndex = 53;
+            this.label9.Text = "Import Date:";
+            // 
+            // Date_ImportDate
+            // 
+            this.Date_ImportDate.CalendarFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Date_ImportDate.Enabled = false;
+            this.Date_ImportDate.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Date_ImportDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.Date_ImportDate.Location = new System.Drawing.Point(18, 89);
+            this.Date_ImportDate.MaximumSize = new System.Drawing.Size(121, 21);
+            this.Date_ImportDate.MinimumSize = new System.Drawing.Size(121, 21);
+            this.Date_ImportDate.Name = "Date_ImportDate";
+            this.Date_ImportDate.Size = new System.Drawing.Size(121, 21);
+            this.Date_ImportDate.TabIndex = 46;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label8.Location = new System.Drawing.Point(250, 65);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(59, 17);
+            this.label8.TabIndex = 52;
+            this.label8.Text = "Staff ID:";
+            // 
+            // CBB_StaffID
+            // 
+            this.CBB_StaffID.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CBB_StaffID.FormattingEnabled = true;
+            this.CBB_StaffID.Location = new System.Drawing.Point(253, 85);
+            this.CBB_StaffID.MaximumSize = new System.Drawing.Size(216, 0);
+            this.CBB_StaffID.MinimumSize = new System.Drawing.Size(216, 0);
+            this.CBB_StaffID.Name = "CBB_StaffID";
+            this.CBB_StaffID.Size = new System.Drawing.Size(216, 25);
+            this.CBB_StaffID.TabIndex = 51;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label10.Location = new System.Drawing.Point(250, 10);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(88, 17);
+            this.label10.TabIndex = 50;
+            this.label10.Text = "Publisher ID:";
+            // 
+            // CBB_PubID
+            // 
+            this.CBB_PubID.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CBB_PubID.FormattingEnabled = true;
+            this.CBB_PubID.Location = new System.Drawing.Point(253, 30);
+            this.CBB_PubID.MaximumSize = new System.Drawing.Size(216, 0);
+            this.CBB_PubID.MinimumSize = new System.Drawing.Size(216, 0);
+            this.CBB_PubID.Name = "CBB_PubID";
+            this.CBB_PubID.Size = new System.Drawing.Size(216, 25);
+            this.CBB_PubID.TabIndex = 49;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label16.Location = new System.Drawing.Point(15, 10);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(89, 17);
+            this.label16.TabIndex = 47;
+            this.label16.Text = "Import Code:";
+            // 
+            // TB_ImportReceipt_ImportID
+            // 
+            this.TB_ImportReceipt_ImportID.BackColor = System.Drawing.Color.White;
+            this.TB_ImportReceipt_ImportID.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_ImportReceipt_ImportID.Location = new System.Drawing.Point(18, 30);
+            this.TB_ImportReceipt_ImportID.MaximumSize = new System.Drawing.Size(216, 25);
+            this.TB_ImportReceipt_ImportID.MinimumSize = new System.Drawing.Size(216, 25);
+            this.TB_ImportReceipt_ImportID.Name = "TB_ImportReceipt_ImportID";
+            this.TB_ImportReceipt_ImportID.Size = new System.Drawing.Size(216, 25);
+            this.TB_ImportReceipt_ImportID.TabIndex = 48;
+            // 
+            // BTN_Books_Save
+            // 
+            this.BTN_Books_Save.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.BTN_Books_Save.BackColor = System.Drawing.Color.SeaShell;
+            this.BTN_Books_Save.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Books_Save.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Save2;
+            this.BTN_Books_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_Books_Save.Location = new System.Drawing.Point(971, 65);
+            this.BTN_Books_Save.Name = "BTN_Books_Save";
+            this.BTN_Books_Save.Size = new System.Drawing.Size(111, 48);
+            this.BTN_Books_Save.TabIndex = 17;
+            this.BTN_Books_Save.Text = "Save Import";
+            this.BTN_Books_Save.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Books_Save.UseVisualStyleBackColor = false;
+            // 
+            // BTN_Books_Add
+            // 
+            this.BTN_Books_Add.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.BTN_Books_Add.BackColor = System.Drawing.Color.SeaShell;
+            this.BTN_Books_Add.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Books_Add.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Add;
+            this.BTN_Books_Add.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_Books_Add.Location = new System.Drawing.Point(971, 7);
+            this.BTN_Books_Add.Name = "BTN_Books_Add";
+            this.BTN_Books_Add.Size = new System.Drawing.Size(111, 48);
+            this.BTN_Books_Add.TabIndex = 18;
+            this.BTN_Books_Add.Text = "Add Import";
+            this.BTN_Books_Add.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Books_Add.UseVisualStyleBackColor = false;
+=======
             this.panel3.Size = new System.Drawing.Size(892, 148);
             this.panel3.TabIndex = 11;
             // 
@@ -395,6 +591,7 @@
             this.LB_Books_Total.Size = new System.Drawing.Size(97, 39);
             this.LB_Books_Total.TabIndex = 1;
             this.LB_Books_Total.Text = "8888";
+>>>>>>> 158b4f601e0b5d8f9f7ea303aa40e717b5e98397
             // 
             // DGV_Books
             // 
@@ -409,14 +606,14 @@
             this.DGV_Books.BackgroundColor = System.Drawing.Color.White;
             this.DGV_Books.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DGV_Books.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_Books.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_Books.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.DGV_Books.ColumnHeadersHeight = 29;
             this.DGV_Books.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DGV_Books.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -427,28 +624,28 @@
             this.PublisherName,
             this.AuthorName,
             this.ActionColumn});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(151)))), ((int)(((byte)(196)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGV_Books.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(151)))), ((int)(((byte)(196)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGV_Books.DefaultCellStyle = dataGridViewCellStyle5;
             this.DGV_Books.EnableHeadersVisualStyles = false;
             this.DGV_Books.Location = new System.Drawing.Point(24, 245);
             this.DGV_Books.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DGV_Books.MultiSelect = false;
             this.DGV_Books.Name = "DGV_Books";
             this.DGV_Books.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_Books.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_Books.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.DGV_Books.RowHeadersWidth = 51;
             this.DGV_Books.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.DGV_Books.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -556,6 +753,21 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1203, 580);
             this.panel4.TabIndex = 12;
+            // 
+            // BTN_AddToTable
+            // 
+            this.BTN_AddToTable.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.BTN_AddToTable.BackColor = System.Drawing.Color.SeaShell;
+            this.BTN_AddToTable.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_AddToTable.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Add;
+            this.BTN_AddToTable.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_AddToTable.Location = new System.Drawing.Point(576, 37);
+            this.BTN_AddToTable.Name = "BTN_AddToTable";
+            this.BTN_AddToTable.Size = new System.Drawing.Size(129, 35);
+            this.BTN_AddToTable.TabIndex = 23;
+            this.BTN_AddToTable.Text = "Add to Table";
+            this.BTN_AddToTable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_AddToTable.UseVisualStyleBackColor = false;
             // 
             // comboBox3
             // 
@@ -866,6 +1078,26 @@
             // PTB_Suppliers_Menu
             // 
             this.PTB_Suppliers_Menu.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Menu;
+<<<<<<< HEAD
+            this.PTB_Suppliers_Menu.Location = new System.Drawing.Point(12, 12);
+            this.PTB_Suppliers_Menu.Name = "PTB_Suppliers_Menu";
+            this.PTB_Suppliers_Menu.Size = new System.Drawing.Size(26, 26);
+            this.PTB_Suppliers_Menu.TabIndex = 0;
+            this.PTB_Suppliers_Menu.TabStop = false;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.Description = "Details";
+            this.dataGridViewImageColumn1.FillWeight = 40F;
+            this.dataGridViewImageColumn1.HeaderText = "Action";
+            this.dataGridViewImageColumn1.Image = global::LibraryManagement_BuiVanTai.Properties.Resources.Delete;
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn1.MinimumWidth = 6;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn1.Width = 66;
+=======
             this.PTB_Suppliers_Menu.Location = new System.Drawing.Point(16, 15);
             this.PTB_Suppliers_Menu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PTB_Suppliers_Menu.Name = "PTB_Suppliers_Menu";
@@ -899,6 +1131,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(73, 62);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+>>>>>>> 158b4f601e0b5d8f9f7ea303aa40e717b5e98397
             // 
             // Tab_NewImportReceipt
             // 
