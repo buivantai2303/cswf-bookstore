@@ -66,6 +66,12 @@ namespace LibraryManagement_BuiVanTai.Database
         }
 
 
+        public DataTable GetPublisherID()
+        {
+            string sqlCommand = $"SELECT {ClassDefineName.table_SaleReceipts_ReceiptID} FROM {ClassDefineName.table_Publishers_TableName};";
+            return db.GetDataTable(sqlCommand);
+        }
+
         public bool DeleteSaleByID(Class_SaleReceipt sale)
         {
             string query = $"DELETE FROM SaleReceiptDetails WHERE ReceiptID = '{sale.ReceiptID}' " +

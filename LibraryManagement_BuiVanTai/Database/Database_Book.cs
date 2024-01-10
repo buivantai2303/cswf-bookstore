@@ -19,6 +19,13 @@ namespace LibraryManagement_BuiVanTai.Database
             db = new Database(servername, databasename);
         }
 
+        public DataTable getTable()
+        {
+            dt = new DataTable();
+            dt = db.getTable("Books");
+            return dt;
+        }
+
         public bool InsertData(Class_Book book)
         {
             string query = "INSERT INTO Books VALUES (\'" + book.BookId + "\'," + "\'" + book.BookTitle + "\'," + "\'" + book.Remaining + "\'," + "\'" + book.BookType + "\'," + "\'" + book.PublisherId + "\'," + "\'" + book.AuthorId + "\'," + "\'" + book.Price + "\')";

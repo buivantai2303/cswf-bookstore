@@ -8,11 +8,11 @@ namespace LibraryManagement_BuiVanTai
 {
     internal class Class_Suppliers
     {
-        public string SupplierID;
-        public string SupplierName;
-        public string SupplierAddress;
-        public string SupplierTel;
-        public string SupplierState;
+        private string SupplierID;
+        private string SupplierName;
+        private string SupplierAddress;
+        private string SupplierTel;
+        private string SupplierState;
 
         public string SupplierID1 { get => SupplierID; set => SupplierID = value; }
         public string SupplierName1 { get => SupplierName; set => SupplierName = value; }

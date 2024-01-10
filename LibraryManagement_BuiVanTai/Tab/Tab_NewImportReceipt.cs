@@ -16,10 +16,5 @@ namespace LibraryManagement_BuiVanTai.Tab
         {
             InitializeComponent();
         }
-
-        public void Tab_NewImportReceipt_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

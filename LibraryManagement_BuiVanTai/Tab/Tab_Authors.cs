@@ -211,5 +211,10 @@ namespace LibraryManagement_BuiVanTai.Tab
             dt = Database_Author.searchData(TB_Authors_Search.Text);
             DGV_Authors.DataSource = dt;
         }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
