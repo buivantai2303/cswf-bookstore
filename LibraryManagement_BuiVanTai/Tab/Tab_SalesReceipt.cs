@@ -146,5 +146,10 @@ namespace LibraryManagement_BuiVanTai.Tab
             DGV_SaleReceipt_ImportReceipt.DataSource = dataTable_SaleReceipt;
             return;
         }
+
+        private void BTN_Delete_SaleReceipt_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
