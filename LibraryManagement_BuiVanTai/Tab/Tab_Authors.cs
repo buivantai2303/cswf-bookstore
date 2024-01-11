@@ -170,7 +170,6 @@ namespace LibraryManagement_BuiVanTai.Tab
 
                 if (result == DialogResult.Yes)
                 {
-                    string columnIDValue = DGV_Authors.Rows[e.RowIndex].Cells[1].Value.ToString();
                     Class_Author at = new Class_Author(DGV_Authors.Rows[e.RowIndex].Cells[1].Value.ToString());
                     if (Database_Author.DeleteData(at) == true)
                     {

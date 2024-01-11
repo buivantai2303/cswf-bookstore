@@ -1,22 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LibraryManagement_BuiVanTai.Class
 {
-    internal class Class_ImportReceipt
+    public class Class_ImportReceipt
     {
-        private string ImportID;
-        private DateTime ImportDate;
-        private string PublisherID;
-        private string StaffID;
-
-        public string ImportID1 { get => ImportID; set => ImportID = value; }
-        public DateTime ImportDate1 { get => ImportDate; set => ImportDate = value; }
-        public string PublisherID1 { get => PublisherID; set => PublisherID = value; }
-        public string StaffID1 { get => StaffID; set => StaffID = value; }
+        public string ImportID { get; set; }
+        public DateTime ImportDate { get; set; }
+        public string PublisherID { get; set; }
+        public string StaffID { get; set; }
 
         public Class_ImportReceipt() { }
 
