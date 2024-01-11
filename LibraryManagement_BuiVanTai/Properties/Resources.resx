@@ -220,13 +220,11 @@
   <data name="Truck1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Truck1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-<<<<<<< HEAD
   <data name="Save" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-=======
+  </data>
   <data name="Logout2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logout2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
->>>>>>> 158b4f601e0b5d8f9f7ea303aa40e717b5e98397
   </data>
   <data name="Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -258,12 +256,11 @@
   <data name="Search_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Search_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-<<<<<<< HEAD
+
   <data name="Cancel2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cancel2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-=======
+  </data>
   <data name="Logo-Full-Blue_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo-Full-Blue_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
->>>>>>> 158b4f601e0b5d8f9f7ea303aa40e717b5e98397
   </data>
 </root>
