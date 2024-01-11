@@ -45,7 +45,6 @@
       <HintPath>..\packages\MSTest.TestFramework.2.2.10\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Data" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -58,12 +57,10 @@
   <ItemGroup>
     <Compile Include="Database\Database_AuthorTests.cs" />
     <Compile Include="Database\Database_BookTests.cs" />
+    <Compile Include="Database\Database_CustomerTests.cs" />
     <Compile Include="Database\Database_PublisherTests.cs" />
     <Compile Include="Database\Database_SaleReceiptsTests.cs" />
     <Compile Include="Database\Database_SuppliersTest.cs" />
-    <Compile Include="Database\Database_StaffTest.cs" />
-    <Compile Include="Database\Database_CustomerTests.cs" />
-    <Compile Include="Database\Database_ImportRececiptAndDetails.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

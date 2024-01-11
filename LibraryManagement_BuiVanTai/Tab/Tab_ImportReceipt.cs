@@ -41,11 +41,11 @@ namespace LibraryManagement_BuiVanTai.Tab
 
             // Add PublisherName fill to CBB_PubName:
             CBB_PubID.DisplayMember = ClassDefineName.table_Publishers_PublisherID;
-            DataTable DT_publisherID = DB_ImportReceipt.GetPublisherID("GetID");
+            DataTable DT_publisherID = DB_ImportReceipt.GetPublisherID();
 
             // Add PublisherName fill to CBB_PubName:
             CBB_StaffID.DisplayMember = ClassDefineName.table_Staffs_StaffID;
-            DataTable DT_staffID = DB_ImportReceipt.GetStaffID("");
+            DataTable DT_staffID = DB_ImportReceipt.GetStaffID();
 
 
             if (DT_publisherID != null && DT_staffID != null)
@@ -142,8 +142,8 @@ namespace LibraryManagement_BuiVanTai.Tab
                 }
 
                 // Retrieve PublisherID based on PublisherName
-                string getSupplierId = selectedRow.Cells[1].Value.ToString();
-                DataTable publisherIDTable = DB_ImportReceipt.GetPublisherID(getSupplierId);
+                string selectedPublisherName = selectedRow.Cells[3].Value.ToString();
+                DataTable publisherIDTable = DB_ImportReceipt.GetPublisherID(selectedPublisherName);
 
                 foreach (DataRow DR in publisherIDTable.Rows)
                 {
@@ -151,10 +151,10 @@ namespace LibraryManagement_BuiVanTai.Tab
                 }
 
 
-                string selectedImportID = selectedRow.Cells[1].Value.ToString();
-                DataTable staffIDTable = DB_ImportReceipt.GetStaffID(selectedImportID);
+                string selectedStaffName = selectedRow.Cells[4].Value.ToString();
+                DataTable sstaffIDTable = DB_ImportReceipt.GetStaffID(selectedStaffName);
 
-                foreach (DataRow DR in staffIDTable.Rows)
+                foreach (DataRow DR in sstaffIDTable.Rows)
                 {
                     CBB_StaffID.Text = DR["StaffID"].ToString();
                 }
@@ -202,7 +202,7 @@ namespace LibraryManagement_BuiVanTai.Tab
         // Add button fuction ================================================================================================
         private void BTN_ImportReceipt_Add_Click(object sender, EventArgs e)
         {
-            Class_ImportReceipt importReceipt = new Class_ImportReceipt(TB_ImportReceipt_ImportID.Text, Date_ImportDate.Value, CBB_PubID.Text, CBB_StaffID.Text);
+            Class_ImportReceipt importReceipt = new Class_ImportReceipt(TB_ImportReceipt_ImportID.Text, Date_ImportDate.Value);
             if (DataConditional())
             {
                 if (DB_ImportReceipt.IsDuplicateSupplier(TB_ImportReceipt_ImportID.Text) > 0)
@@ -215,9 +215,19 @@ namespace LibraryManagement_BuiVanTai.Tab
                     DialogResult result = MessageBox.Show("Do you want to add new Import Receipt?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (result == DialogResult.Yes)
                     {
-                        if (DB_ImportReceipt.InsertData(importReceipt))
+                        if (DB_ImportReceipt.InsertData(importReceipt, TB_PubName.Text, TB_StaffName.Text))
                         {
+                            // Add new data to dataGridSuppliers
+                            DataRow dataGridImport = dataTable_ImportReceipt.NewRow();
+                            dataGridImport[0] = TB_ImportReceipt_ImportID.Text;
+                            dataGridImport[1] = Date_ImportDate.Text;
+                            dataGridImport[2] = CBB_PubID.Text;
+                            dataGridImport[3] = CBB_StaffID.Text;
+                            dataTable_ImportReceipt.Rows.Add(dataGridImport);
+
+
                             GridViewFormLoad_ImportReceipt(ClassDefineName.servername, ClassDefineName.database_name);
+
                             Form_ImportReceiptDetails form_ImportReceiptDetails = new Form_ImportReceiptDetails(TB_ImportReceipt_ImportID.Text);
                             form_ImportReceiptDetails.ShowDialog();
 
