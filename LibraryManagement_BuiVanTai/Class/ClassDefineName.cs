@@ -11,8 +11,6 @@ namespace LibraryManagement_BuiVanTai.Class
 
         // Server name
         public static string servername = "BANHMIBIETBAY";
-
-        // Database name
         public static string database_name = "QuanLyCuaHangSach2";
 
         // Test database name

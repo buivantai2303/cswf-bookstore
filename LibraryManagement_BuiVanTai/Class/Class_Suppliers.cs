@@ -6,19 +6,15 @@ using System.Threading.Tasks;
 
 namespace LibraryManagement_BuiVanTai
 {
-    internal class Class_Suppliers
+    public class Class_Suppliers
     {
-        private string SupplierID;
-        private string SupplierName;
-        private string SupplierAddress;
-        private string SupplierTel;
-        private string SupplierState;
 
-        public string SupplierID1 { get => SupplierID; set => SupplierID = value; }
-        public string SupplierName1 { get => SupplierName; set => SupplierName = value; }
-        public string SupplierAddress1 { get => SupplierAddress; set => SupplierAddress = value; }
-        public string SupplierTel1 { get => SupplierTel; set => SupplierTel = value; }
-        public string SupplierState1 { get => SupplierState; set => SupplierState = value; }
+
+        public string SupplierID { get; set; }
+        public string SupplierName { get; set; }
+        public string SupplierAddress { get; set; }
+        public string SupplierTel { get; set; }
+        public string SupplierState { get; set; }
 
         public Class_Suppliers() { }
 
