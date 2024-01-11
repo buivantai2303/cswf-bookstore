@@ -17,7 +17,7 @@ namespace LibraryManagement_BuiVanTai.Database
         DataSet DS;
 
 
-        public Database(string servername, string databasename, string user = "sa", string pass = "Duong.1802")
+        public Database(string servername, string databasename, string user = "sa", string pass = "180403")
         {
             // Kết nối csdl theo servername và database name
             DS = new DataSet();
