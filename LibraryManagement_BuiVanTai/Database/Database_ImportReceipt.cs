@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace LibraryManagement_BuiVanTai.Database
 {
-    internal class Database_ImportReceipt   
+    internal class Database_ImportReceipt
     {
 
         Database database = null;

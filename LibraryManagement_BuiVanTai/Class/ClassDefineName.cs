@@ -10,10 +10,14 @@ namespace LibraryManagement_BuiVanTai.Class
     {
 
         // Server name
-        public static string servername = "TAGO-MARK2\\TAGOS";
+        public static string servername = "BANHMIBIETBAY";
 
         // Database name
         public static string database_name = "QuanLyCuaHangSach2";
+
+        // Test database name
+
+        public static string database_test = "QuanLyCuaHangSach_Test";
 
         // Class Table Customers.
         public static string table_Customer_TableName = "Customers";

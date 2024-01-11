@@ -1,8 +1,13 @@
 ﻿using LibraryManagement_BuiVanTai.Class;
 using LibraryManagement_BuiVanTai.Database;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LibraryManagement_BuiVanTai.Tab
@@ -16,7 +21,7 @@ namespace LibraryManagement_BuiVanTai.Tab
             InitializeComponent();
         }
 
-        public void Tab_Publisher_Load(object sender, EventArgs e)
+        private void Tab_Publisher_Load(object sender, EventArgs e)
         {
             GridViewFormLoad(ClassDefineName.servername, ClassDefineName.database_name);
         }
@@ -72,44 +77,44 @@ namespace LibraryManagement_BuiVanTai.Tab
             }
         }
 
-        public void TB_Publisher_ID_TextChanged(object sender, EventArgs e)
+        private void TB_Publisher_ID_TextChanged(object sender, EventArgs e)
         {
             CheckNull();
             DataConditional();
         }
 
-        public void TB_Publisher_Firstname_TextChanged(object sender, EventArgs e)
+        private void TB_Publisher_Firstname_TextChanged(object sender, EventArgs e)
         {
             CheckNull();
             DataConditional();
         }
 
-        public void TB_Publisher_LastName_TextChanged(object sender, EventArgs e)
+        private void TB_Publisher_LastName_TextChanged(object sender, EventArgs e)
         {
             CheckNull();
             DataConditional();
         }
 
-        public void TB_Publisher_Tel_TextChanged(object sender, EventArgs e)
+        private void TB_Publisher_Tel_TextChanged(object sender, EventArgs e)
         {
             CheckNull();
             DataConditional();
         }
 
-        public void TB_Publisher_Address_TextChanged(object sender, EventArgs e)
+        private void TB_Publisher_Address_TextChanged(object sender, EventArgs e)
         {
             CheckNull();
             DataConditional();
         }
 
-        public void CBB_Publisher_StateEdit_SelectedIndexChanged(object sender, EventArgs e)
+        private void CBB_Publisher_StateEdit_SelectedIndexChanged(object sender, EventArgs e)
         {
             CheckNull();
             DataConditional();
         }
 
 
-        public void CBB_Publisher_StateSearch_SelectedIndexChanged(object sender, EventArgs e)
+        private void CBB_Publisher_StateSearch_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (CBB_Publisher_StateSearch.Text == "Active")
             {
@@ -135,7 +140,7 @@ namespace LibraryManagement_BuiVanTai.Tab
             }
         }
 
-        public void BTN_Publisher_Add_Click(object sender, EventArgs e)
+        private void BTN_Publisher_Add_Click(object sender, EventArgs e)
         {
             Class_Publisher publisher = new Class_Publisher(TB_Publisher_ID.Text, TB_Publisher_Name.Text, TB_Publisher_Address.Text, TB_Publisher_Tel.Text, CBB_Publisher_StateEdit.Text);
 
@@ -186,7 +191,7 @@ namespace LibraryManagement_BuiVanTai.Tab
             }
         }
 
-        public bool DataConditional()
+        private bool DataConditional()
         {
 
             if (TB_Publisher_ID.Text.Length < 3 || TB_Publisher_ID.Text.Length > 20)
@@ -239,7 +244,7 @@ namespace LibraryManagement_BuiVanTai.Tab
             return true;
         }
 
-        public void BTN_Publisher_Save_Click(object sender, EventArgs e)
+        private void BTN_Publisher_Save_Click(object sender, EventArgs e)
         {
             // Get the selected row index
             int rowIndex = DGV_Publisher.CurrentCell.RowIndex;
@@ -291,7 +296,7 @@ namespace LibraryManagement_BuiVanTai.Tab
             BTN_Publisher_Save.Enabled = false;
         }
 
-        public void BTN_Publisher_Refresh_Click(object sender, EventArgs e)
+        private void BTN_Publisher_Refresh_Click(object sender, EventArgs e)
         {
             TB_Publisher_Search.Clear();
             GridViewFormLoad(ClassDefineName.servername, ClassDefineName.database_name);
@@ -301,7 +306,7 @@ namespace LibraryManagement_BuiVanTai.Tab
             return;
         }
 
-        public void DGV_Publisher_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void DGV_Publisher_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             BTN_Publisher_Save.Enabled = false;
             TB_Publisher_ID.Enabled = false;
@@ -335,7 +340,7 @@ namespace LibraryManagement_BuiVanTai.Tab
             BTN_Publisher_Add.Enabled = false;
         }
 
-        public void TB_Publisher_Search_TextChanged(object sender, EventArgs e)
+        private void TB_Publisher_Search_TextChanged(object sender, EventArgs e)
         {
             if (CBB_Publisher_StateSearch.Text == ClassDefineName.table_Suppliers_SupplierState_AllState)
             {

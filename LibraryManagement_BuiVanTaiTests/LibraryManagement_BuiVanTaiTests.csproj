@@ -60,6 +60,7 @@
     <Compile Include="Database\Database_CustomerTests.cs" />
     <Compile Include="Database\Database_PublisherTests.cs" />
     <Compile Include="Database\Database_SaleReceiptsTests.cs" />
+    <Compile Include="Database\Database_SuppliersTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
