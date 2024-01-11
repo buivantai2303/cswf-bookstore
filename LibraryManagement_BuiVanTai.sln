@@ -5,8 +5,6 @@ VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManagement_BuiVanTai", "LibraryManagement_BuiVanTai\LibraryManagement_BuiVanTai.csproj", "{CD5F914A-4FEA-41BC-AB3A-04EA62503951}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManagement_BuiVanTaiTests", "LibraryManagement_BuiVanTaiTests\LibraryManagement_BuiVanTaiTests.csproj", "{76879713-BF63-45F0-96E1-08E8B88E9683}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{CD5F914A-4FEA-41BC-AB3A-04EA62503951}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD5F914A-4FEA-41BC-AB3A-04EA62503951}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD5F914A-4FEA-41BC-AB3A-04EA62503951}.Release|Any CPU.Build.0 = Release|Any CPU
-		{76879713-BF63-45F0-96E1-08E8B88E9683}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{76879713-BF63-45F0-96E1-08E8B88E9683}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{76879713-BF63-45F0-96E1-08E8B88E9683}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{76879713-BF63-45F0-96E1-08E8B88E9683}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

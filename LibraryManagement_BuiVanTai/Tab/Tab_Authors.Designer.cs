@@ -190,7 +190,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1203, 580);
             this.panel4.TabIndex = 12;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // BTN_Authors_Save
             // 

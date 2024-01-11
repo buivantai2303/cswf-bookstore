@@ -86,6 +86,12 @@
     <Compile Include="Form\Form_Main.Designer.cs">
       <DependentUpon>Form_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_NewImportReceipt\NewImportReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_NewImportReceipt\NewImportReceipt.Designer.cs">
+      <DependentUpon>NewImportReceipt.cs</DependentUpon>
+    </Compile>
     <Compile Include="ImportReceiptDetails\Form_ImportReceiptDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,11 +100,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Tab\Tab_Authors.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -162,14 +163,22 @@
     <EmbeddedResource Include="Form\Form_Main.resx">
       <DependentUpon>Form_Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_NewImportReceipt\NewImportReceipt.resx">
+      <DependentUpon>NewImportReceipt.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ImportReceiptDetails\Form_ImportReceiptDetails.resx">
       <DependentUpon>Form_ImportReceiptDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <EmbeddedResource Include="Tab\Tab_Authors.resx">
       <DependentUpon>Tab_Authors.cs</DependentUpon>
     </EmbeddedResource>
@@ -338,12 +347,6 @@
   <ItemGroup>
     <None Include="Resources\Truck1.png" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Cancel2.png" />
-    <None Include="Resources\Logo-Full-Blue%404x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Logo-Full-Blue_small.png" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

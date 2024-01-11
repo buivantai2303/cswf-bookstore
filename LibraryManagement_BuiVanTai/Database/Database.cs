@@ -17,7 +17,7 @@ namespace LibraryManagement_BuiVanTai.Database
         DataSet DS;
 
 
-        public Database(string servername, string databasename, string user = "sa", string pass = "180403")
+        public Database(string servername, string databasename, string user = "sa", string pass = "Duong.1802")
         {
             // Kết nối csdl theo servername và database name
             DS = new DataSet();
@@ -76,36 +76,6 @@ namespace LibraryManagement_BuiVanTai.Database
             {
                 using (SqlCommand command = new SqlCommand(sqlCommand, SQLCONN))
                 {
-                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
-                    {
-                        DataTable dataTable = new DataTable();
-                        adapter.Fill(dataTable);
-                        return dataTable;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error retrieving data from the database: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return null;
-            }
-        }
-
-        public DataTable GetDataTable(string sqlCommand, Dictionary<string, object> parameters = null)
-        {
-            try
-            {
-                using (SqlConnection connection = new SqlConnection(CONSTRING))
-                using (SqlCommand command = new SqlCommand(sqlCommand, connection))
-                {
-                    if (parameters != null)
-                    {
-                        foreach (var parameter in parameters)
-                        {
-                            command.Parameters.AddWithValue(parameter.Key, parameter.Value);
-                        }
-                    }
-
                     using (SqlDataAdapter adapter = new SqlDataAdapter(command))
                     {
                         DataTable dataTable = new DataTable();
